@@ -30,6 +30,13 @@ ALLOWED_HOSTS = ["127.0.0.1", "192.168.192.24"]
 
 ########## DJANGO APPLICATIONS ###########
 INSTALLED_APPS = [
+    ###libraries
+    'corsheaders',
+    'debug_toolbar',
+    'django_extensions',
+    'rest_framework',
+    'jazzmin',
+
     ###apps
     'authentication',
     'api',
@@ -42,11 +49,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    ###libraries
-    'corsheaders',
-    "debug_toolbar",
 ]
+
+############ MIDDLEWARES AND OTHERS ################
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 MIDDLEWARE = [
     ##libraries middlewares
@@ -133,13 +144,9 @@ TIME_ZONE = 'Asia/Ashgabat'
 DATETIME_FORMAT=  '%Y-%m-%d %H:%M'
 DATETIME_INPUT_FORMATS=  '%Y-%m-%d %H:%M'
 
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_THOUSAND_SEPARATOR = True
-
 USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
