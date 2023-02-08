@@ -4,8 +4,10 @@ Settings for Owren project.
 """
 import os
 from pathlib import Path
-from dotenv import load_dotenv, find_dotenv
 
+from dotenv import find_dotenv, load_dotenv
+
+from .configurations import *
 
 ROOT_URLCONF = 'owren.urls'
 AUTH_USER_MODEL = 'authentication.User'
@@ -24,6 +26,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
 
 load_dotenv(find_dotenv())
 SECRET_KEY = os.environ["SECRET_KEY"]
+SECRET_KEY_FALLBACKS = [os.environ['OLD_SECRET_KEY']]
+
 DEBUG = True
 ALLOWED_HOSTS = ["127.0.0.1", "192.168.192.24"]
 
@@ -33,8 +37,8 @@ INSTALLED_APPS = [
     ###libraries
     'corsheaders',
     'debug_toolbar',
-    'django_extensions',
-    'rest_framework',
+    # 'django_extensions',
+    # 'rest_framework',
     'jazzmin',
 
     ###apps
@@ -53,18 +57,14 @@ INSTALLED_APPS = [
 
 ############ MIDDLEWARES AND OTHERS ################
 
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+#     ]
+# }
 
 MIDDLEWARE = [
-    ##libraries middlewares
     "corsheaders.middleware.CorsMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
-
-    ###default middlewares
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -72,12 +72,17 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
-INTERNAL_IPS = [
+INTERNAL_IP = [
     "127.0.0.1",
     "192.168.192.24",
 ]
+
+############# JAZZMIN ############
+JAZZMIN_SETTINGS = JAZZMIN_SETTINGS
+JAZZMIIN_UI_TWEAKS = JAZZMIIN_UI_TWEAKS
 
 TEMPLATES = [
     {
@@ -100,8 +105,46 @@ ASGI_APPLICATION = 'owren.asgi.application'
 
 #########   DJANGO_CORS_HEADERS ########
 
-CORS_ALLOW_ALL_ORIGINS = True
+
 CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_HEADERS = (
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    'x-csrf-token',
+    'cip',
+    'isajaxrequest',
+)
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]   
+######### CACHE SYSTEM ###########################
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "192.168.192.24:6379",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient"
+        },
+        "KEY_PREFIX": "example"
+    }
+}
+
+CACHE_TTL = 60 * 15
 
 ######### DJANGO DATABASE  ############
 
@@ -118,6 +161,7 @@ DATABASES = {
 
 FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760
+
 ############ PASSWORD VALIDATION ###########
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -135,7 +179,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 #################### INTERNALIZATION, TIMING ############################
 
 LANGUAGE_CODE = 'en-us'
@@ -150,3 +193,5 @@ USE_THOUSAND_SEPARATOR = True
 USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+################################################################################################################
