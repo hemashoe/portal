@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     ###libraries
     'corsheaders',
     'debug_toolbar',
-    # 'django_extensions',
-    # 'rest_framework',
+    'django_extensions',
+    'rest_framework',
     'jazzmin',
 
     ###apps
@@ -57,11 +57,11 @@ INSTALLED_APPS = [
 
 ############ MIDDLEWARES AND OTHERS ################
 
-# REST_FRAMEWORK = {
-#     'DEFAULT_PERMISSION_CLASSES': [
-#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-#     ]
-# }
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
@@ -105,9 +105,7 @@ ASGI_APPLICATION = 'owren.asgi.application'
 
 #########   DJANGO_CORS_HEADERS ########
 
-
 CORS_ALLOW_CREDENTIALS = True
-
 CORS_ALLOW_HEADERS = (
     'accept',
     'accept-encoding',
@@ -131,6 +129,7 @@ CORS_ALLOW_METHODS = [
     'POST',
     'PUT',
 ]   
+
 ######### CACHE SYSTEM ###########################
 
 CACHES = {

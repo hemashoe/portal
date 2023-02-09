@@ -1,21 +1,24 @@
 from django.contrib import admin
-from .models import *
 from django.utils.safestring import mark_safe
+
+from .models import *
+
 # Register your models here.
 
-class AllUsers(admin.ModelAdmin):
+class UserAdmin(admin.ModelAdmin):
     list_display = ('username', 'fullname', 'is_active', 'is_staff', 'created_at')
     list_display_links = ('username', 'fullname')
+    list_editable = ("is_active", 'is_staff')
     search_fields = ('username', 'fullname')
     
-admin.site.register(User, AllUsers)
-
+admin.site.register(User, UserAdmin)
 
 class ProfilesAdmin(admin.ModelAdmin):
     list_display = ('user', 'email', 'fullname', 'get_profile_photo', 'status')
     list_display_links = ('user', 'fullname')
     list_editable = ('status', 'email')
     readonly_fields = ('created_date', 'get_profile_photo')
+    search_fields = ('user', 'email', 'fullname')
     save_on_top = True
 
     def get_profile_photo(self, object):
