@@ -38,3 +38,9 @@ class Post(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     published = models.BooleanField(default=True)
     interests = models.ManyToManyField(Interest, blank=True)
+
+    def __str__(self):
+        return self.title
+    class Meta:
+        verbose_name = 'Post'
+        verbose_name_plural = 'Posts'
