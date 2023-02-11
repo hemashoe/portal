@@ -23,13 +23,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
+ 
 load_dotenv(find_dotenv())
 SECRET_KEY = os.environ["SECRET_KEY"]
 SECRET_KEY_FALLBACKS = [os.environ['OLD_SECRET_KEY']]
 
 DEBUG = True
-ALLOWED_HOSTS = ["127.0.0.1", "192.168.192.24"]
+ALLOWED_HOSTS = ["127.0.0.1", "192.168.192.24", "localhost"]
 
 
 ########## DJANGO APPLICATIONS ###########

@@ -2,7 +2,7 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, Permis
 from django.db import models
 import uuid
 
-from app.models import Interest, Skill
+from app.models import *
 
 
 class Profile(models.Model):
@@ -58,3 +58,23 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self) -> str:
         return self.username
+
+
+class Post(models.Model):
+    title = models.CharField(max_length=255, unique=True)
+    description = models.TextField(max_length=255, blank=True)
+    meta_description = models.CharField(max_length=155, blank=True)
+    slug = models.SlugField(max_length=255, unique=True)
+    body = models.TextField(max_length=100000)
+    image_under_title = models.ImageField(upload_to="post/%Y/%M/%d", null=True, blank=True)
+    image_in_post = models.ImageField(upload_to='post/%Y/%M/%d', null=True, blank=True)
+    date_created = models.DateTimeField(auto_now_add=True)
+    published = models.BooleanField(default=True)
+    interests = models.ManyToManyField(Interest, blank=True)
+    author = models.ForeignKey(Profile, on_delete=models.SET_DEFAULT, default='Null', blank=True)
+
+    def __str__(self):
+        return self.title
+    class Meta:
+        verbose_name = 'Post'
+        verbose_name_plural = 'Posts'
