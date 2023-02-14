@@ -26,10 +26,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
  
 load_dotenv(find_dotenv())
 SECRET_KEY = os.environ["SECRET_KEY"]
-SECRET_KEY_FALLBACKS = [os.environ['OLD_SECRET_KEY']]
 
 DEBUG = True
-ALLOWED_HOSTS = ["127.0.0.1", "192.168.192.24", "localhost"]
+ALLOWED_HOSTS = ["192.168.192.24", "localhost"]
 
 
 ########## DJANGO APPLICATIONS ###########
@@ -76,8 +75,8 @@ MIDDLEWARE = [
 ]
 
 INTERNAL_IP = [
-    "127.0.0.1",
     "192.168.192.24",
+    "127.0.0.1",
 ]
 
 ############# JAZZMIN ############
@@ -106,6 +105,8 @@ ASGI_APPLICATION = 'owren.asgi.application'
 #########   DJANGO_CORS_HEADERS ########
 
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = True
+
 CORS_ALLOW_HEADERS = (
     'accept',
     'accept-encoding',
