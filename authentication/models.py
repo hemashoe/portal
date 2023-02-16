@@ -4,6 +4,7 @@ from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager,
                                         PermissionsMixin)
 from django.db import models
 from django.urls import reverse
+from django.template.defaultfilters import slugify
 
 from app.models import *
 from PIL import Image
@@ -91,14 +92,16 @@ class Post(models.Model):
     interests = models.ManyToManyField(Interest, blank=True)
     author = models.ForeignKey(Profile, on_delete=models.SET_DEFAULT, default='Null', blank=True)
 
-    def __str__(self):
-        return self.title
     class Meta:
         verbose_name = 'Post'
         verbose_name_plural = 'Posts'
+        ordering = ['-date_created']
     
+    def __str__(self):
+        return self.title
+
     def get_absolute_url(self):
-        return reverse("profile_detail", args=[str(self.slug)])
+        return reverse("profile_detail;", args=[str(self.slug)])
     
 
 class Comment(models.Model):
@@ -115,14 +118,14 @@ class Comment(models.Model):
         verbose_name_plural = 'Comments'
   
     def __str__(self):
-        return self.title
+        return self.text
     
 
-class Articles(models.Model):
+class News(models.Model):
     title = models.CharField(max_length=255,unique=True)
     description = models.TextField(max_length=255, blank=True)
     body = models.TextField()
-    slyg= models.SlugField(max_length=255, unique=True)
+    slug= models.SlugField(max_length=255, unique=True)
     title_image = models.ImageField(upload_to="articles/%Y/%M/%d", null=True, blank=True)
     image_in_post = models.ImageField(upload_to='articles/%Y/%M/%d', null=True, blank=True)
     second_image = models.ImageField(upload_to='articles/%Y/%M/%d', null=True, blank=True)
@@ -131,3 +134,18 @@ class Articles(models.Model):
     published = models.BooleanField(default=True)
     interests = models.ManyToManyField(Interest, blank=True)
     author = models.ForeignKey(User, on_delete=models.SET_DEFAULT, default='Null', blank=True)
+
+    class Meta:
+        verbose_name = 'Article'
+        verbose_name_plural = 'Articles'
+        ordering = ['-date_created']
+    
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse("article_detail", args=[str(self.slug)])
+    
+    def save(self, *args, **kwargs):
+        self.slug = self.slug or slugify(self.title)
+        super().save(*args, **kwargs)

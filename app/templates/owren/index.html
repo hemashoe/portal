@@ -1,16 +1,37 @@
 {% extends 'owren/base.html' %}
 {% load static %}
 	{% block content %}
+
+	<!------------------------------HEADER----------------------------->
+	<div class="container">
+		<div class="jumbotron jumbotron-fluid mb-3 pt-0 pb-0 bg-lightblue position-relative">
+			<div class="pl-4 pr-0 h-100 tofront">
+				<div class="row justify-content-between">
+					<div class="col-md-6 pt-6 pb-6 align-self-center">
+						<h1 class="secondfont mb-3 font-weight-bold">"Öwren" Jemgiýetine Hoş Geldiňiz</h1>
+						<p class="mb-3">
+							Biziň Jemgiýetimiz diňe ylym-bilim üçin niýetlenendir.
+							Biziň materiallarymyzdan diňe bilim almagyňyza umyt edyaris.
+						</p>
+						<a href="#" class="btn btn-dark">Doly Maglumat</a>
+					</div>
+					<div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({% static 'img/demo/home.jpg' %});">	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!------------- END HEADER ---------->
+	
 	<div class="container pt-4 pb-4">
 		<div class="row">
 			{% if two_posts %}
 				{% for pop_posts  in two_posts %}
 					<div class="col-lg-6">
 						<div class="card border-0 mb-4 box-shadow h-xl-300">              
-							<div style="background-image: url({{ pop_posts.image_under_title.url }}); height: 100vh; background-size: cover;  background-repeat: no-repeat;"></div>               
+							<div style="background-image: url({{ pop_posts.image_under_title.url }}); height: 100vh; background-size: cover;  background-repeat: no-repeat;" href="{% url 'post_detailed' pop_posts.slug %}"></div>               
 							<div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
 								<h2 class="h4 font-weight-bold">
-								<a class="text-dark" href="#">{{ pop_posts.title }}</a>
+								<a class="text-dark" href="{% url 'post_detailed' pop_posts.slug %}">{{ pop_posts.title }}</a>
 								</h2>
 								<p class="card-text">{{ pop_posts.description}}</p>
 								<div>
@@ -26,7 +47,7 @@
 		
 	<div class="container">
 		<div class="row justify-content-between">
-			<div class="col-md-8">
+			<div class="col-md-7">
 				<h5 class="font-weight-bold spanborder"><span>All Stories</span></h5>
 				{% if all_posts %}
 					{% for posts in all_posts %}
@@ -46,30 +67,25 @@
 					{% endfor %}
 				{% endif %}
 			</div>
-			<div class="col-md-4 pl-4">
-				<h5 class="font-weight-bold spanborder"><span>Popular</span></h5>
-				<ol class="list-featured">
-					<li>
-					<span>
-					<h6 class="font-weight-bold">
-					<a href="#" class="text-dark">Did Supernovae Kill Off Large Ocean Animals?</a>
-					</h6>
-					<p class="text-muted">
-						Jake Bittle in SCIENCE
-					</p>
-					</span>
-					</li>
-					<li>
-					<span>
-					<h6 class="font-weight-bold">
-					<a href="#" class="text-dark">Humans Reversing Climate Clock: 50 Million Years</a>
-					</h6>
-					<p class="text-muted">
-						Jake Bittle in SCIENCE
-					</p>
-					</span>
-					</li>
-				</ol>
+			<div class="col-md-5 pl-5">
+				<h5 class="font-weight-bold spanborder"><span>Lastest And Hottest News</span></h5>
+					<ol class="list-featured row">
+						{% if popular_articles %}
+							{% for  articles in popular_articles %}
+								<li class='col-6'>
+									<span>
+										<h6 class="font-weight-bold">
+											<a href="#" class="text-dark">{{ articles.title }}</a>
+										</h6>
+										<p class="text-muted">
+											{{ articles.description }}
+										</p>
+									</span>
+								</li>
+								<img class='col-5' height="200" src="{{ articles.title_image.url }}">
+							{% endfor%}
+						{% endif %}
+					</ol>
 			</div>
 		</div>
 	</div>
