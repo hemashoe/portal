@@ -29,15 +29,25 @@ admin.site.register(Profile, ProfilesAdmin)
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'date_created', 'meta_description', 'get_post_photo', 'published')
-    list_display_links = ('title', 'meta_description')
-    search_fields = ('title', 'meta_description')
+    list_display = ('title', 'slug', 'date_created', 'get_post_photo', 'published')
+    list_display_links = ('title',)
+    search_fields = ('title',)
     prepopulated_fields = {"slug" : ("title",)}
     list_editable = ('published','slug')
-
 
     def get_post_photo(self, object):
         if object.image_under_title:
             return mark_safe(f"<img src='{object.image_under_title.url}' width=50>")
-    
+
+
 admin.site.register(Post, PostAdmin)
+
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('post', 'author', 'created_on','active')
+    list_display_links = ('post', 'author')
+    search_fields = ('title', 'meta_description')
+    list_editable = ('active',)
+
+
+admin.site.register(Comment, CommentAdmin)

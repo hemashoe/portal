@@ -10,6 +10,7 @@ class Skill(models.Model):
     
     def __str__(self):
         return self.name
+
     class Meta:
         verbose_name = 'Skill'
         verbose_name_plural = 'Skills'
@@ -23,6 +24,7 @@ class Interest(models.Model):
 
     def __str__(self):
         return self.name
+        
     class Meta:
         verbose_name = 'Interests'
         verbose_name_plural = 'Interests'

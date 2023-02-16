@@ -58,3 +58,4 @@ JAZZMIN_SETTINGS = {
 JAZZMIIN_UI_TWEAKS = {
     'theme' : 'lux',
 }
+

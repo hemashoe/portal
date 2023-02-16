@@ -7,7 +7,7 @@ from pathlib import Path
 
 from dotenv import find_dotenv, load_dotenv
 
-from .configurations import *
+from .configurations import JAZZMIIN_UI_TWEAKS, JAZZMIN_SETTINGS
 
 ROOT_URLCONF = 'owren.urls'
 AUTH_USER_MODEL = 'authentication.User'
@@ -21,63 +21,59 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
- 
+
 load_dotenv(find_dotenv())
 SECRET_KEY = os.environ["SECRET_KEY"]
 
 DEBUG = True
-ALLOWED_HOSTS = ["192.168.192.24", "localhost"]
+ALLOWED_HOSTS = ["192.168.192.24", "localhost", '127.0.0.1']
 
 
 ########## DJANGO APPLICATIONS ###########
 INSTALLED_APPS = [
-    ###libraries
+    "debug_toolbar",
     'corsheaders',
-    'debug_toolbar',
-    'django_extensions',
-    'rest_framework',
     'jazzmin',
+    'ckeditor',
+    # 'django_forest',
 
-    ###apps
     'authentication',
-    'api',
     'app',
 
-    ###default
+    'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
 ]
 
 ############ MIDDLEWARES AND OTHERS ################
 
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
-}
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
-INTERNAL_IP = [
+INTERNAL_IPS = [
     "192.168.192.24",
     "127.0.0.1",
 ]
+
+# FOREST = {
+#    'FOREST_URL': 'https://api.forestadmin.com',
+#    'FOREST_ENV_SECRET': 'c899df12612120ba8647bf09e483a8771d80eb7ee663843d6825a7b3620e5acf',
+#    'FOREST_AUTH_SECRET': '936a96e338bb7c4a7695c6b8271f5ba7c37f954edf287062'
+# }
+# APPEND_SLASH=False
 
 ############# JAZZMIN ############
 JAZZMIN_SETTINGS = JAZZMIN_SETTINGS
