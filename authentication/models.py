@@ -102,8 +102,12 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse("profile_detail;", args=[str(self.slug)])
-    
 
+    def save(self, *args, **kwargs):
+        self.slug = self.slug or slugify(self.title)
+        super().save(*args, **kwargs)
+
+    
 class Comment(models.Model):
     post = models.ForeignKey(Post,on_delete=models.CASCADE,related_name='comments')
     author = models.ForeignKey(Profile,on_delete=models.CASCADE)

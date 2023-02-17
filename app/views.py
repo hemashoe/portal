@@ -1,10 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.views.decorators.cache import cache_page
 
 from authentication.models import Post, News
+from owren.settings import CACHE_TTL
 
-
+@cache_page(CACHE_TTL)
 def homepage(request):
     two_popular_posts = Post.objects.filter(published=True).order_by("-date_created")[:2]
     all_posts = Post.objects.filter(published=True).order_by("-date_created")[2:]
@@ -25,13 +27,14 @@ def homepage(request):
 
     context_for_homepage = {
         'two_posts' : two_popular_posts,
-        'all_posts' : post_list,
+        'all_posts' : post_list, 
         'popular_articles' : popular_articles,
     }
 
     return render(request, 'owren/index.html', context_for_homepage)
 
 
+@cache_page(CACHE_TTL)
 def post_detailed(request, slug_id):
     post = get_object_or_404(Post, slug=slug_id)
 
@@ -41,6 +44,7 @@ def post_detailed(request, slug_id):
 
     return render(request, 'owren/post_detailed.html', context_for_postdetailed)
 
+@cache_page(CACHE_TTL)
 def news_detailed(request, slug_id):
     news = get_object_or_404(News, slug=slug_id)
     

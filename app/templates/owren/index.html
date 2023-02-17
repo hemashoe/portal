@@ -21,14 +21,14 @@
 		</div>
 	</div>
 	<!------------- END HEADER ---------->
-	
+
 	<div class="container pt-4 pb-4">
 		<div class="row">
 			{% if two_posts %}
 				{% for pop_posts  in two_posts %}
 					<div class="col-lg-6">
 						<div class="card border-0 mb-4 box-shadow h-xl-300">              
-							<div style="background-image: url({{ pop_posts.image_under_title.url }}); height: 100vh; background-size: cover;  background-repeat: no-repeat;" href="{% url 'post_detailed' pop_posts.slug %}"></div>               
+							<div style="background-image: url({{ pop_posts.image_under_title.url }}); height: 100vh; background-size: cover;  background-repeat: no-repeat;"></div>               
 							<div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
 								<h2 class="h4 font-weight-bold">
 								<a class="text-dark" href="{% url 'post_detailed' pop_posts.slug %}">{{ pop_posts.title }}</a>
@@ -82,7 +82,7 @@
 										</p>
 									</span>
 								</li>
-								<img class='col-5' height="200" src="{{ articles.title_image.url }}">
+								<img class='col-5' height="150" src="{{ articles.title_image.url }}">
 							{% endfor%}
 						{% endif %}
 					</ol>

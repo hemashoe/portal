@@ -56,7 +56,9 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -132,7 +134,7 @@ CORS_ALLOW_METHODS = [
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "192.168.192.24:6379",
+        "LOCATION": "redis://192.168.192.24:6379",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient"
         },
@@ -140,7 +142,7 @@ CACHES = {
     }
 }
 
-CACHE_TTL = 60 * 15
+CACHE_TTL = 60 * 30
 
 ######### DJANGO DATABASE  ############
 

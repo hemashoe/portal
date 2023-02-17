@@ -1,4 +1,5 @@
 import uuid
+from django.template.defaultfilters import slugify
 
 from django.db import models
 
@@ -15,6 +16,10 @@ class Skill(models.Model):
         verbose_name = 'Skill'
         verbose_name_plural = 'Skills'
 
+    def save(self, *args, **kwargs):
+        self.slug = self.slug or slugify(self.name)
+        super().save(*args, **kwargs)
+
 
 class Interest(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True, unique=True)
@@ -28,3 +33,7 @@ class Interest(models.Model):
     class Meta:
         verbose_name = 'Interests'
         verbose_name_plural = 'Interests'
+
+    def save(self, *args, **kwargs):
+        self.slug = self.slug or slugify(self.name)
+        super().save(*args, **kwargs)
