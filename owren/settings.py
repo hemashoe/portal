@@ -7,7 +7,7 @@ from pathlib import Path
 
 from dotenv import find_dotenv, load_dotenv
 
-from .configurations import JAZZMIIN_UI_TWEAKS, JAZZMIN_SETTINGS
+from .configurations import JAZZMIIN_UI_TWEAKS, JAZZMIN_SETTINGS, CKEDITOR_CONFIGS
 
 ROOT_URLCONF = 'owren.urls'
 AUTH_USER_MODEL = 'authentication.User'
@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'jazzmin',
     'ckeditor',
-    # 'django_forest',
+    'ckeditor_uploader',
 
     'authentication',
     'app',
@@ -69,13 +69,12 @@ INTERNAL_IPS = [
     "192.168.192.24",
     "127.0.0.1",
 ]
+####### CK EDITOR ########
 
-# FOREST = {
-#    'FOREST_URL': 'https://api.forestadmin.com',
-#    'FOREST_ENV_SECRET': 'c899df12612120ba8647bf09e483a8771d80eb7ee663843d6825a7b3620e5acf',
-#    'FOREST_AUTH_SECRET': '936a96e338bb7c4a7695c6b8271f5ba7c37f954edf287062'
-# }
-# APPEND_SLASH=False
+CKEDITOR_UPLOAD_PATH="uploads/"
+CKEDITOR_FILENAME_GENERATOR = 'app.utils.get_filename'
+CKEDITOR_CONFIGS = CKEDITOR_CONFIGS
+CKEDITOR_IMAGE_BACKEND = "pillow"
 
 ############# JAZZMIN ############
 JAZZMIN_SETTINGS = JAZZMIN_SETTINGS
@@ -131,18 +130,18 @@ CORS_ALLOW_METHODS = [
 
 ######### CACHE SYSTEM ###########################
 
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://192.168.192.24:6379",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient"
-        },
-        "KEY_PREFIX": "example"
-    }
-}
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django_redis.cache.RedisCache",
+#         "LOCATION": "redis://192.168.192.24:6379",
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient"
+#         },
+#         "KEY_PREFIX": "example"
+#     }
+# }
 
-CACHE_TTL = 60 * 30
+# CACHE_TTL = 60 * 30
 
 ######### DJANGO DATABASE  ############
 

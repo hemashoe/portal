@@ -1,7 +1,8 @@
 import uuid
-from django.template.defaultfilters import slugify
 
 from django.db import models
+from django.template.defaultfilters import slugify
+
 
 class Skill(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True, unique=True)

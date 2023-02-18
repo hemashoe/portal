@@ -1,13 +1,15 @@
 import uuid
 
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager,
                                         PermissionsMixin)
 from django.db import models
-from django.urls import reverse
 from django.template.defaultfilters import slugify
+from django.urls import reverse
+from PIL import Image
 
 from app.models import *
-from PIL import Image
+
 
 class UserManager(BaseUserManager):
     def create_user(self, username, password=None):
@@ -81,12 +83,13 @@ class Profile(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=255, unique=True)
-    description = models.TextField(max_length=255, blank=True)
+    description = models.TextField()
     slug = models.SlugField(max_length=255, unique=True)
-    body = models.TextField(max_length=100000)
+    body = RichTextUploadingField()
     image_under_title = models.ImageField(upload_to="post/%Y/%M/%d", null=True, blank=True)
     image_in_post = models.ImageField(upload_to='post/%Y/%M/%d', null=True, blank=True)
     second_image = models.ImageField(upload_to='post/%Y/%M/%d', null=True, blank=True)
+    third_image = models.ImageField(upload_to='articles/%Y/%M/%d', null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
     published = models.BooleanField(default=True)
     interests = models.ManyToManyField(Interest, blank=True)
@@ -112,7 +115,7 @@ class Comment(models.Model):
     post = models.ForeignKey(Post,on_delete=models.CASCADE,related_name='comments')
     author = models.ForeignKey(Profile,on_delete=models.CASCADE)
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=True)
-    text = models.TextField()
+    text = RichTextUploadingField()
     created_on = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=True)
 
@@ -127,13 +130,12 @@ class Comment(models.Model):
 
 class News(models.Model):
     title = models.CharField(max_length=255,unique=True)
-    description = models.TextField(max_length=255, blank=True)
-    body = models.TextField()
+    description = models.TextField(max_length=555, blank=True)
+    body = RichTextUploadingField()
     slug= models.SlugField(max_length=255, unique=True)
     title_image = models.ImageField(upload_to="articles/%Y/%M/%d", null=True, blank=True)
     image_in_post = models.ImageField(upload_to='articles/%Y/%M/%d', null=True, blank=True)
     second_image = models.ImageField(upload_to='articles/%Y/%M/%d', null=True, blank=True)
-    third_image = models.ImageField(upload_to='articles/%Y/%M/%d', null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
     published = models.BooleanField(default=True)
     interests = models.ManyToManyField(Interest, blank=True)

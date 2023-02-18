@@ -22,20 +22,25 @@
 	</div>
 	<!------------- END HEADER ---------->
 
-	<div class="container pt-4 pb-4">
+	<div class="container pt-8 pb-8">
 		<div class="row">
 			{% if two_posts %}
-				{% for pop_posts  in two_posts %}
+				{% for pop_posts in two_posts %}
 					<div class="col-lg-6">
-						<div class="card border-0 mb-4 box-shadow h-xl-300">              
-							<div style="background-image: url({{ pop_posts.image_under_title.url }}); height: 100vh; background-size: cover;  background-repeat: no-repeat;"></div>               
+						<div class="card border-0 mb-4 box-shadow h-xl-300">
+							{% if pop_posts.image_under_title.url %}        
+								<div style="background-image: url({{ pop_posts.image_under_title.url }}); height: 100vh; background-size: cover;  background-repeat: no-repeat;"></div>               
+							{% else %}
+								<div style="background-image: url({% static 'img/demo/3.jpg'%}); height: 100vh; background-size: cover;  background-repeat: no-repeat;"></div>
+							{% endif %}
 							<div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
 								<h2 class="h4 font-weight-bold">
 								<a class="text-dark" href="{% url 'post_detailed' pop_posts.slug %}">{{ pop_posts.title }}</a>
 								</h2>
 								<p class="card-text">{{ pop_posts.description}}</p>
 								<div>
-									<small class="d-block"><a class="text-muted" href="./author.html">{{ pop_posts.author }}. {{pop_posts.date_created}}</a></small>
+									<small class="d-block"><a class="text-muted" href="{% url 'profile_detailed' pop_posts.author %}">{{ pop_posts.author }}.</a></small>
+									<small> {{pop_posts.date_created |date:"d.m.y H:i"}}</small>
 								</div>
 							</div>
 						</div>
@@ -43,46 +48,59 @@
 				{% endfor %}
 			{% endif %}
 		</div>
-	</div>
-		
+	</div>	
+    <!-- ################################# -->
 	<div class="container">
 		<div class="row justify-content-between">
-			<div class="col-md-7">
-				<h5 class="font-weight-bold spanborder"><span>All Stories</span></h5>
+			<div class="col-md-6">
+				<h5 class="font-weight-bold spanborder"><span>Gyzykly Postlar</span></h5>
 				{% if all_posts %}
 					{% for posts in all_posts %}
 						<div class="mb-3 d-flex justify-content-between">
 							<div class="pr-3">
 								<h2 class="mb-1 h4 font-weight-bold">
-								<a class="text-dark" href="">{{ posts.title}}</a>
+									<a class="text-dark" href="{% url 'post_detailed' posts.slug %}">{{ posts.title}}</a>
 								</h2>
-								<p>
-									{{ posts.description}}
-								</p>
+								<p>{{ posts.description}}</p>
 								<div class="card-text text-muted small">
-								<small class="text-muted">{{ posts.date_created }}</small>  {{ posts.author}}</div>
+									<a href="{% url 'post_detailed' posts.author %}" class="text-muted">{{ posts.author }}</a>
+								</div>
+								<small class="text-muted">{{ posts.date_created |date:"d.m.y H:i" }}</small>
 							</div>
-							<img height="200" src="{{ posts.image_under_title.url }}">
+							{% if posts.image_under_title.url %}
+								<img height="200px" width='200px' src="{{ posts.image_under_title.url }}">
+							{% else %}
+								<img height="200px" width='200px' src="{% static 'img/demo/5.jpg' %}">
+							{% endif %}
 						</div>
 					{% endfor %}
 				{% endif %}
 			</div>
-			<div class="col-md-5 pl-5">
-				<h5 class="font-weight-bold spanborder"><span>Lastest And Hottest News</span></h5>
+			<div class="col-md-6 pl-4">
+				<h5 class="font-weight-bold spanborder"><span>Soňky Täzelikler</span></h5>
 					<ol class="list-featured row">
 						{% if popular_articles %}
 							{% for  articles in popular_articles %}
-								<li class='col-6'>
+								<li class='col-7'>
 									<span>
 										<h6 class="font-weight-bold">
-											<a href="#" class="text-dark">{{ articles.title }}</a>
+											<a href="{% url 'news_detailed' articles.slug %}" class="text-dark">{{ articles.title }}</a>
 										</h6>
 										<p class="text-muted">
 											{{ articles.description }}
 										</p>
+										<div class="card-text text-muted small">
+										<small class="text-muted">{{ articles.date_created |date:"d.m.y H:i" }}</small>
+										<a href="{% url 'news_detailed' articles.author %}" class="text-muted">{{ articles.author }}</a>
+										</div>
+										<br>
 									</span>
 								</li>
-								<img class='col-5' height="150" src="{{ articles.title_image.url }}">
+								{%  if articles.title_image.url %}
+									<img class='col-5' height="200px" width="200px" src="{{ articles.title_image.url }}">
+								{% else %}
+									<img class='col-5' height="200px" width="200px" src="{% static 'img/demo/blog4.jpg'%}">
+								{% endif %}
 							{% endfor%}
 						{% endif %}
 					</ol>
