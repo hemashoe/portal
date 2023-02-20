@@ -1,16 +1,15 @@
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.shortcuts import get_object_or_404, render
-from django.views import generic
 from django.views.decorators.cache import cache_page
 
-from datetime import datetime, timedelta
-
 from authentication.models import News, Post, Profile, User
+from .models import Interest
 
 # from owren.settings import CACHE_TTL
 
 # @cache_page(CACHE_TTL)
 def homepage(request):
+    navbar_items = Interest.objects.all()
     two_popular_posts = Post.objects.filter(published=True).order_by("-date_created")[:2]
     all_posts = Post.objects.filter(published=True).order_by("-date_created")[2:]
     popular_articles = News.objects.filter(published=True).order_by("-date_created")[:10]
@@ -29,6 +28,7 @@ def homepage(request):
         post_list = paginator.page(paginator.num_pages)
 
     context_for_homepage = {
+        'navbar_items' : navbar_items,
         'two_posts' : two_popular_posts,
         'all_posts' : post_list, 
         'popular_articles' : popular_articles,
@@ -39,42 +39,68 @@ def homepage(request):
 
 # @cache_page(CACHE_TTL)
 def post_detailed(request, slug_id):
+    navbar_items = Interest.objects.all()
     post = get_object_or_404(Post, slug=slug_id)
-    authour_info = Profile.objects.get(user=post.author)
     similar_posts = Post.objects.exclude(title=post.title).order_by('-date_created')[:3]
     from_author = Post.objects.filter(author = post.author).exclude(title=post.title).last()
     
     context_for_postdetailed = {
+        'navbar_items' : navbar_items,
         "post" : post,
-        'author' : authour_info,
         "similar_posts" : similar_posts,
         "from_author" : from_author,
     }
 
     return render(request, 'owren/post_detailed.html', context_for_postdetailed)
 
-def profile_detailed(request, username):
-    user = get_object_or_404(Profile, user=username)
-    
-    context_for_profiledetailed = {
-        "user" : user,
-    }
-
-    return render(request, 'owren/profile_detailed.html', context_for_profiledetailed)
-
-
 # @cache_page(CACHE_TTL)
 def news_detailed(request, slug_id):
+    navbar_items = Interest.objects.all()
     news = get_object_or_404(News, slug=slug_id)
-    author_info = User.objects.get(username=news.author)
+    similar_news = News.objects.exclude(title=news.title).order_by('-date_created')[:3]
+    from_author = News.objects.filter(author = news.author).exclude(title=news.title).last()
     
     context_for_newsdetailed = { 
+        'navbar_items' : navbar_items,
         "news" : news,
-        "author" : author_info, 
+        "similar_news" : similar_news,
+        "from_author" : from_author,
     }
     
     return render(request, 'owren/news_detailed.html', context_for_newsdetailed)
 
+def profile_detailed(request, username):
+    navbar_items = Interest.objects.all()
+    user = get_object_or_404(Profile, user=username)
+    posts_from_user = Post.objects.filter(author=user).order_by('-date_created')
+    
+    context_for_profiledetailed = {
+        'navbar_items' : navbar_items,
+        "user" : user,
+        "posts_from_user" : posts_from_user,
+    }
+
+    return render(request, 'owren/profile_detailed.html', context_for_profiledetailed)
+
+def category_detailed(requiest, slug_id):
+    navbar_items = Interest.objects.all()
+    category = Interest.objects.get(slug=slug_id)
+    posts_from_category = Post.objects.filter(interests=category.id).order_by('-date_created')
+
+    context_for_category_detailed = {
+        'navbar_items' : navbar_items,
+        "category" : category,
+        "posts_from_category" : posts_from_category,
+    }
+    
+    return render(requiest, 'owren/category.html', context_for_category_detailed)
+
 
 def about(request):
+    navbar_items = Interest.objects.all()
+
+    context_for_about = {
+        'navbar_items' : navbar_items,
+    }
+
     return render(request, 'owren/about.html')

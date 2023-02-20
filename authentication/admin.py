@@ -36,8 +36,8 @@ class PostAdmin(admin.ModelAdmin):
     list_editable = ('published','slug')
 
     def get_post_photo(self, object):
-        if object.image_under_title:
-            return mark_safe(f"<img src='{object.image_under_title.url}' width=50>")
+        if object.title_image:
+            return mark_safe(f"<img src='{object.title_image.url}' width=50>")
 
 
 admin.site.register(Post, PostAdmin)

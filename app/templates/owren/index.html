@@ -28,8 +28,8 @@
 				{% for pop_posts in two_posts %}
 					<div class="col-lg-6">
 						<div class="card border-0 mb-4 box-shadow h-xl-300">
-							{% if pop_posts.image_under_title.url %}        
-								<div style="background-image: url({{ pop_posts.image_under_title.url }}); height: 100vh; background-size: cover;  background-repeat: no-repeat;"></div>               
+							{% if pop_posts.title_image.url %}        
+								<div style="background-image: url({{ pop_posts.title_image.url }}); height: 100vh; background-size: cover;  background-repeat: no-repeat;"></div>               
 							{% else %}
 								<div style="background-image: url({% static 'img/demo/3.jpg'%}); height: 100vh; background-size: cover;  background-repeat: no-repeat;"></div>
 							{% endif %}
@@ -67,8 +67,8 @@
 								</div>
 								<small class="text-muted">{{ posts.date_created |date:"d.m.y H:i" }}</small>
 							</div>
-							{% if posts.image_under_title.url %}
-								<img height="200px" width='200px' src="{{ posts.image_under_title.url }}">
+							{% if posts.title_image.url %}
+								<img height="200px" width='200px' src="{{ posts.title_image.url }}">
 							{% else %}
 								<img height="200px" width='200px' src="{% static 'img/demo/5.jpg' %}">
 							{% endif %}

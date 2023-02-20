@@ -28,23 +28,13 @@
 		</button>
 		<div class="navbar-collapse collapse" id="navbarColor02">
 			<ul class="navbar-nav mr-auto d-flex align-items-center">
+				{% for items in navbar_items %}
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'category_detailed' items.slug %}">{{items.name}}</a>
+					</li>
+				{% endfor %}
 				<li class="nav-item">
-				<a class="nav-link" href="./article.html">IT</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="./article.html">Fizika We Astronomiýa</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="./article.html">Medeniýet</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="./article.html">Saglyk</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="./article.html">Maslahatlar</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="./about.html">Biz Barada</a>
+					<a class="nav-link" href="{% url 'about' %}">Biz Barada</a>
 				</li>
 			</ul>
 			<ul class="navbar-nav ml-auto d-flex align-items-center">
