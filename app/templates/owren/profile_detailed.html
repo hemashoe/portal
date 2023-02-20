@@ -1,0 +1,33 @@
+{% extends 'owren/base.html' %}
+{% load static %}
+{% block content %}
+
+<nav id="toc" class="fixedsidebar d-none d-lg-block">   
+    <h5 class="mt-4 mb-4 pt-1"><a class="text-dark navbar-brand" href="./index.html"><strong>Mundana</strong> Theme</a></h5>
+    <a target="_blank" href="https://www.buymeacoffee.com/sal" class="btn btn-secondary mb-4 btn-sm btn-round"><i class="fas fa-coffee mr-1"></i> Buy me a coffee</a>
+</nav>
+  
+<nav class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+        <a class="navbar-brand d-lg-none" href="./index.html"><i class="fas fa-anchor mr-2"></i><strong>Mundana</strong></a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="navbar-collapse collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto d-flex align-items-center">
+                <li class="nav-item">
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto d-flex align-items-center">			
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid mb-3 pb-0 bg-white position-relative">
+	<div class="row align-items-center justify-content-center text-center">
+		<div class="col-md-10">
+			<h1 class="display-3 text-dark">Documentation</h1>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
