@@ -1,22 +1,41 @@
 {% extends 'owren/base.html' %}
 {% load static %}
 	{% block content %}
+	<title>{{category.name}}</title>
+	<div class="container">
+		<div class="jumbotron jumbotron-fluid mb-3 pt-0 pb-0 bg-lightblue position-relative">
+			<div class="pl-4 pr-0 h-100 tofront">
+				<div class="row justify-content-between">
+					<div class="col-md-6 pt-6 pb-6 align-self-center">
+						<h1 class="secondfont mb-3 font-weight-bold">"Öwren" Jemgiýetine Hoş Geldiňiz!</h1>
+						<p class="mb-3">
+							Biziň Jemgiýetimiz diňe ylym-bilim üçin niýetlenendir.
+							Biziň materiallarymyzdan diňe bilim almagyňyza umyt edyaris.
+						</p>
+						<a href="#" class="btn btn-dark">Doly Maglumat</a>
+					</div>
+					<div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({% static 'img/home.jpg' %});">	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="container mt-5 mb-5">
 		<div class="row">
 			<div class="col-md-8">
-				<h5 class="font-weight-bold spanborder"><span>Featured in Science</span></h5>
+				<h5 class="font-weight-bold spanborder"><span>Postlar we Habarlar</span></h5>
 				<div class="card border-0 mb-5 box-shadow">
-					<div style="background-image: url(./assets/img/demo/1.jpg); height: 350px; background-size: cover; background-repeat: no-repeat;">
+					<div style="background-image: url({% static 'img/1.jpg' %}); height: 350px; background-size: cover; background-repeat: no-repeat;">
 					</div>
 					<div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
 						<h2 class="h2 font-weight-bold">
-						<a class="text-dark" href="./article.html">Brain Stimulation Relieves Depression Symptoms</a>
+						<a class="text-dark" href="#">Brain Stimulation Relieves Depression Symptoms</a>
 						</h2>
 						<p class="card-text">
 							Researchers have found an effective target in the brain for electrical stimulation to improve mood in people suffering from depression.
 						</p>
 						<div>
-							<small class="d-block"><a class="text-muted" href="./author.html">Favid Rick</a></small>
+							<small class="d-block"><a class="text-muted" href="#">Favid Rick</a></small>
 							<small class="text-muted">Dec 12 · 5 min read</small>
 						</div>
 					</div>
@@ -25,7 +44,7 @@
 				<div class="mb-3 d-flex justify-content-between">
 					<div class="pr-3">
 						<h2 class="mb-1 h4 font-weight-bold">
-						<a class="text-dark" href="./article.html">Nearly 200 Great Barrier Reef coral species also live in the deep sea</a>
+						<a class="text-dark" href="">Nearly 200 Great Barrier Reef coral species also live in the deep sea</a>
 						</h2>
 						<p>
 							There are more coral species lurking in the deep ocean that previously thought.
@@ -35,12 +54,12 @@
 						</div>
 						<small class="text-muted">Dec 12 · 5 min read</small>
 					</div>
-					<img height="120" src="./assets/img/demo/blog8.jpg">
+					<img height="120" src="{% static 'img/blog8.jpg' %}">
 				</div>
 				<div class="mb-3 d-flex justify-content-between">
 					<div class="pr-3">
 						<h2 class="mb-1 h4 font-weight-bold">
-						<a class="text-dark" href="./article.html">East Antarctica's glaciers are stirring</a>
+						<a class="text-dark" href="#">East Antarctica's glaciers are stirring</a>
 						</h2>
 						<p>
 							Nasa says it has detected the first signs of significant melting in a swathe of glaciers in East Antarctica.
@@ -50,12 +69,12 @@
 						</div>
 						<small class="text-muted">Dec 12 · 5 min read</small>
 					</div>
-					<img height="120" src="./assets/img/demo/1.jpg">
+					<img height="120" src="{% static 'img/1.jpg' %}">
 				</div>
 				<div class="mb-3 d-flex justify-content-between">
 					<div class="pr-3">
 						<h2 class="mb-1 h4 font-weight-bold">
-						<a class="text-dark" href="./article.html">50 years ago, armadillos hinted that DNA wasn’t destiny</a>
+						<a class="text-dark" href="#">50 years ago, armadillos hinted that DNA wasn’t destiny</a>
 						</h2>
 						<p>
 							Nasa says it has detected the first signs of significant melting in a swathe of glaciers in East Antarctica.
@@ -65,7 +84,7 @@
 						</div>
 						<small class="text-muted">Dec 12 · 5 min read</small>
 					</div>
-					<img height="120" src="./assets/img/demo/5.jpg">
+					<img height="120" src="{% static 'img/5.jpg' %}">
 				</div>
 			</div>
 			<div class="col-md-4 pl-4">
@@ -75,7 +94,7 @@
 						<li>
 						<span>
 						<h6 class="font-weight-bold">
-						<a href="./article.html" class="text-dark">Did Supernovae Kill Off Large Ocean Animals?</a>
+						<a href="#" class="text-dark">Did Supernovae Kill Off Large Ocean Animals?</a>
 						</h6>
 						<p class="text-muted">
 							Jake Bittle in SCIENCE
@@ -85,7 +104,7 @@
 						<li>
 						<span>
 						<h6 class="font-weight-bold">
-						<a href="./article.html" class="text-dark">Humans Reversing Climate Clock: 50 Million Years</a>
+						<a href="#" class="text-dark">Humans Reversing Climate Clock: 50 Million Years</a>
 						</h6>
 						<p class="text-muted">
 							Jake Bittle in SCIENCE
@@ -95,17 +114,7 @@
 						<li>
 						<span>
 						<h6 class="font-weight-bold">
-						<a href="./article.html" class="text-dark">Unprecedented Views of the Birth of Planets</a>
-						</h6>
-						<p class="text-muted">
-							Jake Bittle in SCIENCE
-						</p>
-						</span>
-						</li>
-						<li>
-						<span>
-						<h6 class="font-weight-bold">
-						<a href="./article.html" class="text-dark">Effective New Target for Mood-Boosting Brain Stimulation Found</a>
+						<a href="#" class="text-dark">Unprecedented Views of the Birth of Planets</a>
 						</h6>
 						<p class="text-muted">
 							Jake Bittle in SCIENCE

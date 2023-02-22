@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 
     'authentication',
     'app',
+    'api',
 
     'django.contrib.staticfiles',
     'django.contrib.admin',
@@ -97,36 +98,35 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'owren.wsgi.application'
-ASGI_APPLICATION = 'owren.asgi.application'
 
 #########   DJANGO_CORS_HEADERS ########
 
-CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOW_CREDENTIALS = True
+# CORS_ALLOW_ALL_ORIGINS = True
 
-CORS_ALLOW_HEADERS = (
-    'accept',
-    'accept-encoding',
-    'authorization',
-    'content-type',
-    'dnt',
-    'origin',
-    'user-agent',
-    'x-csrftoken',
-    'x-requested-with',
-    'x-csrf-token',
-    'cip',
-    'isajaxrequest',
-)
+# CORS_ALLOW_HEADERS = (
+#     'accept',
+#     'accept-encoding',
+#     'authorization',
+#     'content-type',
+#     'dnt',
+#     'origin',
+#     'user-agent',
+#     'x-csrftoken',
+#     'x-requested-with',
+#     'x-csrf-token',
+#     'cip',
+#     'isajaxrequest',
+# )
 
-CORS_ALLOW_METHODS = [
-    'DELETE',
-    'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
-]   
+# CORS_ALLOW_METHODS = [
+#     'DELETE',
+#     'GET',
+#     'OPTIONS',
+#     'PATCH',
+#     'POST',
+#     'PUT',
+# ]   
 
 ######### CACHE SYSTEM ###########################
 
@@ -148,7 +148,7 @@ CORS_ALLOW_METHODS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'blog',
+        'NAME': 'owren',
         'USER': 'root',
         'PASSWORD': 'P@ssw0rd',
         'HOST': 'localhost',
@@ -156,8 +156,8 @@ DATABASES = {
     }
 }
 
-FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760
-DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760
+# FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760
+# DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760
 
 ############ PASSWORD VALIDATION ###########
 

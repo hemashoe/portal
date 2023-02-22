@@ -9,6 +9,8 @@ class Skill(models.Model):
     slug = models.SlugField(blank=True,null=True)
     description = models.CharField(null=True, blank=True, max_length=255)
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=True)
+    photo = models.ImageField(upload_to='skills/', blank=True, null=True)
+    wallpaper = models.ImageField(upload_to='skills/', blank=True, null=True)
     
     def __str__(self):
         return self.name
@@ -27,6 +29,8 @@ class Interest(models.Model):
     slug = models.SlugField(blank=True,null=True)
     description = models.CharField(max_length=255,blank=True,null=False)
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=True)
+    photo = models.ImageField(upload_to='interests/', blank=True, null=True)
+    wallpaper = models.ImageField(upload_to='interests/', blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -38,3 +42,4 @@ class Interest(models.Model):
     def save(self, *args, **kwargs):
         self.slug = self.slug or slugify(self.name)
         super().save(*args, **kwargs)
+    

@@ -1,7 +1,7 @@
 {% extends 'owren/base.html' %}
 {% load static %}
 {% block content %}
-		<!------------------------------HEADER----------------------------->
+	<title>{{post.title}}</title>
 		<div class="container">
 			<div class="jumbotron jumbotron-fluid mb-3 pt-0 pb-0 bg-lightblue position-relative">
 				<div class="pl-4 pr-0 h-100 tofront">
@@ -14,42 +14,38 @@
 							</p>
 							<a href="#" class="btn btn-dark">Doly Maglumat</a>
 						</div>
-						<div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({% static 'img/demo/home.jpg' %});">	</div>
+						<div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({% static 'img/home.jpg' %});">	</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!------------- END HEADER ---------->
-		<!--------------------------------------HEADER--------------------------------------->
+
 		<div class="container">
 			<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
 				<div class="h-100 tofront">
-					<div class="row justify-content-between">
+					<div class="row justify-content-between align-items">
 						<div class="col-md-6 pt-6 pb-6 pr-6 align-self-center">
 							<p class="text-uppercase font-weight-bold">
-								<a class="text-danger" href="#">Stories</a>
+								<a class="text-danger" href="#">Postlar</a>
 							</p>
 							<h1 class="display-4 secondfont mb-3 font-weight-bold">{{post.title}}</h1>
 							<p class="mb-3">
 								{{post.description}}
 							</p>
 							<div class="d-flex align-items-center">
-								<img class="rounded-circle" src="{% static 'img/demo/home.jpg' %}" width="75px" height="75px">
-								<a href="{% url 'profile_detailed' post.author %}" class="ml-3 h4">{{ post.author}}</a>
+								<img class="rounded-circle" src="{% static 'img/home.jpg' %}" width="50px" height="50px">
+								<a href="{% url 'profile_detailed' post.author %}" class="ml-3 h5">{{ post.author}}</a>
 							</div>
 						</div>
-						<div class="col-md-6 pt-2 pb-2 pr-8 align-items-center">
-							<img height="600vh" src="{{ post.title_image.url }}">
+						<div class="col-md-6 pt-6 pb-6 pr-6 justify-content-between">
+							<img style='height: 70vh; width:90vw;' src="{{ post.title_image.url }}">
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- End Header -->
-			
-		<!--------------------------------------
-		MAIN
-		--------------------------------------->
+
+
 		<div class="container pt-4 pb-4">
 			<div class="justify-content-center">
 				<article class="article-post">
@@ -85,44 +81,42 @@
 			<h5 class="font-weight-bold spanborder"><span>Meňzeş Postlar</span></h5>
 			<div class="row">
 				{% if from_author %}
-					<div class="col-lg-6">
+				<div class="col-lg-5">
 						<div class="card border-0 mb-4 box-shadow h-xl-300">
 							{% if from_author.title_image.url %}
-								<div style="background-image: url({{ from_author.title_image.url }}); height: 150px; background-size: cover; background-repeat: no-repeat;"></div>
-							{% else %}
-								<div style="background-image: url({% static 'img/3.jpg' %}); height: 150px; background-size: cover; background-repeat: no-repeat;"></div>
+								<div style="background-image: url({{ from_author.title_image.url }}); height: 75vh; background-size: cover; background-repeat: no-repeat;"></div>
 							{% endif %}
 							<div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
 								<h2 class="h4 font-weight-bold">
 								<a class="text-dark" href="{% url 'post_detailed' from_author.slug %}">{{ from_author.title }}</a>
 								</h2>
 								<p class="card-text"> 
-									{{ from_author.description }}
+									{{ from_author.description | linebreaks | truncatewords:30 }}
 								</p>
 								<div>
-									<small class="d-block"><a class="text-muted" href="./author.html">{{ from_author.author }}</a></small>
+									<small class="d-block"><a class="text-muted" href="">{{ from_author.author }}</a></small>
 									<small class="text-muted">{{ from_author.date_created |date:"d.m.y H:i" }}</small>
 								</div>
 							</div>
 						</div>
-					</div>
+				</div>
 				{% endif %}
-				<div class="col-lg-6">
+				<div class="col-lg-7">
 					<div class="flex-md-row mb-4 box-shadow h-xl-300">
-						{% if similar_posts %}
+					{% if similar_posts %}
 						{% for similar_posts in similar_posts %}	
 						<div class="mb-3 d-flex align-items-center">
-								{% if similar_posts.image_unser_title.url%}
-									<img height="80" src="{{ similar_posts.title_image.url }}">
-								{% else %}
-									<img height="80" src="{% static 'img/demo/3.jpg' %}">
-								{% endif %}	
-								<div class="pl-3">
+								<div class="pl-4">
+									{% if similar_posts.title_image.url%}
+										<img style="height: 160px; width: 500px;" src="{{ similar_posts.title_image.url }}">
+									{% endif %}	
+								</div>
+								<div class="pl-4">
 									<h2 class="mb-2 h6 font-weight-bold">
 									<a class="text-dark" href="{% url 'post_detailed' similar_posts.slug %}">{{ similar_posts.title }}</a>
 									</h2>
 									<div class="card-text text-muted small">
-										{{ similar_posts.description }}
+										{{ similar_posts.description | linebreaks | truncatewords:20 }}
 									</div>
 									<small class="text-muted">{{ similar_posts.date_created |date:"d.m.y H:i" }}</small>
 								</div>
@@ -132,5 +126,5 @@
 				</div>
 			</div>
 		</div>
-		<!-- End Main -->
+
 {% endblock content %}

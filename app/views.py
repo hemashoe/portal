@@ -2,7 +2,7 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.shortcuts import get_object_or_404, render
 from django.views.decorators.cache import cache_page
 
-from authentication.models import News, Post, Profile, User
+from api.models import News, Post, Profile
 from .models import Interest
 
 # from owren.settings import CACHE_TTL
@@ -15,6 +15,7 @@ def homepage(request):
     popular_articles = News.objects.filter(published=True).order_by("-date_created")[:10]
     paginator = Paginator(all_posts, 10)
     page = request.GET.get('page')
+    
     try:
         post_list = paginator.page(page)
     except PageNotAnInteger:
@@ -103,4 +104,4 @@ def about(request):
         'navbar_items' : navbar_items,
     }
 
-    return render(request, 'owren/about.html')
+    return render(request, 'owren/about.html', context_for_about)
