@@ -11,10 +11,9 @@ from loguru import logger
 from mysql.connector import Error
 from newspaper import Article
 
-config = dotenv_values(".env")
+config = dotenv_values("home/hema/Code/python/blog/Owren/.env")
 
 def parse_posts() -> list:
-
     try:
         rss_data = feedparser.parse('https://habr.com/ru/rss/all/all/?fl=ru')
         posts_count = len(rss_data.entries)
@@ -66,13 +65,31 @@ def get_article(posts_parsed : list ) -> None:
         print("Unable to get article")
 
 
-def update_db(posts_parsed : list) -> None:
+def update_db(dataframe : list) -> None:
     try:
-        connection = mysql.connector.connect(dbname=config.get("DATABASE"),
-                              user=config.get("DB_USER"),
-                              password=config.get("DB_PASSWORD"),
-                              host="db")
+        connection = mysql.connector.connect(
+            password=config.get("DB_PASSWORD"),
+            user=config.get("DB_USER"),
+            host=config.get("HOST"),
+            database=config.get("DATABASE"),)
+        
         cursor = connection.cursor()
+
+        for data in dataframe:
+            cursor.execute(f'SELECT * FROM main_posts WHERE source_id={data["post_id"]}')
+            db_reposonse = cursor.fetchall()
+            if not db_reposonse:
+                try:
+                    cursor.execute(f'INSERT INTO main_posts (title, description, source_link, body, source_id) '
+                               f'VALUES (\'{data["title"]}\','
+                               f'\'{data["meta_description"]}\','
+                               f'\'{data["link"]}\',' 
+                               f'\'{data["body"]}\','
+                               f'\'{data["post_id"]}\')')
+                    connection.commit()
+                    print("Inserted New Posts To Database")
+                except NameError as n:
+                    raise n("Unable to insert data to database")                    
 
     except Error as e:
         print(e)
@@ -82,7 +99,8 @@ def main():
     try:
         print("Starting To Parse")
         posts_parsed = parse_posts()
-        get_article(posts_parsed)
+        article=get_article(posts_parsed)
+        update_db(article)
         print("Finished")
     
     except Exception as e:

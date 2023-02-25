@@ -37,7 +37,7 @@ JAZZMIN_SETTINGS = {
         "auth": "fas fa-users-cog",
         "authentication.User": "fas fa-user-plus",
         "auth.Group": "fas fa-users",
-        "api.Profile" : "fas fa-user",
+        "main.Profile" : "fas fa-user",
     },
     # Icons that are used when one is not manually specified
     "default_icon_parents": "fas fa-chevron-circle-right",
