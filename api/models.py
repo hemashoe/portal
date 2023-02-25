@@ -36,22 +36,23 @@ class Profile(models.Model):
     def save(self):
         super().save()
 
-        img = Image.open(self.image.path)
-
-        if img.height > 300 or img.width > 300:
-            output_size = (300, 300)
-            img.thumbnail(output_size)
-            img.save(self.image.path)
+        if self.image:
+            img = Image.open(self.image.path)
+            if img.height > 320 or img.width > 180:
+                output_size = (320, 180)
+                img.thumbnail(output_size)
+                img.save(self.image.path)
 
 
 class Post(models.Model):
     title = models.CharField(max_length=255, unique=True)
     description = models.TextField()
     slug = models.SlugField(max_length=255, unique=True)
+    source_link = models.CharField(max_length=255, unique=True)
+    source_id = models.CharField(max_length=255,unique=True, blank=True)
     body = RichTextUploadingField()
     title_image = models.ImageField(upload_to="post/%Y/%M/%d", null=True, blank=True)
-    additional_image = models.ImageField(upload_to="post/%Y/%M/%d", null=True, blank=True)
-    date_created = models.DateTimeField(auto_now_add=True)
+    date_published = models.DateTimeField(auto_now_add=True)
     published = models.BooleanField(default=True)
     interests = models.ManyToManyField(Interest, blank=True)
     author = models.ForeignKey(Profile, on_delete=models.CASCADE, blank=True)
@@ -59,7 +60,7 @@ class Post(models.Model):
     class Meta:
         verbose_name = 'Post'
         verbose_name_plural = 'Posts'
-        ordering = ['-date_created']
+        ordering = ['-date_published']
     
     def __str__(self):
         return self.title
@@ -74,19 +75,12 @@ class Post(models.Model):
     def save(self):
         super().save()
 
-        img = Image.open(self.title_image.path)
-        second_img = Image.open(self.additional_image.path)
-
-        if img.height > 720 or img.width > 480:
-            output_size = (720, 480)
-            img.thumbnail(output_size)
-            img.save(self.title_image.path)
-
-        if second_img.height > 720 or second_img.width > 480:
-            output_size = (720, 480)
-            second_img.thumbnail(output_size)
-            second_img.save(self.additional_image.path)
-        
+        if self.title_image:
+            img = Image.open(self.title_image.path)
+            if img.height > 720 or img.width > 480:
+                output_size = (720, 480)
+                img.thumbnail(output_size)
+                img.save(self.title_image.path)
 
 class Comment(models.Model):
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=True)
@@ -111,30 +105,32 @@ class News(models.Model):
     description = models.TextField(max_length=555, blank=True)
     body = RichTextUploadingField()
     slug= models.SlugField(max_length=255, unique=True)
+    source_link = models.CharField(max_length=255, unique=True)
+    source_id = models.CharField(max_length=255,unique=True, blank=True)
     news_image = models.ImageField(upload_to="articles/%Y/%M/%d", null=True, blank=True)
-    date_created = models.DateTimeField(auto_now_add=True)
+    date_published = models.DateTimeField(auto_now_add=True)
     published = models.BooleanField(default=True)
     interests = models.ManyToManyField(Interest, blank=True)
     author = models.ForeignKey(Profile, on_delete=models.SET_DEFAULT, default='Null', blank=True)
 
     class Meta:
-        verbose_name = 'Article'
-        verbose_name_plural = 'Articles'
-        ordering = ['-date_created']
+        verbose_name = 'News'
+        verbose_name_plural = 'News'
+        ordering = ['-date_published']
     
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("article_detail", args=[str(self.slug)])
+        return reverse("News", args=[str(self.slug)])
     
     def save(self, *args, **kwargs):
         self.slug = self.slug or slugify(self.title)
         super().save(*args, **kwargs)
 
-        img = Image.open(self.news_image.path)
-
-        if img.height > 720 or img.width > 480:
-            output_size = (720, 480)
-            img.thumbnail(output_size)
-            img.save(self.news_image.path)
+        if self.news_image:
+            img = Image.open(self.news_image.path)
+            if img.height > 720 or img.width > 480:
+                output_size = (720, 480)
+                img.thumbnail(output_size)
+                img.save(self.news_image.path)

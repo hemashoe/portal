@@ -1,0 +1,21 @@
+			<!-- <div class="row" style="position: relative; align-items: center;">
+				<div class="col-md-6" style="padding-left: 70px;">
+					<div class="card-title">
+						<h4 class="font-weight-bold">
+							<a href="{% url 'post_detailed' posts.slug %}" class="text-dark">{{ posts.title}}</a>
+						</h4>
+					</div>
+					<div class="card-body">
+						<p >{{posts.description | linebreaks }}</p>
+					</div>
+					<div class="card-text text-muted">
+						<a href="{% url 'post_detailed' posts.author %}" class="text-muted">{{ posts.author }}</a>
+					</div>
+						<small class="text-muted">{{ posts.date_created |date:"d.m.y H:i" }}</small>
+				</div>
+				<div class="col-md-6" style="position: relative; object-fit: cover;">
+					{% if posts.title_image.url %}
+						<img src="{{ posts.title_image.url }}" height="350px" width='100%'>
+					{% endif %}
+				</div>
+			</div> -->

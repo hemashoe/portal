@@ -10,9 +10,9 @@ from .models import Interest
 # @cache_page(CACHE_TTL)
 def homepage(request):
     navbar_items = Interest.objects.all()
-    two_popular_posts = Post.objects.filter(published=True).order_by("-date_created")[:2]
-    all_posts = Post.objects.filter(published=True).order_by("-date_created")[2:]
-    popular_articles = News.objects.filter(published=True).order_by("-date_created")[:10]
+    two_popular_posts = Post.objects.filter(published=True).order_by("-date_published")[:2]
+    all_posts = Post.objects.filter(published=True).order_by("-date_published")[2:]
+    popular_articles = News.objects.filter(published=True).order_by("-date_published")[:10]
     paginator = Paginator(all_posts, 10)
     page = request.GET.get('page')
     
@@ -42,7 +42,7 @@ def homepage(request):
 def post_detailed(request, slug_id):
     navbar_items = Interest.objects.all()
     post = get_object_or_404(Post, slug=slug_id)
-    similar_posts = Post.objects.exclude(title=post.title).order_by('-date_created')[:3]
+    similar_posts = Post.objects.exclude(title=post.title).order_by('-date_published')[:3]
     from_author = Post.objects.filter(author = post.author).exclude(title=post.title).last()
     
     context_for_postdetailed = {
@@ -58,7 +58,7 @@ def post_detailed(request, slug_id):
 def news_detailed(request, slug_id):
     navbar_items = Interest.objects.all()
     news = get_object_or_404(News, slug=slug_id)
-    similar_news = News.objects.exclude(title=news.title).order_by('-date_created')[:3]
+    similar_news = News.objects.exclude(title=news.title).order_by('-date_published')[:3]
     from_author = News.objects.filter(author = news.author).exclude(title=news.title).last()
     
     context_for_newsdetailed = { 
@@ -73,7 +73,7 @@ def news_detailed(request, slug_id):
 def profile_detailed(request, username):
     navbar_items = Interest.objects.all()
     user = get_object_or_404(Profile, user=username)
-    posts_from_user = Post.objects.filter(author=user).order_by('-date_created')
+    posts_from_user = Post.objects.filter(author=user).order_by('-date_published')
     
     context_for_profiledetailed = {
         'navbar_items' : navbar_items,
@@ -86,7 +86,7 @@ def profile_detailed(request, username):
 def category_detailed(requiest, slug_id):
     navbar_items = Interest.objects.all()
     category = Interest.objects.get(slug=slug_id)
-    posts_from_category = Post.objects.filter(interests=category.id).order_by('-date_created')
+    posts_from_category = Post.objects.filter(interests=category.id).order_by('-date_published')
 
     context_for_category_detailed = {
         'navbar_items' : navbar_items,

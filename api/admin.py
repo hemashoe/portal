@@ -21,8 +21,8 @@ admin.site.register(Profile, ProfilesAdmin)
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'date_created', 'get_post_photo', 'published')
-    list_display_links = ('title',)
+    list_display = ('title', 'slug', 'source_link', 'date_published', 'get_post_photo', 'published')
+    list_display_links = ('title','source_link',)
     search_fields = ('title',)
     prepopulated_fields = {"slug" : ("title",)}
     list_editable = ('published','slug')
@@ -36,8 +36,8 @@ admin.site.register(Post, PostAdmin)
 
 
 class NewsAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'date_created', 'get_post_photo', 'published')
-    list_display_links = ('title',)
+    list_display = ('title', 'slug', 'source_link','date_published', 'get_post_photo', 'published')
+    list_display_links = ('title', 'source_link',)
     search_fields = ('title', 'description',)
     prepopulated_fields = {"slug" : ("title",)}
     list_editable = ('published','slug')
@@ -45,7 +45,6 @@ class NewsAdmin(admin.ModelAdmin):
     def get_post_photo(self, object):
         if object.news_image:
             return mark_safe(f"<img src='{object.news_image.url}' width=50>")
-
 
 admin.site.register(News, NewsAdmin)
 
