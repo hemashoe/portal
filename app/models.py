@@ -6,11 +6,11 @@ from django.template.defaultfilters import slugify
 
 class Skill(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True, unique=True)
-    slug = models.SlugField(blank=True,null=True)
+    slug = models.SlugField(blank=True,null=True, default=f'{slugify(name)}')
     description = models.CharField(null=True, blank=True, max_length=255)
-    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=True)
     photo = models.ImageField(upload_to='skills/', blank=True, null=True)
     wallpaper = models.ImageField(upload_to='skills/', blank=True, null=True)
+    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=True)
     
     def __str__(self):
         return self.name
@@ -20,17 +20,17 @@ class Skill(models.Model):
         verbose_name_plural = 'Skills'
 
     def save(self, *args, **kwargs):
-        self.slug = self.slug or slugify(self.name)
+        self.slug = slugify(self.name)
         super().save(*args, **kwargs)
 
 
 class Interest(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True, unique=True)
-    slug = models.SlugField(blank=True,null=True)
+    slug = models.SlugField(blank=True,null=True, default=f'{slugify(name)}')
     description = models.CharField(max_length=255,blank=True,null=False)
-    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=True)
     photo = models.ImageField(upload_to='interests/', blank=True, null=True)
     wallpaper = models.ImageField(upload_to='interests/', blank=True, null=True)
+    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=True)
 
     def __str__(self):
         return self.name
@@ -40,6 +40,6 @@ class Interest(models.Model):
         verbose_name_plural = 'Interests'
 
     def save(self, *args, **kwargs):
-        self.slug = self.slug or slugify(self.name)
+        self.slug = slugify(self.name)
         super().save(*args, **kwargs)
     

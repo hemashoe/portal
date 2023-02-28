@@ -33,6 +33,7 @@ def parse_posts() -> list:
     except Exception:
         print("Unable to parse habr.com")
 
+
 def get_article(posts_parsed : list ) -> None:
     try:
         data_parsed = []
@@ -98,4 +99,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    sleep(3)

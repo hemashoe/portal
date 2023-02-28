@@ -1,6 +1,6 @@
 from app.models import Interest, Skill
 from authentication.models import User
-from main.models import Comment, Post, Profile, News
+from main.models import Post, Profile, News
 
 from django.core.management.base import BaseCommand
 

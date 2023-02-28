@@ -1,22 +1,18 @@
-import re
-import urllib.request
-from datetime import datetime
-from time import sleep
-from django.template.defaultfilters import slugify
-import feedparser
-import mysql.connector
-from dotenv import load_dotenv, find_dotenv
-from pathlib import Path
-
-from cleantext import clean, fix_bad_unicode
-from loguru import logger
 import os
+import urllib.request
+from pathlib import Path
+from time import sleep
+
+import mysql.connector
+from cleantext import clean, fix_bad_unicode
+from django.template.defaultfilters import slugify
+from dotenv import find_dotenv, load_dotenv
 
 config = load_dotenv(find_dotenv())
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = os.path.join(BASE_DIR, 'parser/habr_csv/')
-
+MEDIA_STORE = os.path.join(f"{BASE_DIR}, 'media/post/'")
 
 def connect_to_db():
     connection = mysql.connector.connect(
@@ -37,9 +33,10 @@ def remove_unwanted(text) -> str:
 
 
 def download_title_img(img_url) -> str:
-    image = urllib.request.urlretrieve(str(img_url), "")
+    image = urllib.request.urlretrieve(str(img_url), os.path.join(MEDIA_STORE, str(img_url.split("/")[-1])))
+    print(image)
+    return image[0]
 
-    return image
 
 def download_multiple_images(images) -> str or list:
     images_downloaded = []

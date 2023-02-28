@@ -10,13 +10,14 @@ from app.models import Interest, Skill
 
 # Create your models here.
 
+
 class Profile(models.Model):
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
     user = models.CharField(max_length=255, unique=True)
     email = models.EmailField(max_length=255, blank=True, null=True)
     fullname = models.CharField(max_length=255, null=False)
     bio = models.TextField(blank=True, null=True)
-    image = models.ImageField(null=True, blank=True, upload_to='profiles/', default='defaults/1.png')
+    profile_img = models.ImageField(null=True, blank=True, upload_to='profiles/', default='defaults/1.png')
     created_date = models.DateField(auto_now_add=True)
     status = models.BooleanField(default=True)
     skills = models.ManyToManyField(Skill,blank=True)
@@ -36,12 +37,12 @@ class Profile(models.Model):
     def save(self, *args, **kwargs):
         super(Profile, self).save(*args, **kwargs)
 
-        if self.image:
-            img = Image.open(self.image.path)
+        if self.profile_img:
+            img = Image.open(self.profile_img.path)
             if img.height > 300 or img.width > 300:
                 output_size = (300, 300)
                 img.thumbnail(output_size)
-                img.save(self.image.path)
+                img.save(self.profile_img.path)
 
 
 class Post(models.Model):
@@ -49,9 +50,9 @@ class Post(models.Model):
     slug = models.SlugField(max_length=255, unique=True)
     source_link = models.CharField(max_length=255, unique=True)
     source_id = models.CharField(max_length=255,unique=True, blank=True)
-    description = RichTextUploadingField()
+    description = models.TextField()
     body = RichTextUploadingField()
-    title_image = models.ImageField(upload_to="post/%Y/%M/%d", null=True, blank=True)
+    title_image = models.ImageField(upload_to="post/", null=True, blank=True)
     date_published = models.DateTimeField(auto_now_add=True)
     published = models.BooleanField(default=True)
     interests = models.ManyToManyField(Interest, blank=True)
@@ -79,32 +80,15 @@ class Post(models.Model):
                 img.thumbnail(output_size)
                 img.save(self.title_image.path)
 
-class Comment(models.Model):
-    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=True)
-    post = models.ForeignKey(Post,on_delete=models.CASCADE,related_name='comments')
-    author = models.ForeignKey(Profile,on_delete=models.CASCADE)
-    text = RichTextUploadingField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    active = models.BooleanField(default=True)
-
-    class Meta:
-        ordering = ['-created_on']
-        verbose_name = 'Comment'
-        verbose_name_plural = 'Comments'
-  
-    def __str__(self):
-        return self.text
-    
 
 class News(models.Model):
-    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=True)
     title = models.CharField(max_length=255,unique=True)
-    description = RichTextUploadingField()
+    description = models.TextField()
     body = RichTextUploadingField()
     slug= models.SlugField(max_length=255, unique=True)
     source_link = models.CharField(max_length=255, unique=True)
     source_id = models.CharField(max_length=255,unique=True, blank=True)
-    news_image = models.ImageField(upload_to="articles/%Y/%M/%d", null=True, blank=True)
+    news_image = models.ImageField(upload_to=f"articles/", null=True, blank=True)
     date_published = models.DateTimeField(auto_now_add=True)
     published = models.BooleanField(default=True)
     interests = models.ManyToManyField(Interest, blank=True)

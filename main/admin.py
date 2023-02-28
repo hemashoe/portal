@@ -14,8 +14,8 @@ class ProfilesAdmin(admin.ModelAdmin):
     save_on_top = True
 
     def get_profile_photo(self, object):
-        if object.image:
-            return mark_safe(f"<img src='{object.image.url}' width=50>")
+        if object.profile_img:
+            return mark_safe(f"<img src='{object.profile_img.url}' width=50>")
     
 admin.site.register(Profile, ProfilesAdmin)
 
@@ -47,12 +47,3 @@ class NewsAdmin(admin.ModelAdmin):
             return mark_safe(f"<img src='{object.news_image.url}' width=50>")
 
 admin.site.register(News, NewsAdmin)
-
-class CommentAdmin(admin.ModelAdmin):
-    list_display = ('post', 'author', 'created_on','active')
-    list_display_links = ('post', 'author')
-    search_fields = ('title', 'meta_description')
-    list_editable = ('active',)
-
-
-admin.site.register(Comment, CommentAdmin)
