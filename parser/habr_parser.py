@@ -1,18 +1,16 @@
 import re
-import urllib.request
 from datetime import datetime
 from time import sleep
 from typing import Any, Union
-import mysql.connector
-from django.template.defaultfilters import slugify
+
 import feedparser
-from cleantext import clean
 import pandas as pd
+from django.template.defaultfilters import slugify
 from loguru import logger
 from newspaper import Article
+from utils import DATA_DIR, remove_unwanted, connect_to_db, author_profile
 
-from utils import remove_unwanted
-
+datafile_name = str(DATA_DIR +  "habr_data" + datetime.now().strftime("%m-%d_%H:%M") + ".csv")
 
 def parse_posts() -> list:
     try:
@@ -38,49 +36,36 @@ def parse_posts() -> list:
 def get_article(posts_parsed : list ) -> None:
     try:
         data_parsed = []
-        article_images = []
 
         for post in posts_parsed:
             article =Article(post['link'])
-            article.download()
+            article.download() 
             article.parse()
-            for img in article.images:
-                images = "" + img    
-            article_images.append(images)
-            post_id = re.search(r'post/(\d+)/', post['link']).group(1)
+            images = ["" + img for img in article.images]
 
             data = {
-                    'post_id': post_id,
+                    'post_id': post['post_id'],
                     'title': article.title,
-                    'meta_description': article.meta_description,
-                    'link': article.url,
+                    'description': article.meta_description,
+                    'source_link': article.url,
                     'body': article.text,
                     'image': article.top_image,
-                    'images': article_images,
-                }
+                    'images': images,
+            }
             data_parsed.append(data)
-            dataframe = pd.DataFrame(data_parsed)
-        datafile_name = "habr_data" + datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".csv"
+
+        dataframe = pd.DataFrame(data_parsed)
         dataframe.to_csv(datafile_name, sep="'", header=True, index=True,index_label="post_id" )
 
         return data_parsed
 
-    except:
-        print("Unable to get article")
+    except NameError as n:
+        raise n("Unable to parse habr.com")
 
 
 def update_db(data_parsed):
-    connection = mysql.connector.connect(
-                database=("Owren"),
-                host=("localhost"),
-                user=("hema"),
-                password=("P@ssw0rd"))
-        
-    cursor = connection.cursor()
-
-    cursor.execute("SELECT id from main_profile WHERE user='nicko_b'")
-    author = cursor.fetchall()
-    print(author[0][0])
+    connection, cursor = connect_to_db()
+    author = author_profile()
 
     for data in data_parsed:
         cursor.execute(f"SELECT * FROM main_post WHERE source_id={data['post_id']}")
@@ -89,10 +74,10 @@ def update_db(data_parsed):
         if len(db_response) == 0:
             try:
                 body_text = remove_unwanted(data['body'])
-                description_text = remove_unwanted(data['meta_description'])
+                description_text = remove_unwanted(data['description'])
 
                 cursor.execute("INSERT INTO main_post (title, slug ,description, source_link, source_id, author_id, body, title_image)" 
-                            'VALUES ("%s","%s","%s","%s","%s","%s","%s","%s")' % (data['title'], slugify(data['title']), description_text, data['link'], data['post_id'], author[0][0], body_text, data['image']))             
+                            'VALUES ("%s","%s","%s","%s","%s","%s","%s","%s")' % (data['title'], slugify(data['title']), description_text, data['source_link'], data['post_id'], author, body_text, data['image']))             
 
                 connection.commit()
                 print("Success")
