@@ -1,17 +1,18 @@
 import re
+import urllib.request
 from datetime import datetime
 from time import sleep
-from typing import Any, Dict, Union
-
-import feedparser
+from typing import Any, Union
 import mysql.connector
+from django.template.defaultfilters import slugify
+import feedparser
+from cleantext import clean
 import pandas as pd
-from dotenv import dotenv_values
 from loguru import logger
-from mysql.connector import Error
 from newspaper import Article
 
-config = dotenv_values("home/hema/Code/python/blog/Owren/.env")
+from utils import remove_unwanted
+
 
 def parse_posts() -> list:
     try:
@@ -43,7 +44,9 @@ def get_article(posts_parsed : list ) -> None:
             article =Article(post['link'])
             article.download()
             article.parse()
-            article_images.append(article.images)
+            for img in article.images:
+                images = "" + img    
+            article_images.append(images)
             post_id = re.search(r'post/(\d+)/', post['link']).group(1)
 
             data = {
@@ -57,50 +60,52 @@ def get_article(posts_parsed : list ) -> None:
                 }
             data_parsed.append(data)
             dataframe = pd.DataFrame(data_parsed)
-            print(dataframe)
-        dataframe.to_csv("habr_data"+ datetime.now().strftime('%Y-%m-%d_%H:%M') + ".csv", sep="'", header=True, index=True,index_label="post_id" )
-        return dataframe
+        datafile_name = "habr_data" + datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".csv"
+        dataframe.to_csv(datafile_name, sep="'", header=True, index=True,index_label="post_id" )
+
+        return data_parsed
 
     except:
         print("Unable to get article")
 
 
-def update_db(dataframe : list) -> None:
-    try:
-        connection = mysql.connector.connect(
-            password=config.get("DB_PASSWORD"),
-            user=config.get("DB_USER"),
-            host=config.get("HOST"),
-            database=config.get("DATABASE"),)
+def update_db(data_parsed):
+    connection = mysql.connector.connect(
+                database=("Owren"),
+                host=("localhost"),
+                user=("hema"),
+                password=("P@ssw0rd"))
         
-        cursor = connection.cursor()
+    cursor = connection.cursor()
 
-        for data in dataframe:
-            cursor.execute(f'SELECT * FROM main_posts WHERE source_id={data["post_id"]}')
-            db_reposonse = cursor.fetchall()
-            if not db_reposonse:
-                try:
-                    cursor.execute(f'INSERT INTO main_posts (title, description, source_link, body, source_id) '
-                               f'VALUES (\'{data["title"]}\','
-                               f'\'{data["meta_description"]}\','
-                               f'\'{data["link"]}\',' 
-                               f'\'{data["body"]}\','
-                               f'\'{data["post_id"]}\')')
-                    connection.commit()
-                    print("Inserted New Posts To Database")
-                except NameError as n:
-                    raise n("Unable to insert data to database")                    
+    cursor.execute("SELECT id from main_profile WHERE user='nicko_b'")
+    author = cursor.fetchall()
+    print(author[0][0])
 
-    except Error as e:
-        print(e)
-        print("Unable to connect to database")
+    for data in data_parsed:
+        cursor.execute(f"SELECT * FROM main_post WHERE source_id={data['post_id']}")
+        db_response = cursor.fetchall()
+
+        if len(db_response) == 0:
+            try:
+                body_text = remove_unwanted(data['body'])
+                description_text = remove_unwanted(data['meta_description'])
+
+                cursor.execute("INSERT INTO main_post (title, slug ,description, source_link, source_id, author_id, body, title_image)" 
+                            'VALUES ("%s","%s","%s","%s","%s","%s","%s","%s")' % (data['title'], slugify(data['title']), description_text, data['link'], data['post_id'], author[0][0], body_text, data['image']))             
+
+                connection.commit()
+                print("Success")
+
+            except NameError as n:
+                raise n("Unable to update db")
 
 def main():
     try:
         print("Starting To Parse")
         posts_parsed = parse_posts()
-        article=get_article(posts_parsed)
-        update_db(article)
+        data_parsed=get_article(posts_parsed)
+        update_db(data_parsed)
         print("Finished")
     
     except Exception as e:

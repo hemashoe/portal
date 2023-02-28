@@ -1,0 +1,6 @@
+
+
+
+
+
+1. alter table main_recognised  modify time timestamp default current_timestamp not null;

@@ -33,23 +33,23 @@ class Profile(models.Model):
     def get_absolute_url(self):
         return reverse("profile_detail", args=[str(self.id)])
     
-    def save(self):
-        super().save()
+    def save(self, *args, **kwargs):
+        super(Profile, self).save(*args, **kwargs)
 
         if self.image:
             img = Image.open(self.image.path)
-            if img.height > 320 or img.width > 180:
-                output_size = (320, 180)
+            if img.height > 300 or img.width > 300:
+                output_size = (300, 300)
                 img.thumbnail(output_size)
                 img.save(self.image.path)
 
 
 class Post(models.Model):
     title = models.CharField(max_length=255, unique=True)
-    description = models.TextField()
     slug = models.SlugField(max_length=255, unique=True)
     source_link = models.CharField(max_length=255, unique=True)
     source_id = models.CharField(max_length=255,unique=True, blank=True)
+    description = RichTextUploadingField()
     body = RichTextUploadingField()
     title_image = models.ImageField(upload_to="post/%Y/%M/%d", null=True, blank=True)
     date_published = models.DateTimeField(auto_now_add=True)
@@ -69,10 +69,7 @@ class Post(models.Model):
         return reverse("profile_detail;", args=[str(self.slug)])
 
     def save(self, *args, **kwargs):
-        self.slug = self.slug or slugify(self.title)
-        super().save(*args, **kwargs)
- 
-    def save(self):
+        self.slug = slugify(self.title)
         super().save()
 
         if self.title_image:
@@ -102,7 +99,7 @@ class Comment(models.Model):
 class News(models.Model):
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=True)
     title = models.CharField(max_length=255,unique=True)
-    description = models.TextField(max_length=555, blank=True)
+    description = RichTextUploadingField()
     body = RichTextUploadingField()
     slug= models.SlugField(max_length=255, unique=True)
     source_link = models.CharField(max_length=255, unique=True)
@@ -125,7 +122,7 @@ class News(models.Model):
         return reverse("News", args=[str(self.slug)])
     
     def save(self, *args, **kwargs):
-        self.slug = self.slug or slugify(self.title)
+        self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
         if self.news_image:
