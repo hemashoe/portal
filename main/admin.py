@@ -15,7 +15,7 @@ class ProfilesAdmin(admin.ModelAdmin):
 
     def get_profile_photo(self, object):
         if object.profile_img:
-            return mark_safe(f"<img src='{object.profile_img.url}' width=50>")
+            return mark_safe(f"<img src='{object.profile_img.url}' width=80px>")
     
 admin.site.register(Profile, ProfilesAdmin)
 
@@ -29,7 +29,7 @@ class PostAdmin(admin.ModelAdmin):
 
     def get_post_photo(self, object):
         if object.title_image:
-            return mark_safe(f"<img src='{object.title_image.url}' width=50>")
+            return mark_safe(f"<img src='{object.title_image.url}' width=150px>")
 
 
 admin.site.register(Post, PostAdmin)
@@ -44,6 +44,6 @@ class NewsAdmin(admin.ModelAdmin):
 
     def get_post_photo(self, object):
         if object.news_image:
-            return mark_safe(f"<img src='{object.news_image.url}' width=50>")
+            return mark_safe(f"<img src='{object.news_image.url}' width=80>")
 
 admin.site.register(News, NewsAdmin)

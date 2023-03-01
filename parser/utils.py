@@ -1,10 +1,10 @@
 import os
 import urllib.request
+import re
 from pathlib import Path
 
 import mysql.connector
-from cleantext import clean, fix_bad_unicode
-from django.template.defaultfilters import slugify
+import emoji
 from dotenv import find_dotenv, load_dotenv
 
 config = load_dotenv(find_dotenv())
@@ -12,6 +12,7 @@ config = load_dotenv(find_dotenv())
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = os.path.join(BASE_DIR, 'parser/habr_csv/')
 MEDIA_STORE = os.path.join(str(BASE_DIR), 'media/post/')
+
 
 def connect_to_db():
     connection = mysql.connector.connect(
@@ -24,17 +25,40 @@ def connect_to_db():
 
     return connection, cursor
 
-def remove_unwanted(text) -> str:
-    text = clean(text, no_emoji=True)
 
-    return text
+def remove_unwanted(text) -> str:
+    prepared_text = []
+    
+    text = emoji.demojize(text)
+    text = text.encode('utf-8', 'ignore').decode('utf-8')
+    prepared_text.append(text)
+
+    return prepared_text
 
 
 def download_img(img_url, post_id) -> str:
-    path = os.path.join(MEDIA_STORE + '/' + (post_id))
+    path = os.path.join(MEDIA_STORE,(post_id))
     Path(path).mkdir(parents=True, exist_ok=True)
     image = urllib.request.urlretrieve(str(img_url), os.path.join(str(path),str(img_url.split("/")[-1])))
+
     return image[0]
+
+
+def download_title_img(img_url, post_id) -> str:
+    try:
+        path = os.path.join(MEDIA_STORE,(post_id))
+        Path(path).mkdir(parents=True, exist_ok=True)
+        image = urllib.request.urlretrieve(str(img_url), os.path.join(str(path),str(img_url.split("/")[-1])))
+        img_db_name = image[0].split("/")[-3:]
+        name = os.path.join(img_db_name[0], img_db_name[1], img_db_name[2])
+
+        return name
+
+    except Exception:
+
+        name = ''
+        
+        return name
 
 
 def download_multiple_images(images : list, post_id : str):
@@ -48,6 +72,7 @@ def download_multiple_images(images : list, post_id : str):
             msg = f"Image {image} not downloaded"
         
         return msg
+
 
 def check_duplication(post_id):
     try:

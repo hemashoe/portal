@@ -1,15 +1,14 @@
 import re
 from datetime import datetime
-from time import sleep
 from typing import Any, Union
 
 import feedparser
 import pandas as pd
-from django.template.defaultfilters import slugify
+from slugify import slugify
 from loguru import logger
 from newspaper import Article
 from utils import (DATA_DIR, author_profile, check_duplication, connect_to_db,
-            remove_unwanted, download_img, download_multiple_images)
+            remove_unwanted, download_title_img, download_multiple_images)
 
 FILE_NAME = str(DATA_DIR +  "habr_data" + datetime.now().strftime("%m-%d_%H:%M") + ".csv")
 
@@ -47,7 +46,7 @@ def get_article(posts_parsed : list ) -> None:
 
             data = {
                     'post_id': post['post_id'],
-                    'title': article.title,
+                    'title': post['title'],
                     'description': article.meta_description,
                     'source_link': article.url,
                     'body': article.text,
@@ -73,21 +72,22 @@ def update_db(data_parsed):
         check_for_dublicate = check_duplication(data['post_id'])
 
         if check_for_dublicate==False:
-            try: 
+            try:
                 body_text = remove_unwanted(data['body'])
                 slug = slugify(data['title'])
                 description_text = remove_unwanted(data['description'])
-                title_img = download_img(data['image'], data['post_id'])
+                title_img = download_title_img(data['image'], data['post_id'])
                 download_multiple_images(data['images'], data['post_id'])
 
-                query = f'INSERT INTO main_post (title, slug, source_link, source_id, description, body, title_image, published, author_id)' \
-                        f'VALUES ("{data["title"]}", "{slug}", "{data["source_link"]}", "{data["post_id"]}", "{description_text}", "{body_text}", "{title_img}", "0", "{author}")'
+                query = f"INSERT INTO main_post (title, slug, source_link, source_id, description, body, title_image, published, author_id)" \
+                        f'VALUES ("{data["title"]}", "{slug}", "{data["source_link"]}", "{data["post_id"]}", "{str(description_text[0])}", "{str(body_text[0])}", "{title_img}", "0", "{author}")'
                 cursor.execute(query)
                 connection.commit()
                 print(f"Post {data['post_id']} added to database")
                     
             except NameError as n:
-                raise n("Unable to update db")
+
+                raise n(f"Unable to update db. Problem in {data['post_id']}")
         else:
             pass
 
