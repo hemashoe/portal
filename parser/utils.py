@@ -1,7 +1,6 @@
 import os
 import urllib.request
 from pathlib import Path
-from time import sleep
 
 import mysql.connector
 from cleantext import clean, fix_bad_unicode
@@ -12,7 +11,7 @@ config = load_dotenv(find_dotenv())
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = os.path.join(BASE_DIR, 'parser/habr_csv/')
-MEDIA_STORE = os.path.join(f"{BASE_DIR}, 'media/post/'")
+MEDIA_STORE = os.path.join(str(BASE_DIR), 'media/post/')
 
 def connect_to_db():
     connection = mysql.connector.connect(
@@ -26,24 +25,43 @@ def connect_to_db():
     return connection, cursor
 
 def remove_unwanted(text) -> str:
-    text = clean(text,  no_emoji=True)
-    text = fix_bad_unicode(text)
+    text = clean(text, no_emoji=True)
 
     return text
 
 
-def download_title_img(img_url) -> str:
-    image = urllib.request.urlretrieve(str(img_url), os.path.join(MEDIA_STORE, str(img_url.split("/")[-1])))
-    print(image)
+def download_img(img_url, post_id) -> str:
+    path = os.path.join(MEDIA_STORE + '/' + (post_id))
+    Path(path).mkdir(parents=True, exist_ok=True)
+    image = urllib.request.urlretrieve(str(img_url), os.path.join(str(path),str(img_url.split("/")[-1])))
     return image[0]
 
 
-def download_multiple_images(images) -> str or list:
-    images_downloaded = []
-    for image in images:
-        image_downloaded = download_title_img(image)
-        images_downloaded.append(image_downloaded)
-    return images_downloaded
+def download_multiple_images(images : list, post_id : str):
+    for image in images: 
+        downloaded = download_img(str(image), post_id)
+
+        if downloaded:
+            msg = f"Image {image} downloaded"
+
+        else:
+            msg = f"Image {image} not downloaded"
+        
+        return msg
+
+def check_duplication(post_id):
+    try:
+        connection, cursor = connect_to_db()
+        query = f"SELECT source_id FROM main_post WHERE source_id='{post_id}'"
+        cursor.execute(query)
+        result = cursor.fetchall()
+        if len(result) == 0:
+            return False
+        else:
+            return True
+
+    except mysql.connector.Error as err:
+        print(err)
 
 
 def author_profile():

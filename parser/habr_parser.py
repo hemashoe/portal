@@ -8,9 +8,10 @@ import pandas as pd
 from django.template.defaultfilters import slugify
 from loguru import logger
 from newspaper import Article
-from utils import DATA_DIR, remove_unwanted, connect_to_db, author_profile
+from utils import (DATA_DIR, author_profile, check_duplication, connect_to_db,
+            remove_unwanted, download_img, download_multiple_images)
 
-datafile_name = str(DATA_DIR +  "habr_data" + datetime.now().strftime("%m-%d_%H:%M") + ".csv")
+FILE_NAME = str(DATA_DIR +  "habr_data" + datetime.now().strftime("%m-%d_%H:%M") + ".csv")
 
 def parse_posts() -> list:
     try:
@@ -56,7 +57,7 @@ def get_article(posts_parsed : list ) -> None:
             data_parsed.append(data)
 
         dataframe = pd.DataFrame(data_parsed)
-        dataframe.to_csv(datafile_name, sep="'", header=True, index=True,index_label="post_id" )
+        dataframe.to_csv(FILE_NAME, sep="'", header=True, index=True,index_label="post_id" )
 
         return data_parsed
 
@@ -69,22 +70,27 @@ def update_db(data_parsed):
     author = author_profile()
 
     for data in data_parsed:
-        cursor.execute(f"SELECT * FROM main_post WHERE source_id={data['post_id']}")
-        db_response = cursor.fetchall()
+        check_for_dublicate = check_duplication(data['post_id'])
 
-        if len(db_response) == 0:
-            try:
+        if check_for_dublicate==False:
+            try: 
                 body_text = remove_unwanted(data['body'])
+                slug = slugify(data['title'])
                 description_text = remove_unwanted(data['description'])
+                title_img = download_img(data['image'], data['post_id'])
+                download_multiple_images(data['images'], data['post_id'])
 
-                cursor.execute("INSERT INTO main_post (title, slug ,description, source_link, source_id, author_id, body, title_image)" 
-                            'VALUES ("%s","%s","%s","%s","%s","%s","%s","%s")' % (data['title'], slugify(data['title']), description_text, data['source_link'], data['post_id'], author, body_text, data['image']))             
-
+                query = f'INSERT INTO main_post (title, slug, source_link, source_id, description, body, title_image, published, author_id)' \
+                        f'VALUES ("{data["title"]}", "{slug}", "{data["source_link"]}", "{data["post_id"]}", "{description_text}", "{body_text}", "{title_img}", "0", "{author}")'
+                cursor.execute(query)
                 connection.commit()
-                print("Success")
-
+                print(f"Post {data['post_id']} added to database")
+                    
             except NameError as n:
                 raise n("Unable to update db")
+        else:
+            pass
+
 
 def main():
     try:
