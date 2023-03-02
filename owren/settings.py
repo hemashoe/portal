@@ -9,27 +9,25 @@ from dotenv import find_dotenv, load_dotenv
 
 from .configurations import JAZZMIIN_UI_TWEAKS, JAZZMIN_SETTINGS, CKEDITOR_CONFIGS
 
+
+################ ALL DIRECTORIES ################
+
 ROOT_URLCONF = 'owren.urls'
 AUTH_USER_MODEL = 'authentication.User'
 
-################ ALL DIRECTORIES ################
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
 
-
 load_dotenv(find_dotenv())
 SECRET_KEY = os.environ["SECRET_KEY"]
-
 DEBUG = True
 ALLOWED_HOSTS = ["192.168.192.24", "localhost", '127.0.0.1']
 
-
 ########## DJANGO APPLICATIONS ###########
+
 INSTALLED_APPS = [
     "debug_toolbar",
     'corsheaders',
@@ -37,8 +35,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
 
-    'authentication',
     'app',
+    'authentication',
     'main',
 
     'django.contrib.staticfiles',
@@ -50,7 +48,6 @@ INSTALLED_APPS = [
 ]
 
 ############ MIDDLEWARES AND OTHERS ################
-
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",

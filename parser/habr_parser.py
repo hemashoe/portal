@@ -4,13 +4,16 @@ from typing import Any, Union
 
 import feedparser
 import pandas as pd
-from slugify import slugify
 from loguru import logger
 from newspaper import Article
+from slugify import slugify
 from utils import (DATA_DIR, author_profile, check_duplication, connect_to_db,
-            remove_unwanted, download_title_img, download_multiple_images)
+                   download_multiple_images, download_title_img,
+                   remove_unwanted)
 
 FILE_NAME = str(DATA_DIR +  "habr_data" + datetime.now().strftime("%m-%d_%H:%M") + ".csv")
+
+
 
 def parse_posts() -> list:
     try:
@@ -28,15 +31,19 @@ def parse_posts() -> list:
                 'link': post_content.guid,
             }
             posts_parsed.append(post_parsed)
+
+        logger.info(f"Starting to parse habr succesfully")
         return posts_parsed
 
-    except Exception:
+    except Exception as e:
+        logger.error("Unable to parse habr.com", 'Could not Connect To Habr')
         print("Unable to parse habr.com")
 
 
 def get_article(posts_parsed : list ) -> None:
     try:
         data_parsed = []
+        logger.info('Parsing articles')
 
         for post in posts_parsed:
             article =Article(post['link'])
@@ -57,21 +64,23 @@ def get_article(posts_parsed : list ) -> None:
 
         dataframe = pd.DataFrame(data_parsed)
         dataframe.to_csv(FILE_NAME, sep="'", header=True, index=True,index_label="post_id" )
-
+        logger.success(f"Successfully saved articles in {FILE_NAME}")
         return data_parsed
 
     except NameError as n:
+        logger.error(f"Some error occured")
         raise n("Unable to parse habr.com")
 
 
 def update_db(data_parsed):
+    logger.info("Connecting to database and updating")
     connection, cursor = connect_to_db()
     author = author_profile()
 
     for data in data_parsed:
         check_for_dublicate = check_duplication(data['post_id'])
 
-        if check_for_dublicate==False:
+        if check_for_dublicate==False:  
             try:
                 body_text = remove_unwanted(data['body'])
                 slug = slugify(data['title'])
@@ -80,27 +89,32 @@ def update_db(data_parsed):
                 download_multiple_images(data['images'], data['post_id'])
 
                 query = f"INSERT INTO main_post (title, slug, source_link, source_id, description, body, title_image, published, author_id)" \
-                        f'VALUES ("{data["title"]}", "{slug}", "{data["source_link"]}", "{data["post_id"]}", "{str(description_text[0])}", "{str(body_text[0])}", "{title_img}", "0", "{author}")'
+                        f'VALUES ("{data["title"]}", "{slug}", "{data["source_link"]}", "{data["post_id"]}", "{str(description_text)}", "{str(body_text)}", "{title_img}", "0", "{author}")'
                 cursor.execute(query)
                 connection.commit()
                 print(f"Post {data['post_id']} added to database")
+                logger.success(f"Post {data['post_id']} added to database")
                     
             except NameError as n:
-
+                logger.error(f"Unabe to update database, some error in {data['post_id']}")
                 raise n(f"Unable to update db. Problem in {data['post_id']}")
         else:
             pass
 
 
 def main():
+    logger.add('../logs/owren.log', format='{time} __|__ {level} __|__ {message}', level='INFO', rotation='10 MB', compression='zip')
+    
     try:
         print("Starting To Parse")
         posts_parsed = parse_posts()
         data_parsed=get_article(posts_parsed)
         update_db(data_parsed)
         print("Finished")
+        logger.success("Successfully finished")
     
     except Exception as e:
+        logger.error("Unable to parse habr.com", 'Could not Connect To Habr')
         print(e)
 
 if __name__ == "__main__":

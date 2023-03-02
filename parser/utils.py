@@ -1,10 +1,10 @@
 import os
-import urllib.request
 import re
+import urllib.request
 from pathlib import Path
 
-import mysql.connector
 import emoji
+import mysql.connector
 from dotenv import find_dotenv, load_dotenv
 
 config = load_dotenv(find_dotenv())
@@ -27,22 +27,24 @@ def connect_to_db():
 
 
 def remove_unwanted(text) -> str:
-    prepared_text = []
-    
-    text = emoji.demojize(text)
-    text = text.encode('utf-8', 'ignore').decode('utf-8')
-    prepared_text.append(text)
+    text = ''.join(text)
+    text = text.replace('"', '')
 
-    return prepared_text
+    return text
 
 
 def download_img(img_url, post_id) -> str:
     path = os.path.join(MEDIA_STORE,(post_id))
     Path(path).mkdir(parents=True, exist_ok=True)
-    image = urllib.request.urlretrieve(str(img_url), os.path.join(str(path),str(img_url.split("/")[-1])))
+    try:
+        image = urllib.request.urlretrieve(str(img_url), os.path.join(str(path),str(img_url.split("/")[-1])))
+        
+        return image[0]
 
-    return image[0]
+    except:
+        image = ''
 
+        return image
 
 def download_title_img(img_url, post_id) -> str:
     try:
@@ -69,7 +71,7 @@ def download_multiple_images(images : list, post_id : str):
             msg = f"Image {image} downloaded"
 
         else:
-            msg = f"Image {image} not downloaded"
+            msg = ''
         
         return msg
 

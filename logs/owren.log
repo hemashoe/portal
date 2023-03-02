@@ -1,0 +1,16 @@
+2023-03-02T14:50:00.773370+0500 __|__ INFO __|__ Starting to parse habr succesfully
+2023-03-02T14:50:00.773586+0500 __|__ INFO __|__ Parsing articles
+2023-03-02T14:50:17.026372+0500 __|__ SUCCESS __|__ Successfully saved articles in /home/hema/Code/python/blog/Owren/parser/habr_csv/habr_data03-02_14:50.csv
+2023-03-02T14:50:17.027022+0500 __|__ INFO __|__ Connecting to database and updating
+2023-03-02T14:50:18.935049+0500 __|__ SUCCESS __|__ Post 719970 added to database
+2023-03-02T14:50:20.878678+0500 __|__ SUCCESS __|__ Post 719958 added to database
+2023-03-02T14:50:23.070203+0500 __|__ SUCCESS __|__ Post 719950 added to database
+2023-03-02T14:50:25.235439+0500 __|__ SUCCESS __|__ Post 719946 added to database
+2023-03-02T14:50:27.746626+0500 __|__ SUCCESS __|__ Post 718994 added to database
+2023-03-02T14:50:30.215125+0500 __|__ SUCCESS __|__ Post 719780 added to database
+2023-03-02T14:50:32.435458+0500 __|__ SUCCESS __|__ Post 719928 added to database
+2023-03-02T14:50:33.400418+0500 __|__ SUCCESS __|__ Post 719934 added to database
+2023-03-02T14:50:35.386978+0500 __|__ SUCCESS __|__ Post 719796 added to database
+2023-03-02T14:50:36.973962+0500 __|__ SUCCESS __|__ Post 719488 added to database
+2023-03-02T14:50:40.735790+0500 __|__ SUCCESS __|__ Post 719932 added to database
+2023-03-02T14:50:40.824393+0500 __|__ SUCCESS __|__ Successfully finished
