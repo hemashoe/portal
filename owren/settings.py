@@ -1,14 +1,9 @@
-"""
-Settings for Owren project.
-
-"""
 import os
 from pathlib import Path
 
 from dotenv import find_dotenv, load_dotenv
 
 from .configurations import JAZZMIIN_UI_TWEAKS, JAZZMIN_SETTINGS, CKEDITOR_CONFIGS
-
 
 ################ ALL DIRECTORIES ################
 
@@ -23,6 +18,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
 
 load_dotenv(find_dotenv())
 SECRET_KEY = os.environ["SECRET_KEY"]
+
 DEBUG = True
 ALLOWED_HOSTS = ["192.168.192.24", "localhost", '127.0.0.1']
 
@@ -70,7 +66,7 @@ INTERNAL_IPS = [
 ####### CK EDITOR ########
 
 CKEDITOR_UPLOAD_PATH="posts/"
-CKEDITOR_FILENAME_GENERATOR = 'app.utils.get_filename'
+CKEDITOR_FILENAME_GENERATOR = '.utils.get_filename'
 CKEDITOR_CONFIGS = CKEDITOR_CONFIGS
 CKEDITOR_IMAGE_BACKEND = "pillow"
 
@@ -95,35 +91,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'owren.wsgi.application'
-
-#########   DJANGO_CORS_HEADERS ########
-
-# CORS_ALLOW_CREDENTIALS = True
-# CORS_ALLOW_ALL_ORIGINS = True
-
-# CORS_ALLOW_HEADERS = (
-#     'accept',
-#     'accept-encoding',
-#     'authorization',
-#     'content-type',
-#     'dnt',
-#     'origin',
-#     'user-agent',
-#     'x-csrftoken',
-#     'x-requested-with',
-#     'x-csrf-token',
-#     'cip',
-#     'isajaxrequest',
-# )
-
-# CORS_ALLOW_METHODS = [
-#     'DELETE',
-#     'GET',
-#     'OPTIONS',
-#     'PATCH',
-#     'POST',
-#     'PUT',
-# ]   
 
 ######### CACHE SYSTEM ###########################
 
@@ -176,7 +143,6 @@ AUTH_PASSWORD_VALIDATORS = [
 #################### INTERNALIZATION, TIMING ############################
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'Asia/Ashgabat'
 DATETIME_FORMAT=  '%Y-%m-%d %H:%M'
 DATETIME_INPUT_FORMATS=  '%Y-%m-%d %H:%M'

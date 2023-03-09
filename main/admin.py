@@ -3,7 +3,6 @@ from django.utils.safestring import mark_safe
 
 from .models import *
 
-# Register your models here.
 
 class ProfilesAdmin(admin.ModelAdmin):
     list_display = ('user', 'email', 'fullname', 'get_profile_photo', 'status')

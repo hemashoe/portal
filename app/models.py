@@ -6,7 +6,7 @@ from django.template.defaultfilters import slugify
 
 class Skill(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True, unique=True)
-    slug = models.SlugField(blank=True,null=True, default=f'{slugify(name)}')
+    slug = models.SlugField(blank=True,null=True, unique=True)
     description = models.CharField(null=True, blank=True, max_length=255)
     photo = models.ImageField(upload_to='skills/', blank=True, null=True)
     wallpaper = models.ImageField(upload_to='skills/', blank=True, null=True)
@@ -26,7 +26,7 @@ class Skill(models.Model):
 
 class Interest(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True, unique=True)
-    slug = models.SlugField(blank=True,null=True, default=f'{slugify(name)}')
+    slug = models.SlugField(blank=True,null=True, unique=True)
     description = models.CharField(max_length=255,blank=True,null=False)
     photo = models.ImageField(upload_to='interests/', blank=True, null=True)
     wallpaper = models.ImageField(upload_to='interests/', blank=True, null=True)

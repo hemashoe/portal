@@ -14,7 +14,6 @@ from utils import (DATA_DIR, author_profile, check_duplication, connect_to_db,
 FILE_NAME = str(DATA_DIR +  "habr_data" + datetime.now().strftime("%m-%d_%H:%M") + ".csv")
 
 
-
 def parse_posts() -> list:
     try:
         rss_data = feedparser.parse('https://habr.com/ru/rss/all/all/?fl=ru')
@@ -103,7 +102,7 @@ def update_db(data_parsed):
 
 
 def main():
-    logger.add('../logs/owren.log', format='{time} __|__ {level} __|__ {message}', level='INFO', rotation='10 MB', compression='zip')
+    logger.add('../logs/habr_parser.log', format='{time} __|__ {level} __|__ {message}', level='INFO', rotation='100 MB', compression='zip')
     
     try:
         print("Starting To Parse")
