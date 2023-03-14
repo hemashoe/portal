@@ -7,11 +7,11 @@ import pandas as pd
 from loguru import logger
 from newspaper import Article
 from slugify import slugify
-from utils import (DATA_DIR, author_profile, check_duplication, connect_to_db,
+from utils import (HABR_DIR, author_profile, check_duplication, connect_to_db,
                    download_multiple_images, download_title_img,
                    remove_unwanted)
 
-FILE_NAME = str(DATA_DIR +  "habr_data" + datetime.now().strftime("%m-%d_%H:%M") + ".csv")
+FILE_NAME = str(HABR_DIR +  "habr_data" + datetime.now().strftime("%m-%d_%H:%M") + ".csv")
 
 
 def parse_posts() -> list:
@@ -99,7 +99,6 @@ def update_db(data_parsed):
                 raise n(f"Unable to update db. Problem in {data['post_id']}")
         else:
             pass
-
 
 def main():
     logger.add('../logs/habr_parser.log', format='{time} __|__ {level} __|__ {message}', level='INFO', rotation='100 MB', compression='zip')

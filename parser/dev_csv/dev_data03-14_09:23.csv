@@ -1,0 +1,1580 @@
+'post_id'title'body'source_link'image'images
+0'6M4HKMU1E'Why I choose CRA ( Create-react-app) over Vite for this React project ?'"<p>You must have stumbled upon many posts praising Vite and how it should be the de-facto standard to get started with React apps. Vite is awesome, nothing wrong with it. But, sometimes I just believe when you're put into this decision-making situation, you should give yourself some time instead of blindly picking the new tech upgrade in the market and ditching the older one.</p>
+
+<p>I still use both CRA (create-react-app) and Vite for my React projects. In the organization (Mercedes Benz) I work, we had to start a new project from nothing. We had interns, and junior developers to collaborate with on that project. The project requirements were mostly already defined and were not likely to change in a short period. It was established to be a small to medium-sized full-stack application with an estimated completion time of two months. There weren't major performance-related concerns so I decided to pick CRA even though I, myself am a big admirer of Vite.</p>
+
+<p>CRA has been proven successful over these many years and got support from Facebook. It was easier to find help related to deployment, installation of new packages and more issues in case they show up in the development process (which they would). It is not an app which is likely to be in the development phase for a long period. Had that been the case, or we were likely to face performance-related issues in the long run because of the app being too bulky, I'd have opted to go with Vite. But, that wasn't the case here. Sticking with CRA ensures that we have more help available on the internet, less time spent on learning and more in development. Most packages have stable compatible versions with CRA available with proper documentation. So, why not stick with it?</p>
+
+<p>I've seen some developers blindly going for the upgrades in the market instead of considering the older technology while making architectural-level decisions in designing an application from scratch. In my opinion, it is completely fine to sometimes stick with older tech stack even while creating new applications. I'd bring Vue into the picture for a moment where there is a buzz in the market about why you should ditch Vue 2 ever since a stable version of Vue 3 has been released. But, why always? Why can't I use Vue 2.6 in my apps in 2023? Maybe there is a UI library that only has a stable version for Vue 2. It is your choice to still use Vue 2 or create-react-app, it is not obsolete and not likely to be so for the next few years. So relax, and use what you love. You should however have a pretty convincing reason to justify your choice.</p>
+
+<p>So, that's it for this post. Here, I just put my two cents on why it's fine to continue using existing technologies despite them having better upgrades available. If you have anything to say, please comment in the comments section. See you in the next post. 😀</p>"'https://dev.to/apfirebolt/why-i-choose-cra-create-react-app-over-vite-for-this-react-project--cj8'https://dev.to/social_previews/article/1399799.png'"['https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--hBakF5IP--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/69481/5c403480-cc3a-4f1f-9a47-291ef78ee019.jpg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--WPRCzalN--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/508824/d200695f-ea29-4921-a216-6bc901ec1d26.jpeg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--fj-7Eu0G--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/623115/0e030598-8d70-4d1b-b922-b068efcfb28b.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--cB6d_K8v--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/i/hlhrtuspjyrstifubdhs.gif', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s---ZkaJrSi--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1033807/0d460f7d-01fc-483f-9c57-54c8368873fa.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--nlI0NEGf--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/623115/0e030598-8d70-4d1b-b922-b068efcfb28b.png', 'https://dev.to/social_previews/article/1399799.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--YIzk_5MJ--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/995013/ac08f63e-6c83-4e04-aa00-eebc7390f35c.png', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg']"
+1'1JN22FUIA'"3 Lesson I've From Spotlighting Women in tech"'"<p>You know how they say ""You learn as you go""? Well, it's actually true. For March, I decided to publish my series, <a href=""https://twitter.com/CodesChrissy/status/1630713924713586689?s=20"">Bada$$ Women in Tech</a>. It's where I write posts on Twitter about women who made wonderful contributions to the tech industry every day in honor of International Women's History Month. By shining a spotlight on some of the amazing women I’ve worked with, I’ve not only been able to learn the diverse stories and triumphs of women in tech, but I've learned 3 lessons on writing along the way. Now, grab a your keyboard and open a new document on Google Docs(or whatever word processing system you use) because </p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://i.giphy.com/media/VGKCB7LPvb1tsDVdbx/giphy.gif""><img height=""480"" src=""https://i.giphy.com/media/VGKCB7LPvb1tsDVdbx/giphy.gif"" width=""480"" /></a></p>
+
+<h2>
+  
+  
+  1. You can contribute to tech in many ways.
+</h2>
+
+<p>When I started Bada$$ Women in Tech, I initially was going to focus on women who are entrepreneurs, CEOs, and founders. As I found and researched more women to spotlight, I quickly realized that whether they are CEO or community manager at a tech start-up, <em>any</em> woman's story of contribution to the industry is important and must be shared. Ok onto the next lesson.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://i.giphy.com/media/1YjrpKOmJD8l8XzXOu/giphy.gif""><img height=""270"" src=""https://i.giphy.com/media/1YjrpKOmJD8l8XzXOu/giphy.gif"" width=""480"" /></a> </p>
+
+<h2>
+  
+  
+  2. Go with your gut
+</h2>
+
+<p>I was brainstorming some names to add to my list of women to highlight, and I came across this person:</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--v3XBObIR--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0cg9sp4ua1rmwf1vwuao.jpg""><img alt=""Angelica Ross is a dark-skinned Black woman with a blonde buzzcut with piercing eyes and a soft smile"" height=""1100"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--v3XBObIR--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0cg9sp4ua1rmwf1vwuao.jpg"" width=""880"" /></a></p>
+
+<p>This Angelica Ross. She's known for playing Candy on <em>Pose</em> and runs a non-profit tech organization called <a href=""https://transtechsocial.org/"">TransTech Social Enterprise</a></p>
+
+<p>At first, I was really excited about the idea of including her in my series but then I remembered that some parts of Twitter have bigoted views about transwomen, so I experienced a little bit of mental ping-pong game. On one hand, I wanted to share her story since my goal for this series was to celebrate women from diverse backgrounds in tech, but on the other hand, I did not want Ross and any other transwoman to be subjected to potential bullying and harassment. So I posted my concern on one of the Discord channels in <a href=""https://www.baddiesintech.com/"">Baddies in Tech</a> (one of the greatest communities I've ever been in) and asked for some advice. A few minutes later, one person mentioned that I was doing a good thing by adding Ross to my lineup and just simply block any Twitter trolls(To social media newbies, trolls are individuals who often post negative comments under a person's post) from my thread. They also suggested that I post a link to my tweet so they can retweet it and defend my post against negative comments. So, I took that person's advice and made that post. Ok, I'm getting sappy, so let's get back to the lessons before I start crying. </p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://i.giphy.com/media/ebLSn4jsrBOwdB2gmL/giphy.gif""><img height=""270"" src=""https://i.giphy.com/media/ebLSn4jsrBOwdB2gmL/giphy.gif"" width=""480"" /></a> </p>
+
+<h2>
+  
+  
+  3. Be open to suggestions
+</h2>
+
+<p>As cliche as it sounds, two hands are actually better than one. Since I started this series, I have received a lot of support and some suggestions from other women on ladies to spotlight in my series. This warmed my heart because it shows that my series' goal is being achieved: empowering women in the tech community.  Ok, let's move on before I get emotional!</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://i.giphy.com/media/PjsguZnO0CJrrjXCHw/giphy.gif""><img height=""270"" src=""https://i.giphy.com/media/PjsguZnO0CJrrjXCHw/giphy.gif"" width=""480"" /></a> </p>
+
+<h2>
+  
+  
+  Takeaways
+</h2>
+
+<p>Overall, I am very proud of starting this series, and I look forward to seeing how many women I can empower as it continues to grow. Speaking for growth, if you have any suggestions on what you would like to be spotlighted, post them in the comments section below. Also, don't forget to follow me on <a href=""https://twitter.com/CodesChrissy"">Twitter</a> to see updates on my series and connect with me on my other socials via <a href=""https://linkfree.eddiehub.io/CBID2"">Linkfree</a>. Now, go out there be awesome ladies and those in between! </p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://i.giphy.com/media/sGP8iEPuv1BCi03FoZ/giphy.gif""><img height=""480"" src=""https://i.giphy.com/media/sGP8iEPuv1BCi03FoZ/giphy.gif"" width=""480"" /></a> </p>
+
+<h2>
+  
+  
+  Credits
+</h2>
+
+<p>BF Childs Home GIF by <a href=""https://media.giphy.com/media/VGKCB7LPvb1tsDVdbx/giphy.gif"">BF Childs</a><br />
+Next Step Cat GIF by <a href=""https://media.giphy.com/media/1YjrpKOmJD8l8XzXOu/giphy.gif"">PBS KIDS</a> <br />
+Sad 90 Day Fiance GIF by <a href=""https://media.giphy.com/media/ebLSn4jsrBOwdB2gmL/giphy.gif"">TLC Europe</a><br />
+Celebrate Women Empowerment GIF by <a href=""https://media.giphy.com/media/sGP8iEPuv1BCi03FoZ/giphy.gif"">INTO ACTION</a><br />
+Women Empowerment Vectors by <a href=""https://www.vecteezy.com/free-vector/women-empowerment"">Vecteezy</a></p>"'https://dev.to/cbid2/3-lesson-ive-from-spotlighting-women-in-tech-9a0'https://res.cloudinary.com/practicaldev/image/fetch/s---e63sTyA--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/noc9sqzw07xbnwjj2o01.png'"['https://res.cloudinary.com/practicaldev/image/fetch/s--SiNbcG1A--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/955766/10a6f8ae-df83-4d96-b602-8795dc80fa7c.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--AE4ZpYXA--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/945340/56f49ca3-ae1f-4297-af30-1368e6089419.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--67gZWJQ7--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/494502/2d4eb07b-a07a-46f9-91cd-1b98d862a13c.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--eq8Suk7d--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/712014/698787dd-00b6-4968-81f0-aec694a055e8.jpeg', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--ipqYl-OA--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/noc9sqzw07xbnwjj2o01.png', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--hzBl4TBH--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/469122/085f1955-378c-49cb-866b-21b9ec1f1439.jpeg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--qS0lYNel--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/945340/56f49ca3-ae1f-4297-af30-1368e6089419.jpeg', 'https://i.giphy.com/media/PjsguZnO0CJrrjXCHw/giphy.gif', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg', 'https://i.giphy.com/media/VGKCB7LPvb1tsDVdbx/giphy.gif', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://i.giphy.com/media/sGP8iEPuv1BCi03FoZ/giphy.gif', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://i.giphy.com/media/1YjrpKOmJD8l8XzXOu/giphy.gif', 'https://res.cloudinary.com/practicaldev/image/fetch/s--OOwzaeSF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_775/https://res.cloudinary.com/practicaldev/image/fetch/s--XIICQ_e4--/c_limit%252Cf_auto%252Cfl_progressive%252Cq_66%252Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m2ja8tymo646or3emo07.gif', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s---e63sTyA--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/noc9sqzw07xbnwjj2o01.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--v3XBObIR--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0cg9sp4ua1rmwf1vwuao.jpg', 'https://i.giphy.com/media/ebLSn4jsrBOwdB2gmL/giphy.gif']"
+2'Q7EB479OO'Mastering Middleware in Go: Tips, Tricks, and Real-World Use Cases'"<p>As a developer coming from a Java background, one of the first things I thought about when starting to work with Go was whether there was a similar concept to Filters that I had grown accustomed to. <strong>Fortunately, Go has its own way of</strong> <strong>handling middleware</strong>, and it's a powerful feature that can help you write better, more maintainable code.</p>
+
+<p><strong>Middleware is a powerful concept in Go</strong> that allows you to intercept and modify HTTP requests and responses. It’s a way to add functionality to your HTTP server without modifying your core application logic. Middleware is essentially a chain of functions that can be executed before and after the main request handler. It can perform tasks like authentication, logging, request validation, response compression, and much more.</p>
+
+<p>In this article, we’ll explore the basics of middleware in Go and take a deep dive into some real-world use cases.</p>
+
+<p><strong>Let’s understand first Why should we use Middleware in Go?</strong></p>
+
+<p>We should use middleware in Go because it provides a modular and extensible way to add functionality to our web application. Middleware sits between the incoming HTTP request and the application’s final response, allowing us to add features like authentication, request logging, and error handling. By using middleware, we can keep our application’s core logic clean and focused, and reduce code duplication.</p>
+
+<p><strong>What principle will break if we don’t use middleware in Go?</strong></p>
+
+<p>If we don’t use middleware in Go, we risk violating the single responsibility principle. This principle states that a module, class, or function should only have one reason to change. If we don’t use middleware, we may be tempted to add features like authentication or request logging directly to our application’s request handlers. This can lead to bloated, hard-to-maintain code that is difficult to change.</p>
+
+<p><strong>Which scenarios is middleware very helpful?</strong></p>
+
+<p>Middleware is very helpful in scenarios where we need to perform common tasks on incoming HTTP requests, such as authentication, authorization, request validation, and logging. Middleware allows us to apply these tasks consistently across our application, reducing code duplication and making it easier to maintain and modify our code.</p>
+
+<p><strong>What all middleware must we have in our code?</strong></p>
+
+<p>The middleware that we need in our code depends on the specific requirements of our application. However, there are several middleware functions that are commonly used in web applications, including:</p>
+
+<p><strong>Authentication middleware:</strong> This middleware checks whether the user is authenticated and authorized to access the requested resource.<br />
+<strong>Logging middleware:</strong> This middleware logs information about incoming requests, including request method, URL, headers, and response status.<br />
+<strong>Error handling middleware:</strong> This middleware catches errors that occur during request handling and returns an appropriate error response to the client.<br />
+<strong>Request validation middleware:</strong> This middleware validates incoming requests to ensure that they meet certain criteria, such as HTTP method, headers, query parameters, and request body content.<br />
+<strong>Caching middleware:</strong> This middleware caches responses to certain requests to improve performance and reduce server load.<br />
+<strong>Request Tracing:</strong> This middleware is used to trace the path of a request through a web application. It captures relevant information about the request and logs it for monitoring and debugging purposes.<br />
+The question that could be coming to your mind next is:</p>
+
+<p><strong>How to incorporate Middleware in Go?</strong></p>
+
+<p>Go has a built-in net/http package that provides a basic HTTP server. To use middleware with this server, we simply need to wrap the original handler with our middleware function.</p>
+
+<p>There are many third-party packages available that provide more advanced functionality. <strong>One of the most popular is Gin, a web framework that provides a powerful set of tools for building web applications. We also use in our org gin Webframework.</strong></p>
+
+<p><strong>Gin</strong> uses a custom Context object instead of the http.ResponseWriter and *http.Request objects used in the standard net/http package. This Context object provides additional functionality and allows middleware functions to perform more advanced tasks.</p>
+
+<p>To add middleware in Gin, we can use the Use() method of the gin.Engine object. Here's an example of how we can add middleware to a Gin application:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight go""><code><span class=""k"">package</span> <span class=""n"">main</span>
+
+<span class=""k"">import</span> <span class=""p"">(</span>
+ <span class=""s"">""fmt""</span>
+ <span class=""s"">""net/http""</span>
+ <span class=""s"">""time""</span>
+
+ <span class=""s"">""github.com/gin-gonic/gin""</span>
+<span class=""p"">)</span>
+
+<span class=""k"">func</span> <span class=""n"">main</span><span class=""p"">()</span> <span class=""p"">{</span>
+ <span class=""n"">r</span> <span class=""o"">:=</span> <span class=""n"">gin</span><span class=""o"">.</span><span class=""n"">New</span><span class=""p"">()</span>
+
+ <span class=""c"">// Middleware 1 - Request validation</span>
+ <span class=""n"">r</span><span class=""o"">.</span><span class=""n"">Use</span><span class=""p"">(</span><span class=""n"">validateRequest</span><span class=""p"">)</span>
+
+ <span class=""c"">// Middleware 2 - Request tracing</span>
+ <span class=""n"">r</span><span class=""o"">.</span><span class=""n"">Use</span><span class=""p"">(</span><span class=""n"">traceRequest</span><span class=""p"">)</span>
+
+ <span class=""c"">// Middleware 3 - Security</span>
+ <span class=""n"">r</span><span class=""o"">.</span><span class=""n"">Use</span><span class=""p"">(</span><span class=""n"">secureRequest</span><span class=""p"">)</span>
+
+ <span class=""c"">// Middleware 4 - Authentication</span>
+ <span class=""n"">r</span><span class=""o"">.</span><span class=""n"">Use</span><span class=""p"">(</span><span class=""n"">authenticateRequest</span><span class=""p"">)</span>
+
+ <span class=""c"">// Login Endpoint</span>
+ <span class=""n"">r</span><span class=""o"">.</span><span class=""n"">POST</span><span class=""p"">(</span><span class=""s"">""/login""</span><span class=""p"">,</span> <span class=""n"">login</span><span class=""p"">)</span>
+
+ <span class=""k"">if</span> <span class=""n"">err</span> <span class=""o"">:=</span> <span class=""n"">r</span><span class=""o"">.</span><span class=""n"">Run</span><span class=""p"">(</span><span class=""s"">"":8080""</span><span class=""p"">);</span> <span class=""n"">err</span> <span class=""o"">!=</span> <span class=""no"">nil</span> <span class=""p"">{</span>
+  <span class=""n"">fmt</span><span class=""o"">.</span><span class=""n"">Println</span><span class=""p"">(</span><span class=""s"">""Failed to start server""</span><span class=""p"">)</span>
+ <span class=""p"">}</span>
+<span class=""p"">}</span>
+
+<span class=""k"">func</span> <span class=""n"">login</span><span class=""p"">(</span><span class=""n"">c</span> <span class=""o"">*</span><span class=""n"">gin</span><span class=""o"">.</span><span class=""n"">Context</span><span class=""p"">)</span> <span class=""p"">{</span>
+ <span class=""c"">// Authentication passed, do login logic</span>
+ <span class=""n"">c</span><span class=""o"">.</span><span class=""n"">JSON</span><span class=""p"">(</span><span class=""n"">http</span><span class=""o"">.</span><span class=""n"">StatusOK</span><span class=""p"">,</span> <span class=""n"">gin</span><span class=""o"">.</span><span class=""n"">H</span><span class=""p"">{</span>
+  <span class=""s"">""message""</span><span class=""o"">:</span> <span class=""s"">""Logged in successfully""</span><span class=""p"">,</span>
+ <span class=""p"">})</span>
+<span class=""p"">}</span>
+
+<span class=""k"">func</span> <span class=""n"">validateRequest</span><span class=""p"">(</span><span class=""n"">c</span> <span class=""o"">*</span><span class=""n"">gin</span><span class=""o"">.</span><span class=""n"">Context</span><span class=""p"">)</span> <span class=""p"">{</span>
+ <span class=""c"">// Validate the request</span>
+
+ <span class=""c"">// Call the next middleware or endpoint handler</span>
+ <span class=""n"">c</span><span class=""o"">.</span><span class=""n"">Next</span><span class=""p"">()</span>
+<span class=""p"">}</span>
+
+<span class=""k"">func</span> <span class=""n"">traceRequest</span><span class=""p"">(</span><span class=""n"">c</span> <span class=""o"">*</span><span class=""n"">gin</span><span class=""o"">.</span><span class=""n"">Context</span><span class=""p"">)</span> <span class=""p"">{</span>
+ <span class=""c"">// Do some request tracing before request is processed</span>
+ <span class=""n"">beforeRequest</span><span class=""p"">(</span><span class=""n"">c</span><span class=""p"">)</span>
+
+ <span class=""c"">// Call the next middleware or endpoint handler</span>
+ <span class=""n"">c</span><span class=""o"">.</span><span class=""n"">Next</span><span class=""p"">()</span>
+
+ <span class=""c"">// Do some request tracing after request is processed</span>
+ <span class=""n"">afterRequest</span><span class=""p"">(</span><span class=""n"">c</span><span class=""p"">)</span>
+<span class=""p"">}</span>
+
+<span class=""k"">func</span> <span class=""n"">secureRequest</span><span class=""p"">(</span><span class=""n"">c</span> <span class=""o"">*</span><span class=""n"">gin</span><span class=""o"">.</span><span class=""n"">Context</span><span class=""p"">)</span> <span class=""p"">{</span>
+ <span class=""c"">// Add some security features to the request</span>
+
+ <span class=""c"">// Call the next middleware or endpoint handler</span>
+ <span class=""n"">c</span><span class=""o"">.</span><span class=""n"">Next</span><span class=""p"">()</span>
+<span class=""p"">}</span>
+
+<span class=""k"">func</span> <span class=""n"">authenticateRequest</span><span class=""p"">(</span><span class=""n"">c</span> <span class=""o"">*</span><span class=""n"">gin</span><span class=""o"">.</span><span class=""n"">Context</span><span class=""p"">)</span> <span class=""p"">{</span>
+ <span class=""c"">// Authenticate the request</span>
+
+ <span class=""c"">// Call the next middleware or endpoint handler</span>
+ <span class=""n"">c</span><span class=""o"">.</span><span class=""n"">Next</span><span class=""p"">()</span>
+<span class=""p"">}</span>
+
+<span class=""k"">func</span> <span class=""n"">beforeRequest</span><span class=""p"">(</span><span class=""n"">c</span> <span class=""o"">*</span><span class=""n"">gin</span><span class=""o"">.</span><span class=""n"">Context</span><span class=""p"">)</span> <span class=""p"">{</span>
+ <span class=""n"">start</span> <span class=""o"">:=</span> <span class=""n"">time</span><span class=""o"">.</span><span class=""n"">Now</span><span class=""p"">()</span>
+
+ <span class=""c"">// Log the request start time</span>
+ <span class=""n"">fmt</span><span class=""o"">.</span><span class=""n"">Printf</span><span class=""p"">(</span><span class=""s"">""Started %s %s</span><span class=""se"">\n</span><span class=""s"">""</span><span class=""p"">,</span> <span class=""n"">c</span><span class=""o"">.</span><span class=""n"">Request</span><span class=""o"">.</span><span class=""n"">Method</span><span class=""p"">,</span> <span class=""n"">c</span><span class=""o"">.</span><span class=""n"">Request</span><span class=""o"">.</span><span class=""n"">URL</span><span class=""o"">.</span><span class=""n"">Path</span><span class=""p"">)</span>
+
+ <span class=""c"">// Add start time to the request context</span>
+ <span class=""n"">c</span><span class=""o"">.</span><span class=""n"">Set</span><span class=""p"">(</span><span class=""s"">""startTime""</span><span class=""p"">,</span> <span class=""n"">start</span><span class=""p"">)</span>
+<span class=""p"">}</span>
+
+<span class=""k"">func</span> <span class=""n"">afterRequest</span><span class=""p"">(</span><span class=""n"">c</span> <span class=""o"">*</span><span class=""n"">gin</span><span class=""o"">.</span><span class=""n"">Context</span><span class=""p"">)</span> <span class=""p"">{</span>
+ <span class=""c"">// Get the start time from the request context</span>
+ <span class=""n"">startTime</span><span class=""p"">,</span> <span class=""n"">exists</span> <span class=""o"">:=</span> <span class=""n"">c</span><span class=""o"">.</span><span class=""n"">Get</span><span class=""p"">(</span><span class=""s"">""startTime""</span><span class=""p"">)</span>
+ <span class=""k"">if</span> <span class=""o"">!</span><span class=""n"">exists</span> <span class=""p"">{</span>
+  <span class=""n"">startTime</span> <span class=""o"">=</span> <span class=""n"">time</span><span class=""o"">.</span><span class=""n"">Now</span><span class=""p"">()</span>
+ <span class=""p"">}</span>
+
+ <span class=""c"">// Calculate the request duration</span>
+ <span class=""n"">duration</span> <span class=""o"">:=</span> <span class=""n"">time</span><span class=""o"">.</span><span class=""n"">Since</span><span class=""p"">(</span><span class=""n"">startTime</span><span class=""o"">.</span><span class=""p"">(</span><span class=""n"">time</span><span class=""o"">.</span><span class=""n"">Time</span><span class=""p"">))</span>
+
+ <span class=""c"">// Log the request completion time and duration</span>
+ <span class=""n"">fmt</span><span class=""o"">.</span><span class=""n"">Printf</span><span class=""p"">(</span><span class=""s"">""Completed %s %s in %v</span><span class=""se"">\n</span><span class=""s"">""</span><span class=""p"">,</span> <span class=""n"">c</span><span class=""o"">.</span><span class=""n"">Request</span><span class=""o"">.</span><span class=""n"">Method</span><span class=""p"">,</span> <span class=""n"">c</span><span class=""o"">.</span><span class=""n"">Request</span><span class=""o"">.</span><span class=""n"">URL</span><span class=""o"">.</span><span class=""n"">Path</span><span class=""p"">,</span> <span class=""n"">duration</span><span class=""p"">)</span>
+<span class=""p"">}</span>
+
+</code></pre>
+
+</div>
+
+
+
+<p>In this example, we’re adding four middleware functions to our Gin application using the Use() method. Each middleware function is defined as a gin.HandlerFunc that takes a gin.Context object as a parameter.</p>
+
+<p>The order in which we add middleware using the Use() method matters. Middleware functions are executed in the order they are added, so it's important to add them in the correct order to ensure that the desired behavior is achieved.</p>
+
+<p>In TraceRequest middleware, we added two functions: beforeRequest and afterRequest .we first call beforeRequest function to do some tracing before the request is processed. After the request is processed, we call afterRequest function to do some tracing after the request is processed.</p>
+
+<p>Inside beforeRequest function, we log the start time of the request and add it to the request context. Inside afterRequest function, we get the start time from the request context, calculate the request duration, and log the completion time and duration.</p>
+
+<p>*<em>Sequence diagram:<br />
+*</em><br />
+<a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--AzWWney0--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ggutsllp1obfear84ki0.png""><img alt=""Image description"" height=""395"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--AzWWney0--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ggutsllp1obfear84ki0.png"" width=""880"" /></a></p>
+
+<p><strong>Conclusion</strong><br />
+In this article, we have seen how middleware works in Go and why it is important to use them in web applications. We have also seen some common middleware use cases such as request validation, request tracing, security, and authentication. By using middleware, we can write modular and reusable code, and easily add functionality to our application without changing the core logic.</p>
+
+<p>In summary, if you are building a web application in Go, middleware is an essential concept that you should master to improve the quality and security of your code.</p>
+
+<p><strong>I hope you found this article helpful in understanding middleware concepts. If you enjoyed reading this, please like the article and consider following me for more Go programming tutorials.</strong></p>"'https://dev.to/ansu/mastering-middleware-in-go-tips-tricks-and-real-world-use-cases-13md'https://dev.to/social_previews/article/1399731.png'"['https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Bpd0xNfr--/c_imagga_scale,f_auto,fl_progressive,h_100,q_66,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/82678/3688b2bf-b4d5-4e1c-94fc-c9ea0216bfaa.gif', 'https://res.cloudinary.com/practicaldev/image/fetch/s--eXZGk0Bv--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/859413/f6b53ee1-f613-4efe-af59-422c7eeac07a.jpeg', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--FACAjl5M--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1037546/23508e2e-0a22-41db-962d-e68a0506a62f.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--AzWWney0--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ggutsllp1obfear84ki0.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--oh6gjTBu--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1037546/23508e2e-0a22-41db-962d-e68a0506a62f.jpeg', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--8t-VGqgg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/i/7p7qe33hhlj5zdi3bj82.jpg', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://dev.to/social_previews/article/1399731.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--SoNVR1us--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/653570/24831d91-9306-43bd-b04b-58b642057be5.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--vdbRyuOl--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/18209/c773a4c2-d6ca-4416-8478-4a4c36fae000.PNG', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png']"
+3'U48XXK5LC'👨🏽‍💻🚀 Discover These 5 Incredible ES6 Features That Will Make You a Better JavaScript Developer 🚀👨🏽‍💻'"<h2>
+  
+  
+  <strong>Introduction</strong>
+</h2>
+
+<p>As a JavaScript developer, you know how important it is to stay up-to-date with the latest language features and tools. That's why ES6 (also known as ECMAScript 2015) is such a game-changer. With its powerful new features and improved syntax, ES6 has revolutionized modern JavaScript development. But with so many new additions to the language, where do you start?</p>
+
+<p>In this post, we'll walk you through the most essential ES6 features that every JavaScript developer should know. From block-scoped variables to template literals, we'll show you how these features can make your code more concise, readable, and maintainable. So whether you're a seasoned JavaScript pro or just starting out, get ready to take your skills to the next level with ES6!</p>
+
+<h2>
+  
+  
+  <strong>1. Block-Scoped Declarations</strong>
+</h2>
+
+<p>In JavaScript, block-scoped variables can be declared using <strong><code>let</code></strong> and <strong><code>const</code></strong> keywords. Block-scoped variables are only accessible within the block of code they were defined in. This means that if a variable is declared inside a block of code, it cannot be accessed outside that block. This feature of JavaScript allows developers to write more secure and predictable code, reducing the chance of variable name collisions.</p>
+
+<p>The <strong><code>let</code></strong> keyword is used to declare block-scoped variables that can be reassigned later. In the following example, we declare a variable <strong><code>x</code></strong> outside an <strong><code>if</code></strong> block and assign it the value <strong><code>10</code></strong>. Inside the <strong><code>if</code></strong> block, we declare another variable <strong><code>x</code></strong> and assign it the value <strong><code>20</code></strong>. When we log the value of <strong><code>x</code></strong> inside the <strong><code>if</code></strong> block, we get the value <strong><code>20</code></strong>. However, when we log the value of <strong><code>x</code></strong> outside the <strong><code>if</code></strong> block, we get the value <strong><code>10</code></strong>. This is because the variable <strong><code>x</code></strong> inside the <strong><code>if</code></strong> block is a different variable than the one declared outside the block.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight jsx""><code>
+<span class=""c1"">// Example of let</span>
+<span class=""kd"">let</span> <span class=""nx"">x</span> <span class=""o"">=</span> <span class=""mi"">10</span><span class=""p"">;</span>
+<span class=""k"">if</span> <span class=""p"">(</span><span class=""kc"">true</span><span class=""p"">)</span> <span class=""p"">{</span>
+  <span class=""kd"">let</span> <span class=""nx"">x</span> <span class=""o"">=</span> <span class=""mi"">20</span><span class=""p"">;</span>
+  <span class=""nx"">console</span><span class=""p"">.</span><span class=""nx"">log</span><span class=""p"">(</span><span class=""nx"">x</span><span class=""p"">);</span> <span class=""c1"">// Output: 20</span>
+<span class=""p"">}</span>
+<span class=""nx"">console</span><span class=""p"">.</span><span class=""nx"">log</span><span class=""p"">(</span><span class=""nx"">x</span><span class=""p"">);</span> <span class=""c1"">// Output: 1</span>
+</code></pre>
+
+</div>
+
+
+
+<p>The <strong><code>const</code></strong> keyword is used to declare block-scoped variables that cannot be reassigned. In the following example, we declare a constant <strong><code>PI</code></strong> and assign it the value <strong><code>3.14159</code></strong>. When we try to reassign the value of <strong><code>PI</code></strong> to <strong><code>42</code></strong>, we get an error because we cannot reassign a constant.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight jsx""><code>
+<span class=""c1"">// Example of const</span>
+<span class=""kd"">const</span> <span class=""nx"">PI</span> <span class=""o"">=</span> <span class=""mf"">3.14159</span><span class=""p"">;</span>
+<span class=""nx"">PI</span> <span class=""o"">=</span> <span class=""mi"">42</span><span class=""p"">;</span> <span class=""c1"">// Throws an error</span>
+
+</code></pre>
+
+</div>
+
+
+
+<h2>
+  
+  
+  <strong>2. Arrow Functions</strong>
+</h2>
+
+<p>Arrow functions are a new syntax for creating functions in JavaScript. They provide a concise way to define functions and are often used in conjunction with other new features of JavaScript like <strong><code>let</code></strong>, <strong><code>const</code></strong>, and template literals. Arrow functions have a shorter syntax than traditional functions and provide a few benefits over them.</p>
+
+<p>The syntax for an arrow function looks like this: <strong><code>(arguments) =&gt; { expression }</code></strong>. The arrow function can take zero or more arguments, and the function body is a single expression. If the expression is a single statement, it does not require curly braces.</p>
+
+<p>In the following example, we define a traditional function <strong><code>add</code></strong> that takes two arguments and returns their sum. We then define an arrow function <strong><code>add</code></strong> that does the same thing. The arrow function is shorter and more concise than the traditional function.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight jsx""><code>
+<span class=""c1"">// Traditional function</span>
+<span class=""kd"">function</span> <span class=""nx"">add</span><span class=""p"">(</span><span class=""nx"">a</span><span class=""p"">,</span> <span class=""nx"">b</span><span class=""p"">)</span> <span class=""p"">{</span>
+  <span class=""k"">return</span> <span class=""nx"">a</span> <span class=""o"">+</span> <span class=""nx"">b</span><span class=""p"">;</span>
+<span class=""p"">}</span>
+
+<span class=""c1"">// Arrow function</span>
+<span class=""kd"">const</span> <span class=""nx"">add</span> <span class=""o"">=</span> <span class=""p"">(</span><span class=""nx"">a</span><span class=""p"">,</span> <span class=""nx"">b</span><span class=""p"">)</span> <span class=""o"">=&gt;</span> <span class=""nx"">a</span> <span class=""o"">+</span> <span class=""nx"">b</span><span class=""p"">;</span>
+
+<span class=""c1"">// Arrow function with multiple statements</span>
+<span class=""kd"">const</span> <span class=""nx"">sayHello</span> <span class=""o"">=</span> <span class=""nx"">name</span> <span class=""o"">=&gt;</span> <span class=""p"">{</span>
+  <span class=""kd"">const</span> <span class=""nx"">message</span> <span class=""o"">=</span> <span class=""s2"">`Hello, </span><span class=""p"">${</span><span class=""nx"">name</span><span class=""p"">}</span><span class=""s2"">!`</span><span class=""p"">;</span>
+  <span class=""nx"">console</span><span class=""p"">.</span><span class=""nx"">log</span><span class=""p"">(</span><span class=""nx"">message</span><span class=""p"">);</span>
+<span class=""p"">};</span>
+
+</code></pre>
+
+</div>
+
+
+
+<h2>
+  
+  
+  <strong>3. Template Literals</strong>
+</h2>
+
+<p>Template literals are another new feature of JavaScript that allows developers to create strings more easily. They provide a way to include variables and expressions inside a string without having to concatenate them using the <code>+</code> operator. This makes code more readable and easier to write.</p>
+
+<p>The syntax for a template literal is a string enclosed in backticks. Inside the string, we can include variables or expressions by wrapping them in <code>${}</code>. In the following example, we define a variable name and a string message that includes the variable using a template literal. This is equivalent to concatenating the string using the + operator.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight jsx""><code><span class=""kd"">const</span> <span class=""nx"">name</span> <span class=""o"">=</span> <span class=""dl"">'</span><span class=""s1"">John</span><span class=""dl"">'</span><span class=""p"">;</span>
+<span class=""kd"">const</span> <span class=""nx"">message</span> <span class=""o"">=</span> <span class=""s2"">`Hello, </span><span class=""p"">${</span><span class=""nx"">name</span><span class=""p"">}</span><span class=""s2"">!`</span><span class=""p"">;</span>
+<span class=""nx"">console</span><span class=""p"">.</span><span class=""nx"">log</span><span class=""p"">(</span><span class=""nx"">message</span><span class=""p"">);</span> <span class=""c1"">// Output: ""Hello, John!""</span>
+
+</code></pre>
+
+</div>
+
+
+
+<p>We can also include expressions inside a template literal. In the following example, we define two variables and use them in a template literal to create a string that calculates the sum of two numbers.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight jsx""><code><span class=""kd"">const</span> <span class=""nx"">a</span> <span class=""o"">=</span> <span class=""mi"">10</span><span class=""p"">;</span>
+<span class=""kd"">const</span> <span class=""nx"">b</span> <span class=""o"">=</span> <span class=""mi"">20</span><span class=""p"">;</span>
+<span class=""kd"">const</span> <span class=""nx"">sum</span> <span class=""o"">=</span> <span class=""s2"">`</span><span class=""p"">${</span><span class=""nx"">a</span><span class=""p"">}</span><span class=""s2""> + </span><span class=""p"">${</span><span class=""nx"">b</span><span class=""p"">}</span><span class=""s2""> = </span><span class=""p"">${</span><span class=""nx"">a</span> <span class=""o"">+</span> <span class=""nx"">b</span><span class=""p"">}</span><span class=""s2"">`</span><span class=""p"">;</span>
+<span class=""nx"">console</span><span class=""p"">.</span><span class=""nx"">log</span><span class=""p"">(</span><span class=""nx"">sum</span><span class=""p"">);</span> <span class=""c1"">// Output: ""10 + 20 = 30""</span>
+
+</code></pre>
+
+</div>
+
+
+
+<p>Template literals also support multi-line strings, which can be useful when working with long strings of text. In the following example, we define a variable that includes line breaks using a template literal.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight jsx""><code><span class=""kd"">const</span> <span class=""nx"">text</span> <span class=""o"">=</span> <span class=""s2"">`This is a
+multi-line
+string.`</span><span class=""p"">;</span>
+<span class=""nx"">console</span><span class=""p"">.</span><span class=""nx"">log</span><span class=""p"">(</span><span class=""nx"">text</span><span class=""p"">);</span> <span class=""c1"">// Output: ""This is a\nmulti-line\nstring.""</span>
+
+</code></pre>
+
+</div>
+
+
+
+<h2>
+  
+  
+  <strong>4. Destructuring</strong>
+</h2>
+
+<p>Destructuring is a new feature of JavaScript that allows us to extract values from objects and arrays and assign them to variables. This can simplify code by reducing the need to write verbose code to access properties of objects or elements of arrays.</p>
+
+<h3>
+  
+  
+  <strong>Destructuring Objects</strong>
+</h3>
+
+<p>To destructure an object, we can use the following syntax:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight jsx""><code><span class=""kd"">const</span><span class=""err""> </span><span class=""nx"">person</span> <span class=""o"">=</span> <span class=""p"">{</span><span class=""err""> </span><span class=""na"">name</span><span class=""p"">:</span><span class=""err""> </span><span class=""dl"">'</span><span class=""s1"">John</span><span class=""dl"">'</span><span class=""p"">,</span><span class=""err""> </span><span class=""na"">age</span><span class=""p"">:</span><span class=""err""> </span><span class=""mi"">30</span><span class=""err""> </span><span class=""p"">};</span>
+<span class=""kd"">const</span><span class=""err""> </span><span class=""p"">{</span> <span class=""nx"">name</span><span class=""p"">,</span> <span class=""nx"">age</span> <span class=""p"">}</span> <span class=""o"">=</span> <span class=""nx"">person</span><span class=""p"">;</span>
+
+</code></pre>
+
+</div>
+
+
+
+<p>In this example, we create an object called <strong><code>person</code></strong> with two properties: <strong><code>name</code></strong> and <strong><code>age</code></strong>. We then destructure the object using curly braces <strong><code>{}</code></strong> and assign the values of the <strong><code>name</code></strong> and <strong><code>age</code></strong> properties to variables of the same name. The resulting variables will have the values <strong><code>'John'</code></strong> and <strong><code>30</code></strong>, respectively.</p>
+
+<h3>
+  
+  
+  <strong>Destructuring Arrays</strong>
+</h3>
+
+<p>To destructure an array, we can use the following syntax:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight jsx""><code><span class=""kd"">const</span><span class=""err""> </span><span class=""nx"">numbers</span> <span class=""o"">=</span> <span class=""p"">[</span><span class=""mi"">1</span><span class=""p"">,</span><span class=""err""> </span><span class=""mi"">2</span><span class=""p"">,</span><span class=""err""> </span><span class=""mi"">3</span><span class=""p"">,</span><span class=""err""> </span><span class=""mi"">4</span><span class=""p"">,</span><span class=""err""> </span><span class=""mi"">5</span><span class=""p"">];</span>
+<span class=""kd"">const</span><span class=""err""> </span><span class=""p"">[</span><span class=""nx"">first</span><span class=""p"">,</span> <span class=""nx"">second</span><span class=""p"">,</span> <span class=""p"">...</span><span class=""nx"">rest</span><span class=""p"">]</span> <span class=""o"">=</span> <span class=""nx"">numbers</span><span class=""p"">;</span>
+
+</code></pre>
+
+</div>
+
+
+
+<p>In this example, we create an array called <strong><code>numbers</code></strong> with five elements. We then destructure the array by assigning the values of the first and second elements to variables called <strong><code>first</code></strong> and <strong><code>second</code></strong>, respectively. We also use the rest parameter syntax <strong><code>...</code></strong> to assign the remaining elements of the array to a new array called <strong><code>rest</code></strong>.</p>
+
+<h2>
+  
+  
+  <strong>5. Classes</strong>
+</h2>
+
+<ul>
+<li>Explanation of class syntax and how it simplifies object-oriented programming in JavaScript</li>
+<li>Code examples of classes in Markdown format:
+</li>
+</ul>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight jsx""><code>
+<span class=""c1"">// Example of a class </span>
+<span class=""kd"">class</span><span class=""err""> </span><span class=""nx"">Person</span><span class=""err""> </span><span class=""p"">{</span><span class=""err""> </span>
+    <span class=""kd"">constructor</span><span class=""p"">(</span><span class=""nx"">name</span><span class=""p"">,</span> <span class=""nx"">age</span><span class=""p"">)</span> <span class=""p"">{</span>
+    <span class=""err""> </span><span class=""k"">this</span><span class=""p"">.</span><span class=""nx"">name</span><span class=""err""> </span><span class=""o"">=</span> <span class=""nx"">name</span><span class=""p"">;</span>
+     <span class=""k"">this</span><span class=""p"">.</span><span class=""nx"">age</span><span class=""o"">=</span> <span class=""nx"">age</span><span class=""p"">;</span>
+    <span class=""p"">}</span>
+
+    <span class=""nx"">sayHello</span><span class=""p"">()</span> <span class=""p"">{</span>
+        <span class=""nx"">console</span><span class=""p"">.</span><span class=""nx"">log</span><span class=""p"">(</span><span class=""s2"">`Hello, my name is </span><span class=""p"">${</span><span class=""k"">this</span><span class=""p"">.</span><span class=""nx"">name</span><span class=""p"">}</span><span class=""s2""> and I am </span><span class=""p"">${</span><span class=""k"">this</span><span class=""p"">.</span><span class=""nx"">age</span><span class=""p"">}</span><span class=""s2""> years old.`</span><span class=""p"">);</span>
+<span class=""p"">}</span>
+<span class=""p"">}</span>
+<span class=""kd"">const</span><span class=""err""> </span><span class=""nx"">john</span> <span class=""o"">=</span><span class=""err""> </span><span class=""k"">new</span><span class=""err""> </span><span class=""nx"">Person</span><span class=""p"">(</span><span class=""dl"">'</span><span class=""s1"">John</span><span class=""dl"">'</span><span class=""p"">,</span><span class=""err""> </span><span class=""mi"">30</span><span class=""p"">);</span>
+<span class=""nx"">john</span><span class=""p"">.</span><span class=""nx"">sayHello</span><span class=""p"">();</span>
+
+</code></pre>
+
+</div>
+
+
+
+<h2>
+  
+  
+  <strong>Conclusion</strong>
+</h2>
+
+<p>In conclusion, we've covered some of the most useful ES6 features that can make your JavaScript code more efficient, readable, and maintainable. From destructuring to arrow functions to classes, these features can help you write code that's not only faster to develop but also easier to debug and extend. </p>
+
+<p>But don't stop here! ES6 is a vast and constantly evolving language, and there's always more to explore. So keep experimenting with new features, read the official documentation, and join online communities to learn from other developers. With ES6 in your toolkit, you'll be well-equipped to tackle any JavaScript project that comes your way. Happy coding!</p>"'https://dev.to/almonteluis/discover-these-5-incredible-es6-features-that-will-make-you-a-better-javascript-developer-37lo'https://res.cloudinary.com/practicaldev/image/fetch/s--QPh2wJhH--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ckhsfo5hinwdqzyu0rwh.png'"['https://res.cloudinary.com/practicaldev/image/fetch/s--xwBoQC_6--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/186199/a3d1cfed-a1ca-41cd-a146-9db4e65711d4.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--kM3vwF4C--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ckhsfo5hinwdqzyu0rwh.png', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--jG6gou-U--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/921099/40a0f589-9863-4ad2-9e55-286802450d97.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--IxrGprDT--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fbsvcwqnj5mgkzuwy24r.png', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--ly3Km8J_--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/820341/e194b487-83e7-47d8-b388-eeb4645aaad0.png', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--cB6d_K8v--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/i/hlhrtuspjyrstifubdhs.gif', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--2Nr7nILm--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1025401/bded43fa-1f30-42f8-9526-78024d7c5575.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--letP8vwt--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1025401/bded43fa-1f30-42f8-9526-78024d7c5575.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--QPh2wJhH--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ckhsfo5hinwdqzyu0rwh.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--519t6zLB--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/895188/3a022016-5197-4412-bd27-6051904f42fb.png']"
+4'294ZKGGFZ'What you should know about SEO as a Web Developer!'"<p>Since 2009, I worked for small or large projects that involves optimizes sites for Google at some level. Some organizations I worked, seems an increase access around 50%, with some effort to improve the code and marketing team.</p>
+
+<p>Algorithms changes has change during the year, but some core concepts still working pretty well, for almost 14 years, so follow some basics to help you.</p>
+
+<h2>
+  
+  
+  Don't exclude no one, develop for a blind person
+</h2>
+
+<p>Text in our computers it's something everyone can read, for blind people they can count with screen readers and understanding pretty well the content. Web born with interoperability and accessibility as core concepts to facilitate access for everyone, include people with screen readers.</p>
+
+<p>Google was first developed and improved using HTML as his main base to search and rank sites, mainly because of accessibility HTML has.</p>
+
+<p>So you should consider all people and give to Google a facilitated access similar to a blind person. Structured content, semantic tag and rely more on text content than visual ones.</p>
+
+<h2>
+  
+  
+  Speed meters
+</h2>
+
+<p>What's the most fastest way to deliver an HTML after requested? That should be the answer you need to find when want a good SEO.</p>
+
+<p>I saw a lot of new tools, trying to make miracle to deliver HTML at the end user, some tools try to parse JSX components in the back-end, another tools trying make a mixed of then. For some applications they can work pretty well, but for SEO NodeJS in general should be avoid, except when combine prepared HTML text, with another text, like Ghost does with Handlebars. Also take a look with care for tools made in PHP.</p>
+
+<p>For large scale this kind of optimizations could save some money and headaches.</p>
+
+<p>JS and CSS shouldn't be something slow and change HTML tag positions.</p>
+
+<h2>
+  
+  
+  Be a structured person, to make bot spend time with you
+</h2>
+
+<p>Markdown could be a good example about generate structured text, you have Titles, Subtitles, Paragraphs. For sites link it's another good structure that help to give Googlebot context.</p>
+
+<p>Links it's very important and you should place a lot of then point to another pages and point back to the content. The most time googlebot spent to understand some site, more relevant they became. Also it's much better with you have another contents point to your content. Blog post in dev.to would help you.</p>
+
+<h2>
+  
+  
+  If need place schemas
+</h2>
+
+<p>Go to schema.org and try to structure your content with the JSON. That's no more, no less.</p>
+
+<h2>
+  
+  
+  Monitor the search and increase content
+</h2>
+
+<p>After some weeks, go to webmasters tools, like <a href=""https://search.google.com/search-console"">google search console</a> or <a href=""https://www.bing.com/webmasters"">bing search console</a>.</p>
+
+<p>These tools helps you with ideas for new content, what kind of page you could improve perfomance, world, terms and articles to write and gain more access.</p>
+
+<h2>
+  
+  
+  Resuming
+</h2>
+
+<ul>
+<li>Don't exclude no one, develop for a blind person, accessibility and semantics matter</li>
+<li>Focus on the response speed</li>
+<li>Be a structured person and make bot spend time in your site</li>
+<li>Learn about schemas and structured contents</li>
+<li>Monitor the constantly the results</li>
+</ul>"'https://dev.to/flpms/what-you-should-know-about-seo-as-a-web-developer-pdl'https://dev.to/social_previews/article/1399647.png'"['https://res.cloudinary.com/practicaldev/image/fetch/s--0S5enHDM--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/170161/81487113-fa0e-4505-85c3-b3c47ec7daf6.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--bXpdDkS4--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/186838/110ff378-dcc5-4b34-9c2c-3892a8d24d56.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--cnc0z5xu--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/337841/75deba0f-8d8a-476a-b62b-557c6de1bc8f.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--PsN9w6FK--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/656421/a0956cd3-1336-462b-9fd4-cb0793446706.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--spHAHDab--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/40471/e9d0be09-6234-45c8-bc42-e56f3c37e201.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Ea1OGrCb--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1/f451a206-11c8-4e3d-8936-143d0a7e65bb.png', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--7eixBtsP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cle4is361slr4jtgrbqg.png', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--FsLh_64L--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/40471/e9d0be09-6234-45c8-bc42-e56f3c37e201.jpeg', 'https://dev.to/social_previews/article/1399647.png', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s---wjEG4EB--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/623947/08654793-31ad-46e4-b298-1febcf781d1a.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--88X-u0Wv--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/680497/436651c2-9537-47b6-9d90-4d3b57aa8ceb.png', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--SJfRLnec--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cwkw09cb5un6au3a9b5e.png']"
+5'H8L9CDEXG'Raspberry Pi como runner do GitHub Action'"<h2>
+  
+  
+  Raspberry Pi 🖱️ + GitHubActions 🤖
+</h2>
+
+<p>Estamos em 2023, o carnaval já passou e agora estou retomando meus estudos e laboratórios. Há alguns eu tive a ideia de utilizar o meu <em>""Home Server""</em> (foto abaixo) que no caso é um <a href=""https://www.raspberrypi.com/"">Raspberry Pi 4</a> como um Runner para executar processos de CI/CD no <a href=""https://github.com/features/actions"">GitHub Actions</a>.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--FedAJfnC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ew5y7xuo6h7kld9mbdzp.jpg""><img alt=""Image description"" height=""660"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--FedAJfnC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ew5y7xuo6h7kld9mbdzp.jpg"" width=""880"" /></a></p>
+
+<p>Então neste artigo a ideia é exemplificar como configurar um <em>self-hosted runner</em> para utilizar em seus processos de CI/CD.</p>
+
+<p>Eu utilizei como base para esse <em>hands-on</em> a <a href=""https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners"">documentação do oficial do GitHub</a>, lá você irá encontrar todos os detalhes sobre sistemas operacionais suportados, arquitetura e mais detalhes das configurações possíveis.</p>
+
+<h2>
+  
+  
+  Instalação e configuração do runner 🛠
+</h2>
+
+<p>Vamos lá! Você pode adicionar self hosted runners a nível de organização se utilizar o <a href=""https://docs.github.com/pt/enterprise-cloud@latest/admin/overview/about-enterprise-accounts"">GitHub Corporativo</a>. Assim todos os repositórios dentro daquela conta poderão utilizar os servidores configurados, ou você pode configurar a nível de repositório, que é como irei seguir por aqui.</p>
+
+<p>O primeiro passo da configuração é ir no seu repositório em: <strong><em>Settings -&gt; Actions -&gt; Runners</em></strong> e clica no botão <strong><em>""New self-hosted runner""</em></strong>, nesse momento você irá selecionar a arquitetura do servidor e o sistemas operacional.</p>
+
+<p>Será exibido um passo-a-passo que precisar ser feito no servidor que será o runner.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--A53EWrDC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u7k7l0aqgm1iziib3f00.gif""><img alt=""Image description"" height=""652"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--A53EWrDC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u7k7l0aqgm1iziib3f00.gif"" width=""880"" /></a></p>
+
+<p>Agora eu vou conectar no meu Raspberry Pi e executar o passo-a-passo informado para fazer instalação.</p>
+
+<p><strong>Download</strong><br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""c""># Create a folder</span>
+<span class=""nv"">$ </span><span class=""nb"">mkdir </span>actions-runner <span class=""o"">&amp;&amp;</span> <span class=""nb"">cd </span>actions-runner
+
+<span class=""c""># Download the latest runner package</span>
+<span class=""nv"">$ </span>curl <span class=""nt"">-o</span> actions-runner-linux-arm64-2.302.1.tar.gz <span class=""nt"">-L</span> https://github.com/actions/runner/releases/download/v2.302.1/actions-runner-linux-arm64-2.302.1.tar.gz
+
+<span class=""c""># Extract the installer</span>
+<span class=""nv"">$ </span><span class=""nb"">tar </span>xzf ./actions-runner-linux-arm64-2.302.1.tar.gz
+</code></pre>
+
+</div>
+
+
+
+<p><strong>Configure</strong><br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""c""># Create the runner and start the configuration experience</span>
+<span class=""nv"">$ </span>./config.sh <span class=""nt"">--url</span> https://github.com/santospedroh/raspberry-pi-runner <span class=""nt"">--token</span> XXXXXXXXXXXXXXXXXXXXXX 
+<span class=""c""># Last step, run it!</span>
+<span class=""nv"">$ </span>./run.sh
+</code></pre>
+
+</div>
+
+
+
+<p>Após esses passos de instalação será exibida uma tela no seu terminal para que seja feita as configurações do <em>self-hosted runner</em> onde será solicitado o grupo do runner, nome do runner e diretório de working.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--e4oZJ1on--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th35zw841ouiaxhxg2l4.png""><img alt=""Image description"" height=""625"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--e4oZJ1on--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th35zw841ouiaxhxg2l4.png"" width=""880"" /></a></p>
+
+<p>Após a instalação e configuração finalizadas com sucesso o runner precisar ser iniciado utilizar o script run: <code>$ ./run.sh</code>.</p>
+
+<p>Se tudo deu certo, o seu repositório já irá exibir o runner como <em>Idle</em> quer dizer que está ativo aguardando um Job para executar. 🤓</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--35LTfqT7--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ueww284102i6k1jfpx9r.gif""><img alt=""Image description"" height=""563"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--35LTfqT7--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ueww284102i6k1jfpx9r.gif"" width=""880"" /></a></p>
+
+<h2>
+  
+  
+  Testando um hello world 🌎
+</h2>
+
+<p>Na <em>branch main</em> do repositório eu deixei salvo um workflow que vai executar no Raspberry Pi que acabamos de configura como <em>self-runner</em>.</p>
+
+<p>Abaixo dos detalhes do workflow:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight yaml""><code><span class=""na"">name</span><span class=""pi"">:</span> <span class=""s"">workflow-raspberry</span>
+
+<span class=""na"">on</span><span class=""pi"">:</span>
+  <span class=""na"">push</span><span class=""pi"">:</span>
+    <span class=""na"">branches</span><span class=""pi"">:</span> <span class=""pi"">[</span> <span class=""s2"">""</span><span class=""s"">main""</span> <span class=""pi"">]</span>
+
+<span class=""na"">jobs</span><span class=""pi"">:</span>
+  <span class=""na"">hello-world</span><span class=""pi"">:</span>
+    <span class=""na"">runs-on</span><span class=""pi"">:</span> <span class=""s"">self-hosted</span>
+    <span class=""na"">steps</span><span class=""pi"">:</span>
+      <span class=""pi"">-</span> <span class=""na"">uses</span><span class=""pi"">:</span> <span class=""s"">actions/checkout@v3</span>
+      <span class=""pi"">-</span> <span class=""na"">name</span><span class=""pi"">:</span> <span class=""s"">Run a one-line script</span>
+        <span class=""na"">run</span><span class=""pi"">:</span> <span class=""s"">echo Hello, world in runner raspberry-pi</span>
+</code></pre>
+
+</div>
+
+
+
+<p>No comando run do workflow além da mensagem de hello world vou adicionar o comando <code>uname -a</code> para exibir as informações do meu Raspberry Pi, assim que o commit for feito a action será disparada para execução. 🚀</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--_s9XQyfs--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cae0x4pzez2owiw560er.png""><img alt=""Image description"" height=""599"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--_s9XQyfs--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cae0x4pzez2owiw560er.png"" width=""880"" /></a></p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--BKDLTrum--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e31q61lxqpds5zyy12hn.png""><img alt=""Image description"" height=""535"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--BKDLTrum--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e31q61lxqpds5zyy12hn.png"" width=""835"" /></a></p>
+
+<h2>
+  
+  
+  Exemplo prático 💡
+</h2>
+
+<p>Já que agora já temos o runner instalado e configurado no Raspberry Pi para executar os jobs do GitHub Actions tive a ideia de fazer o deploy de um programinha em python para piscar um led utilizando as portas GPIO do Raspberry Pi.</p>
+
+<p>Segue abaixo o esquema eletrônico com as conexões na GPIO:</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--td0X_a-y--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/68nwyb0u215tmn22736v.png""><img alt=""Esquema eletronico"" height=""1161"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--td0X_a-y--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/68nwyb0u215tmn22736v.png"" width=""880"" /></a></p>
+
+<p>Segue abaixo o código fonte que vou utilizar na <em>branch ´feature/led´</em> é um código bem simples que faz o led piscar 10 vezes.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight python""><code><span class=""kn"">import</span> <span class=""nn"">RPi.GPIO</span> <span class=""k"">as</span> <span class=""n"">GPIO</span>
+<span class=""kn"">import</span> <span class=""nn"">time</span>
+
+<span class=""n"">pinoLed</span> <span class=""o"">=</span> <span class=""mi"">12</span>
+<span class=""n"">cont</span> <span class=""o"">=</span> <span class=""mi"">10</span>
+
+<span class=""n"">GPIO</span><span class=""p"">.</span><span class=""n"">setwarnings</span><span class=""p"">(</span><span class=""bp"">False</span><span class=""p"">)</span>
+<span class=""n"">GPIO</span><span class=""p"">.</span><span class=""n"">setmode</span><span class=""p"">(</span><span class=""n"">GPIO</span><span class=""p"">.</span><span class=""n"">BOARD</span><span class=""p"">)</span>
+<span class=""n"">GPIO</span><span class=""p"">.</span><span class=""n"">setup</span><span class=""p"">(</span><span class=""mi"">12</span><span class=""p"">,</span> <span class=""n"">GPIO</span><span class=""p"">.</span><span class=""n"">OUT</span><span class=""p"">)</span>
+
+<span class=""k"">print</span><span class=""p"">(</span><span class=""s"">""---------- Inicio ----------""</span><span class=""p"">)</span>
+<span class=""k"">for</span> <span class=""n"">i</span> <span class=""ow"">in</span> <span class=""nb"">range</span><span class=""p"">(</span><span class=""n"">cont</span><span class=""p"">):</span>
+    <span class=""n"">GPIO</span><span class=""p"">.</span><span class=""n"">output</span><span class=""p"">(</span><span class=""n"">pinoLed</span><span class=""p"">,</span> <span class=""n"">GPIO</span><span class=""p"">.</span><span class=""n"">HIGH</span><span class=""p"">)</span>
+    <span class=""n"">time</span><span class=""p"">.</span><span class=""n"">sleep</span><span class=""p"">(</span><span class=""mi"">1</span><span class=""p"">)</span>
+    <span class=""n"">GPIO</span><span class=""p"">.</span><span class=""n"">output</span><span class=""p"">(</span><span class=""n"">pinoLed</span><span class=""p"">,</span> <span class=""n"">GPIO</span><span class=""p"">.</span><span class=""n"">LOW</span><span class=""p"">)</span>
+    <span class=""n"">time</span><span class=""p"">.</span><span class=""n"">sleep</span><span class=""p"">(</span><span class=""mi"">1</span><span class=""p"">)</span>
+    <span class=""n"">i</span> <span class=""o"">=</span> <span class=""n"">i</span><span class=""o"">+</span><span class=""mi"">1</span>
+    <span class=""k"">print</span><span class=""p"">(</span><span class=""s"">""Piscou... ""</span> <span class=""o"">+</span> <span class=""nb"">str</span><span class=""p"">(</span><span class=""n"">i</span><span class=""p"">)</span> <span class=""o"">+</span> <span class=""s"">"" de ""</span> <span class=""o"">+</span> <span class=""nb"">str</span><span class=""p"">(</span><span class=""n"">cont</span><span class=""p"">)</span> <span class=""o"">+</span> <span class=""s"">""""</span><span class=""p"">)</span>
+<span class=""k"">print</span><span class=""p"">(</span><span class=""s"">""------------ Fim -----------""</span><span class=""p"">)</span>
+<span class=""n"">GPIO</span><span class=""p"">.</span><span class=""n"">cleanup</span><span class=""p"">()</span>
+</code></pre>
+
+</div>
+
+
+
+<p>Também vamos precisar alterar o <em>workflow</em> para executar o código python dentro do runner Raspberry:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight yaml""><code><span class=""na"">name</span><span class=""pi"">:</span> <span class=""s"">workflow-raspberry</span>
+
+<span class=""na"">on</span><span class=""pi"">:</span>
+  <span class=""na"">push</span><span class=""pi"">:</span>
+    <span class=""na"">branches</span><span class=""pi"">:</span> <span class=""pi"">[</span> <span class=""s2"">""</span><span class=""s"">main""</span> <span class=""pi"">]</span>
+
+<span class=""na"">jobs</span><span class=""pi"">:</span>
+  <span class=""na"">hello-world</span><span class=""pi"">:</span>
+    <span class=""na"">runs-on</span><span class=""pi"">:</span> <span class=""s"">self-hosted</span>
+    <span class=""na"">steps</span><span class=""pi"">:</span>
+      <span class=""pi"">-</span> <span class=""na"">uses</span><span class=""pi"">:</span> <span class=""s"">actions/checkout@v3</span>
+      <span class=""pi"">-</span> <span class=""na"">name</span><span class=""pi"">:</span> <span class=""s"">Run a one-line script</span>
+        <span class=""na"">run</span><span class=""pi"">:</span> <span class=""s"">echo Hello, world in runner raspberry-pi &amp;&amp; uname -a</span>
+  <span class=""c1"">## Novo Job pisca led </span>
+  <span class=""na"">led</span><span class=""pi"">:</span>
+    <span class=""na"">needs</span><span class=""pi"">:</span> <span class=""s"">hello-world</span>
+    <span class=""na"">runs-on</span><span class=""pi"">:</span> <span class=""s"">self-hosted</span>
+    <span class=""na"">steps</span><span class=""pi"">:</span>
+      <span class=""pi"">-</span> <span class=""na"">name</span><span class=""pi"">:</span> <span class=""s"">Run script python blink led 10x</span>
+        <span class=""na"">run</span><span class=""pi"">:</span> <span class=""s"">python3 app/led.py</span>        
+</code></pre>
+
+</div>
+
+
+
+<p>Veja no YouTube como ficou o resultado final com o led piscando no Raspberry 🏮</p>
+
+<p>
+
+</p>
+
+<p>Repositório GitHub - <a href=""https://github.com/santospedroh/raspberry-pi-runner/tree/feature/ledr"">raspberry-pi-runner</a></p>"'https://dev.to/santospedroh/raspberry-pi-como-runner-do-github-action-596h'https://res.cloudinary.com/practicaldev/image/fetch/s--XviIY9Q4--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u8bvb4jnbygs35a3y5x4.png'"['https://res.cloudinary.com/practicaldev/image/fetch/s--GFchxadS--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/396040/a13ce57b-0789-4b8e-ad69-35c49b771530.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--eVza2yuC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_775/https://res.cloudinary.com/practicaldev/image/fetch/s--XDmbmZKz--/c_limit%252Cf_auto%252Cfl_progressive%252Cq_66%252Cw_880/https://i.ibb.co/6Z960jq/zoxide.gif', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--XviIY9Q4--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u8bvb4jnbygs35a3y5x4.png', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--_4eKyolw--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u8bvb4jnbygs35a3y5x4.png', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--e4oZJ1on--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th35zw841ouiaxhxg2l4.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--XWNaLfmX--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/746775/4b2db7db-5b1e-460a-8a59-3765d8100008.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--m4Dw8I7R--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/999439/4f5b288f-51b3-43f6-b373-86a51e5f1ed0.jpeg', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--FedAJfnC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ew5y7xuo6h7kld9mbdzp.jpg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--35LTfqT7--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ueww284102i6k1jfpx9r.gif', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--qdCz2gBd--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/589520/ae720f4d-2363-470f-a74a-c40f12878052.png', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--A53EWrDC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u7k7l0aqgm1iziib3f00.gif', 'https://res.cloudinary.com/practicaldev/image/fetch/s--_s9XQyfs--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cae0x4pzez2owiw560er.png', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--unF_GJUo--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/396040/a13ce57b-0789-4b8e-ad69-35c49b771530.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--SJfRLnec--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cwkw09cb5un6au3a9b5e.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--3DjqAjW4--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/237007/bf424b3d-a1ec-415a-9809-787ab1bf7b98.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--td0X_a-y--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/68nwyb0u215tmn22736v.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--BKDLTrum--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e31q61lxqpds5zyy12hn.png']"
+6'CFETOJMJD'Neopets - Meu inicio não tão convencional na área da tecnologia'"<p>Uma pergunta muito recorrente feita a devs é como a pessoa começou a programar, qual foi o primeiro contato que teve com algo relacionado com a área.</p>
+
+<p>As respostas são diversas e durante minha jornada acadêmica e profissional já tive várias colegas que contaram que o primeiro contato foi editando HTML/CSS para o Tumblr, experiência que também compartilho, contudo meu primeiro contato <strong>mesmo</strong> foi um pouco antes com um site chamado <a href=""https://www.neopets.com/index.phtml"">Neopets</a>.</p>
+
+<p>Para quem não conhece basicamente era um site que você tem pets virtuais e precisa cuidar deles, comprar comida, mobiliar uma casa, jogar minigames para ganhar moedas no jogo, etc. </p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--JZYSG90c--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/v91tpy9583b31g5a17yl.jpg""><img alt=""Image description"" height=""435"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--JZYSG90c--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/v91tpy9583b31g5a17yl.jpg"" width=""580"" /></a></p>
+
+<p>Além disso tudo você tinha uma página pessoal que podia ser personalizada e a Vanessa novinha, já uma cria do clã customização, não podia ficar fora dessa.</p>
+
+<p>O princípio era o mesmo que acontecia com o Tumblr, brincar com HTML e CSS para deixar o seu profile pessoal do jeito que quisesse e obviamente, seguindo as tendências dos inícios dos anos 2000, vocês podem imaginar muita cor, músicas tocando e gifs girando nos perfis mais visitados.  </p>
+
+<p>Aqui temos um exemplo de profile customizado feito por <a href=""http://neo-faeriewings.com"">Neo-faireWings</a>, minhas habilidades na época eram nesse nível? Não, mas eu era literalmente uma criança então vamos relevar.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--gMu4RL7g--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/t0qdniagw7d3k5lszrls.png""><img alt=""Image description"" height=""880"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--gMu4RL7g--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/t0qdniagw7d3k5lszrls.png"" width=""880"" /></a></p>
+
+<p>Minha conta é de 2005 e naquela época eu não fazia ideia o que estava fazendo, no que estava mexendo e como seria o certo, só tinha um objetivo e muita vontade de chegar lá. </p>
+
+<p><del>Será que posso dizer que tenho 17 anos de experiência e usar meu perfil como prova? Brincadeira.</del></p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--1GMUyNPs--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d3h1hq9fqgqm2mlt3ttx.png""><img alt=""Image description"" height=""321"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--1GMUyNPs--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d3h1hq9fqgqm2mlt3ttx.png"" width=""880"" /></a></p>
+
+<p><del>Eu tinha até loja, muito empreendedora mirim essa menina.</del></p>
+
+<p>Consegui recuperar a conta faz pouco tempo e infelizmente o perfil por algum motivo estava na aparência <em>default</em>. Não sei se foi algo devido atualizações do site ou se no passado eu mesma resetei, essa dúvida ficará pra sempre comigo.</p>
+
+<p>A moral da história é que jamais imaginaria que ali seria o comecinho, um gostinho, do que hoje é uma profissão. </p>
+
+<p>A Vanessa do passado nunca sequer cogitou que algo tão simples quanto querer ter um perfil bonitinho em um jogo online abriria portas para um futuro completamente diferente da realidade dela.</p>
+
+<p>Espero do fundo do meu coração que esse ciclo nunca seja encerrado, pelo contrário que apenas floresça. </p>
+
+<p>Por mais meninas motivadas pela simples curiosidade e força de vontade.</p>
+
+<blockquote>
+<p><em>Dedico esse relato as futuras devs que podem estar nesse exato momento, da sua própria maneira, descobrindo o mundo tão vasto e desafiador que é o da área da Tecnologia 💗</em> </p>
+</blockquote>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--g5WPncdy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/889uwlkx3z2mv9tm48fc.jpg""><img alt=""Image description"" height=""466"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--g5WPncdy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/889uwlkx3z2mv9tm48fc.jpg"" width=""624"" /></a></p>"'https://dev.to/vanessatelles/neopets-meu-inicio-nao-tao-convencional-na-area-da-tecnologia-1560'https://res.cloudinary.com/practicaldev/image/fetch/s--GjrXpuBU--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4dswnuiy9wvsqmrk8jag.jpg'"['https://res.cloudinary.com/practicaldev/image/fetch/s--hBakF5IP--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/69481/5c403480-cc3a-4f1f-9a47-291ef78ee019.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--1GMUyNPs--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d3h1hq9fqgqm2mlt3ttx.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--gMu4RL7g--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/t0qdniagw7d3k5lszrls.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Ea1OGrCb--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1/f451a206-11c8-4e3d-8936-143d0a7e65bb.png', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--GjrXpuBU--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4dswnuiy9wvsqmrk8jag.jpg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--uPbu-uaS--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/786008/161ff19a-8bce-42dc-982f-77b9accb58d3.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--E6gkSBVs--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/947376/fd3ec15d-cd47-4573-bc3e-8016c1632b78.jpeg', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--jBtDA156--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/982343/99b7a039-13b3-4eb5-820b-da74b180ddf6.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--sg4vfrv0--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/95058/bf38a113-b394-476d-b5c4-1b5b37d7f0d7.png', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--dx00U0Dn--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4dswnuiy9wvsqmrk8jag.jpg', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--JZYSG90c--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/v91tpy9583b31g5a17yl.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--OOwzaeSF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_775/https://res.cloudinary.com/practicaldev/image/fetch/s--XIICQ_e4--/c_limit%252Cf_auto%252Cfl_progressive%252Cq_66%252Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m2ja8tymo646or3emo07.gif', 'https://res.cloudinary.com/practicaldev/image/fetch/s--AWxN9PeA--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/947376/fd3ec15d-cd47-4573-bc3e-8016c1632b78.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--LuIJUhpP--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/95058/bf38a113-b394-476d-b5c4-1b5b37d7f0d7.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--ixo1GbLu--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1023071/4f075943-edb5-40ee-b519-2bf37dd62d27.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--qK1HipA3--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/304497/27c66d88-d949-4f6c-80ab-8349c4e4031d.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--LqgADxKo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jb3sc2966d2rvbcohxvq.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--g5WPncdy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/889uwlkx3z2mv9tm48fc.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Sot2J9j2--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/688590/c7ba74e6-c6ef-4279-95e0-529ade5113eb.jpg']"
+7'47VRKYVLY'"Building a Random Nerd Joke App with Public API's in Javascript ."'"<p>Javascript is a well loved &amp; accepted Programming Language, due to it’s synchrony with both client and server-side applications. and API’s are simply url’s that makes request to server  side &amp; gets data &amp; sending it back to client side. Here, I made a simple web app that spits out nerdy jokes with liners &amp; responses with the click of a button, this was of course made possible with a free web API for random jokes i found on Github. So I Would like to show y’all how i made this fun project from scratch. With Steps and Code visualization of the processes. </p>
+
+<p><strong>Step 1: Set up your project</strong></p>
+
+<p>To get started, create a new folder for your project and open it in your favorite code editor. Then, create a new HTML file called index.html and a new JavaScript file called main.js.<br />
+Next, you'll need to include the following scripts in your HTML file:</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--avsSIsmK--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2pa2qza0w15qzwe3s7k9.png""><img alt=""Image description"" height=""906"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--avsSIsmK--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2pa2qza0w15qzwe3s7k9.png"" width=""880"" /></a></p>
+
+<p>In this code, we're writing out client-side content with HTML and linking our main.js, normalize.css, rest.css &amp; style.css file to our HTML file.</p>
+
+<p><strong>Step 2: Get an API URL</strong></p>
+
+<p>To use APIs, you'll need to get an API key. There are several APIs available for jokes content, so i found this one on a free API repo on Github . For this tutorial, we'll use the Official-joke API.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s---a1TIEd2--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1owp845u26zp7q5b8vbl.png""><img alt=""Image description"" height=""491"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s---a1TIEd2--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1owp845u26zp7q5b8vbl.png"" width=""880"" /></a></p>
+
+<p>Step 3: Set up API request</p>
+
+<p>In your main.js file, add your query selector for your button element with an event listener to response to clicks.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--qznh4vxj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tejud7wi99ddwmm6cjuv.png""><img alt=""Image description"" height=""360"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--qznh4vxj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tejud7wi99ddwmm6cjuv.png"" width=""880"" /></a></p>
+
+<ul>
+<li>Below your event listener,  add a function that takes in your Event listener and API request , Here i used a function name called “getFetch” with an empty parameter because it is not needed in this case.</li>
+</ul>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--8Am2yM6B--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l888mb5va6n5uidczvvc.png""><img alt=""Image description"" height=""446"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--8Am2yM6B--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l888mb5va6n5uidczvvc.png"" width=""880"" /></a></p>
+
+<ul>
+<li>In The first line after your function, create a variable that cannot be reassigned , so as to hold your API Request URL link as stored data.</li>
+</ul>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--fTuvVU4f--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2f2guhsy0hrfq9kvel5c.png""><img alt=""Image description"" height=""446"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--fTuvVU4f--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2f2guhsy0hrfq9kvel5c.png"" width=""880"" /></a></p>
+
+<ul>
+<li>Add an API Fetch request “then” method, to fetch data from the API URL by getting a parse response from the server-side and returning it back as JSON data, the JSON data returned back is logged on the console with a “then” method to display object properties &amp; methods for reference.</li>
+</ul>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--NkSwxztI--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ccp6b5p56l7p12pwscsl.png""><img alt=""Image description"" height=""597"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--NkSwxztI--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ccp6b5p56l7p12pwscsl.png"" width=""880"" /></a> </p>
+
+<ul>
+<li>Add A “Catch” Error method on the next line and log it in the console to display error messages in your API Request/Response.</li>
+</ul>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--q0TD6UNR--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/059zmyihkltrnx9flnva.png""><img alt=""Image description"" height=""680"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--q0TD6UNR--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/059zmyihkltrnx9flnva.png"" width=""880"" /></a></p>
+
+<ul>
+<li>Under your API Request response data logged into the console, add your query selector to your “h2” element which is the desired content text size in the html for the random joke liners , with an inner-text method to enable it display the “ data.setup” JSON property in the API Response. </li>
+</ul>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--C_l_Spjl--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/a881xfk02hsg2bgdiqbj.png""><img alt=""Image description"" height=""723"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--C_l_Spjl--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/a881xfk02hsg2bgdiqbj.png"" width=""880"" /></a></p>
+
+<ul>
+<li>Add another  query selector to your “h3” element which is the desired content text size in the html for the random joke punchliner response , with an inner-text method to enable it display the “ data.punchline” JSON property in the API Response , on the DOM.
+</li>
+</ul>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--GXMeBW7V--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ty54zy7c1fmzswxmrwga.png""><img alt=""Image description"" height=""745"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--GXMeBW7V--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ty54zy7c1fmzswxmrwga.png"" width=""880"" /></a></p>
+
+<ul>
+<li>Did a brief CSS Styling of the page to align the view in visual /UX coherence. </li>
+</ul>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--iTzcFpjU--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uhdy86nqsrlfyquxhcef.png""><img alt=""Image description"" height=""1672"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--iTzcFpjU--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uhdy86nqsrlfyquxhcef.png"" width=""880"" /></a></p>
+
+<p><strong>Step 4: Display Joke liners &amp; Responses</strong></p>
+
+<p>Now that we have the API response, we need to display Joke liners &amp; Responses.</p>
+
+<ul>
+<li>click on the “ want Sum Random Nerd Jokes?”  Button to generate random jokes with punchline responses which displays under the button . </li>
+<li>Have fun &amp; smile through the jokes. lol. </li>
+</ul>
+
+<p>site link : <a href=""https://randomnerdjokes.netlify.app"">https://randomnerdjokes.netlify.app</a></p>
+
+<p>So that’s It. this was something i did in a matter of minutes with my knowledge of how to integrate API’s in Javascript projects. I Hope this gave you some insight especially if you’re a newbie to Javascipt API’s &amp; OOP’s.  I’ll be back with more fun projects. </p>"'https://dev.to/ebuka1anthony/building-a-random-nerd-joke-app-with-public-apis-in-javascript--11f3'https://res.cloudinary.com/practicaldev/image/fetch/s--KxGwkUvQ--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dm6rm8kz2qhmuuvtfwm1.png'"['https://res.cloudinary.com/practicaldev/image/fetch/s--GXMeBW7V--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ty54zy7c1fmzswxmrwga.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--fTuvVU4f--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2f2guhsy0hrfq9kvel5c.png', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--C_l_Spjl--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/a881xfk02hsg2bgdiqbj.png', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--mBJqCOj9--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1025307/a2b4d336-556d-4592-987b-9271b14057f7.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--ZSodnD4W--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/854659/af35461f-22a7-4317-b91e-c751ca96fed8.jpg', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--ucoVbBK0--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/262977/89d36d26-06b7-4217-a433-39d0f75cb8cd.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--KxGwkUvQ--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dm6rm8kz2qhmuuvtfwm1.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--iTzcFpjU--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uhdy86nqsrlfyquxhcef.png', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--qznh4vxj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tejud7wi99ddwmm6cjuv.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--7DzR99q7--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1025307/a2b4d336-556d-4592-987b-9271b14057f7.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--8Am2yM6B--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l888mb5va6n5uidczvvc.png', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--cB6d_K8v--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/i/hlhrtuspjyrstifubdhs.gif', 'https://res.cloudinary.com/practicaldev/image/fetch/s---a1TIEd2--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1owp845u26zp7q5b8vbl.png', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--TvLEDHjO--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dm6rm8kz2qhmuuvtfwm1.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--q0TD6UNR--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/059zmyihkltrnx9flnva.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--avsSIsmK--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2pa2qza0w15qzwe3s7k9.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--FLY27DwO--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/964629/863d88d6-22bc-4b89-b540-36ae6bbc67e4.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--5Whki01R--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1039565/22d54942-7848-4dca-9943-72b37d54026d.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--LqgADxKo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jb3sc2966d2rvbcohxvq.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--NkSwxztI--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ccp6b5p56l7p12pwscsl.png']"
+8'U3RM6UJ7J'My favorite Chrome extensions in 2023'"<p>I wrote about <a href=""https://dev.to/starbist/my-favorite-chrome-extensions-for-web-development-mostly-3aj8"">my favorite Chrome extensions for web development</a> four years ago. This time I wanted to share a few of my favorites that I discovered since then (that may or may not be related to web development).</p>
+
+<h2>
+  
+  
+  Grammarly to Markdown
+</h2>
+
+<p>Before discovering the <a href=""https://chrome.google.com/webstore/detail/grammarly-to-markdown/bjodbpcjeogaihbekannledankhcjbgo"">Grammarly to Markdown</a> extension, I used <a href=""https://euangoddard.github.io/clipboard2markdown/"">the Paste to Markdown</a> online tool. That implied I had to copy the text from Grammarly, paste it into Paste to Markdown, copy it again, and then paste it into my Markdown file. With Grammarly to Markdown, I cut the middleman and paste it directly to Markdown.</p>
+
+<h2>
+  
+  
+  SEO META in 1 CLICK
+</h2>
+
+<p>When using frameworks that don't support SEO out of the box, I often use <a href=""https://chrome.google.com/webstore/detail/seo-meta-in-1-click/bjogjfinolnhfhkbipphpdlldadpnmhc"">SEO META in 1 CLICK</a> extension. It shows me all important meta information and highlights options that are ok, but also what is missing or could be better. The most valuable feature is the ""Headers"" tab, where I can see the heading structure of my page. Here's an example from my home page:</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--eYDmtfiD--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4p6v4fsa6wit3t024qxt.png""><img alt=""Screenshot of SEO META in 1 CLICK extension showing heading structure for UI Dev Newsletter page."" height=""523"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--eYDmtfiD--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4p6v4fsa6wit3t024qxt.png"" width=""880"" /></a></p>
+
+<h2>
+  
+  
+  SEO Minion
+</h2>
+
+<p><a href=""https://chrome.google.com/webstore/detail/seo-minion/giihipjfimkajhlcilipnjeohabimjhi"">SEO Minion</a> is another extension I use to inspect page SEO. SEO Minion has seven sections, but my favorites are related to links:</p>
+
+<ul>
+<li>Highlight All Links</li>
+<li>Check Broken Links</li>
+</ul>
+
+<p>Highlight All Links shows all links, but you could filter internal or external, follow or nofollow, or even download a sheet with all links on a page.</p>
+
+<p>Check Broken Links inspects all links on the page and categories them so you can quickly check which links are valid, empty, or redirected.</p>
+
+<p>I find these options essential for improving the site's SEO health.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--Nj_Mu-nP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/268nrr28tcusx7esno3i.png""><img alt=""Screenshot of a UI Dev Newsletter page with SEO Minion extension highlighting page links."" height=""560"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--Nj_Mu-nP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/268nrr28tcusx7esno3i.png"" width=""880"" /></a></p>
+
+<h2>
+  
+  
+  Social Share Preview
+</h2>
+
+<p>Last month I developed <a href=""https://dev.to/starbist/how-to-create-dynamic-og-images-with-serverless-function-using-sharp-library-4acf"">a serverless function that generates OG images</a> on my site, and I have used Social Share Preview extension to make it easier to preview my OG image. This extension shows the page preview for Facebook, Twitter, and LinkedIn.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--mtCMUFaI--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ns8qse82h0zg5x20yy6y.png""><img alt=""Screenshot of a UI Dev Newsletter page with Social Share Preview extension highlighting preview on Facebook."" height=""535"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--mtCMUFaI--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ns8qse82h0zg5x20yy6y.png"" width=""880"" /></a></p>
+
+<h2>
+  
+  
+  Twitter Links
+</h2>
+
+<p>Twitter Links isn't available on Chrome Store, but you can <a href=""https://github.com/round/Twitter-Links-beta"">download it from GitHub</a>. I sometimes use it to check if someone shares my pages on Twitter.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--30pXGwtx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2lbdznl6sv654hw95z4d.png""><img alt=""Screenshot of a Twitter Links extension showing a popup window with search results for UI Dev Newsletter link."" height=""506"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--30pXGwtx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2lbdznl6sv654hw95z4d.png"" width=""880"" /></a></p>
+
+<h2>
+  
+  
+  WakaTime
+</h2>
+
+<p>I am a big fan of <a href=""https://chrome.google.com/webstore/detail/wakatime/jnbbnacmeggbgdjgaoojpmhdlkkpblgi"">Wakatime</a>, and I've been using it since 2016 (I discovered that while writing my article <a href=""https://dev.to/starbist/i-do-html-and-css-for-a-living-20lj"">I do HTML and CSS for a living</a> earlier this year). This software measures how you spend time on your computer. I have it installed in my VS Code and browser. That way, I could understand how much time I spent working, coding, browsing, etc.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--tNmu97H6--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/slg079rngvl1xkzq4or7.png""><img alt=""Screenshot of my Twitter profile showing a post about using Wakatime."" height=""536"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--tNmu97H6--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/slg079rngvl1xkzq4or7.png"" width=""880"" /></a></p>
+
+<h2>
+  
+  
+  Conclusion
+</h2>
+
+<p>I also wrote about <a href=""https://dev.to/starbist/my-favorite-vs-code-extensions-in-2023-1dlf"">my favorite VS Code extensions</a> and <a href=""https://dev.to/starbist/my-favorite-npm-packages-in-2023-4f05"">my favorite NPM packages</a>.</p>
+
+<p>Make sure to check <a href=""https://www.silvestar.codes/uses/"">my setup page</a> to discover more tools, apps, and extensions.</p>"'https://dev.to/starbist/my-favorite-chrome-extensions-in-2023-383m'https://dev.to/social_previews/article/1399595.png'"['https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--eYDmtfiD--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4p6v4fsa6wit3t024qxt.png', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--zy3kz1_s--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/762797/8fb9b05b-c685-47c4-b3cc-cd2743d6f25c.jpeg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--tNmu97H6--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/slg079rngvl1xkzq4or7.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--jjH099eD--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/609838/bc3ac0a6-8c2e-4c51-8fdd-83bd3d6ec159.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--U8t03mKz--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/55331/da92806b-00f9-4032-a9d1-cf5b7ee4514f.jpeg', 'https://dev.to/social_previews/article/1399595.png', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Nj_Mu-nP--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/268nrr28tcusx7esno3i.png', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--cB6d_K8v--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/i/hlhrtuspjyrstifubdhs.gif', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Dl-k31rl--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/30254/ebd4adb3-eaeb-48a5-963b-ac1e528af02c.jpg', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--30pXGwtx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2lbdznl6sv654hw95z4d.png', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--0y0Jfun8--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/30254/ebd4adb3-eaeb-48a5-963b-ac1e528af02c.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--w2N4V0_v--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/624685/daea0102-8be8-4177-931f-0991f24d422d.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--mtCMUFaI--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ns8qse82h0zg5x20yy6y.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png']"
+9'CGOR9MDMJ'My favorite bash shortcuts in 2023'"<p>I use <a href=""https://fishshell.com/"">fishshell</a>, and its <a href=""https://github.com/oh-my-fish/oh-my-fish"">Oh my fish</a> framework as my command line shell. Over the years, I have gathered many useful functions and shortcuts. Here are my favorites.</p>
+
+<h2>
+  
+  
+  General shortcuts
+</h2>
+
+<p>Let's start with some general shortcuts. The first one is the <code>brc</code> shortcut which reloads the <code>.bashrc</code> file and refreshes its content. That way, I can use new shortcuts if added.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">brc</span><span class=""o"">=</span><span class=""s2"">""source ~/.config/fish/.bashrc""</span>
+</code></pre>
+
+</div>
+
+
+
+<p>Since I am using VS Code Insiders, whose command in the terminal is <code>code-insiders</code>, which I am too lazy to write every time, I have added a <code>ci</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">ci</span><span class=""o"">=</span><span class=""s2"">""code-insiders""</span>
+</code></pre>
+
+</div>
+
+
+
+<p>Sometimes I use <a href=""https://github.com/nvbn/thefuck"">The Fuck</a> app for my terminal, but it might be inconvenient when sharing screen. So, I use a shortcut <code>pls</code> to run <code>fuck</code> command.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">pls</span><span class=""o"">=</span>fuck
+</code></pre>
+
+</div>
+
+
+
+<h2>
+  
+  
+  SSH shortcuts
+</h2>
+
+<p>Recently Josie posted on Twitter how she cannot remember how to add the SSH key.</p>
+
+<blockquote>
+<p><em>""I have been a software engineer for 7 years and I will never remember the steps to adding a SSH key to my Github profile I'm so sorry.""</em></p>
+
+<p>— <a href=""https://twitter.com/javavvitch/status/1630651324420218880?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1630651324420218880%7Ctwgr%5Efeebce5c4c4b51e9286a355229bc8c45cc7efb96%7Ctwcon%5Es1_&amp;ref_url=https%3A%2F%2Fpaperusercontent.com%2Fintegrations%2Fembed%2Fiframe%2Ftweet%3Fid%3D1630651324420218880""><em>Josie on Twitter</em></a></p>
+</blockquote>
+
+<p>It reminded me of the SSH shortcuts that I configured many years ago. So here are my SSH shortcuts.</p>
+
+<p>To generate a new SSH key, I use the <code>sshkey</code> shortcut with an additional argument, the SSH user filename, like so <code>sshkey pgh_rsa</code>.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""k"">function </span>sshAddKey  ssh-keygen <span class=""nt"">-t</span> rsa <span class=""nt"">-C</span> <span class=""nv"">$argvendalias</span> <span class=""nv"">sshkey</span><span class=""o"">=</span>sshAddKey
+</code></pre>
+
+</div>
+
+
+
+<p>To start the SSH agent and add the SSH key, I use the <code>sshuser</code> shortcut with an additional argument, the SSH user filename, like so <code>sshuser pgh_rsa</code>.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""k"">function </span>sshStart  <span class=""nb"">eval </span>ssh-agent <span class=""nt"">-s</span>  ssh-add ~/.ssh/<span class=""nv"">$argv</span><span class=""o"">[</span>1]endalias <span class=""nv"">sshuser</span><span class=""o"">=</span>sshStart
+</code></pre>
+
+</div>
+
+
+
+<p>To delete all identities from the agent, I use the <code>sshdel</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">sshdel</span><span class=""o"">=</span><span class=""s2"">""ssh-add -D""</span>
+</code></pre>
+
+</div>
+
+
+
+<p>To test the SSH connection to GitHub, I use the <code>sshpingg</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">sshpingg</span><span class=""o"">=</span><span class=""s2"">""ssh -T git@github.com""</span>
+</code></pre>
+
+</div>
+
+
+
+<h2>
+  
+  
+  Handling terminal processes shortcuts
+</h2>
+
+<p>Since I use Gulp, 11ty, and custom Node.js scripts in my workflow, I have situations where I need to kill a process or two that are stuck or hanging.</p>
+
+<p>To check if a process already occupies a port, I use the <code>checkPort</code> shortcut with am additional argument, the port, like so <code>checkPort 8080</code>.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""k"">function </span>checkPort  lsof <span class=""nt"">-t</span> <span class=""nt"">-i</span>:<span class=""nv"">$argv</span><span class=""o"">[</span>1]endalias <span class=""nv"">cport</span><span class=""o"">=</span>checkPort
+</code></pre>
+
+</div>
+
+
+
+<p>To terminate all processes that occupy a port, I use the <code>kport</code> shortcut with an additional argument, the port, like so <code>kport 8080</code>.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""k"">function </span>killPort  <span class=""nb"">kill</span> <span class=""nt"">-9</span> <span class=""o"">(</span>lsof <span class=""nt"">-t</span> <span class=""nt"">-i</span>:<span class=""nv"">$argv</span><span class=""o"">[</span>1]<span class=""o"">)</span>endalias <span class=""nv"">kport</span><span class=""o"">=</span>killPort
+</code></pre>
+
+</div>
+
+
+
+<p>To terminate all running Node.js processes, I use the <code>killnode</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">killnode</span><span class=""o"">=</span><span class=""s2"">""killall -9 node""</span>
+</code></pre>
+
+</div>
+
+
+
+<p>To terminate all running Node.js processes, I use the <code>kf</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">kf</span><span class=""o"">=</span><span class=""s2"">""killify""</span>
+</code></pre>
+
+</div>
+
+
+
+<p><code>kf</code> is just an alias for <a href=""https://www.npmjs.com/package/killify"">my killify NPM package</a>.</p>
+
+<h2>
+  
+  
+  Filesystem shortcuts
+</h2>
+
+<p>For general filesystem navigation in my terminal, I'm using <a href=""https://github.com/rupa/z"">z</a> command. But for finer control, I am using the following commands.</p>
+
+<p>To go up one level, I use <code>cd..</code> and <code>..</code> commands.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span>cd..<span class=""o"">=</span><span class=""s2"">""cd ..""</span><span class=""nb"">alias</span> ..<span class=""o"">=</span><span class=""s2"">""cd ..""</span>
+</code></pre>
+
+</div>
+
+
+
+<p>To see the long listing format of the current folder, I use the <code>ll</code> and <code>lll</code> shortcuts. To see every single file and folder within current folder, I use the <code>llll</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">ll</span><span class=""o"">=</span><span class=""s2"">""ls -la""</span><span class=""nb"">alias </span><span class=""nv"">lll</span><span class=""o"">=</span><span class=""s2"">""exa -abghHliS""</span><span class=""k"">function </span>exaTree  exa <span class=""nt"">--long</span> <span class=""nt"">--tree</span> <span class=""nv"">$argvendalias</span> <span class=""nv"">llll</span><span class=""o"">=</span>exaTree
+</code></pre>
+
+</div>
+
+
+
+<p>To remove folders and files, I use the <code>rr</code> and <code>rrr</code> shortcuts. The difference is that the <code>rr</code> shortcut shows prompt before removal.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">rr</span><span class=""o"">=</span><span class=""s2"">""rm -rf -i""</span><span class=""nb"">alias </span><span class=""nv"">rrr</span><span class=""o"">=</span><span class=""s2"">""rm -rf""</span>
+</code></pre>
+
+</div>
+
+
+
+<p><em>Use <code>rm -rf</code> with extreme caution. The action cannot be reverted, and all deleted files and folders are permanently gone.</em></p>
+
+<h2>
+  
+  
+  Git shortcuts
+</h2>
+
+<p>I am using a lot of Git shortcuts, but here are my favorites.</p>
+
+<p>To view the git log, I use the <code>gl</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">gl</span><span class=""o"">=</span><span class=""s2"">""git log --oneline --graph""</span>
+</code></pre>
+
+</div>
+
+
+
+<p>To stash every new, removed, or changed file in the current repository, I use the <code>ga.</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">gs</span><span class=""o"">=</span><span class=""s2"">""alias ga.=""</span>git add .<span class=""s2"">""
+</span></code></pre>
+
+</div>
+
+
+
+<p>To commit the changes, I use the <code>gc</code> shortcut with an additional argument, the message, like so <code>gc ""My message""</code>.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""c""># git: commit with messagefunction commitWithMessage  git commit -m $argvendalias gc=commitWithMessage</span>
+</code></pre>
+
+</div>
+
+
+
+<p>To edit the last commit message, I use the <code>gcam</code> shortcut with an additional argument, the new message, like so <code>gcam ""My new message.""</code>.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""c""># git: commit amend messagefunction commitAmend  git commit --amend -m $argvendalias gcam=commitAmend</span>
+</code></pre>
+
+</div>
+
+
+
+<p><em>Remember to add quotation marks when using the <code>gc</code> and <code>gcam</code> shortcuts.</em></p>
+
+<p>To view all local and remote branches, I use the <code>gba</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">gba</span><span class=""o"">=</span><span class=""s2"">""git branch -a""</span>
+</code></pre>
+
+</div>
+
+
+
+<p>To prune or to delete the refs to the branches that don't exist on the remote, I use the <code>grpo</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""k"">function </span>pruneOrigin  git remote prune origin  gbaendalias <span class=""nv"">grpo</span><span class=""o"">=</span>pruneOrigin
+</code></pre>
+
+</div>
+
+
+
+<p>To fetch all remote branches, I use the <code>gfa</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">gfa</span><span class=""o"">=</span><span class=""s2"">""git fetch --all""</span>
+</code></pre>
+
+</div>
+
+
+
+<p>To push all local branches to remote, I use the <code>gpa</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">gpa</span><span class=""o"">=</span><span class=""s2"">""git push --all""</span>
+</code></pre>
+
+</div>
+
+
+
+<p>To undo all changes, I use the <code>gr</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">gr</span><span class=""o"">=</span><span class=""s2"">""git reset --hard""</span>
+</code></pre>
+
+</div>
+
+
+
+<p>To checkout to my <code>master</code> branch, I use the <code>gcm</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">gcm</span><span class=""o"">=</span><span class=""s2"">""git checkout master""</span>
+</code></pre>
+
+</div>
+
+
+
+<p>To pull the master branch from the remote, I use the <code>gpom</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">gpom</span><span class=""o"">=</span><span class=""s2"">""git pull origin master""</span>
+</code></pre>
+
+</div>
+
+
+
+<p>To create a new branch, I use the <code>gcn</code> shortcut with an additional argument, the branch name, like so <code>gcn new-branch-name</code>.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""k"">function </span>checkoutNew  git checkout <span class=""nt"">-b</span> <span class=""nv"">$argvendalias</span> <span class=""nv"">gcn</span><span class=""o"">=</span>checkoutNew
+</code></pre>
+
+</div>
+
+
+
+<h2>
+  
+  
+  git-flow shortcuts
+</h2>
+
+<p>I am using <a href=""https://github.com/nvie/gitflow"">git-flow</a>, a set of Git extensions that makes it easier to implement <a href=""https://nvie.com/posts/a-successful-git-branching-model/"">Vincent Driessen's branching model</a> I have used for ages.</p>
+
+<p>To initialize git-flow, I use the <code>gfi</code> shortcut.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""nb"">alias </span><span class=""nv"">gfi</span><span class=""o"">=</span><span class=""s2"">""git flow init""</span>
+</code></pre>
+
+</div>
+
+
+
+<p>To start a feature branch, I use the <code>gfs</code> shortcut with an additional argument, the branch name, like so <code>gfs feature-name</code>.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""k"">function </span>flowFeatureStart  git flow feature start <span class=""nv"">$argvendalias</span> <span class=""nv"">gfs</span><span class=""o"">=</span>flowFeatureStart
+</code></pre>
+
+</div>
+
+
+
+<p>To close and merge a feature branch, I use the <code>gff</code> shortcut with an additional argument, the branch name, like so <code>gff feature-name</code>.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight shell""><code><span class=""k"">function </span>flowFeatureFinish  git flow feature finish <span class=""nv"">$argvendalias</span> <span class=""nv"">gff</span><span class=""o"">=</span>flowFeatureFinish
+</code></pre>
+
+</div>
+
+
+
+<p>I use similar shortcuts to start and finish the <code>hotfix</code> and <code>release</code> branches.</p>
+
+<h2>
+  
+  
+  Conclusion
+</h2>
+
+<p>If you want to see my complete fish configuration, I have it <a href=""https://github.com/maliMirkec/fish"">versioned on GitHub</a>.</p>
+
+<p>You could check <a href=""https://www.silvestar.codes/uses/"">my setup page</a> to learn what other software and hardware I use.</p>"'https://dev.to/starbist/my-favorite-bash-shortcuts-in-2023-o94'https://dev.to/social_previews/article/1399598.png'"['https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg', 'https://dev.to/social_previews/article/1399598.png', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--cB6d_K8v--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/i/hlhrtuspjyrstifubdhs.gif', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--SoNVR1us--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/653570/24831d91-9306-43bd-b04b-58b642057be5.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--u5OV4uIl--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/379823/1d73f142-7915-4d97-93a9-8dfdb2134ee6.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Y4rtxWOA--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/271136/41dde5f5-bc4f-4132-94d5-64dfe28df43f.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Dl-k31rl--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/30254/ebd4adb3-eaeb-48a5-963b-ac1e528af02c.jpg', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--b0O8QGSF--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/136661/6eef6885-797e-458e-93eb-1f6d618adbe9.jpeg', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--0y0Jfun8--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/30254/ebd4adb3-eaeb-48a5-963b-ac1e528af02c.jpg', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg']"
+10'PYP7MGRLY'Getting Started with Boto3: A Powerful and Versatile AWS SDK'"<h2>
+  
+  
+  Introduction
+</h2>
+
+<p>AWS provides a variety of services that make it easy to build and manage applications in the cloud. One of the most powerful tools for interacting with AWS services is Boto3, an AWS SDK for Python. Boto3 makes it easy to write Python scripts that automate tasks, interact with AWS services, and manage AWS resources. In this post, we'll explore the basics of using Boto3 with AWS and see how it can be used to manage AWS resources effectively.</p>
+
+<h2>
+  
+  
+  What is Boto3?
+</h2>
+
+<p>Boto3 is a Python library that allows developers to write scripts to interact with AWS services. It provides a simple and easy-to-use API that can be used to perform common tasks such as creating and managing EC2 instances, managing S3 buckets, and managing AWS services. Boto3 is built on top of the AWS SDK for Python and is compatible with Python 2.6.x, 2.7.x, 3.3.x, 3.4.x, 3.5.x, 3.6.x, 3.7.x, and 3.8.x.</p>
+
+<h2>
+  
+  
+  Why Use Boto3?
+</h2>
+
+<p>Boto3 provides a powerful set of tools for working with AWS. It is easy to use and offers a comprehensive set of APIs that can be used to automate tasks, manage resources, and interact with AWS services. Here are a few reasons why Boto3 is such a valuable tool:</p>
+
+<ul>
+<li>
+<strong>Versatile:</strong> Boto3 provides a versatile and powerful API that can be used to manage a wide variety of AWS services.</li>
+<li>
+<strong>Easy to Use:</strong> Boto3 provides a simple and easy-to-use API that is easy to learn and use.</li>
+<li>
+<strong>Comprehensive:</strong> Boto3 offers a comprehensive set of APIs that can be used to automate tasks, manage resources, and interact with AWS services.</li>
+<li>
+<strong>Pythonic:</strong> Boto3 is built on top of the AWS SDK for Python and provides a Pythonic interface that is easy to understand and use.</li>
+</ul>
+
+<h2>
+  
+  
+  Using Boto3 with AWS
+</h2>
+
+<p>To get started with Boto3, you'll need to install it using pip.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>pip install boto3
+</code></pre>
+
+</div>
+
+
+
+<p>Once you've installed Boto3, you'll need to create an AWS IAM user with appropriate permissions. You'll then need to create an AWS access key ID and secret access key, which you'll use to authenticate your requests.<br />
+lets do it step by step : </p>
+
+<p>Once you have your credentials, you can use Boto3 to interact with AWS services. Boto3 provides a variety of low-level and high-level interfaces for interacting with AWS services, so you can choose the level of abstraction that's appropriate for your needs. For example, you can use Boto3 to perform tasks such as:</p>
+
+<ul>
+<li>Creating and managing EC2 instances</li>
+<li>Managing S3 buckets</li>
+<li>Managing AWS services like Elastic Beanstalk and RDS</li>
+<li>Creating and managing AWS Lambda functions</li>
+</ul>
+<h2>
+  
+  
+  Examples
+</h2>
+
+<p>Here are a few examples of how you can use Boto3 to manage AWS resources:</p>
+<h3>
+  
+  
+  Creating an EC2 Instance
+</h3>
+
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>import boto3
+
+ec2 = boto3.client('ec2')
+
+response = ec2.run_instances(
+ImageId='ami-0c55b159cbfafe1f0',
+InstanceType='t2.micro',
+KeyName='my-key-pair',
+MinCount=1,
+MaxCount=1
+)
+
+print(response)
+</code></pre>
+
+</div>
+
+
+<p>This code snippet shows how to use Boto3 to launch an EC2 instance. The <code>boto3.client('ec2')</code> method is used to create a client object for the EC2 service. Then, the <code>run_instances</code> method is used to launch an EC2 instance with the specified parameters, such as the AMI ID, instance type, key pair name, and minimum and maximum count. The method returns a response object that contains information about the launched instance. Finally, the <code>print</code> function is used to display the response object.</p>
+<h3>
+  
+  
+  Uploading a File to S3:
+</h3>
+
+<p>Boto3 can also be used to upload a file to an S3 bucket:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>import boto3
+
+s3 = boto3.resource('s3')
+
+bucket = s3.Bucket('my-bucket')
+
+with open('my-file.txt', 'rb') as data:
+    bucket.put_object(Key='my-file.txt', Body=data)
+</code></pre>
+
+</div>
+
+
+
+<p>This Python code uploads a file to an S3 bucket using Boto3 library. First, it creates an S3 resource object using Boto3 and specifies the bucket to upload the file to. Then, it opens the file in binary mode and uses the <code>put_object()</code> method of the bucket object to upload the file to the specified key in the bucket.</p>
+
+<h3>
+  
+  
+  Creating a Lambda Function:
+</h3>
+
+<p>Boto3 can also be used to create a Lambda function:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>import boto3
+
+client = boto3.client('lambda')
+
+response = client.create_function(
+    FunctionName='my-function',
+    Runtime='python3.8',
+    Role='arn:aws:iam::123456789012:role/service-role/lambda-basic-role',
+    Handler='index.handler',
+    Code={
+        'ZipFile': b'...'
+    },
+    Description='My function',
+    Timeout=60,
+    MemorySize=128
+)
+</code></pre>
+
+</div>
+
+
+
+<p>This code uses Boto3 to create a new AWS Lambda function with specified configuration parameters, including the function name, runtime, role, handler, code, description, timeout, and memory size.<br />
+The <code>create_function()</code> method sends a request to AWS Lambda to create the function and returns a response containing information about the newly created function, including its Amazon Resource Name (ARN) and other metadata.</p>
+
+<h2>
+  
+  
+  Conclusion:
+</h2>
+
+<p>Boto3 is a powerful and versatile AWS SDK that provides an easy-to-use API for interacting with AWS services. With its comprehensive set of APIs and Pythonic interface, Boto3 makes it easy to automate tasks, manage resources, and interact with AWS services. Whether you're a seasoned AWS developer or just getting started, Boto3 is an invaluable tool for building and managing applications in the cloud. </p>
+
+<h2>
+  
+  
+  References
+</h2>
+
+<ul>
+<li><a href=""https://aws.amazon.com/documentation/"">AWS Documentation</a></li>
+<li><a href=""https://boto3.amazonaws.com/v1/documentation/api/latest/index.html"">Boto3 Documentation</a></li>
+<li><a href=""https://github.com/boto/boto3"">Boto3 GitHub Repository</a></li>
+</ul>
+
+<p>You can connect with me on <a href=""https://www.linkedin.com/in/mohammedmesbah/"">LinkedIn</a>.</p>"'https://dev.to/aws-builders/getting-started-with-boto3-a-powerful-and-versatile-aws-sdk-442d'https://res.cloudinary.com/practicaldev/image/fetch/s--JThfAAxL--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e4kppkfy2639q33qzwks.jpg'"['https://res.cloudinary.com/practicaldev/image/fetch/s--JThfAAxL--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e4kppkfy2639q33qzwks.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--vWmcJ-ty--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/2794/88da75b6-aadd-4ea1-8083-ae2dfca8be94.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--CGooXVdw--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/494391/72046f52-c0b4-474d-b3e7-b9f88a787a0d.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--9NAlpq2V--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/869117/a462c21b-629f-4b45-95c7-3a51891b5c70.jpeg', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--3vA9CcCA--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/2794/88da75b6-aadd-4ea1-8083-ae2dfca8be94.png', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--MaGHtHUw--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e4kppkfy2639q33qzwks.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--tMqh8JqX--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1044567/ed7af153-6eef-4581-b0a6-d4ff5ea8094c.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--qrQIzRhz--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/683427/e1dda86a-f5a8-4249-a8a2-57ae8ea22a5b.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s---eim4jlJ--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/993038/ef631ad8-363b-4633-9308-da57f9a31f8d.jpeg']"
+11'U8E0739AL'My favorite VS Code extensions in 2023'"<p>I have been using VS Code for so long that I cannot remember when I switched. One of the reasons VS Code is so successful is its extensions. There are so many great ones, and I use quite a few. So, if I had to pick my favorites, it would be the following.</p>
+
+<h2>
+  
+  
+  :emojisense:
+</h2>
+
+<p>I use <a href=""https://marketplace.visualstudio.com/items?itemName=bierner.emojisense"">:emojisense:</a> occasionally when I need to insert emojis in my code. It doesn't happen that often, but it saves me time because I have it in my editor.</p>
+
+<h2>
+  
+  
+  Auto Rename Tag
+</h2>
+
+<p>Sometimes I forget that I have <a href=""https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag"">Auto Rename Tag</a> installed. It just does its job so smoothly.</p>
+
+<h2>
+  
+  
+  Beautify
+</h2>
+
+<p>Although <a href=""https://marketplace.visualstudio.com/items?itemName=hookyqr.beautify"">Beautify</a> is deprecated, I'm not giving up on it because it still works great. I frequently use it to beautify my HTML, CSS, Sass, JavaScript, and JSON code.</p>
+
+<h2>
+  
+  
+  Change Case
+</h2>
+
+<p><a href=""https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case"">Change Case</a> is an extension that I use so often. For example, when I want to create a new blog post, I use ""Change Case kebab"" to generate the file name for me. I especially like to use this command with multi-selection when I need to change cases in bulk.</p>
+
+<h2>
+  
+  
+  Date &amp; Time
+</h2>
+
+<p><a href=""https://marketplace.visualstudio.com/items?itemName=rid9.datetime"">Date &amp; time</a> have been part of my status bar very long. I feel like it should be part of the standard VS Code package.</p>
+
+<h2>
+  
+  
+  Front Matter CMS
+</h2>
+
+<p><a href=""https://marketplace.visualstudio.com/items?itemName=eliostruyf.vscode-front-matter"">Front Matter CMS</a> prevents me from forgetting about SEO. Although this extension has many other options, I use it to highlight errors like the title and meta description length of my articles and pages.</p>
+
+<h2>
+  
+  
+  Gremlins tracker for Visual Studio Code
+</h2>
+
+<p>I stumbled upon <a href=""https://marketplace.visualstudio.com/items?itemName=nhoizey.gremlins"">Gremlins tracker for Visual Studio Code</a> extension a while ago. It is a helpful extension that reveals those unwanted and harmful characters that slip in your code when pasting or accidentally hitting unwanted key combinations like option + space.</p>
+
+<h2>
+  
+  
+  Import Cost
+</h2>
+
+<p><a href=""https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost"">Import Cost</a> is a known extension that shows how much the npm package weighs.</p>
+
+<h2>
+  
+  
+  Insert Unicode
+</h2>
+
+<p>I like unicode characters, and I sometimes use them in my articles. <a href=""https://marketplace.visualstudio.com/items?itemName=brunnerh.insert-unicode"">Insert Unicode</a> extension has thousands of characters, but my favorite ones are the times (⨉), the right arrow (→), and the note (♪) characters. This extension also searches emojis, but it has different names than the :emojisense: which I got used to.</p>
+
+<h2>
+  
+  
+  Remove empty lines
+</h2>
+
+<p>I like my code clean and organized, and <a href=""https://marketplace.visualstudio.com/items?itemName=usernamehw.remove-empty-lines"">Remove empty lines</a> extension helps me clean unnecessary blank lines in documents, like in HTML code.</p>
+
+<h2>
+  
+  
+  Conclusion
+</h2>
+
+<p>Last year I wrote about <a href=""https://dev.to/starbist/my-favorite-vs-code-settings-1ll0"">my favorite VC Code settings</a>, so check that, too. And check <a href=""https://www.silvestar.codes/uses/"">my setup page</a> if you want to know what other software and hardware I use.</p>"'https://dev.to/starbist/my-favorite-vs-code-extensions-in-2023-1dlf'https://dev.to/social_previews/article/1399602.png'"['https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--cB6d_K8v--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/i/hlhrtuspjyrstifubdhs.gif', 'https://dev.to/social_previews/article/1399602.png', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--jG6gou-U--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/921099/40a0f589-9863-4ad2-9e55-286802450d97.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--oUMjn7FV--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/104720/cee6e63a-9eda-4f43-8169-13eac58edf87.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Dl-k31rl--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/30254/ebd4adb3-eaeb-48a5-963b-ac1e528af02c.jpg', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--PsN9w6FK--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/656421/a0956cd3-1336-462b-9fd4-cb0793446706.png', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--0y0Jfun8--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/30254/ebd4adb3-eaeb-48a5-963b-ac1e528af02c.jpg', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg']"

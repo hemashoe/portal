@@ -123,6 +123,16 @@ DATABASES = {
 FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760
 
+############## EMAIL SERVICE ###############
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = os.environ["EMAIL_HOST_USER"]
+EMAIL_HOST_PASSWORD = os.environ ["EMAIL_HOST_PASSWORD"]
+
 ############ PASSWORD VALIDATION ###########
 
 AUTH_PASSWORD_VALIDATORS = [
