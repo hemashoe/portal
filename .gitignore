@@ -27,12 +27,14 @@ media
 .Python
 build/
 develop-eggs/
+media/
 dist/
 downloads/
 eggs/
 .eggs/
 lib/
 lib64/
+media/
 parts/
 sdist/
 var/

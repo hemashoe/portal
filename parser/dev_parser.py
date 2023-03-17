@@ -71,6 +71,7 @@ def get_everything(post_parsed : list) -> None:
         logger.error(f"Unable to get more info from URLs ")
         raise n("Unable to get more info from URLs ")
 
+
 def update_db(data_parsed):
     logger.info("Connecting to database and updating")
     connection, cursor = connect_to_db()
