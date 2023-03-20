@@ -60,7 +60,7 @@ def get_article(posts_parsed : list ) -> None:
                     'images': images,
             }
             data_parsed.append(data)
-
+    
         dataframe = pd.DataFrame(data_parsed)
         dataframe.to_csv(FILE_NAME, sep="'", header=True, index=True,index_label="post_id" )
         logger.success(f"Successfully saved articles in {FILE_NAME}")

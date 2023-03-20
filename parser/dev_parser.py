@@ -82,6 +82,7 @@ def update_db(data_parsed):
 
         if check_duplication==False:
             try:
+                print(data['body'])
                 body_text = remove_unwanted(data['body'])
                 slug = slugify(data['title'])
                 title_img = download_title_img(data['image'], data['post_id'])

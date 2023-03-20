@@ -1,0 +1,2382 @@
+'post_id'title'body'source_link'image'images
+0'5GK3PIHEM'"Unleashing Twitter's Data: How to Access the Twitter API with JavaScript"'"<p>Connecting to the Twitter API through JavaScript is a powerful way to access Twitter data and build applications that integrate with Twitter. In this article, we will guide you through the process of connecting to the Twitter API via JavaScript.</p>
+
+<p>Before we begin, it's important to note that the Twitter API requires authentication for most endpoints. To authenticate, you will need to create a Twitter developer account and generate API keys and access tokens. If you're looking for guidance on setting up a Twitter developer account and obtaining API keys, you may find this article helpful, which provides detailed instructions on <a href=""https://geekwiser.com/how-to-create-a-twitter-developer-account/"">how to create a Twitter developer account</a>.</p>
+
+<p>Once you have your API keys and access tokens, you can start building your JavaScript application to connect to the Twitter API.</p>
+
+<h2>
+  
+  
+  Step 1: Set up a Twitter API endpoint
+</h2>
+
+<p>The first step is to set up an endpoint that will allow your JavaScript application to access the Twitter API. We'll be using the fetch function to make HTTP requests to the Twitter API.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>const endpointUrl = 'https://api.twitter.com/1.1/search/tweets.json';
+</code></pre>
+
+</div>
+
+
+
+<h2>
+  
+  
+  Step 2: Build the API request
+</h2>
+
+<p>Next, you will need to build the API request using the fetch function. You will need to include your API keys and access tokens in the request headers.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>const headers = new Headers();
+headers.append('Authorization', 'Bearer ' + 'YOUR_ACCESS_TOKEN');
+
+const options = {
+  method: 'GET',
+  headers: headers,
+};
+
+const queryParams = '?q=javascript';
+
+fetch(endpointUrl + queryParams, options)
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data))
+  .catch(error =&gt; console.error(error));
+
+</code></pre>
+
+</div>
+
+
+
+<p>This code creates a new Headers object and adds the Authorization header to it with your access token. The fetch function is then used to make a GET request to the Twitter API, passing in the headers and query parameters.</p>
+
+<p>In this example, we're searching for tweets that contain the word ""javascript"".</p>
+
+<h2>
+  
+  
+  Step 3: Handle the API response
+</h2>
+
+<p>Finally, you will need to handle the API response in your JavaScript application. In this example, we're simply logging the response data to the console.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>.then(data =&gt; console.log(data))
+.catch(error =&gt; console.error(error));
+</code></pre>
+
+</div>
+
+
+
+<p>You can modify this code to display the data on a webpage, store it in a database, or perform other actions based on your application's requirements.</p>
+
+<h2>
+  
+  
+  Conclusion
+</h2>
+
+<p>Connecting to the Twitter API via JavaScript is a great way to access Twitter data and build applications that integrate with Twitter. By following the steps outlined in this article, you can start building your own Twitter-powered applications.</p>
+
+<p>Remember to always handle Twitter data responsibly and in compliance with Twitter's terms of service and developer policies. Happy coding!</p>"'https://dev.to/nimeshbrt/unleashing-twitters-data-how-to-access-the-twitter-api-with-javascript-24mp'https://dev.to/social_previews/article/1391845.png'"['https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://dev.to/social_previews/article/1391845.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--FARjQcRh--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1045090/ff59a532-9602-493e-92c4-de86ae01aeb2.jpg', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--dg4ZiZBo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_775/https://res.cloudinary.com/practicaldev/image/fetch/s--TUGxJRrI--/c_limit%252Cf_auto%252Cfl_progressive%252Cq_auto%252Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/a5qpsb281cronnwrl84i.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--TsjTkH2t--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/555339/67855780-0af8-4cf1-a212-d0fe6c68fab8.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--k7ODdLKu--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/565977/03ce84d0-7e8e-4dc3-8ba6-4757f83897e8.jpeg', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--cnc0z5xu--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/337841/75deba0f-8d8a-476a-b62b-557c6de1bc8f.jpg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s---H7336Uk--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/38578/c785dfe1-aaa2-48fe-89b9-1563db95c85c.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--IMrVErmT--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/555339/67855780-0af8-4cf1-a212-d0fe6c68fab8.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Nh_N-1P---/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/995013/ac08f63e-6c83-4e04-aa00-eebc7390f35c.png', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--yXg8UT1z--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/180171/2365bc37-cc2b-4a06-bfdf-e9acb7c4f95d.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--qu0RnCdR--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/286811/54d3506c-8230-451b-b76d-3fd4b8fce165.png', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--CiTwwQ1d--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/305742/9fbcd58d-5093-4cbd-8b51-beac411204dc.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--DRHPa3Qq--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/995013/ac08f63e-6c83-4e04-aa00-eebc7390f35c.png', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg']"
+1'YQSFZBOFC'EventBus Mesh'"<p>I've been thinking about this topic a lot lately when bringing EventBridge's EventBus into some applications. On the current projects I'm working on with existing code, I've said 100 times, if EventBridge existed when I started them, I wouldn't have so much SNS-&gt;SQS based code lying around. But such is life when working in evolving tech. Enter the EventBus Mesh</p>
+
+<h3>
+  
+  
+  Microservice items of owernship
+</h3>
+
+<p>I want to start off with this idea that in a Microservice architecture I like to have everything be as independent as possible. That means the following items are each owned by the boudnary itself</p>
+
+<ul>
+<li>  API Definition</li>
+<li>  Data model and data store</li>
+<li>  Frontend and Backend code</li>
+<li>  Any async communication channels
+
+<ul>
+<li>  A way to publish that only that boundary to use</li>
+<li>  A way to subscribe that only that boundary can use</li>
+</ul>
+
+
+</li>
+</ul>
+
+<h3>
+  
+  
+  Pub/Sub before EventBridge
+</h3>
+
+<p>Before EventBridge, I built a lot of software that looked like the below. And for clarity, there is <strong>100% nothing wrong with this approach</strong></p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--sQb1Ztyy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/Bus-Mesh-Traditional-2.png""><img alt=""Traditional Pub Sub"" height=""706"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--sQb1Ztyy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/Bus-Mesh-Traditional-2.png"" width=""880"" /></a></p>
+
+<ul>
+<li>  Functions behind API Gateway</li>
+<li>  A single or multiple DynamoDB Tables under its control</li>
+<li>  SQS for subscribing to other SNS Topics (only it can read from)</li>
+<li>  SNS Topic for publishing messages/events out to the ecosystem. Only it could publish to that topic</li>
+</ul>
+
+<p>With the advent of <a href=""https://aws.amazon.com/eventbridge/pipes/"">EventBridge Pipes</a> and the ability of EventBridge Rules to trigger a Step Function (like this pattern <a href=""https://serverlessland.com/patterns/eventbridge-sfn"">EventBridge Step Function Rule</a>), I felt the need to explore replacing SNS/SQS with EventBridge for new features and projects.</p>
+
+<p>Again, nothing wrong with any of the above but I wanted to gain some additional capabilities</p>
+
+<h3>
+  
+  
+  Benefits of Moving to EventBridge
+</h3>
+
+<ul>
+<li>  Rules - they are more expressive and powerful than simple SNS message filtering. Filtering saves execution cycles which saves on cost and saves on waste</li>
+<li>  Schema Discovery - really nice feature to have messages/events be expressed through Schema</li>
+<li>  Pipes - standalone, they are fantastic for filtering, encriching and transforming. For more on Pipes, have a read <a href=""https://www.binaryheap.com/3a7w"">here</a>
+</li>
+</ul>
+
+<p>With just these three benefits, I save on wasted execution, remove points of failure and eliminate Lambdas and other code that could introduce errors that have to be tested. <a href=""https://aws.amazon.com/blogs/aws/we_build_muck_s/"">This old article by Jeff Barr</a> which describes the famous Keynote that Jeff Bezos did where he talks about ""undifferentiated heavy lifting"" is example why I like pushing this kind of code up to the cloud</p>
+
+<h3>
+  
+  
+  What is an EventBus Mesh
+</h3>
+
+<p>I drew up this simple diagram to highlight how I see putting Buses together.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s---YHJapAc--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/bus_mesh.png""><img alt=""EventBus Mesh"" height=""669"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s---YHJapAc--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/bus_mesh.png"" width=""880"" /></a></p>
+
+<p>Some of the core pieces of this pattern are this</p>
+
+<ul>
+<li>  Functions respond to API requests</li>
+<li>  Functions (Lambda or Step) interact with DynamoDB</li>
+<li>  EventBridge becomes the glue
+
+<ul>
+<li>  Service A Bus connects to Service B Bus</li>
+<li>  Service A Bus connects to Functions in Service A</li>
+<li>  EventBridge Pipes are used to connect to DynamoDB on Service A and then are registered onto Service A Bus</li>
+</ul>
+
+
+</li>
+</ul>
+
+<p>The really important thing to nail down are the ""boundaries"". It's important to make sure that what owns what is isolated to that boundary. The real glue is Bus -&gt; Bus. It's like Pub/Sub (and it is) but instead of susbscribing an SQS Queue to an SNS Topic, you subscribe Service B's Bus to Service A's bus. Additionally, make sure to specify the Rules around the data that will connect those buses together.</p>
+
+<p>The big con for me is that Bus B when connected to Bus A knows about Bus A. But if Queue B nows about Topic A, in my mind it's about the same thing. And in the case where this is all internal to one collection of products, it doesn't bother me so hopefully it doesn't bother you was well.</p>
+
+<h3>
+  
+  
+  Two Bus Setup
+</h3>
+
+<p>For this example, we are going to build two EventBuses and connect them together. Very similar to the diagram above.</p>
+
+<p>Let's look at some <a href=""https://www.binaryheap.com/ojc1"">CDK code</a> to build</p>
+
+<h4>
+  
+  
+  EventBus One
+</h4>
+
+
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight typescript""><code><span class=""k"">export</span> <span class=""kd"">class</span> <span class=""nx"">EventBusOne</span> <span class=""kd"">extends</span> <span class=""nx"">Construct</span> <span class=""p"">{</span>
+    <span class=""k"">private</span> <span class=""k"">readonly</span> <span class=""nx"">_bus</span><span class=""p"">:</span> <span class=""nx"">EventBus</span><span class=""p"">;</span>
+
+    <span class=""kd"">constructor</span><span class=""p"">(</span><span class=""nx"">scope</span><span class=""p"">:</span> <span class=""nx"">Construct</span><span class=""p"">,</span> <span class=""nx"">id</span><span class=""p"">:</span> <span class=""kr"">string</span><span class=""p"">)</span> <span class=""p"">{</span>
+        <span class=""k"">super</span><span class=""p"">(</span><span class=""nx"">scope</span><span class=""p"">,</span> <span class=""nx"">id</span><span class=""p"">);</span>
+
+        <span class=""k"">this</span><span class=""p"">.</span><span class=""nx"">_bus</span> <span class=""o"">=</span> <span class=""k"">new</span> <span class=""nx"">events</span><span class=""p"">.</span><span class=""nx"">EventBus</span><span class=""p"">(</span><span class=""nx"">scope</span><span class=""p"">,</span> <span class=""dl"">""</span><span class=""s2"">EventBusOne</span><span class=""dl"">""</span><span class=""p"">,</span> <span class=""p"">{</span>
+            <span class=""na"">eventBusName</span><span class=""p"">:</span> <span class=""dl"">""</span><span class=""s2"">event-bus-one</span><span class=""dl"">""</span><span class=""p"">,</span>
+        <span class=""p"">});</span>
+    <span class=""p"">}</span>
+
+    <span class=""kd"">get</span> <span class=""nx"">eventBus</span><span class=""p"">():</span> <span class=""nx"">EventBus</span> <span class=""p"">{</span>
+        <span class=""k"">return</span> <span class=""k"">this</span><span class=""p"">.</span><span class=""nx"">_bus</span><span class=""p"">;</span>
+    <span class=""p"">}</span>
+<span class=""p"">}</span>
+</code></pre>
+
+</div>
+
+
+
+<h4>
+  
+  
+  EventBus Two
+</h4>
+
+
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight typescript""><code><span class=""k"">export</span> <span class=""kd"">class</span> <span class=""nx"">EventBusTwo</span> <span class=""kd"">extends</span> <span class=""nx"">Construct</span> <span class=""p"">{</span>
+    <span class=""k"">private</span> <span class=""k"">readonly</span> <span class=""nx"">_bus</span><span class=""p"">:</span> <span class=""nx"">EventBus</span><span class=""p"">;</span>
+
+    <span class=""kd"">constructor</span><span class=""p"">(</span><span class=""nx"">scope</span><span class=""p"">:</span> <span class=""nx"">Construct</span><span class=""p"">,</span> <span class=""nx"">id</span><span class=""p"">:</span> <span class=""kr"">string</span><span class=""p"">)</span> <span class=""p"">{</span>
+        <span class=""k"">super</span><span class=""p"">(</span><span class=""nx"">scope</span><span class=""p"">,</span> <span class=""nx"">id</span><span class=""p"">);</span>
+
+        <span class=""k"">this</span><span class=""p"">.</span><span class=""nx"">_bus</span> <span class=""o"">=</span> <span class=""k"">new</span> <span class=""nx"">events</span><span class=""p"">.</span><span class=""nx"">EventBus</span><span class=""p"">(</span><span class=""nx"">scope</span><span class=""p"">,</span> <span class=""dl"">""</span><span class=""s2"">EventBusTwo</span><span class=""dl"">""</span><span class=""p"">,</span> <span class=""p"">{</span>
+            <span class=""na"">eventBusName</span><span class=""p"">:</span> <span class=""dl"">""</span><span class=""s2"">event-bus-two</span><span class=""dl"">""</span><span class=""p"">,</span>
+        <span class=""p"">});</span>
+    <span class=""p"">}</span>
+
+    <span class=""kd"">get</span> <span class=""nx"">eventBus</span><span class=""p"">():</span> <span class=""nx"">EventBus</span> <span class=""p"">{</span>
+        <span class=""k"">return</span> <span class=""k"">this</span><span class=""p"">.</span><span class=""nx"">_bus</span><span class=""p"">;</span>
+    <span class=""p"">}</span>
+<span class=""p"">}</span>
+</code></pre>
+
+</div>
+
+
+
+<p>When that gets run, the resources created will look like this in the console.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--_WYqUFmn--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/buses.jpg""><img alt=""EventBuses"" height=""224"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--_WYqUFmn--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/buses.jpg"" width=""880"" /></a></p>
+
+<p>With a foundation of two EventBuses, let's take a look at connecting them together.</p>
+
+<h3>
+  
+  
+  Create the EventBus Mesh with a Rule
+</h3>
+
+<p>For this example, let's assume that Bus2 is interested in Events that land on Bus one that have the <code>detail-type</code> of ""Busing"". With CDK and TypeScript we do that by this code.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight typescript""><code>    <span class=""k"">private</span> <span class=""nx"">buildBusOneRule</span> <span class=""o"">=</span> <span class=""p"">(</span>
+        <span class=""nx"">scope</span><span class=""p"">:</span> <span class=""nx"">Construct</span><span class=""p"">,</span>
+        <span class=""nx"">props</span><span class=""p"">:</span> <span class=""nx"">EventBridgeRuleStackProps</span>
+    <span class=""p"">)</span> <span class=""o"">=&gt;</span> <span class=""p"">{</span>
+        <span class=""kd"">const</span> <span class=""nx"">rule</span> <span class=""o"">=</span> <span class=""k"">new</span> <span class=""nx"">Rule</span><span class=""p"">(</span><span class=""k"">this</span><span class=""p"">,</span> <span class=""dl"">""</span><span class=""s2"">BusOne-BusTwo-Rule</span><span class=""dl"">""</span><span class=""p"">,</span> <span class=""p"">{</span>
+            <span class=""na"">eventPattern</span><span class=""p"">:</span> <span class=""p"">{</span>
+                <span class=""na"">detailType</span><span class=""p"">:</span> <span class=""p"">[</span><span class=""dl"">""</span><span class=""s2"">Busing</span><span class=""dl"">""</span><span class=""p"">],</span>
+            <span class=""p"">},</span>
+            <span class=""na"">ruleName</span><span class=""p"">:</span> <span class=""dl"">""</span><span class=""s2"">bus-two-mesh</span><span class=""dl"">""</span><span class=""p"">,</span>
+            <span class=""na"">eventBus</span><span class=""p"">:</span> <span class=""nx"">props</span><span class=""p"">.</span><span class=""nx"">busOne</span><span class=""p"">,</span>
+        <span class=""p"">});</span>
+
+        <span class=""kd"">const</span> <span class=""nx"">dlq</span> <span class=""o"">=</span> <span class=""k"">new</span> <span class=""nx"">Queue</span><span class=""p"">(</span><span class=""k"">this</span><span class=""p"">,</span> <span class=""dl"">""</span><span class=""s2"">BusOneBusTwoMesh-DLQ</span><span class=""dl"">""</span><span class=""p"">);</span>
+
+        <span class=""kd"">const</span> <span class=""nx"">role</span> <span class=""o"">=</span> <span class=""k"">new</span> <span class=""nx"">Role</span><span class=""p"">(</span><span class=""k"">this</span><span class=""p"">,</span> <span class=""dl"">""</span><span class=""s2"">BusOneBusTwoMesh-Role</span><span class=""dl"">""</span><span class=""p"">,</span> <span class=""p"">{</span>
+            <span class=""na"">assumedBy</span><span class=""p"">:</span> <span class=""k"">new</span> <span class=""nx"">ServicePrincipal</span><span class=""p"">(</span><span class=""dl"">""</span><span class=""s2"">events.amazonaws.com</span><span class=""dl"">""</span><span class=""p"">),</span>
+        <span class=""p"">});</span>
+
+        <span class=""nx"">rule</span><span class=""p"">.</span><span class=""nx"">addTarget</span><span class=""p"">(</span>
+            <span class=""k"">new</span> <span class=""nx"">targets</span><span class=""p"">.</span><span class=""nx"">EventBus</span><span class=""p"">(</span><span class=""nx"">props</span><span class=""p"">.</span><span class=""nx"">busTwo</span><span class=""p"">,</span> <span class=""p"">{</span>
+                <span class=""na"">deadLetterQueue</span><span class=""p"">:</span> <span class=""nx"">dlq</span><span class=""p"">,</span>
+                <span class=""na"">role</span><span class=""p"">:</span> <span class=""nx"">role</span><span class=""p"">,</span>
+            <span class=""p"">})</span>
+        <span class=""p"">);</span>
+    <span class=""p"">};</span>
+</code></pre>
+
+</div>
+
+
+
+<p>When connecting the buses together the output of that will look like the below in the console.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--RG6hECP5--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/bus_mesh.jpg""><img alt=""Connecting Bus One to Bus Two"" height=""404"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--RG6hECP5--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/bus_mesh.jpg"" width=""880"" /></a></p>
+
+<p>I like using the naming convention of ""mesh"" in the name just so I know the Rules that are related to connecting Buses easily stand out. And they could be searched on that keyword.</p>
+
+<h3>
+  
+  
+  BusTwo Rules for Triggering Targets
+</h3>
+
+<p>Now that BusTwo is receiving events with <code>detail-type</code> of ""Busing"", it only makes sense to have that event go somewhere. In a real scenario, I might be responding to change in one system and needing to handle that change in other. By using EventBus and Rules you can get really granular. For instance</p>
+
+<ul>
+<li>  Only events that have a certain <code>detail-type</code> go to a specific State Machine</li>
+<li>  Look for multiple <code>detal-type</code> that go to the same State Machine</li>
+<li>  Look for matches in the payload itself</li>
+<li>  So many other choices that can be explored <a href=""https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-patterns.html"">here</a>
+</li>
+</ul>
+
+<p>Things really scale well and can be extended to your actual liking.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight typescript""><code><span class=""k"">private</span> <span class=""nx"">buildBusTwoRule</span> <span class=""o"">=</span> <span class=""p"">(</span>
+        <span class=""nx"">scope</span><span class=""p"">:</span> <span class=""nx"">Construct</span><span class=""p"">,</span>
+        <span class=""nx"">props</span><span class=""p"">:</span> <span class=""nx"">EventBridgeRuleStackProps</span>
+    <span class=""p"">)</span> <span class=""o"">=&gt;</span> <span class=""p"">{</span>
+        <span class=""kd"">const</span> <span class=""nx"">rule</span> <span class=""o"">=</span> <span class=""k"">new</span> <span class=""nx"">Rule</span><span class=""p"">(</span><span class=""k"">this</span><span class=""p"">,</span> <span class=""dl"">""</span><span class=""s2"">SampleEventSM-Rule</span><span class=""dl"">""</span><span class=""p"">,</span> <span class=""p"">{</span>
+            <span class=""na"">eventPattern</span><span class=""p"">:</span> <span class=""p"">{</span>
+                <span class=""na"">detailType</span><span class=""p"">:</span> <span class=""p"">[</span><span class=""dl"">""</span><span class=""s2"">Busing</span><span class=""dl"">""</span><span class=""p"">],</span>
+            <span class=""p"">},</span>
+            <span class=""na"">ruleName</span><span class=""p"">:</span> <span class=""dl"">""</span><span class=""s2"">bus-two-busing</span><span class=""dl"">""</span><span class=""p"">,</span>
+            <span class=""na"">eventBus</span><span class=""p"">:</span> <span class=""nx"">props</span><span class=""p"">.</span><span class=""nx"">busTwo</span><span class=""p"">,</span>
+        <span class=""p"">});</span>
+
+        <span class=""kd"">const</span> <span class=""nx"">dlq</span> <span class=""o"">=</span> <span class=""k"">new</span> <span class=""nx"">Queue</span><span class=""p"">(</span><span class=""k"">this</span><span class=""p"">,</span> <span class=""dl"">""</span><span class=""s2"">SampleEventSM-DLQ</span><span class=""dl"">""</span><span class=""p"">);</span>
+
+        <span class=""kd"">const</span> <span class=""nx"">role</span> <span class=""o"">=</span> <span class=""k"">new</span> <span class=""nx"">Role</span><span class=""p"">(</span><span class=""k"">this</span><span class=""p"">,</span> <span class=""dl"">""</span><span class=""s2"">SampleEventSM-Role</span><span class=""dl"">""</span><span class=""p"">,</span> <span class=""p"">{</span>
+            <span class=""na"">assumedBy</span><span class=""p"">:</span> <span class=""k"">new</span> <span class=""nx"">ServicePrincipal</span><span class=""p"">(</span><span class=""dl"">""</span><span class=""s2"">events.amazonaws.com</span><span class=""dl"">""</span><span class=""p"">),</span>
+        <span class=""p"">});</span>
+
+        <span class=""nx"">rule</span><span class=""p"">.</span><span class=""nx"">addTarget</span><span class=""p"">(</span>
+            <span class=""k"">new</span> <span class=""nx"">targets</span><span class=""p"">.</span><span class=""nx"">SfnStateMachine</span><span class=""p"">(</span><span class=""nx"">props</span><span class=""p"">.</span><span class=""nx"">stateMachine</span><span class=""p"">,</span> <span class=""p"">{</span>
+                <span class=""na"">input</span><span class=""p"">:</span> <span class=""nx"">RuleTargetInput</span><span class=""p"">,</span>
+                <span class=""na"">deadLetterQueue</span><span class=""p"">:</span> <span class=""nx"">dlq</span><span class=""p"">,</span>
+                <span class=""na"">role</span><span class=""p"">:</span> <span class=""nx"">role</span><span class=""p"">,</span>
+            <span class=""p"">})</span>
+        <span class=""p"">);</span>
+    <span class=""p"">};</span>
+</code></pre>
+
+</div>
+
+
+
+<p>The above code should look alot like the code that connects the EventBuses but the Rule's target is now a StateMachine and not another EventBus.</p>
+
+<p>When run and deployed up to the Cloud, the Console will show you that the rule presents like this.</p>
+
+<h4>
+  
+  
+  Rule Event Pattern
+</h4>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--2xMu-ROe--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/bus_two_rule-1.jpg""><img alt=""Bus Two Rule"" height=""566"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--2xMu-ROe--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/bus_two_rule-1.jpg"" width=""880"" /></a></p>
+
+<h4>
+  
+  
+  Rule Target
+</h4>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--f3awxeDA--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/bus_two_target.jpg""><img alt=""Bus Two Target"" height=""352"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--f3awxeDA--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/bus_two_target.jpg"" width=""880"" /></a></p>
+
+<h3>
+  
+  
+  Executing the Target of the EventBus Mesh
+</h3>
+
+<p>The whole point of connecting two or more buses together is so that a consumer of one of the buses can do something with the updated information or the command that was put on the wire.</p>
+
+<p>In the case of this demonstration, I'm going to use Step Functions with a simple State Machine. Taking a quick look at what's deployed, you'll see that it's a single step. Of course you'd want something more robust if you handled this event, but this is just a demo and this article is not on Step Functions</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--SJsyI2bY--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/state_machine.jpg""><img alt=""EventBus Mesh State Machine"" height=""425"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--SJsyI2bY--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/state_machine.jpg"" width=""880"" /></a><br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight typescript""><code><span class=""cm"">/**
+ * Sets up the state machine. Brings in the roles, permissions and appropriate keys and whatnot
+ * to allow the state machine to do its thing
+ *
+ *  @param {Construct} scope - the context for the state machine
+ */</span>
+<span class=""nx"">finalizeStateMachine</span> <span class=""o"">=</span> <span class=""p"">(</span><span class=""nx"">scope</span><span class=""p"">:</span> <span class=""nx"">Construct</span><span class=""p"">)</span> <span class=""o"">=&gt;</span> <span class=""p"">{</span>
+    <span class=""kd"">const</span> <span class=""nx"">logGroup</span> <span class=""o"">=</span> <span class=""k"">new</span> <span class=""nx"">logs</span><span class=""p"">.</span><span class=""nx"">LogGroup</span><span class=""p"">(</span><span class=""k"">this</span><span class=""p"">,</span> <span class=""dl"">""</span><span class=""s2"">CloudwatchLogs</span><span class=""dl"">""</span><span class=""p"">,</span> <span class=""p"">{</span>
+        <span class=""na"">logGroupName</span><span class=""p"">:</span> <span class=""dl"">""</span><span class=""s2"">/aws/vendedlogs/states/sample-state-machine</span><span class=""dl"">""</span><span class=""p"">,</span>
+    <span class=""p"">});</span>
+
+    <span class=""kd"">const</span> <span class=""nx"">role</span> <span class=""o"">=</span> <span class=""k"">new</span> <span class=""nx"">Role</span><span class=""p"">(</span><span class=""k"">this</span><span class=""p"">,</span> <span class=""dl"">""</span><span class=""s2"">StateMachineRole</span><span class=""dl"">""</span><span class=""p"">,</span> <span class=""p"">{</span>
+        <span class=""na"">assumedBy</span><span class=""p"">:</span> <span class=""k"">new</span> <span class=""nx"">ServicePrincipal</span><span class=""p"">(</span><span class=""dl"">""</span><span class=""s2"">states.us-west-2.amazonaws.com</span><span class=""dl"">""</span><span class=""p"">),</span>
+    <span class=""p"">});</span>
+
+    <span class=""kd"">const</span> <span class=""nx"">flow</span> <span class=""o"">=</span> <span class=""k"">this</span><span class=""p"">.</span><span class=""nx"">buildStateMachine</span><span class=""p"">(</span><span class=""nx"">scope</span><span class=""p"">);</span>
+
+    <span class=""k"">this</span><span class=""p"">.</span><span class=""nx"">_stateMachine</span> <span class=""o"">=</span> <span class=""k"">new</span> <span class=""nx"">stepfunctions</span><span class=""p"">.</span><span class=""nx"">StateMachine</span><span class=""p"">(</span><span class=""k"">this</span><span class=""p"">,</span> <span class=""dl"">""</span><span class=""s2"">StateMachine</span><span class=""dl"">""</span><span class=""p"">,</span> <span class=""p"">{</span>
+        <span class=""na"">role</span><span class=""p"">:</span> <span class=""nx"">role</span><span class=""p"">,</span>
+        <span class=""na"">stateMachineName</span><span class=""p"">:</span> <span class=""dl"">""</span><span class=""s2"">SampleStateMachine</span><span class=""dl"">""</span><span class=""p"">,</span>
+        <span class=""na"">definition</span><span class=""p"">:</span> <span class=""nx"">flow</span><span class=""p"">,</span>
+        <span class=""na"">stateMachineType</span><span class=""p"">:</span> <span class=""nx"">stepfunctions</span><span class=""p"">.</span><span class=""nx"">StateMachineType</span><span class=""p"">.</span><span class=""nx"">EXPRESS</span><span class=""p"">,</span>
+        <span class=""na"">timeout</span><span class=""p"">:</span> <span class=""nx"">Duration</span><span class=""p"">.</span><span class=""nx"">seconds</span><span class=""p"">(</span><span class=""mi"">5</span><span class=""p"">),</span>
+        <span class=""na"">logs</span><span class=""p"">:</span> <span class=""p"">{</span>
+            <span class=""na"">level</span><span class=""p"">:</span> <span class=""nx"">LogLevel</span><span class=""p"">.</span><span class=""nx"">ALL</span><span class=""p"">,</span>
+            <span class=""na"">destination</span><span class=""p"">:</span> <span class=""nx"">logGroup</span><span class=""p"">,</span>
+            <span class=""na"">includeExecutionData</span><span class=""p"">:</span> <span class=""kc"">true</span><span class=""p"">,</span>
+        <span class=""p"">},</span>
+    <span class=""p"">});</span>
+<span class=""p"">};</span>
+
+<span class=""cm"">/**
+ * Creates the workflow for the state machine.  Builds transitions and errors/catches/retries
+ *
+ *  @param {Construct} scope - the context for the state machine
+ */</span>
+<span class=""nx"">buildStateMachine</span> <span class=""o"">=</span> <span class=""p"">(</span><span class=""nx"">scope</span><span class=""p"">:</span> <span class=""nx"">Construct</span><span class=""p"">):</span> <span class=""nx"">stepfunctions</span><span class=""p"">.</span><span class=""nx"">IChainable</span> <span class=""o"">=&gt;</span> <span class=""p"">{</span>
+    <span class=""k"">return</span> <span class=""k"">new</span> <span class=""nx"">Succeed</span><span class=""p"">(</span><span class=""nx"">scope</span><span class=""p"">,</span> <span class=""dl"">""</span><span class=""s2"">We made it and it finished</span><span class=""dl"">""</span><span class=""p"">);</span>
+<span class=""p"">};</span>
+</code></pre>
+
+</div>
+
+
+
+<h2>
+  
+  
+  Wrap Up
+</h2>
+
+<p>Hopefully you've seen a touch of the power of this pattern. By using an EventBus Mesh you gain the ability to connect multiple features together and then gain the isolation and control of publishing and reading those events while also using Pipes to help filter, enrich and transform if needed.</p>
+
+<p>With most things Serverless and AWS there are many different ways to solve problems but using EventBridge Meshes should be a new pattern that you can now introduce into your toolkit.</p>
+
+<p>And as always, if you want to see this code in action, feel free to pull it down from the <a href=""https://github.com/benbpyle/cdk-event-bridge-mesh"">Github repos</a>. Then you can run</p>
+
+<h5>
+  
+  
+  Prep the Environment
+</h5>
+
+
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>npm install
+</code></pre>
+
+</div>
+
+
+
+<h5>
+  
+  
+  Deploy EventBus Mesh
+</h5>
+
+
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>cdk deploy
+</code></pre>
+
+</div>
+
+
+
+<h5>
+  
+  
+  Destroy EventBus Mesh
+</h5>
+
+
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>cdk destroy
+</code></pre>
+
+</div>
+
+
+
+<p>Happy building!</p>"'https://dev.to/aws-builders/eventbus-mesh-4c8o'https://res.cloudinary.com/practicaldev/image/fetch/s--pjAI50P5--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/k2awwd0o94dbxyvzbetw.jpg'"['https://res.cloudinary.com/practicaldev/image/fetch/s--nknIvKbL--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1037283/15427c0a-6a72-4997-8c7f-0660ff351be1.jpeg', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s---YHJapAc--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/bus_mesh.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--3vA9CcCA--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/2794/88da75b6-aadd-4ea1-8083-ae2dfca8be94.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--jG6gou-U--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/921099/40a0f589-9863-4ad2-9e55-286802450d97.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Pox0001Z--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/918266/27533df8-701e-4623-9e1c-23135f4d37b6.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--f3awxeDA--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/bus_two_target.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--IxrGprDT--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fbsvcwqnj5mgkzuwy24r.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--v9WkjSVi--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/436443/e0d257f2-dcb0-4822-b12e-87aae37b8581.png', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--vWmcJ-ty--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/2794/88da75b6-aadd-4ea1-8083-ae2dfca8be94.png', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--_WYqUFmn--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/buses.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--2xMu-ROe--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/bus_two_rule-1.jpg', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RG6hECP5--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/bus_mesh.jpg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--SJsyI2bY--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/state_machine.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pjAI50P5--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/k2awwd0o94dbxyvzbetw.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--0xVxX6KM--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/k2awwd0o94dbxyvzbetw.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--CZDMxFWJ--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/235304/4c41c627-459e-4855-9fdf-8a04049105c5.jpg', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--sQb1Ztyy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.binaryheap.com/wp-content/uploads/2023/03/Bus-Mesh-Traditional-2.png']"
+2'GG6BRHQM6'Lightning Web Components: Custom Nested Components'"<p>Lightning Web Runtime, or LWR for short was released back in <a href=""https://help.salesforce.com/s/articleView?id=release-notes.rn_experiences_developers_lwr.htm&amp;release=230&amp;type=5"">Spring 21 (v51.0)</a>. Even before the release of LWR, most developers dreamed of being able to build custom nested components. We could see that OOTB (Out Of The Box) components could use them (see Tabs component).</p>
+
+<p>Salesforce recently released the ability to build custom LWCs with child <code>&lt;slot/&gt;</code>'s, to allow nesting of components. Nested LWCs allow you to compose multiple components together into a single component. The child components maintain their own life cycle and can communicate with each other through events, making it easy to create flexible and dynamic apps.</p>
+
+<blockquote>
+<p>Before continuing, Aura based Communities are (sadly) not supported. So if you're currently using them it might be time to make the switch to LWR.</p>
+</blockquote>
+
+<h2>
+  
+  
+  Code Example
+</h2>
+
+<p>Enough talk, lets jump into the code and see the magic happen.</p>
+
+<h3>
+  
+  
+  HTML
+</h3>
+
+<p>We'll start by creating the HTML template to hold our <code>&lt;slot/&gt;</code>'s.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight html""><code><span class=""nt"">&lt;template&gt;</span>
+  <span class=""nt"">&lt;template</span> <span class=""na"">if:false=</span><span class=""s"">{isAura}</span><span class=""nt"">&gt;</span>
+    <span class=""nt"">&lt;div</span> <span class=""na"">class=</span><span class=""s"">""container""</span><span class=""nt"">&gt;</span>
+      <span class=""nt"">&lt;div&gt;</span>
+        <span class=""nt"">&lt;slot</span> <span class=""na"">name=</span><span class=""s"">""region1""</span><span class=""nt"">&gt;&lt;/slot&gt;</span>
+      <span class=""nt"">&lt;/div&gt;</span>
+      <span class=""nt"">&lt;div&gt;</span>
+        <span class=""nt"">&lt;slot</span> <span class=""na"">name=</span><span class=""s"">""region2""</span><span class=""nt"">&gt;&lt;/slot&gt;</span>
+      <span class=""nt"">&lt;/div&gt;</span>
+      <span class=""nt"">&lt;div&gt;</span>
+        <span class=""nt"">&lt;slot</span> <span class=""na"">name=</span><span class=""s"">""region3""</span><span class=""nt"">&gt;&lt;/slot&gt;</span>
+      <span class=""nt"">&lt;/div&gt;</span>
+    <span class=""nt"">&lt;/div&gt;</span>
+  <span class=""nt"">&lt;/template&gt;</span>
+<span class=""nt"">&lt;/template&gt;</span>
+</code></pre>
+
+</div>
+
+
+
+<h3>
+  
+  
+  JavaScript
+</h3>
+
+<p>Now lets have a look at the JavaScript. The important part (or magic) here is the <code>@slot</code> definitions in the comment directly above the LWC export. Without these definitions, the dynamic components will not work.</p>
+
+<p>The <code>isAura</code> check also ensures this component shows a warning in the experience builder when it is being used from within an Aura based community.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight javascript""><code><span class=""k"">import</span> <span class=""p"">{</span> <span class=""nx"">LightningElement</span> <span class=""p"">}</span> <span class=""k"">from</span> <span class=""dl"">'</span><span class=""s1"">lwc</span><span class=""dl"">'</span>
+
+<span class=""cm"">/**
+ * @slot region1
+ * @slot region2
+ * @slot region3
+ */</span>
+<span class=""k"">export</span> <span class=""k"">default</span> <span class=""kd"">class</span> <span class=""nx"">NestedLWCs</span> <span class=""kd"">extends</span> <span class=""nx"">LightningElement</span> <span class=""p"">{</span>
+  <span class=""kd"">get</span> <span class=""nx"">isAura</span><span class=""p"">()</span> <span class=""p"">{</span>
+    <span class=""k"">return</span> <span class=""nb"">window</span><span class=""p"">[</span><span class=""dl"">'</span><span class=""s1"">$A</span><span class=""dl"">'</span><span class=""p"">]</span> <span class=""o"">!==</span> <span class=""kc"">undefined</span> <span class=""o"">&amp;&amp;</span> <span class=""nb"">window</span><span class=""p"">[</span><span class=""dl"">'</span><span class=""s1"">$A</span><span class=""dl"">'</span><span class=""p"">]</span> <span class=""o"">!==</span> <span class=""kc"">null</span>
+  <span class=""p"">}</span>
+<span class=""p"">}</span>
+</code></pre>
+
+</div>
+
+
+
+<h3>
+  
+  
+  Metadata XML
+</h3>
+
+<p>Make sure your <code>.xml</code> file is setup to be available in the experience builder. The key values are setting <code>isExposed</code> to <code>true</code> and including both <code>lightningCommunity__Page</code> and <code>lightningCommunity__Default</code> as <code>targets</code>.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight xml""><code><span class=""cp"">&lt;?xml version=""1.0"" encoding=""UTF-8""?&gt;</span>
+<span class=""nt"">&lt;LightningComponentBundle</span> <span class=""na"">xmlns=</span><span class=""s"">""http://soap.sforce.com/2006/04/metadata""</span><span class=""nt"">&gt;</span>
+  <span class=""nt"">&lt;apiVersion&gt;</span>57.0<span class=""nt"">&lt;/apiVersion&gt;</span>
+  <span class=""nt"">&lt;isExposed&gt;</span>true<span class=""nt"">&lt;/isExposed&gt;</span>
+  <span class=""nt"">&lt;masterLabel&gt;</span>Nested LWCs<span class=""nt"">&lt;/masterLabel&gt;</span>
+  <span class=""nt"">&lt;description&gt;</span>Nested LWC magic<span class=""nt"">&lt;/description&gt;</span>
+  <span class=""nt"">&lt;targets&gt;</span>
+    <span class=""nt"">&lt;target&gt;</span>lightningCommunity__Page<span class=""nt"">&lt;/target&gt;</span>
+    <span class=""nt"">&lt;target&gt;</span>lightningCommunity__Default<span class=""nt"">&lt;/target&gt;</span>
+  <span class=""nt"">&lt;/targets&gt;</span>
+<span class=""nt"">&lt;/LightningComponentBundle&gt;</span>
+</code></pre>
+
+</div>
+
+
+
+<h2>
+  
+  
+  Experience Builder
+</h2>
+
+<p>Now lets open up the Experience Builder and see our custom LWC in action.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--GfMjZ1fj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://blog.lukesecomb.digital/lwc-nested-components/nested-lwc-1.gif""><img alt=""Experience Builder: Draging our custom LWC onto the page"" height=""222"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--GfMjZ1fj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://blog.lukesecomb.digital/lwc-nested-components/nested-lwc-1.gif"" width=""880"" /></a></p>
+
+<p>We can also nest components within other nested components. I am not aware of any limitation here. I was able to place up to 10 levels deep without any issues, noting theses are very barebones test LWCs. More complex LWCs may start affecting performance.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--zb40TjOe--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://blog.lukesecomb.digital/lwc-nested-components/nested-lwc-2.gif""><img alt=""Experience Builder: Draging our custom LWC onto the page"" height=""222"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--zb40TjOe--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://blog.lukesecomb.digital/lwc-nested-components/nested-lwc-2.gif"" width=""880"" /></a></p>
+
+<h2>
+  
+  
+  Wrapping Up
+</h2>
+
+<p>In summary, nested LWCs provide a powerful and flexible way for developers to create custom components that can be composed of multiple other components, making it easier to build dynamic and reusable apps on the Experience Cloud platform.</p>"'https://dev.to/lukethacoder/lightning-web-components-custom-nested-components-171n'https://res.cloudinary.com/practicaldev/image/fetch/s--UdKWqDbH--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kv2qhaldtk7digdmi2e1.jpg'"['https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--jG6gou-U--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/921099/40a0f589-9863-4ad2-9e55-286802450d97.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--zb40TjOe--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://blog.lukesecomb.digital/lwc-nested-components/nested-lwc-2.gif', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Q6e8tgdA--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/357090/c75dd3be-04bc-42ab-9ed1-92158590d930.jpeg', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--KeI0IXh5--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kv2qhaldtk7digdmi2e1.jpg', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--24HfGQlK--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/2565/93fcdbc1-0575-4490-ab67-ec5f50e54a17.jpg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--jBObEeAJ--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/164500/aecd8212-9e6d-44d2-86cc-6ab0b1edd2e8.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--cB6d_K8v--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/i/hlhrtuspjyrstifubdhs.gif', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--GfMjZ1fj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://blog.lukesecomb.digital/lwc-nested-components/nested-lwc-1.gif', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--U0qk_Tzh--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/164500/aecd8212-9e6d-44d2-86cc-6ab0b1edd2e8.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--BId-Y547--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/79354/05158841-c512-4a2f-ad9b-5fd3ac6ec108.png', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--UdKWqDbH--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kv2qhaldtk7digdmi2e1.jpg', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg']"
+3'551KZ7HZX'Why Rust has Such a Complex Syntax'"<p><a href=""https://www.rust-lang.org/"">Rust</a> has a complex syntax because it is a systems programming language that aims to provide low-level control over computer hardware, while also maintaining safety and performance. To achieve these goals, Rust has a number of advanced features, such as a powerful macro system, a strong type system, and advanced memory management capabilities.</p>
+
+<p>The complex syntax of Rust is a result of these features, which require a more nuanced and detailed syntax than simpler languages. For example, Rust's ownership system and borrow checker are key features that make Rust memory safe and prevent common memory-related bugs such as null pointer dereferences and data races. However, these features also require a more complex syntax to specify how ownership and borrowing work in different contexts.</p>
+
+<p>Furthermore, Rust's syntax is designed to be expressive and concise, which can make it appear more complex at first glance. However, once you become familiar with Rust's syntax and features, it can actually make programming in Rust more efficient and easier to reason about.</p>
+
+<p>Here are some examples of complex Rust syntax:</p>
+
+<h2>
+  
+  
+  Lifetimes
+</h2>
+
+<p>Rust's ownership and borrowing system relies on lifetimes to ensure memory safety. Lifetimes are annotations that indicate the duration of a reference to a value. They are expressed using the <code>'a</code> syntax, where <code>a</code> is a variable name that represents the lifetime. Here's an example:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight rust""><code><span class=""k"">fn</span> <span class=""n"">longest</span><span class=""o"">&lt;</span><span class=""nv"">'a</span><span class=""o"">&gt;</span><span class=""p"">(</span><span class=""n"">x</span><span class=""p"">:</span> <span class=""o"">&amp;</span><span class=""nv"">'a</span> <span class=""nb"">str</span><span class=""p"">,</span> <span class=""n"">y</span><span class=""p"">:</span> <span class=""o"">&amp;</span><span class=""nv"">'a</span> <span class=""nb"">str</span><span class=""p"">)</span> <span class=""k"">-&gt;</span> <span class=""o"">&amp;</span><span class=""nv"">'a</span> <span class=""nb"">str</span> <span class=""p"">{</span>
+  <span class=""k"">if</span> <span class=""n"">x</span><span class=""nf"">.len</span><span class=""p"">()</span> <span class=""o"">&gt;</span> <span class=""n"">y</span><span class=""nf"">.len</span><span class=""p"">()</span> <span class=""p"">{</span>
+    <span class=""n"">x</span>
+  <span class=""p"">}</span> <span class=""k"">else</span> <span class=""p"">{</span>
+    <span class=""n"">y</span>
+  <span class=""p"">}</span>
+<span class=""p"">}</span>
+</code></pre>
+
+</div>
+
+
+
+<p>In this example, the longest function takes two string references, <code>x</code> and <code>y</code>, with the same lifetime <code>'a</code>. The function returns a string reference with the same lifetime.</p>
+
+<h2>
+  
+  
+  Macros
+</h2>
+
+<p>Rust's macro system allows for the creation of custom syntax extensions that can be used to generate code at compile time. Macros are defined using the <code>macro_rules!</code> syntax. Here's an example:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight rust""><code><span class=""nd"">macro_rules!</span> <span class=""n"">my_macro</span> <span class=""p"">{</span>
+  <span class=""p"">(</span><span class=""nv"">$x:expr</span><span class=""p"">)</span> <span class=""k"">=&gt;</span> <span class=""p"">{</span>
+    <span class=""nd"">println!</span><span class=""p"">(</span><span class=""s"">""The value of x is: {}""</span><span class=""p"">,</span> <span class=""nv"">$x</span><span class=""p"">);</span>
+  <span class=""p"">};</span>
+<span class=""p"">}</span>
+
+<span class=""k"">fn</span> <span class=""nf"">main</span><span class=""p"">()</span> <span class=""p"">{</span>
+  <span class=""k"">let</span> <span class=""n"">x</span> <span class=""o"">=</span> <span class=""mi"">42</span><span class=""p"">;</span>
+  <span class=""nd"">my_macro!</span><span class=""p"">(</span><span class=""n"">x</span><span class=""p"">);</span>
+<span class=""p"">}</span>
+</code></pre>
+
+</div>
+
+
+
+<p>In this example, the <code>my_macro</code> macro takes an expression <code>$x</code> and generates code that prints the value of <code>$x</code> using the <code>println!</code> macro.</p>
+
+<h2>
+  
+  
+  Pattern matching
+</h2>
+
+<p>Rust's pattern matching syntax allows for concise and expressive code that can handle complex data structures. Here's an example:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight rust""><code><span class=""k"">fn</span> <span class=""nf"">match_tuple</span><span class=""p"">(</span><span class=""n"">t</span><span class=""p"">:</span> <span class=""p"">(</span><span class=""nb"">i32</span><span class=""p"">,</span> <span class=""nb"">i32</span><span class=""p"">))</span> <span class=""k"">-&gt;</span> <span class=""nb"">String</span> <span class=""p"">{</span>
+  <span class=""k"">match</span> <span class=""n"">t</span> <span class=""p"">{</span>
+    <span class=""p"">(</span><span class=""mi"">0</span><span class=""p"">,</span> <span class=""mi"">0</span><span class=""p"">)</span> <span class=""k"">=&gt;</span> <span class=""nn"">String</span><span class=""p"">::</span><span class=""nf"">from</span><span class=""p"">(</span><span class=""s"">""Origin""</span><span class=""p"">),</span>
+    <span class=""p"">(</span><span class=""n"">x</span><span class=""p"">,</span> <span class=""mi"">0</span><span class=""p"">)</span> <span class=""k"">=&gt;</span> <span class=""nd"">format!</span><span class=""p"">(</span><span class=""s"">""On x-axis, x = {}""</span><span class=""p"">,</span> <span class=""n"">x</span><span class=""p"">),</span>
+    <span class=""p"">(</span><span class=""mi"">0</span><span class=""p"">,</span> <span class=""n"">y</span><span class=""p"">)</span> <span class=""k"">=&gt;</span> <span class=""nd"">format!</span><span class=""p"">(</span><span class=""s"">""On y-axis, y = {}""</span><span class=""p"">,</span> <span class=""n"">y</span><span class=""p"">),</span>
+    <span class=""p"">(</span><span class=""n"">x</span><span class=""p"">,</span> <span class=""n"">y</span><span class=""p"">)</span> <span class=""k"">=&gt;</span> <span class=""nd"">format!</span><span class=""p"">(</span><span class=""s"">""On the plane at ({}, {})""</span><span class=""p"">,</span> <span class=""n"">x</span><span class=""p"">,</span> <span class=""n"">y</span><span class=""p"">),</span>
+  <span class=""p"">}</span>
+<span class=""p"">}</span>
+
+<span class=""k"">fn</span> <span class=""nf"">main</span><span class=""p"">()</span> <span class=""p"">{</span>
+  <span class=""k"">let</span> <span class=""n"">t1</span> <span class=""o"">=</span> <span class=""p"">(</span><span class=""mi"">0</span><span class=""p"">,</span> <span class=""mi"">0</span><span class=""p"">);</span>
+  <span class=""k"">let</span> <span class=""n"">t2</span> <span class=""o"">=</span> <span class=""p"">(</span><span class=""mi"">2</span><span class=""p"">,</span> <span class=""mi"">0</span><span class=""p"">);</span>
+  <span class=""k"">let</span> <span class=""n"">t3</span> <span class=""o"">=</span> <span class=""p"">(</span><span class=""mi"">0</span><span class=""p"">,</span> <span class=""mi"">3</span><span class=""p"">);</span>
+  <span class=""k"">let</span> <span class=""n"">t4</span> <span class=""o"">=</span> <span class=""p"">(</span><span class=""mi"">1</span><span class=""p"">,</span> <span class=""mi"">2</span><span class=""p"">);</span>
+  <span class=""nd"">println!</span><span class=""p"">(</span><span class=""s"">""{}""</span><span class=""p"">,</span> <span class=""nf"">match_tuple</span><span class=""p"">(</span><span class=""n"">t1</span><span class=""p"">));</span>
+  <span class=""nd"">println!</span><span class=""p"">(</span><span class=""s"">""{}""</span><span class=""p"">,</span> <span class=""nf"">match_tuple</span><span class=""p"">(</span><span class=""n"">t2</span><span class=""p"">));</span>
+  <span class=""nd"">println!</span><span class=""p"">(</span><span class=""s"">""{}""</span><span class=""p"">,</span> <span class=""nf"">match_tuple</span><span class=""p"">(</span><span class=""n"">t3</span><span class=""p"">));</span>
+  <span class=""nd"">println!</span><span class=""p"">(</span><span class=""s"">""{}""</span><span class=""p"">,</span> <span class=""nf"">match_tuple</span><span class=""p"">(</span><span class=""n"">t4</span><span class=""p"">));</span>
+<span class=""p"">}</span>
+</code></pre>
+
+</div>
+
+
+
+<p>In this example, the <code>match_tuple</code> function takes a tuple <code>t</code> and uses pattern matching to determine where the tuple lies on a coordinate plane. The <code>match</code> keyword is used to match each possible pattern of the tuple, with each pattern consisting of a combination of values and placeholders. The <code>format!</code> macro is used to generate a string representation of the matching pattern.</p>
+
+<h2>
+  
+  
+  Traits
+</h2>
+
+<p>Rust's trait system is used to define interfaces for types, allowing for generic programming and code reuse. Traits are similar to interfaces in other programming languages, but with more flexibility and power. Here's an example:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight rust""><code><span class=""k"">trait</span> <span class=""n"">Animal</span> <span class=""p"">{</span>
+  <span class=""k"">fn</span> <span class=""nf"">name</span><span class=""p"">(</span><span class=""o"">&amp;</span><span class=""k"">self</span><span class=""p"">)</span> <span class=""k"">-&gt;</span> <span class=""o"">&amp;</span><span class=""k"">'static</span> <span class=""nb"">str</span><span class=""p"">;</span>
+  <span class=""k"">fn</span> <span class=""nf"">talk</span><span class=""p"">(</span><span class=""o"">&amp;</span><span class=""k"">self</span><span class=""p"">)</span> <span class=""p"">{</span>
+    <span class=""nd"">println!</span><span class=""p"">(</span><span class=""s"">""{} says {}""</span><span class=""p"">,</span> <span class=""k"">self</span><span class=""nf"">.name</span><span class=""p"">(),</span> <span class=""k"">self</span><span class=""nf"">.voice</span><span class=""p"">());</span>
+  <span class=""p"">}</span>
+  <span class=""k"">fn</span> <span class=""nf"">voice</span><span class=""p"">(</span><span class=""o"">&amp;</span><span class=""k"">self</span><span class=""p"">)</span> <span class=""k"">-&gt;</span> <span class=""o"">&amp;</span><span class=""k"">'static</span> <span class=""nb"">str</span><span class=""p"">;</span>
+<span class=""p"">}</span>
+
+<span class=""k"">struct</span> <span class=""n"">Dog</span> <span class=""p"">{}</span>
+
+<span class=""k"">impl</span> <span class=""n"">Animal</span> <span class=""k"">for</span> <span class=""n"">Dog</span> <span class=""p"">{</span>
+  <span class=""k"">fn</span> <span class=""nf"">name</span><span class=""p"">(</span><span class=""o"">&amp;</span><span class=""k"">self</span><span class=""p"">)</span> <span class=""k"">-&gt;</span> <span class=""o"">&amp;</span><span class=""k"">'static</span> <span class=""nb"">str</span> <span class=""p"">{</span>
+    <span class=""s"">""Dog""</span>
+  <span class=""p"">}</span>
+  <span class=""k"">fn</span> <span class=""nf"">voice</span><span class=""p"">(</span><span class=""o"">&amp;</span><span class=""k"">self</span><span class=""p"">)</span> <span class=""k"">-&gt;</span> <span class=""o"">&amp;</span><span class=""k"">'static</span> <span class=""nb"">str</span> <span class=""p"">{</span>
+    <span class=""s"">""Woof!""</span>
+  <span class=""p"">}</span>
+<span class=""p"">}</span>
+
+<span class=""k"">struct</span> <span class=""n"">Cat</span> <span class=""p"">{}</span>
+
+<span class=""k"">impl</span> <span class=""n"">Animal</span> <span class=""k"">for</span> <span class=""n"">Cat</span> <span class=""p"">{</span>
+  <span class=""k"">fn</span> <span class=""nf"">name</span><span class=""p"">(</span><span class=""o"">&amp;</span><span class=""k"">self</span><span class=""p"">)</span> <span class=""k"">-&gt;</span> <span class=""o"">&amp;</span><span class=""k"">'static</span> <span class=""nb"">str</span> <span class=""p"">{</span>
+    <span class=""s"">""Cat""</span>
+  <span class=""p"">}</span>
+  <span class=""k"">fn</span> <span class=""nf"">voice</span><span class=""p"">(</span><span class=""o"">&amp;</span><span class=""k"">self</span><span class=""p"">)</span> <span class=""k"">-&gt;</span> <span class=""o"">&amp;</span><span class=""k"">'static</span> <span class=""nb"">str</span> <span class=""p"">{</span>
+    <span class=""s"">""Meow!""</span>
+  <span class=""p"">}</span>
+<span class=""p"">}</span>
+
+<span class=""k"">fn</span> <span class=""nf"">main</span><span class=""p"">()</span> <span class=""p"">{</span>
+  <span class=""k"">let</span> <span class=""n"">dog</span> <span class=""o"">=</span> <span class=""n"">Dog</span> <span class=""p"">{};</span>
+  <span class=""k"">let</span> <span class=""n"">cat</span> <span class=""o"">=</span> <span class=""n"">Cat</span> <span class=""p"">{};</span>
+  <span class=""n"">dog</span><span class=""nf"">.talk</span><span class=""p"">();</span>
+  <span class=""n"">cat</span><span class=""nf"">.talk</span><span class=""p"">();</span>
+<span class=""p"">}</span>
+</code></pre>
+
+</div>
+
+
+
+<p>In this example, the <code>Animal</code> trait defines an interface for types that have a name and a voice. The <code>Dog</code> and <code>Cat</code> types implement the <code>Animal</code> trait, providing implementations for the required methods.</p>
+
+<h2>
+  
+  
+  Closures
+</h2>
+
+<p>Rust's closures are anonymous functions that can capture variables from their surrounding environment. Closures are defined using the <code>||</code> syntax and can be used in many of the same ways as regular functions. Here's an example:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight rust""><code><span class=""k"">fn</span> <span class=""nf"">main</span><span class=""p"">()</span> <span class=""p"">{</span>
+  <span class=""k"">let</span> <span class=""n"">x</span> <span class=""o"">=</span> <span class=""mi"">5</span><span class=""p"">;</span>
+  <span class=""k"">let</span> <span class=""n"">add</span> <span class=""o"">=</span> <span class=""p"">|</span><span class=""n"">y</span><span class=""p"">|</span> <span class=""n"">x</span> <span class=""o"">+</span> <span class=""n"">y</span><span class=""p"">;</span>
+  <span class=""nd"">println!</span><span class=""p"">(</span><span class=""s"">""{}""</span><span class=""p"">,</span> <span class=""nf"">add</span><span class=""p"">(</span><span class=""mi"">3</span><span class=""p"">));</span>
+<span class=""p"">}</span>
+</code></pre>
+
+</div>
+
+
+
+<p>In this example, the <code>add</code> closure captures the variable <code>x</code> from its surrounding environment and adds it to its argument <code>y</code>.</p>"'https://dev.to/bybydev/why-rust-has-such-a-complex-syntax-3kj3'https://dev.to/social_previews/article/1407198.png'"['https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--SLymINSO--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/993665/5f0321d8-88e0-4e71-84cd-ca8f7a424e02.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--4eguq-5K--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/924886/d47517c7-3918-4564-ac7d-6972d9512c73.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--S_7XQbej--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/usnswl9krn2tvx8noljp.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--huKrDCRz--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/956955/fffd441f-a30c-4311-a8f4-27bb9d87029a.jpg', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--YSjENdvT--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/455472/1102b6e7-efc2-401e-b350-aa312b968659.png', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--TlttX8L3--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_775/https://res.cloudinary.com/practicaldev/image/fetch/s--kQaHuEvE--/c_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_420%2Cq_auto%2Cw_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2lvnr9ayoilsffew8vdy.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--rvorgY15--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/924886/d47517c7-3918-4564-ac7d-6972d9512c73.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--bCb5pJgP--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/652576/3943bd22-a95d-4b6c-bf69-856c269cf944.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--wUn7csrr--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1034314/d031908a-e319-451b-aefb-f3eab0bfff38.jpg', 'https://dev.to/social_previews/article/1407198.png', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--yXg8UT1z--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/180171/2365bc37-cc2b-4a06-bfdf-e9acb7c4f95d.jpg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--1JlbmjJX--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/540306/ae8f12de-c8b6-47a5-a3cc-02030460ee04.jpeg', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg']"
+4'S7C057OIF'Top React UI Libraries for Simplifying Frontend Development and How to Implement Them'"<p>Creating a visually appealing and intuitive user interface is key when it comes to developing modern websites. Developing UIs from scratch can be time consuming and complex, you'll agree with me that React and its add-on libraries makes life easier, right?<br />
+React UI libraries are pre-built and easily customizable UI components that easily fit to your application's design and functionality requirements.<br />
+In this article, we will take a look at some of the top React UI libraries that can help simplify engineering on the frontend and enhance your web app's user experience.<br />
+These libraries offer a range of components that helps save time and efforts while delivering highly decorous and professional user interface. Let's take a look at the libraries one after the other and how you can implement them in your project:</p>
+<h3>
+  
+  
+  1. React Icons
+</h3>
+
+<p>Icons are an essential part of modern web design, providing users with visual cues and helping to make interfaces more intuitive and user-friendly. <br />
+React icons provides a set of pre-built icons that can be easily customized and integrated into your project. Some of the popular icons you'll find in react icons include Ant Design icons, Bootstrap icons, Dev icons, Font Awesome 5, Material Design icons and Game icons. It is not limited to those alone, there are several other icons you can make use of in your project, but it is a good practice to maintain consistency for each project. <br />
+Let us see how we can implement React icons in a react project.</p>
+<h4>
+  
+  
+  Step 1: Installation
+</h4>
+
+<p>You need to install react-icons into your react app using the npm command below in your terminal:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>npm install react-icons --save
+</code></pre>
+
+</div>
+
+
+
+<h4>
+  
+  
+  Step 2: Importing the icons
+</h4>
+
+<p>You'll need to first import the specific icon component you want to use from the react-icons library. <br />
+You can't possibly know the name of all icon component off the top of your head, simply go to  <a href=""https://react-icons.github.io/react-icons/"">https://react-icons.github.io/react-icons/</a> and search for the specific icon you want to use.<br />
+As a case study, we are going to use the *<em>warning *</em> icon component from Ant Design (ant design icons are usually the first set of results).<br />
+On the website, search for 'warning', click on the icon once to copy it.<br />
+Go to the specific component you want to add the icon to and import it using:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>import {AiFillWarning} from 'react-icons/ai'
+</code></pre>
+
+</div>
+
+
+
+<p>Note: the last two letters of the texts in quotes must match the first two letters of the icon component - in this case, it is <strong>ai</strong>...indicating <strong>Ant Design</strong>.</p>
+
+<h4>
+  
+  
+  Step 3: Add the icon as a component
+</h4>
+
+<p>Let's add the icon within a single-word paragraph:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>&lt;p&gt;Caution &lt;AiFillWarning/&gt; &lt;/p&gt;
+</code></pre>
+
+</div>
+
+
+
+<p>React-icons can be easily imported and used in your project. <a href=""https://github.com/react-icons/react-icons"">Read full documentation</a>.</p>
+
+<h3>
+  
+  
+  2. Toast notifications using <em>Toastify</em>
+</h3>
+
+<p>Toast notifications helps with real-time feedback on users actions, improving the overall user experience. <strong>Toastify</strong> provides an easily customizable solution for adding toast notifications to your project. The library provides components (functional and class baseed) for displaying notifications.<br />
+There is a wide range of configuration options for toast notifications. Let's take a look at how it works and how we can implement it in a react project:</p>
+<h4>
+  
+  
+  Step 1: Installation
+</h4>
+
+<p>To use toastify in your react project, you will need to add it by running the npm command below:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>npm install --save react-toastify
+</code></pre>
+
+</div>
+
+
+
+<h4>
+  
+  
+  Step 2: Import toast notification
+</h4>
+
+<p>The two components that must be imported are <code>**ToastContainer**</code> and <code>**toast**</code>. Use the import statement to integrate these two components:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>import {ToastContainer, toast} from 'react-toastify'
+</code></pre>
+
+</div>
+
+
+
+<p>You also need to import the pre-built styles:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>import 'react-toastify/dist/ReactToastify.css'
+</code></pre>
+
+</div>
+
+
+
+<h4>
+  
+  
+  Step 3: Create toast render function
+</h4>
+
+<p>In your functional component, a function is needed to render the component when the user performs an action on the web page:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>const notify = () =&gt; toast('Notification text here');
+</code></pre>
+
+</div>
+
+
+
+<p>You can also render a component instead of a string...<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>const notify = () =&gt; toast(&lt;NewComponent/&gt;);
+</code></pre>
+
+</div>
+
+
+
+<p>Using the onClick event on a button, let's render the notification by calling the <code>notify</code> function...<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>&lt;button onClick={notify}&gt;Notify Me!&lt;/button&gt;
+&lt;ToastContainer/&gt;
+</code></pre>
+
+</div>
+
+
+
+<p>When the <code>Notify Me</code> button is clicked, the <code>onCLick</code> event triggers the notify function which in turn renders the toast notification in the UI.<br />
+<strong>Note: you must also render the  component for the toast notification to work.</strong><br />
+There are configurations options that you can customize to fit into your project requirements; check out the full documentation here: <a href=""https://fkhadra.github.io/react-toastify/introduction/"">Toastify Documentation</a></p>
+<h3>
+  
+  
+  3. React Modal
+</h3>
+
+<p>React modal provides a customizable and accessible way to display content in a modal dialog. It is a simple and flexible solution that enables developers to create interactive UIs. React modal is highly configurable and can be easily integrated into any React application.<br />
+Let's delve into the implementation of modals using React modal:</p>
+<h4>
+  
+  
+  Step 1: Installation
+</h4>
+
+<p>To use react modal in your react app, you will need to add it by running the npm command below in your terminal:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>npm install react-modal
+</code></pre>
+
+</div>
+
+
+
+<h4>
+  
+  
+  Step 2: Import the modal from React-modal library
+</h4>
+
+<p>After installation, you need to import the Modal from the library into the component you are working on using the import statement:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>import {Modal} from 'react-modal'
+</code></pre>
+
+</div>
+
+
+
+<h4>
+  
+  
+  Step 3: Add to component
+</h4>
+
+<p>You need to render the Modal component in your project. The two configurations that must be added as props in the Modal component are <code>isOpen</code> and <code>onRequestClose</code>.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>&lt;Modal
+isOpen
+onRequestClose
+&gt;
+Modal contents can be written here...
+&lt;/Modal&gt;
+</code></pre>
+
+</div>
+
+
+
+<p>The modal need to be interactive well enough for smooth user experience. Using events and states, we can configure the modal to be interactive:<br />
+Above the modal component, let's add a button that will trigger a click event that would make the modal pop up.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>&lt;button onClick={}&gt;Open Modal&lt;/button&gt;
+</code></pre>
+
+</div>
+
+
+
+<p>The button doesn't do anything yet, using the useState hook, we can alter the state of the modal:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>const [modalOpen, setModalOpen] = useState(false);
+//the initial state of the modal should be set to false to keep it closed by default
+</code></pre>
+
+</div>
+
+
+
+<p>The click event needs a function that will alter the state of the pop up modal by rendering it to the user interface:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>&lt;button onClick={() =&gt; setModalOpen(true)}&gt;Open Modal&lt;/button&gt;
+</code></pre>
+
+</div>
+
+
+
+<p>Add <code>modalOpen</code> as the value of the isOpen prop in the modal component<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>&lt;Modal
+isOpen={modalOpen}
+onRequestClose
+&gt;
+Modal contents can be written here...
+&lt;/Modal&gt;
+</code></pre>
+
+</div>
+
+
+
+<p><code>isOpen</code> prop opens and closes the modal.<br />
+A close button has to be added to the modal component to enable the user to close the modal.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>&lt;Modal
+isOpen={modalOpen}
+onRequestClose
+&gt;
+&lt;button onClick={() =&gt; setModalOpen(false)}&gt;Close Modal&lt;/button&gt;
+
+Modal contents can be written here...
+&lt;/Modal&gt;
+</code></pre>
+
+</div>
+
+
+
+<p>To optimize the user experience to the max, the user needs to be 0able to close the modal when the overlay is clicked. The <code>onRequestClose</code> prop allows the user to close the modal:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>&lt;Modal
+isOpen={modalOpen}
+onRequestClose={() =&gt; setModalOpen(false)}
+&gt;
+&lt;button onClick={() =&gt; setModalOpen(false)}&gt;Close Modal&lt;/button&gt;
+
+Modal contents can be written here...
+&lt;/Modal&gt;
+</code></pre>
+
+</div>
+
+
+
+<p>Make sure to bind modal to your appElement root using:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>Modal.setAppElement('#root');
+</code></pre>
+
+</div>
+
+
+
+<p>For styling and additional configuration, refer to full documentation here: <a href=""https://github.com/reactjs/react-modal"">React Modal Documentation</a>.</p>
+
+<h3>
+  
+  
+  4. Tool Tip (tippy.js)
+</h3>
+
+<p>Tippyjs tool tip is a UI component that provides extra information about an element when users hover over the element. Tool tips are useful in creating interactive websites, providing users with relevant information without crowding the user interface.<br />
+Let us see how we can integrate react tool tip in a project.</p>
+<h4>
+  
+  
+  Step 1: Installation
+</h4>
+
+<p>To integrate tippyjs, you need to first install the npm package in the project via the terminal...<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>npm i @tippyjs/react
+</code></pre>
+
+</div>
+
+
+
+<h4>
+  
+  
+  Step 2: Import tippy component
+</h4>
+
+<p>After installation, import <code>Tippy</code> in the component you are working on, also import the ToolTip css file...<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+</code></pre>
+
+</div>
+
+
+
+<h4>
+  
+  
+  Step 3: Integrating to UI
+</h4>
+
+<p>To use the Tippy component in the UI, you will wrap the component around the element you are trying to pass additional info to. See example below:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>&lt;Tippy content=""Say Hello""&gt;
+&lt;button&gt;Greet&lt;/button&gt;
+&lt;/Tippy&gt;
+</code></pre>
+
+</div>
+
+
+
+<p>Tippy library provides a fast, easy and non-complex way to integrate tooltips in react.<br />
+<a href=""https://github.com/atomiks/tippyjs-react"">See full documentation</a>.</p>
+<h3>
+  
+  
+  AOS (Animate On Scroll) Library
+</h3>
+
+<p>The AOS library, short for Animate On Scroll, is a powerful tool that helps to create captivating animations that trigger as users scroll through their website. In this guide, we'll explore how to use AOS to add dynamic visual effects to your website.</p>
+<h4>
+  
+  
+  Step 1: Installation
+</h4>
+
+<p>Install the aos library using npm in the terminal...<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>npm install aos --save
+</code></pre>
+
+</div>
+
+
+
+<h4>
+  
+  
+  Step 2: Import the library in your App component
+</h4>
+
+<p>It is recommended to import the library to the base component, this helps to avoid importing into different child components you are working - implementing the DRY principle.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>import AOS from 'aos';
+import 'aos/dist/aos.css';
+</code></pre>
+
+</div>
+
+
+
+<h4>
+  
+  
+  Step 3: Initialize AOS in the App component using the <code>useEffect</code> hook. See example below:
+</h4>
+
+
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>import React, { useEffect } from 'react';
+
+function MyComponent() {
+  useEffect(() =&gt; {
+    AOS.init();
+  }, []);
+
+  return (
+    // Your component code
+  );
+}
+</code></pre>
+
+</div>
+
+
+
+<h4>
+  
+  
+  Step 4: Add data-aos to any jsx element
+</h4>
+
+<p>There are more than 15 animation effects that can be used on elements. You have to apply the <code>data-aos</code> attribute to be able to apply any animation effect.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>&lt;div data-aos=""fade-up""&gt;Animate me!&lt;/div&gt;
+</code></pre>
+
+</div>
+
+
+
+<p>Meanwhile, keep in mind that you have already initialized the library in the base component which is the App component, so you do not need to initialize it anywhere else.<br />
+<a href=""https://chat.openai.com/chat"">See full AOS documentation</a>.</p>
+
+<p>There are many other useful libraries that aren't discussed in this article, we will take a look at them in the sequel (part 2) of this article. I hope you found this article useful, let me know your thoughts in the comment section.</p>"'https://dev.to/david_bilsonn/top-react-ui-libraries-for-simplifying-frontend-development-and-how-to-implement-them-48g6'https://res.cloudinary.com/practicaldev/image/fetch/s--J3B6vhYc--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6vj04x60lwijhgfhlisd.jpg'"['https://res.cloudinary.com/practicaldev/image/fetch/s--LbeZksfC--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1027690/843b1845-9262-4d78-a80e-e958888cab6b.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--CT7-oHa6--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6vj04x60lwijhgfhlisd.jpg', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--F6b_ur3d--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/456124/34056161-41ce-4516-98ec-6fe7160ed67e.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--IxrGprDT--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fbsvcwqnj5mgkzuwy24r.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--DOLDe2R9--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1027690/843b1845-9262-4d78-a80e-e958888cab6b.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s---UF65DpZ--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/724298/fc44ddad-955d-4271-9ed8-ca00067068cf.png', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--cB6d_K8v--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/i/hlhrtuspjyrstifubdhs.gif', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--OgDj6Rz2--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/412282/ba00914e-d7c5-437a-a1a5-429c87615fd9.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--5ll5GNfa--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/786312/ab4eae48-0422-4e36-81ad-8a6f1230de91.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--J3B6vhYc--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6vj04x60lwijhgfhlisd.jpg', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg']"
+5'HYPN16H06'Finally decided on the pricing for my new product'"<p>Hello everyone! We are revealing the pricing for CodeSmash, our new No Code platform! If you want more info, feel free to check it out at <a href=""https://codesmash.studio"">https://codesmash.studio</a></p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--HnVjHCMB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fbf3lmaxdkty9w8778n5.jpg""><img alt=""Image description"" height=""1197"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--HnVjHCMB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fbf3lmaxdkty9w8778n5.jpg"" width=""880"" /></a></p>"'https://dev.to/mariostopfer/finally-decided-on-the-pricing-for-my-new-product-4nab'https://dev.to/social_previews/article/1407063.png'"['https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--LqgADxKo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jb3sc2966d2rvbcohxvq.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--HDqOLW0u--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1020451/f6efdc31-4bd6-463c-8067-63cd31632156.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--h93S5FeO--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/386955/e908afc9-e12e-40ec-92ef-cd158638af28.png', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--HJgPMt89--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/862121/c932b0c8-5537-4c89-889a-91ae69b8e2a8.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--GrT5wXUI--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/276240/996f6d48-ef7d-49ae-9be3-ceabf5057fd0.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--8t-VGqgg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/i/7p7qe33hhlj5zdi3bj82.jpg', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--oq_fXpaQ--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/330389/12cb2f92-2943-4d00-a74e-8fc8e40f52dd.jpg', 'https://dev.to/social_previews/article/1407063.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--i_rjdvpE--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/862121/c932b0c8-5537-4c89-889a-91ae69b8e2a8.jpeg', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--HnVjHCMB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fbf3lmaxdkty9w8778n5.jpg', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg']"
+6'7X6330E99'[Off-Topic] Living Outside the Algorithm'"<p>The buzzword in everyone's mouth is AI. Related to that, are the “algorithms” each platform prides itself in.</p>
+
+<p>I stay out of most social media, but while you can’t run from all algorithms, you can minimize their impact.</p>
+
+<p>But why would you do that?</p>
+
+<p>Most platforms want you on their platform for the most time possible, regardless if you want it or not, and they can do good work at that.</p>
+
+<p>I will share here how I use Youtube and to one extent or another, you can probably apply to any other platform.</p>
+
+<h2>
+  
+  
+  My Youtube routine
+</h2>
+
+<p>I subscribe mostly to programming stuff and music channels, and then to some other subjects and a few guilty pleasures. </p>
+
+<p>When I started my “routine” I just unsubscribed from a bunch of things that I had subscribed to because of one thing or another that I don’t even like anymore or because of a “one of” video. </p>
+
+<ul>
+<li>Go to <a href=""https://www.youtube.com/feed/subscriptions"">Subscriptions</a>
+</li>
+<li>Add to <a href=""https://www.youtube.com/playlist?list=WL"">Watch Later</a> or to “Queue” the videos you’re interested</li>
+<li>What it</li>
+<li>???</li>
+<li>Go do something else!</li>
+</ul>
+
+<p>Personally put everything in my Watch Later and only use that (with the exception of music mixes).</p>
+
+<p>A lot of things I code while listening to some late/daily news shows or random stuff in the playlist.</p>
+
+<h3>
+  
+  
+  How about finding new channels?
+</h3>
+
+<p>Recommendations are the way to go. The creator you follow mentions something (or does a collab)? Check it out and if you like it, then subscribe to it. When you find yourself never clicking it again, then just unsub it.</p>
+
+<h2>
+  
+  
+  Why do that
+</h2>
+
+<p>Ever wondered what happened to pagination?</p>
+
+<p>Infinite scrolling means that you just keep going. But when you know there’s a beginning and end to your feed, you get more time in your day… I know I did.</p>
+
+
+
+
+<p>If you think this is worth it, share it with someone who might need this.</p>
+
+
+
+
+<p>Cover Photo by <a href=""https://unsplash.com/@drscythe?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"">Dominik Scythe</a> on <a href=""https://unsplash.com/photos/Sot0f3hQQ4Y?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"">Unsplash</a></p>"'https://dev.to/noriller/off-topic-living-outside-the-algorithm-f88'https://res.cloudinary.com/practicaldev/image/fetch/s---ZmARE5j--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xrxfpkx898ucmzd622pl.jpg'"['https://res.cloudinary.com/practicaldev/image/fetch/s---ZmARE5j--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xrxfpkx898ucmzd622pl.jpg', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--wCd29MAH--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/752901/31c74da2-8ec6-47e9-b90c-f422a71a102b.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--rDEO5iXc--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/704107/c5967cc2-b1a9-47e1-a052-6675877b5835.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--1Mo91X7K--/c_imagga_scale,f_auto,fl_progressive,h_100,q_66,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/528762/cd4ce7bd-dd34-40fd-9be9-e22cccfd9e5b.gif', 'https://res.cloudinary.com/practicaldev/image/fetch/s--iekSyGGV--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xrxfpkx898ucmzd622pl.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--MRzp5CWx--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/704107/c5967cc2-b1a9-47e1-a052-6675877b5835.jpeg', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--fkgvjoqm--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/187971/a5359a24-b652-46be-8898-2c5df32aa6e0.png', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--H1_tgykv--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/84ohvrdv1c6vsa0laos1.png', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg']"
+7'P42N31O5K'How to Add Estimated Review Time and Context Labels to Pull Requests'"<p>The pull request (PR) review process, if not set up well in your team, can create a lot of bottlenecks in getting your code merged into the main branch and into production. By adding more context and information automatically to your PRs, you save yourself and your team work.</p>
+
+<p>Take the scenario of fixing a typo in documentation. If there’s a backlog of PRs that need attention, such a PR may take two days — or longer — just to be approved. This is where <a href=""https://linearb.io/blog/what-is-continuous-merge/"">continuous merge</a> (CM) with gitStream comes in.</p>
+
+<p><a href=""https://github.com/marketplace/gitstream-by-linearb"">gitStream</a> is a tool that allows you to add context and automation to your PRs, classifying PRs based on their complexity. </p>
+
+<p>This ensures that a review won't stay in the queue for long as it can be quickly assigned to the right person, immediately approved or have the appropriate action identified easily.</p>
+
+<p>This hands-on article demonstrates how to add gitStream CM to your repository. </p>
+
+<p>In this article, you’ll learn:</p>
+
+<ol>
+<li>How to Configure your Repository</li>
+<li>How to Create Pull Requests (PRs) </li>
+<li>How to Add the CM Feature to Your PRs</li>
+</ol>
+
+<h2>
+  
+  
+  Quick gitStream Setup Guide
+</h2>
+
+<p>If you’re keen to get all the benefits of gitStream and continuous merge right away, all you need to do is follow these simple steps. If you want to understand how gitStream works, how you can customize it and more options, it will follow right after.</p>
+
+<ol>
+<li>Choose Install for free on <a href=""https://github.com/marketplace/gitstream-by-linearb"">gitStream's GitHub marketplace page</a>
+</li>
+<li>Add 2 files to your repo:
+</li>
+</ol>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>a) .cm/gitstream.cm
+b) .github/workflows/gitstream.yml
+</code></pre>
+
+</div>
+
+
+
+<ol>
+<li>Open a pull request</li>
+<li>Set gitStream as a required check</li>
+</ol>
+
+<h2>
+  
+  
+  A Comprehensive Guide to gitStream &amp; Continuous Merge
+</h2>
+
+<p><a href=""https://docs.gitstream.cm/filter-functions/"">Filter functions</a> and <a href=""https://docs.gitstream.cm/context-variables/"">context variables</a> are used to effect <a href=""https://docs.gitstream.cm/automation-actions/"">automated actions</a>, such as adding labels (add-label@v1), assigning reviewers (add-reviewers@v1), and approving requests (approve@v1), among others. </p>
+
+<p>Everything is included in a .cm configuration file named gitstream.cm. </p>
+
+<p>All instructions to gitStream CM are detailed in the docs found at docs.gitstream.cm. gitStream also uses GitHub Actions to do its work, so you’ll need to add the gitstream.yml file to your GitHub Actions directory at .github/workflows/.</p>
+
+<p>The main components to fulfill gitStream’s CM are:</p>
+
+<ul>
+<li>The configuration files: gitstream.cm and gitstream.yml.</li>
+<li>The filter functions: Code that tries to check and/or select certain data types from the input for checks during a PR creation.</li>
+<li>The context variables: The inputs fed to the filter functions.</li>
+<li>The automation actions.</li>
+</ul>
+
+<p><strong>Note:</strong> Some steps use Python only for demonstration purposes. It’s not required knowledge.</p>
+
+<h3>
+  
+  
+  Prerequisites
+</h3>
+
+<p>To follow this tutorial, ensure you have the following:</p>
+
+<ul>
+<li>Hands-on knowledge of Git and GitHub workings. You must know activities such as creating a repository, PRs, commits, and pushes. </li>
+<li>A GitHub account.</li>
+<li>Git installed in your working environment.</li>
+</ul>
+
+<p>You can find and review the final project code <a href=""https://github.com/marketplace/gitstream-by-linearb"">here</a>.</p>
+
+<h3>
+  
+  
+  Step 1 - Set Up gitStream on Your Repo
+</h3>
+
+<p>Create an empty repo and give it a name, then install gitStream to it from the marketplace. </p>
+
+<p>After installation, you can either: 1) Clone the repository to your environment; or 2) Create a folder and point it to the repository. This tutorial uses the second option.</p>
+
+<p>Create a folder called gitStreamDemo. In this folder, create two directories, .github/workflows and .cm, using the commands in a terminal window below:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>mkdir -p .github/workflows
+
+mkdir .cm
+</code></pre>
+
+</div>
+
+
+
+<p>In the .github/workflows folder, create a file called gitstream.yml and add the following YAML script:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>name: gitStream workflow automation
+
+on:
+
+workflow_dispatch:
+
+  inputs:
+
+    client_payload:
+
+      description: The Client payload
+
+      required: true
+
+    full_repository:
+
+      description: the repository name include the owner in `owner/repo_name` format
+
+      required: true
+
+    head_ref:
+
+      description: the head sha
+
+      required: true
+
+    base_ref:
+
+      description: the base ref 
+
+      required: true
+
+    installation_id:
+
+      description: the installation id
+
+      required: false
+
+    resolver_url:
+
+      description: the resolver url to pass results to
+
+      required: true
+
+    resolver_token:
+
+      description: Optional resolver token for resolver service
+
+      required: false
+
+      default: ''
+
+jobs:
+
+  gitStream:
+
+    timeout-minutes: 5
+
+    # uncomment this condition, if you dont want any automation on dependabot PRs
+
+    # if: github.actor != 'dependabot[bot]'
+
+    runs-on: ubuntu-latest
+
+    name: gitStream workflow automation
+
+    steps:
+
+      - name: Evaluate Rules
+
+        uses: linear-b/gitstream-github-action@v1
+
+        id: rules-engine
+
+        with:
+
+          full_repository: ${{ github.event.inputs.full_repository }}
+
+          head_ref: ${{ github.event.inputs.head_ref }}
+
+          base_ref: ${{ github.event.inputs.base_ref }}
+
+          client_payload: ${{ github.event.inputs.client_payload }}
+
+          installation_id: ${{ github.event.inputs.installation_id }}
+
+          resolver_url: ${{ github.event.inputs.resolver_url }}
+
+          resolver_token: ${{ github.event.inputs.resolver_token }}
+</code></pre>
+
+</div>
+
+
+
+<p>Next, create a file called gitstream.cm in the .cm folder and add the following code:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>manifest:
+
+  version: 1.0
+
+automations:
+
+  show_estimated_time_to_review:
+
+    if:
+
+      - true
+
+    run:
+
+      - action : add-label@v1
+
+      args:
+
+       label: ""{{ calc.etr }} min review""
+
+       color: {{ '00ff00' if (calc.etr &gt;= 20) else ('7B3F00' if (calc.etr &gt;= 5) else '0044ff') }}
+
+  safe_changes:
+
+    if:
+
+      - {{ is.doc_formatting or is.doc_update }}
+
+    run:
+
+      - action: add-label@v1
+
+       args:
+
+       label: 'documentation changes: PR approved'
+
+       color: {{'71797e'}}
+
+      - action: approve@v1
+
+  domain_review:
+
+    if:
+
+      - {{ is.domain_change }}
+
+    run:
+
+      - action: add-reviewers@v1
+
+      args:
+
+       reviewers: [&lt;listofreviewers&gt;]
+
+      - action: add-label@v1
+
+      args:
+
+       label: 'domain reviewer assigned'
+
+       color: {{'71797e'}}
+
+  set_default_comment:
+
+    if:
+
+      - true
+
+    run:
+
+      - action: add-comment@v1
+
+      args:
+
+       comment: ""Hello there. Thank you for creating a pull request with us. A reviewer will soon get in touch.""
+
+calc:
+
+  etr: {{ branch | estimatedReviewTime }}
+
+is:
+
+  domain_change: {{ files | match(regex=r/domain\//) | some }}
+
+  doc_formatting: {{ source.diff.files | isFormattingChange }}
+
+  doc_update: {{ files | allDocs }}
+</code></pre>
+
+</div>
+
+
+
+<p>In the file, you’ll see the following four automation actions:</p>
+
+<ul>
+<li>show_estimated_time_to_review: This automation calculates the estimated time a review to a PR may take.</li>
+<li>safe_changes: This shows if changes to non-critical components done in a PR are safe, such as document changes. The PR is automatically approved.</li>
+<li>domain_review: This automation runs to show if a change was made to the domain layer.</li>
+<li>set_default_comment: This is fired every time a PR is opened and raises an acknowledgment comment to the user that a PR has been created.</li>
+</ul>
+
+<p>At the end of the document, there’s a section containing filter functions for the automation actions. The actions are run after certain conditions specified in the filter functions or keys are met.</p>
+
+<h3>
+  
+  
+  Step 2 - Calculating the Time to Review
+</h3>
+
+<p>In the first automation, check the value of the etr variable and decide which label to assign to the PR. For more information on <a href=""https://linearb.io/blog/why-estimated-review-time-improves-pull-requests-and-reduces-cycle-time/"">how ETR is calculated, check out this blog</a>.</p>
+
+<p>Create a file called main.py in the root of your folder. Then, create three folders using the command below:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>mkdir views domain data
+</code></pre>
+
+</div>
+
+
+
+<p>Add the following to the main.py file:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>def show_message(name1, name2):
+
+  print(f'Hello, {name}. Welcome to the gitStream world')
+
+if __name__ == '__main__':
+
+  print_hi('Mike')
+</code></pre>
+
+</div>
+
+
+
+<p>Copy the main.py file as is and paste it to the other three folders. Rename them to match the folders’ names (domain.py) for the domain folder.</p>
+
+<p>For the dummy documentation file, create a README.md file in the root of your folder and add the following markdown script.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code># gitStreamDemo
+</code></pre>
+
+</div>
+
+
+
+<p>A demo showing how to set up gitStream on your first repo</p>
+
+<p>Now, run these commands to initialize the repository, stage the files for committing, and make a commit, in that order:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>git init
+
+git add .
+
+git commit -am “initialization”
+</code></pre>
+
+</div>
+
+
+
+<p>Next, point the folder to your repository using the command below:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>git remote add origin https://github.com/&lt;your-username&gt;/&lt;your-repo-name&gt;
+</code></pre>
+
+</div>
+
+
+
+<p>Finally, push it:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>git push -u origin main
+</code></pre>
+
+</div>
+
+
+
+<h3>
+  
+  
+  Step 3 - Creating the Repository
+</h3>
+
+<p>As you may have noticed, there’s a sample bug in the code. In any programming language, you must call the function using its exact name. But in this case, print_hi was called instead of show_message. As a team member or an open-source contributor, you can fix this by opening a PR.</p>
+
+<p>First, create a branch called fix-function-call and checkout into the branch using the commands below:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>git branch fix-function-call
+
+git checkout fix-function-call
+</code></pre>
+
+</div>
+
+
+
+<p>Next, replace the name print_hi with show_message in all the .py files, then commit and push the changes.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>git commit -am “changed function name”
+
+git push --set-upstream origin fix-function-call
+</code></pre>
+
+</div>
+
+
+
+<p>Now, open your repository in GitHub. You’ll see the following card:</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--a1UY2Li3--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e3o63n00agai85y2wk2g.png""><img alt=""Compare and pull request button"" height=""110"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--a1UY2Li3--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e3o63n00agai85y2wk2g.png"" width=""880"" /></a></p>
+
+<p>Click on <strong>Compare &amp; pull request</strong>. On the next page, click the <strong>Create pull request</strong> button.</p>
+
+<p>Once the gitStream automation has finished running, you’ll see the <strong>domain reviewer assigned</strong> tag. Additionally, a comment has been created.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--V6VRabxy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zer9hfludbe5q8mp6tdd.png""><img alt=""Domain reviewer assigned tag"" height=""106"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--V6VRabxy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zer9hfludbe5q8mp6tdd.png"" width=""880"" /></a></p>
+
+<p>Add this Dijkstra’s Shortest Path Algorithm <a href=""https://github.com/Agusioma/dijkstra-in-python/blob/main/dijkstra.py"">script</a> just below the show_message function in each of the .py files again. These scripts calculate the shortest path for a node in a graph.</p>
+
+<p>Commit the changes and then push the code.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>git commit -am “updates”
+
+git push
+</code></pre>
+
+</div>
+
+
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--Cw6TDsrE--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/14i8lkhpa27qnt7pbtsr.png""><img alt=""PR Approved"" height=""168"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--Cw6TDsrE--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/14i8lkhpa27qnt7pbtsr.png"" width=""880"" /></a></p>
+
+<h3>
+  
+  
+  Creating a Safe Change
+</h3>
+
+<p>For the final automation, you’ll add text to the README.md file created earlier. Create a new branch and checkout to it. You do so because you’ll need a new PR to demonstrate this automation.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>git checkout main
+
+git branch update_docs
+
+git checkout update_docs
+</code></pre>
+
+</div>
+
+
+
+<p>Then, add this sentence to the README.md file:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>Continuous Merging is very beneficial to the Open-Source Community.
+</code></pre>
+
+</div>
+
+
+
+<p>Commit and push.<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>git commit -am “updated the docs”
+
+git push --set-upstream origin update_docs
+</code></pre>
+
+</div>
+
+
+
+<p>When the checks are done, you’ll see a different label with the PR already approved.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--ZqJ8DWD4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4i9qzrt6mmyzrck5i30v.png""><img alt=""PR Approved"" height=""170"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--ZqJ8DWD4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4i9qzrt6mmyzrck5i30v.png"" width=""880"" /></a></p>
+
+<h2>
+  
+  
+  Help Developers Make the Most of Their Time...
+</h2>
+
+<p>Reviewing and merging PRs are crucial in contributing to software development and enhancing team productivity. However, being unable to classify PRs by complexity can lead to long wait times or much back-and-forth in the review process.</p>
+
+<p>CM remedies this issue by classifying PRs based on the complexity, automating some actions including tagging the appropriate reviewers, assigning them PRs, and approving PRs among others to reduce the backlog.</p>
+
+<p>Check out <a href=""https://github.com/apps/gitstream-cm/installations/new"">gitStream</a> to add CM to your existing repos.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--NVzn2Ddt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nyx931osafkg8j4189ge.png""><img alt=""Learn more about gitStream today!"" height=""462"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--NVzn2Ddt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nyx931osafkg8j4189ge.png"" width=""880"" /></a></p>"'https://dev.to/linearb/how-to-add-estimated-review-time-and-context-labels-to-pull-requests-327n'https://res.cloudinary.com/practicaldev/image/fetch/s--Gb80-rZ4--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yum0r2byhioo3m7gd5f0.png'"['https://res.cloudinary.com/practicaldev/image/fetch/s--Gb80-rZ4--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yum0r2byhioo3m7gd5f0.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--eVza2yuC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_775/https://res.cloudinary.com/practicaldev/image/fetch/s--XDmbmZKz--/c_limit%252Cf_auto%252Cfl_progressive%252Cq_66%252Cw_880/https://i.ibb.co/6Z960jq/zoxide.gif', 'https://res.cloudinary.com/practicaldev/image/fetch/s--ZqJ8DWD4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4i9qzrt6mmyzrck5i30v.png', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--2hvwaLk5--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/174508/f06aa36d-92c5-4ce8-a2a7-e53ee09170e1.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--3a6FkRGD--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/333889/eb0a0070-181b-470f-a5e7-9f9cff2bb844.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--V6VRabxy--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zer9hfludbe5q8mp6tdd.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--NVzn2Ddt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nyx931osafkg8j4189ge.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Cw6TDsrE--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/14i8lkhpa27qnt7pbtsr.png', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Xvzg0tYP--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/990860/3239624a-afe0-4982-b9be-2c3bd4901210.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--YcLsJDpa--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/4364/2c7eb340-27af-4302-a261-60dfbfdd60cc.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--OZezr8sd--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/330389/12cb2f92-2943-4d00-a74e-8fc8e40f52dd.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--2paGcKVq--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/84473/1a8a7aa5-c250-402e-9b75-45c61bab002f.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--a1UY2Li3--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e3o63n00agai85y2wk2g.png', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RSL_rpS5--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/4364/2c7eb340-27af-4302-a261-60dfbfdd60cc.jpg', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--LVf-tYmK--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yum0r2byhioo3m7gd5f0.png', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg']"
+8'X8AO8T5P3'FLiPN-FLaNK Stack Weekly for 20 March 2023'"<h2>
+  
+  
+  20-March-2023
+</h2>
+
+<h3>
+  
+  
+  FLiPN-FLaNK Stack Weekly
+</h3>
+
+<p>Welcome to the eleventh newsletter of 2023. </p>
+
+<p>Tim Spann @PaaSDev</p>
+
+<h2>
+  
+  
+  PODCAST
+</h2>
+
+<p>New podcast coming.</p>
+
+<h2>
+  
+  
+  CODE + COMMUNITY
+</h2>
+
+<p>Join my meetup group NJ/NYC/Philly/Virtual. </p>
+
+<p><a href=""https://www.meetup.com/new-york-city-apache-pulsar-meetup/"">https://www.meetup.com/new-york-city-apache-pulsar-meetup/</a></p>
+
+<p><a href=""https://www.meetup.com/futureofdata-princeton/"">https://www.meetup.com/futureofdata-princeton/</a></p>
+
+<p><strong>This is Issue #75</strong></p>
+
+<p><a href=""https://github.com/tspannhw/FLiPStackWeekly"">https://github.com/tspannhw/FLiPStackWeekly</a></p>
+
+<p><a href=""https://www.linkedin.com/pulse/schedule-2023-tim-spann-/"">https://www.linkedin.com/pulse/schedule-2023-tim-spann-/</a></p>
+
+<h3>
+  
+  
+  Free Training
+</h3>
+
+<h3>
+  
+  
+  Meetup
+</h3>
+
+<p><a href=""http://www.meetup.com/futureofdata-princeton/"">http://www.meetup.com/futureofdata-princeton/</a></p>
+
+<p><a href=""https://www.meetup.com/phillyjug/events/291103971/"">https://www.meetup.com/phillyjug/events/291103971/</a></p>
+
+<h3>
+  
+  
+  Videos
+</h3>
+
+<p><a href=""https://youtu.be/ufQwbpmLIi4"">https://youtu.be/ufQwbpmLIi4</a></p>
+
+<p><a href=""https://www.youtube.com/watch?v=VkUNA74kyK0&amp;ab_channel=PierreVillard"">https://www.youtube.com/watch?v=VkUNA74kyK0&amp;ab_channel=PierreVillard</a></p>
+
+<p><a href=""https://hazelcast.com/resources/real-time-stream-processing-roundtable-featuring-industry-practitioners/"">https://hazelcast.com/resources/real-time-stream-processing-roundtable-featuring-industry-practitioners/</a></p>
+
+<p><a href=""https://www.youtube.com/watch?app=desktop&amp;v=PlSoeRh-JiE"">https://www.youtube.com/watch?app=desktop&amp;v=PlSoeRh-JiE</a></p>
+
+<p><a href=""https://www.youtube.com/watch?v=-UvgfJlqxbs&amp;ab_channel=Cloudera%2CInc"">https://www.youtube.com/watch?v=-UvgfJlqxbs&amp;ab_channel=Cloudera%2CInc</a></p>
+
+<p><a href=""https://www.youtube.com/watch?v=1NPgN91FrPU&amp;t=319s&amp;ab_channel=Conf42"">https://www.youtube.com/watch?v=1NPgN91FrPU&amp;t=319s&amp;ab_channel=Conf42</a></p>
+
+<p><a href=""https://www.youtube.com/watch?v=m7Xe6ZddSFg"">https://www.youtube.com/watch?v=m7Xe6ZddSFg</a></p>
+
+<h3>
+  
+  
+  Articles
+</h3>
+
+<p><a href=""https://blog.cloudera.com/cloudera-dataflow-designer-the-key-to-agile-data-pipeline-development/"">https://blog.cloudera.com/cloudera-dataflow-designer-the-key-to-agile-data-pipeline-development/</a></p>
+
+<p><a href=""https://blog.cloudera.com/self-service-is-simply-efficient-cloudera-dataflow-designer-ga-announcement/"">https://blog.cloudera.com/self-service-is-simply-efficient-cloudera-dataflow-designer-ga-announcement/</a></p>
+
+<p><a href=""https://www.linkedin.com/pulse/streaming-data-ingestion-open-lakehouse-made-easy-vetticaden%3FtrackingId=WfYt04bvTK%252B1iJz88A3c%252BQ%253D%253D/?trackingId=WfYt04bvTK%2B1iJz88A3c%2BQ%3D%3D"">https://www.linkedin.com/pulse/streaming-data-ingestion-open-lakehouse-made-easy-vetticaden%3FtrackingId=WfYt04bvTK%252B1iJz88A3c%252BQ%253D%253D/?trackingId=WfYt04bvTK%2B1iJz88A3c%2BQ%3D%3D</a></p>
+
+<p><a href=""https://community.cloudera.com/t5/What-s-New-Cloudera/Cloudera-DataFlow-Designer-for-self-service-data-flow/ba-p/366039"">https://community.cloudera.com/t5/What-s-New-Cloudera/Cloudera-DataFlow-Designer-for-self-service-data-flow/ba-p/366039</a></p>
+
+<p><a href=""https://blog.cloudera.com/streaming-ingestion-for-apache-iceberg-with-cloudera-stream-processing/"">https://blog.cloudera.com/streaming-ingestion-for-apache-iceberg-with-cloudera-stream-processing/</a></p>
+
+<p><a href=""https://computer.rip/2023-03-13-the-door-close-button.html"">https://computer.rip/2023-03-13-the-door-close-button.html</a></p>
+
+<p><a href=""https://blog.cloudera.com/streaming-ingestion-for-apache-iceberg-with-cloudera-stream-processing/"">https://blog.cloudera.com/streaming-ingestion-for-apache-iceberg-with-cloudera-stream-processing/</a></p>
+
+<p><a href=""https://thenybble.de/posts/json-analysis/"">https://thenybble.de/posts/json-analysis/</a></p>
+
+<p><a href=""https://opensource.googleblog.com/2023/03/introducing-service-weaver-framework-for-writing-distributed-applications.html"">https://opensource.googleblog.com/2023/03/introducing-service-weaver-framework-for-writing-distributed-applications.html</a></p>
+
+<h3>
+  
+  
+  Recent Talks
+</h3>
+
+<p>Conf42 Python 2023 with David K</p>
+
+<p><a href=""https://www.slideshare.net/bunkertor/conf42-python-ml-enhanced-event-streaming-apps-with-python-microservices"">https://www.slideshare.net/bunkertor/conf42-python-ml-enhanced-event-streaming-apps-with-python-microservices</a></p>
+
+<p>Philly Jug - King of Prussia</p>
+
+<p><a href=""https://www.slideshare.net/bunkertor/phillyjug-getting-started-with-realtime-cloud-native-streaming-with-java"">https://www.slideshare.net/bunkertor/phillyjug-getting-started-with-realtime-cloud-native-streaming-with-java</a></p>
+
+<p>Python Web Conference<br />
+<a href=""https://2023.pythonwebconf.com/presentations/apache-pulsar-development-202-with-python"">https://2023.pythonwebconf.com/presentations/apache-pulsar-development-202-with-python</a></p>
+
+<p><a href=""https://www.slideshare.net/bunkertor/pythonwebconference-cloud-native-apache-pulsar-development-202-with-python"">https://www.slideshare.net/bunkertor/pythonwebconference-cloud-native-apache-pulsar-development-202-with-python</a></p>
+
+<p>Trenton Computer Festival Pro<br />
+<a href=""https://www.slideshare.net/bunkertor/itpc-building-modern-data-streaming-apps"">https://www.slideshare.net/bunkertor/itpc-building-modern-data-streaming-apps</a></p>
+
+<h3>
+  
+  
+  Events
+</h3>
+
+<p>March 30, 2023: Pulsar Meetup - Flink: Virtual<br />
+<a href=""https://www.meetup.com/new-york-city-apache-pulsar-meetup/events/290459862/"">https://www.meetup.com/new-york-city-apache-pulsar-meetup/events/290459862/</a></p>
+
+<p>March 31, 2023:  Warsaw IT - Virtual / Hybrid<br />
+<a href=""https://warszawskiedniinformatyki.pl/en/"">https://warszawskiedniinformatyki.pl/en/</a></p>
+
+<p>April 4-6, 2023: DevNexus: Atlanta, GA. In-Person.<br />
+<a href=""https://devnexus.com/"">https://devnexus.com/</a></p>
+
+<p>April 24-26, 2023: Real-Time Analytics Summit:  San Francisco, CA. In-Person.<br />
+<a href=""https://rtasummit.com/"">https://rtasummit.com/</a></p>
+
+<p>April 25, 2023:   Future of Data Meetup:   San Francisco, CA. In-Person.<br />
+<a href=""https://www.meetup.com/futureofdata-princeton/"">https://www.meetup.com/futureofdata-princeton/</a></p>
+
+<p>May 9, 2023:   Garden State Java User Group.   In-Person.   New Jersey<br />
+<a href=""https://gsjug.org/"">https://gsjug.org/</a></p>
+
+<p>May 10-12, 2023:  Open Source Summit North America.   Virtual<br />
+<a href=""https://events.linuxfoundation.org/open-source-summit-north-america/"">https://events.linuxfoundation.org/open-source-summit-north-america/</a></p>
+
+<p>Cloudera Events<br />
+<a href=""https://www.cloudera.com/about/events.html"">https://www.cloudera.com/about/events.html</a></p>
+
+<p>More Events:<br />
+<a href=""https://www.linkedin.com/pulse/schedule-2023-tim-spann-/"">https://www.linkedin.com/pulse/schedule-2023-tim-spann-/</a></p>
+
+<h3>
+  
+  
+  Code
+</h3>
+
+<p><a href=""https://github.com/tspannhw/FLaNK-AllTheStreams"">https://github.com/tspannhw/FLaNK-AllTheStreams</a></p>
+
+<p><a href=""https://github.com/tspannhw/flank-airquality"">https://github.com/tspannhw/flank-airquality</a></p>
+
+<p><a href=""https://github.com/tspannhw/CloudDemo2023"">https://github.com/tspannhw/CloudDemo2023</a></p>
+
+<h3>
+  
+  
+  Tools
+</h3>
+
+<p><a href=""https://github.com/tsl0922/ttyd/wiki/Example-Usage"">https://github.com/tsl0922/ttyd/wiki/Example-Usage</a></p>
+
+<p><a href=""https://gitlab.com/kalilinux/kali-purple/documentation/-/wikis/home"">https://gitlab.com/kalilinux/kali-purple/documentation/-/wikis/home</a></p>
+
+<p><a href=""https://github.com/ggerganov/llama.cpp"">https://github.com/ggerganov/llama.cpp</a></p>
+
+<p><a href=""https://github.com/Genymobile/scrcpy"">https://github.com/Genymobile/scrcpy</a></p>
+
+<p><a href=""https://github.com/capitalone/DataProfiler"">https://github.com/capitalone/DataProfiler</a></p>
+
+<p><a href=""https://github.com/orhun/halp"">https://github.com/orhun/halp</a></p>
+
+<p><a href=""https://github.com/henripar/scrollbar"">https://github.com/henripar/scrollbar</a></p>
+
+<p><a href=""https://github.com/airtai/fastkafka"">https://github.com/airtai/fastkafka</a></p>
+
+<p><a href=""https://github.com/astanin/python-tabulate"">https://github.com/astanin/python-tabulate</a></p>
+
+<p><a href=""https://paimon.apache.org/"">https://paimon.apache.org/</a></p>
+
+<p><a href=""https://viper.cs.columbia.edu/"">https://viper.cs.columbia.edu/</a></p>
+
+<p><a href=""https://xkite.io/getstarted"">https://xkite.io/getstarted</a></p>
+
+<p><a href=""https://scg.unibe.ch/assets/download/oorp/"">https://scg.unibe.ch/assets/download/oorp/</a></p>
+
+<p><a href=""https://www.endbasic.dev/download.html"">https://www.endbasic.dev/download.html</a></p>
+
+<p><a href=""https://github.com/THUDM/ChatGLM-6B/blob/main/README_en.md"">https://github.com/THUDM/ChatGLM-6B/blob/main/README_en.md</a></p>
+
+<p><a href=""https://github.com/MaterializeInc/datagen"">https://github.com/MaterializeInc/datagen</a></p>
+
+<p><a href=""https://osv.dev/docs/"">https://osv.dev/docs/</a></p>
+
+<p>© 2023 Tim Spann</p>"'https://dev.to/tspannhw/flipn-flank-stack-weekly-for-20-march-2023-5d5m'https://res.cloudinary.com/practicaldev/image/fetch/s--6G8rj1aY--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uj5lvqrzft1qrvs7lef0.jpeg'"['https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--AksQ-aSW--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uj5lvqrzft1qrvs7lef0.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--SJfRLnec--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cwkw09cb5un6au3a9b5e.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--6G8rj1aY--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uj5lvqrzft1qrvs7lef0.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--8t-VGqgg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/i/7p7qe33hhlj5zdi3bj82.jpg', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--A4J1ry9m--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/317892/24dfdfed-f277-4cb5-840f-fe08c3a5987f.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--oTfcT2mz--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/36214/886fdbdc-7719-4cf4-b5f7-8d1e80ca2f9d.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--4_evMr1U--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/680512/edea83e6-90e1-4aa9-b028-30f8b98c2259.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--xp-9h59P--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/879086/c23e7353-0873-45cc-a4fb-9bce7de113d5.jpg', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--UpDXqwYf--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/276240/996f6d48-ef7d-49ae-9be3-ceabf5057fd0.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--l6Z4DXid--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/276240/996f6d48-ef7d-49ae-9be3-ceabf5057fd0.jpeg', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg']"
+9'IOZN7DX0C'Why Not Microservices?'"<h1>
+  
+  
+  Introduction
+</h1>
+
+<p>Many organizations and teams may see microservices as the best approach to a determined problem. This post covers 5 basic concepts to think about when implementing this type of architecture. The idea is to revise some concepts that will help you question the need for this approach.</p>
+
+<h2>
+  
+  
+  1. Communication Services
+</h2>
+
+<p><strong>Microservices</strong> are services that attend a certain domain and are released independently. These services could then be exposed to other services through API's, Service Brokers, or other communication services.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--N81v8pW6--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/g0lwkadqoh65u7rv946p.png""><img alt=""Two API's"" height=""173"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--N81v8pW6--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/g0lwkadqoh65u7rv946p.png"" width=""880"" /></a><br />
+<b>Figure 1 - Microservices through API's</b></p>
+
+<h2>
+  
+  
+  2. Independent Deployability
+</h2>
+
+<p>Many consider independent deployability the most important piece to microservices. Applying this concept is necessary to validate applications that are loosely coupled. To validate this one should be able to makes changes to a microservice without having to change other non-related services. </p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--T0xvmEex--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8iostkoq2zbu0jnqkc1a.png""><img alt=""Releases"" height=""578"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--T0xvmEex--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8iostkoq2zbu0jnqkc1a.png"" width=""768"" /></a><br />
+<b>Figure 2 - Releases</b></p>
+
+<h2>
+  
+  
+  3. Databases Sharing
+</h2>
+
+<p>It is highly recommended that each microservice contains its own database. When we think of a microservice as a unique piece of software it should have independence in all levels and that includes the database. When one or more microservice share the same database one can easily fall into the assumption of shared deployment or accessing the same data between these services.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--nVYL3Fc_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e7xmepha5s9u9fu9prcz.png""><img alt=""Database"" height=""722"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--nVYL3Fc_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e7xmepha5s9u9fu9prcz.png"" width=""771"" /></a><br />
+<b>Figure 3 - Databases</b></p>
+
+<h2>
+  
+  
+  4. Business Domain
+</h2>
+
+<p>With a microservice approach each microservice needs to be independent and organized to effectively allow for independence. Design techniques like layered architecture, clean architecture, domain-driven design(DDD), etc. These approaches may allow for teams to structure the code with independent contextualization efficiently.</p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--Pe2-uCaw--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9qenbxu1rxef52hdhftj.png""><img alt=""Business Domain"" height=""959"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--Pe2-uCaw--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9qenbxu1rxef52hdhftj.png"" width=""767"" /></a><br />
+<b>Figure 4 - Business Domain</b></p>
+
+<h2>
+  
+  
+  5. Client Communication
+</h2>
+
+<p>With the growth of business and processes within an organization the tendency is that the number of services will also grow. However the consumers of these microservices needs to be able to effectively communicate or call the microservice for the desired job. There are a couple of strategies to solve this issue. Having an API gateway is a strategy to expose, version and evolve microservices effectively. </p>
+
+<p><a class=""article-body-image-wrapper"" href=""https://res.cloudinary.com/practicaldev/image/fetch/s--8b1SL8VY--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qrt04uwynta7dz0qgli6.png""><img alt=""API Gateway"" height=""330"" src=""https://res.cloudinary.com/practicaldev/image/fetch/s--8b1SL8VY--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qrt04uwynta7dz0qgli6.png"" width=""553"" /></a><br />
+<b>Figure 5 - API Gateway</b></p>
+
+<h1>
+  
+  
+  Conclusion
+</h1>
+
+<p>This post contains only the tip of the iceberg when it come to microservices. To develop this type of solution more situations needs to be considered like the teams experience, deployment automation, cloud computing, security, scalability, testing, resilience, observability, organization alignment, etc. </p>
+
+<p>The increase in complexity and team experience when creating microservices are many times why these projects tend to fail. It is common to have less experience or reduced teams working on software projects, with the mindset of a microservice architecture.</p>
+
+<p>Microservices are effective when used, planned, and executed in appropriate scenarios, but I always tend to ask myself why not microservices.</p>
+
+<h1>
+  
+  
+  References
+</h1>
+
+<ol>
+<li>Building Microservices: Designing Fine-Grained Systems</li>
+</ol>"'https://dev.to/caiocesar/why-not-microservices-1ih9'https://res.cloudinary.com/practicaldev/image/fetch/s--cVPKV9Cb--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zndw6a0kw3p3cl3128rr.png'"['https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--H1_tgykv--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/84ohvrdv1c6vsa0laos1.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--9G5rUH9Q--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/79932/be7bcd76-1f69-4336-9155-6017aebb2c53.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--IxrGprDT--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fbsvcwqnj5mgkzuwy24r.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--66SCladj--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zndw6a0kw3p3cl3128rr.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--nVYL3Fc_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e7xmepha5s9u9fu9prcz.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--qtlZdZSM--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1048007/db7ebed4-ae36-434e-a8a4-363b4667e7ac.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--N81v8pW6--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/g0lwkadqoh65u7rv946p.png', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--8b1SL8VY--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qrt04uwynta7dz0qgli6.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--byou6wER--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/753963/d13fd535-19e5-43a5-be80-6f256f45d4c2.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--iVhSLlH5--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/842521/65a14afd-f091-46b9-aca8-bae692fa7669.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--x6maSiU3--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/251073/914a810b-e23f-47e0-80eb-028f6697bd10.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Pe2-uCaw--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9qenbxu1rxef52hdhftj.png', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--cVPKV9Cb--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zndw6a0kw3p3cl3128rr.png', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--T0xvmEex--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8iostkoq2zbu0jnqkc1a.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--ZtGEAyXS--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/251073/914a810b-e23f-47e0-80eb-028f6697bd10.jpeg', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg']"
+10'1WMONAQ1S'Creating Axios Interceptor in React and NextJs'"<p>Hello and welcome to this article on creating an Axios interceptor in React and Next.js. In this article, we'll cover how to set up and use Axios, as well as how to create an interceptor that can automatically refresh tokens.</p>
+
+<p>Step 1: Initializing the Project<br />
+First, we need to initialize the project with the following command: <code>yarn create react-app &lt;app-name&gt;</code> or <code>npx create-react-app &lt;app-name&gt;</code>. This command will create a new React app with the name of your choice.</p>
+
+<p>Step 2: Creating the Axios Configuration File<br />
+Now that we have a new React app, we can create the directory service and create a file named axiosConfig.ts inside it. Here's the code you need to put in that file:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>import axios from 'axios';
+import { getToken, setToken } from '../../../utils/localStorage';
+import { redirect } from ""react-router-dom"";
+import { getRefreshToken } from '../login';
+
+const statusCode = [401,402,403]
+const HttpAuthInstance = axios.create({
+    baseURL: process.env.REACT_APP_BASE_URL,
+    headers: {
+        ""Authorization"": ""Bearer"" + "" "" + getToken(""token"").accessToken
+    }
+})
+
+HttpAuthInstance.interceptors.response.use((response) =&gt; {
+    return response;
+}, (error) =&gt; {
+    if (statusCode.indexOf(error?.response?.status) !== -1) {
+        getRefreshToken(getToken(""token"")?.refreshToken).then(res=&gt;setToken(""token"",res?.data))
+    }
+})
+
+export default HttpAuthInstance;
+</code></pre>
+
+</div>
+
+
+
+<p>This code sets up an Axios instance that includes a base URL and headers with an authorization token. It also sets up an interceptor that checks for certain error status codes and refreshes the token if necessary.</p>
+
+<p>Step 3: Using the Axios Configuration File<br />
+To use this Axios instance in your application, simply import it into the file where you need to make API calls. Here's an example of how to do that:<br />
+</p>
+
+<div class=""highlight js-code-highlight"">
+<pre class=""highlight plaintext""><code>import HttpAuthInstance from './service/axiosConfig';
+
+HttpAuthInstance.get('/api/users').then(response =&gt; {
+    console.log(response.data);
+});
+</code></pre>
+
+</div>
+
+
+
+<p>In this example, we're making a GET request to the /api/users endpoint and logging the response data to the console.</p>
+
+<p>That's it! With this Axios interceptor, your application will automatically refresh tokens when necessary, making it more secure and efficient. I hope you found this article helpful and informative. Happy coding!</p>"'https://dev.to/sandesh56/creating-axios-interceptor-in-react-and-nextjs-395e'https://res.cloudinary.com/practicaldev/image/fetch/s--zQ5Zv3Mg--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/v4aur0jekm4pj0mk165l.png'"['https://res.cloudinary.com/practicaldev/image/fetch/s--sGiI_M0f--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1029620/3fe0da39-bf80-4053-852e-0e575006e54a.jpg', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--tqZeh2nl--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/648859/a89a4994-c31d-432f-bb57-de4a07c8a5ae.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--8t-VGqgg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/i/7p7qe33hhlj5zdi3bj82.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--zQ5Zv3Mg--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/v4aur0jekm4pj0mk165l.png', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s---H7336Uk--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/38578/c785dfe1-aaa2-48fe-89b9-1563db95c85c.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--nj_xXXaO--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/652731/ce84be12-ad7d-4b50-96a5-2daf24b5e623.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--qavSmTEQ--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/v4aur0jekm4pj0mk165l.png', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--yXg8UT1z--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/180171/2365bc37-cc2b-4a06-bfdf-e9acb7c4f95d.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--kFbGzlEo--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/652731/ce84be12-ad7d-4b50-96a5-2daf24b5e623.jpeg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--yG9NaJlu--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/161327/2ff05281-db58-4dcb-946a-4b679e4a266b.jpeg', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--hXw4fnb3--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/520716/dc6051bc-9129-4879-a833-f743051af755.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--xYn8AUKA--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/800618/181b32a8-1048-4563-8c0d-c0540b9a37de.jpg', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg']"
+11'KSN3J115C'How to Empower Your Team with Test Automation'"<p>Test automation is a critical capability that makes the difference in delivering software with quality and speed, letting the team adapt faster software changes to meet the quality requirements. But its implementation is hard.</p>
+
+<p>Test automation has become an essential tool for organizations looking to stay competitive and deliver high-quality products on time and on budget in the rapid pace of technological change and increasing complexity of software systems.</p>
+
+<p>The integration of test automation activities in the software delivery pipeline requires the transversal collaboration of multiple actors not necessarily familiarized with quality or testing activities — and that’s why a leader needs to empower the team to succeed.</p>
+
+<p>Organizations, pressured by accelerated competition, have to lead fast transformations to capture opportunities before challengers do. This article shares how to make the difference when it comes to accelerating software delivery with test automation.</p>
+
+<p><strong><em>Over 57 different <a href=""https://www.lambdatest.com/learning-hub/ecommerce-test-cases?utm_source=devto&amp;utm_medium=organic&amp;utm_campaign=mar20_bh&amp;utm_term=bh&amp;utm_content=learning_hub"">test cases for e-commerce websites</a> and application are covered to guarantee a flawless and secure purchasing experience for customers.</em></strong></p>
+
+<h2>
+  
+  
+  Share the value of test automation
+</h2>
+
+<p>Your team has to understand that test automation is not just a tool for quality assurance or testing teams. It is a valuable capability to develop for the entire software development process and for the business.</p>
+
+<p>The value of test automation lies in its ability to improve the quality and speed of software delivery, which in the end helps the company to develop better products and services for its customers more quickly and more efficiently.</p>
+
+<p>Software teams that try to accelerate without test automation face accumulating technical debt that sooner or later translate into painful issues like recurring bugs, extra hours to fix problems, or performing recurring manual tests that are of low interest and too slow.</p>
+
+<p>Your team has to understand the following benefits of test automation:</p>
+
+<ul>
+<li><p><strong>Faster and stable</strong> software delivery</p></li>
+<li><p>**Confidence **to rework and change software</p></li>
+<li><p><strong>Save time</strong> for more valuable activities</p></li>
+<li><p><strong>Better understanding</strong> of expected software behavior</p></li>
+<li><p><strong>Production efficiency</strong> by detecting and fixing issues earlier</p></li>
+<li><p><strong>Maintain requirements</strong> up-to-date improving organization stability</p></li>
+</ul>
+
+<p>The recommended way to share the value of test automation is to acculturate your team with external examples of successful usage of test automation for similar problems you are facing. That way, people can start to consider test automation as a realistic solution for what they want to improve, avoiding feeling forced to do so.</p>
+
+<p>From that point, your responsibility as a leader is to envision the path to follow, share lights out of the tunnel, and help them to visualize the future with better outcomes than the current situation leveraging test automation.</p>
+
+<h2>
+  
+  
+  Lead the way for the first steps
+</h2>
+
+<p>Having the team convinced about the value of test automation is the first step. Still, much ambiguity will remain about which actions to follow, whom to involve, and what to focus on as a priority.</p>
+
+<p>The responsibility of a leader is to navigate that initial fog, deconstructing the complexity into clear outcomes the team can follow. The clarity of actions will enable the team to focus on the first actions to implement test automation.</p>
+
+<p>As a leader, you have to clarify:</p>
+
+<ol>
+<li><p><strong>What are the desired outcomes</strong></p></li>
+<li><p><strong>Which scope is the priority</strong></p></li>
+<li><p><strong>What will change concretely</strong></p></li>
+<li><p><strong>Who is involved and should do what</strong></p></li>
+<li><p><strong>Which external resources are needed</strong>.</p></li>
+</ol>
+
+<p>The definition of this initial perimeter enables you to set the stage for an early-win team and share more broadly in the organization about the change. The advantages of a small team are to test and adapt new processes more rapidly with minimum effort.</p>
+
+<p>The team will encounter roadblocks and issues in the first steps of implementation. Your role as a leader is to help them in problem-solving to demonstrate that the subject is essential and how you expect things to be solved.</p>
+
+<p>As test automation involves technology, the tooling question will be a structuring one to address early on to set your team on the right track.</p>
+
+<p><strong><em>Our <a href=""https://www.lambdatest.com/learning-hub/gaming-platform-test-case-template?utm_source=devto&amp;utm_medium=organic&amp;utm_campaign=mar20_bh&amp;utm_term=bh&amp;utm_content=learning_hub"">Gaming Platform</a> Test Case Templates tutorial offers a step-by-step guide for effective test scenarios. Improve your game’s quality and performance today.</em></strong></p>
+
+<h2>
+  
+  
+  Invest in the right tools and technologies
+</h2>
+
+<p>Adopting the right technology makes test automation more efficient, effective, and accessible for your team to set up and maintain in the long run. Once again, your responsibility as a leader is to step back to improve the decision taken for your organization.</p>
+
+<p>Many tools compete in the test automation space to help teams deliver better software. Your value is to set clear priorities of what will be a game-changer for your organization, and what should not be looked at all.</p>
+
+<p>The important part is to clarify the structuring requirements specific to your context:</p>
+
+<ul>
+<li><p>Which <strong>test techniques</strong> are more valuable first?</p></li>
+<li><p>What <strong>integrations **are must-have for example with **CI/CD</strong>?</p></li>
+<li><p>Does the tooling support better <strong>collaboration</strong>, sharing and <strong>reporting</strong>?</p></li>
+<li><p>Are tests implemented with <strong>low-code</strong> and <strong>coding</strong>, which languages?</p></li>
+<li><p>Can you <strong>combine multiple test techniques</strong> like Web &amp; API?</p></li>
+<li><p>How do functionalities <strong>ease setup and maintenance</strong>?</p></li>
+</ul>
+
+<p>Answering these questions will clarify the most important functions and requirements your organizations need to capture value from test automation. The next step is to translate the requirements into possible technology solutions.</p>
+
+<p>Test Management, Test Execution, and Test Reporting are the major vertical solutions needed to implement test automation. Specific narrowed tools exist for each vertical, but there are also unified test automation platforms like LambdaTest that bundle the offer.</p>
+
+<p>The main capabilities to look at in your choice is the usability of the solution by different profiles to foster end-to-end collaboration in the organization. The availability of on-demand devices, native reportings, and intelligent features is also a strong factor of creating more value with test automation, and of the capability of the tool to be innovative.</p>
+
+<h2>
+  
+  
+  Learn from results to replicate
+</h2>
+
+<p>Learning from the results of your automated tests enables you to replicate successes and avoid mistakes in the future, and develop a continuous improvement culture that is essential to increase the maturity of software quality practices.</p>
+
+<p>One of the key benefits of test automation is to generate useful data that can be analyzed to identify patterns and trends. This data can be used to identify key areas of improvement and identify bottlenecks in processes to know where to focus your team’s efforts.</p>
+
+<p>Based on the data, you can, for instance, identify which tests are taking the longest to run, are failing most frequently, and providing the most value. With more maturity, you can even prioritize test execution based on their value to get faster feedback loops.</p>
+
+<p>But learning is not only about the tests and technology.</p>
+
+<p>Performing retrospectives with your team enables you to discover other areas of improvements such as in processes, skills, and even organizational issues, providing you with the big picture necessary to solve structuring problems.</p>
+
+<p>That learning process will support the expansion of test automation practices in your organization much more easily. Leverage also internal influencers and people ready to act as key users to diffuse more efficiently what works best in your context.</p>
+
+<p>With the right tooling, you can accelerate the deployment of test automation by providing on-demand training, resources, and ready-to-use templates. You then have to continuously encourage collaboration and communication to keep improving in the long run.</p>
+
+<p>You can also empower your team faster and save them valuable time by addressing key challenges of test automation right from the start.</p>
+
+<h2>
+  
+  
+  Anticipate main challenges by design
+</h2>
+
+<p>Each organization is different, but common challenges will be faced when implementing test automation, whatever the context. One essential responsibility of a leader is to address them early on to set the team in the best conditions to make a difference.</p>
+
+<p>Managing changes in organizations is about evolving in realistic transition stages that will bring enough value and manage the risks involved. Correctly size the challenges of each transition will sustain the team’s momentum and motivation.</p>
+
+<p>Here’s common test automation challenges to address early on:</p>
+
+<ol>
+<li><p><strong>Produce valuable outcomes</strong> by focusing on concrete problems where test automation can makes the difference and show its value to the organization</p></li>
+<li><p><strong>Reduce initial cost and effort of implementation</strong> limiting scope, tools and processes to the essential, and using SaaS to limit capital expenditures</p></li>
+<li><p><strong>Availability of skilled and experienced profiles</strong> you can manage with internal mobility, external expertise, and complement with on-the-job training</p></li>
+<li><p><strong>Limit maintenance and updates efforts</strong> requiring to limit automation at first to increase its stability and ability to update them with software changes</p></li>
+<li><p><strong>Clarity of leadership and coalition</strong> leading first, and progressively defining a responsibility model to spread test automation responsibilities across teams</p></li>
+</ol>
+
+<p>Leaders have to balance the competing demands of different stakeholders and priorities to address these challenges. It requires proactivity and adaptability to effectively adapt the value proposition of test automation to each stakeholders interests.</p>
+
+<p>Anticipating issues is the hard part of leading transversal changes in organizations like test automation. but will contribute to the most important goal of supporting the organization in remaining competitive today’s digital competition landscape.</p>
+
+<h2>
+  
+  
+  Empowering for Better and Faster Software
+</h2>
+
+<p>Test automation creates a differentiating advantage for organizations searching to continuously deliver <em>Quality at Speed software</em>. More than technology, test automation favors an end-to-end collaboration on the delivery of better and faster software.</p>
+
+<p>Your responsibility as a leader is to develop a test automation capability by empowering your team to overcome the first obstacles and set the right foundations that will generate valuable outcomes for the organization, to then be deployed more broadly with other teams.</p>
+
+<p>There’s no valuable transformation without challenges — that’s where a leader able to empower the team can unlock the potential of each team member to solve whatever problems emerged to progress towards the delivery of better and faster software.</p>
+
+<p><strong><em><a href=""https://www.lambdatest.com/learning-hub/cms-test-case-template?utm_source=devto&amp;utm_medium=organic&amp;utm_campaign=mar20_bh&amp;utm_term=bh&amp;utm_content=learning_hub"">CMS testing</a> is required to ensure a content management system’s functionality, performance, security, and usability remain smooth.</em></strong></p>
+
+<h2>
+  
+  
+  Conclusion
+</h2>
+
+<p>Empowering your team with test automation is a journey leaders must be able to lead at different parts of the organization to succeed. It is not about one-shot efforts, but about leveraging test automation as the accelerator of business transformation.</p>"'https://dev.to/lambdatest/how-to-empower-your-team-with-test-automation-56g3'https://res.cloudinary.com/practicaldev/image/fetch/s--GsTNpKAa--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ah8lfg1d9jzccikdhkhr.png'"['https://res.cloudinary.com/practicaldev/image/fetch/s--J_bMoRdj--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/465403/25305d44-10cd-4090-86c0-ecfcb62fb949.jpeg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--xJS9ba8---/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/498/672e8bfb-36c6-4772-b521-f8073280fc72.jpg', 'https://dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--2hvwaLk5--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/174508/f06aa36d-92c5-4ce8-a2a7-e53ee09170e1.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--KN0Lyyrn--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_775/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s772be1odd5eetgsnqmi.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--RmY55OKL--/c_limit,f_auto,fl_progressive,q_auto,w_256/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--6bNO0VjP--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/969988/97aa997f-65bc-41f6-8455-b70b3c47adfe.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--GsTNpKAa--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ah8lfg1d9jzccikdhkhr.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--3a6FkRGD--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/333889/eb0a0070-181b-470f-a5e7-9f9cff2bb844.png', 'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg', 'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--Xvzg0tYP--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/990860/3239624a-afe0-4982-b9be-2c3bd4901210.jpg', 'https://res.cloudinary.com/practicaldev/image/fetch/s--0OxKFKNX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ah8lfg1d9jzccikdhkhr.png', 'https://res.cloudinary.com/practicaldev/image/fetch/s--3qNb7B7w--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/498/672e8bfb-36c6-4772-b521-f8073280fc72.jpg', 'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg', 'https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png', 'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg', 'https://dev.to/assets/loading-ellipsis-b714cf681fd66c853ff6f03dd161b77aa3c80e03cdc06f478b695f42770421e9.svg']"

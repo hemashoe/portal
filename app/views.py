@@ -25,7 +25,7 @@ def homepage(request):
         'news' : all_news,
     }
 
-    return render(request, 'owren/index.html', context_for_homepage)
+    return render(request, 'index.html', context_for_homepage)
 
 
 # @cache_page(CACHE_TTL)
@@ -42,7 +42,7 @@ def post_detailed(request, slug_id):
         "from_author" : from_author,
     }
 
-    return render(request, 'owren/post_detailed.html', context_for_postdetailed)
+    return render(request, 'post_detailed.html', context_for_postdetailed)
 
 # # @cache_page(CACHE_TTL)
 # def news_detailed(request, slug_id):
@@ -58,7 +58,7 @@ def post_detailed(request, slug_id):
 #         "from_author" : from_author,
 #     }
     
-#     return render(request, 'owren/news_detailed.html', context_for_newsdetailed)
+#     return render(request, 'news_detailed.html', context_for_newsdetailed)
 
 def profile_detailed(request, username):
     user = get_object_or_404(Profile, user=username)
@@ -69,7 +69,7 @@ def profile_detailed(request, username):
         "posts_from_user" : posts_from_user,
     }
 
-    return render(request, 'owren/profile_detailed.html', context_for_profiledetailed)
+    return render(request, 'profile_detailed.html', context_for_profiledetailed)
 
 # def category_detailed(requiest, slug_id):
 #     navbar_items = Interest.objects.all()
@@ -86,4 +86,4 @@ def profile_detailed(request, username):
 
 
 def about(request):
-    return render(request, 'owren/about.html')
+    return render(request, 'about.html')

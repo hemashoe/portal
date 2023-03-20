@@ -111,7 +111,7 @@ WSGI_APPLICATION = 'owren.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Owren',
         'USER': 'root',
         'PASSWORD': 'P@ssw0rd',

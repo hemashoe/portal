@@ -1,9 +1,7 @@
 import os
-import re
 import urllib.request
 from pathlib import Path
 
-import emoji
 import mysql.connector
 from dotenv import find_dotenv, load_dotenv
 
@@ -56,11 +54,9 @@ def download_title_img(img_url, post_id) -> str:
         image = urllib.request.urlretrieve(str(img_url), os.path.join(str(path),str(img_url.split("/")[-1])))
         img_db_name = image[0].split("/")[-3:]
         name = os.path.join(img_db_name[0], img_db_name[1], img_db_name[2])
-
         return name
 
     except Exception:
-
         name = ''
         
         return name

@@ -58,3 +58,31 @@
 2023-03-17T08:35:33.964887+0500 __|__ SUCCESS __|__ Successfully saved articles in /home/hema/Code/python/blog/Owren/parser/dev_csv/dev_data03-17_08:35.csv
 2023-03-17T08:35:33.966311+0500 __|__ INFO __|__ Connecting to database and updating
 2023-03-17T08:35:34.773237+0500 __|__ ERROR __|__ Unable to parse dev.to
+2023-03-18T12:06:27.169013+0500 __|__ INFO __|__ Starting to parse dev succesfully
+2023-03-18T12:06:27.188793+0500 __|__ INFO __|__ Parsing articles
+2023-03-18T12:06:35.057315+0500 __|__ SUCCESS __|__ Successfully saved articles in /home/hema/Code/python/blog/Owren/parser/dev_csv/dev_data03-18_12:06.csv
+2023-03-18T12:06:35.058167+0500 __|__ INFO __|__ Connecting to database and updating
+2023-03-18T12:06:36.047782+0500 __|__ ERROR __|__ Unable to parse dev.to
+2023-03-18T12:15:20.039179+0500 __|__ INFO __|__ Starting to parse dev succesfully
+2023-03-18T12:15:20.039377+0500 __|__ INFO __|__ Parsing articles
+2023-03-18T12:15:27.592249+0500 __|__ SUCCESS __|__ Successfully saved articles in /home/hema/Code/python/blog/Owren/parser/dev_csv/dev_data03-18_12:15.csv
+2023-03-18T12:15:27.592855+0500 __|__ INFO __|__ Connecting to database and updating
+2023-03-18T12:15:29.069130+0500 __|__ ERROR __|__ Unable to parse dev.to
+2023-03-18T12:22:54.575307+0500 __|__ INFO __|__ Starting to parse dev succesfully
+2023-03-18T12:22:54.575514+0500 __|__ INFO __|__ Parsing articles
+2023-03-18T12:23:03.405778+0500 __|__ SUCCESS __|__ Successfully saved articles in /home/hema/Code/python/blog/Owren/parser/dev_csv/dev_data03-18_12:22.csv
+2023-03-18T12:23:03.406675+0500 __|__ INFO __|__ Connecting to database and updating
+2023-03-18T12:23:04.261878+0500 __|__ ERROR __|__ Unable to parse dev.to
+2023-03-18T12:23:28.482249+0500 __|__ INFO __|__ Starting to parse dev succesfully
+2023-03-18T12:23:28.482487+0500 __|__ INFO __|__ Parsing articles
+2023-03-18T12:23:28.999224+0500 __|__ ERROR __|__ Unable to parse dev.to
+2023-03-18T12:24:02.718035+0500 __|__ INFO __|__ Starting to parse dev succesfully
+2023-03-18T12:24:02.718268+0500 __|__ INFO __|__ Parsing articles
+2023-03-18T12:24:09.433037+0500 __|__ SUCCESS __|__ Successfully saved articles in /home/hema/Code/python/blog/Owren/parser/dev_csv/dev_data03-18_12:24.csv
+2023-03-18T12:24:09.433553+0500 __|__ INFO __|__ Connecting to database and updating
+2023-03-18T12:24:10.247922+0500 __|__ ERROR __|__ Unable to parse dev.to
+2023-03-20T10:03:26.539598+0500 __|__ INFO __|__ Starting to parse dev succesfully
+2023-03-20T10:03:26.552779+0500 __|__ INFO __|__ Parsing articles
+2023-03-20T10:03:35.377118+0500 __|__ SUCCESS __|__ Successfully saved articles in /home/hema/Code/python/blog/Owren/parser/dev_csv/dev_data03-20_10:03.csv
+2023-03-20T10:03:35.377751+0500 __|__ INFO __|__ Connecting to database and updating
+2023-03-20T10:03:36.716345+0500 __|__ ERROR __|__ Unable to parse dev.to
