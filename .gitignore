@@ -32,6 +32,8 @@ dist/
 downloads/
 eggs/
 .eggs/
+dev_csv/
+habr_csv/
 lib/
 lib64/
 media/
