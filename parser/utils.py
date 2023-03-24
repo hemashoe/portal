@@ -9,7 +9,7 @@ config = load_dotenv(find_dotenv())
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 HABR_DIR = os.path.join(BASE_DIR, 'parser/habr_csv/')
-DEV_DIR = os.path.join(BASE_DIR, 'parser/dev_csv/')
+TPROGER_DIR = os.path.join(BASE_DIR, 'parser/tproger_csv/')
 MEDIA_STORE = os.path.join(str(BASE_DIR), 'media/post/')
 
 

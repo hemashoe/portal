@@ -86,3 +86,12 @@
 2023-03-20T10:03:35.377118+0500 __|__ SUCCESS __|__ Successfully saved articles in /home/hema/Code/python/blog/Owren/parser/dev_csv/dev_data03-20_10:03.csv
 2023-03-20T10:03:35.377751+0500 __|__ INFO __|__ Connecting to database and updating
 2023-03-20T10:03:36.716345+0500 __|__ ERROR __|__ Unable to parse dev.to
+2023-03-20T11:43:16.046051+0500 __|__ INFO __|__ Starting to parse dev succesfully
+2023-03-20T11:43:16.046240+0500 __|__ INFO __|__ Parsing articles
+2023-03-20T11:43:23.593117+0500 __|__ SUCCESS __|__ Successfully saved articles in /home/hema/Code/python/blog/Owren/parser/dev_csv/dev_data03-20_11:43.csv
+2023-03-20T11:43:23.593886+0500 __|__ INFO __|__ Connecting to database and updating
+2023-03-20T11:43:24.890264+0500 __|__ ERROR __|__ Unable to parse dev.to
+2023-03-20T12:07:48.339139+0500 __|__ ERROR __|__ Unable to get RSS info from  dev.to
+2023-03-20T12:07:48.339540+0500 __|__ SUCCESS __|__ Successfully finished
+2023-03-20T12:09:44.645613+0500 __|__ ERROR __|__ Unable to get RSS info from  tproger.ru
+2023-03-20T12:09:44.645930+0500 __|__ SUCCESS __|__ Successfully finished

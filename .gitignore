@@ -30,6 +30,7 @@ develop-eggs/
 /media/
 dist/
 downloads/
+env/
 eggs/
 .eggs/
 dev_csv/
