@@ -1,10 +1,10 @@
-from PIL import Image
 import uuid
 
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 from django.template.defaultfilters import slugify
 from django.urls import reverse
+from PIL import Image
 
 from app.models import Interest, Skill
 

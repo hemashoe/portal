@@ -28,6 +28,8 @@ media
 build/
 develop-eggs/
 /media/
+/static/
+static/
 dist/
 downloads/
 env/

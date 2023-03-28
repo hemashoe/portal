@@ -25,7 +25,7 @@ ALLOWED_HOSTS = ["192.168.192.24", "localhost", '127.0.0.1']
 ########## DJANGO APPLICATIONS ###########
 
 INSTALLED_APPS = [
-    "debug_toolbar",
+    # "debug_toolbar",
     'corsheaders',
     'jazzmin',
     'ckeditor',
@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    # "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -106,6 +106,57 @@ WSGI_APPLICATION = 'owren.wsgi.application'
 # }
 
 # CACHE_TTL = 60 * 30
+
+############# LOGGING ###########################
+
+
+############### LOGGING #################
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'logfile': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': "logs/voice.log",
+            'maxBytes': 100000,
+            'backupCount': 100,
+            'formatter': 'verbose',
+        },
+        'console': { 
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',                                                             
+        },  
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['logfile'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'django.request': {
+            'handlers': ['logfile'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'django.server': {
+            'handlers': ['logfile'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+}
 
 ######### DJANGO DATABASE  ############
 

@@ -56,7 +56,7 @@ def download_title_img(img_url, post_id) -> str:
         name = os.path.join(img_db_name[0], img_db_name[1], img_db_name[2])
         return name
 
-    except Exception:
+    except Exception:   
         name = ''
         
         return name
