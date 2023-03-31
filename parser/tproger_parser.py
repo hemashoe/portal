@@ -1,19 +1,19 @@
-import re
-from datetime import datetime
-from typing import Any, Union
 import random
 import string
+from datetime import datetime
+from typing import Any, Union
 
 import feedparser
 import pandas as pd
 from loguru import logger
 from newspaper import Article
 from slugify import slugify
-from utils import (TPROGER_DIR, author_profile, check_duplication_title, connect_to_db,
-                   download_multiple_images, download_title_img,
+from utils import (TPROGER_DIR, author_profile, check_duplication_title,
+                   connect_to_db, download_multiple_images, download_title_img,
                    remove_unwanted)
 
-FILE_NAME = str(TPROGER_DIR +  "tproger_data" + datetime.now().strftime("%m-%d_%H:%M") + ".csv")
+FILE_NAME = str(TPROGER_DIR + "tproger_data" + datetime.now().strftime("%m-%d_%H:%M") + ".csv")
+
 
 def parse_posts() -> list:
     try:
@@ -32,15 +32,15 @@ def parse_posts() -> list:
             }
             posts_parsed.append(post_parsed)
 
-        logger.info(f"Starting to parse dev succesfully")
+        logger.info(f"Start parsing {post_parsed['post_id']} was succesfully")
         return posts_parsed
 
     except Exception as e:
-        logger.error("Unable to get RSS info from  tproger.ru")
-        print("Unable to get RSS info from tproger.ru")
+        logger.error("Unable to get RSS info from  tproger.ru {e}")
+        print(e)
 
 
-def get_everything(post_parsed : list) -> None:
+def get_everything(post_parsed: list) -> None:
     try:
         data_parsed = []
         logger.info("Parsing articles")
@@ -53,21 +53,21 @@ def get_everything(post_parsed : list) -> None:
 
             data = {
                 'post_id': post['post_id'],
-                'title' : post['title'],
-                'body' : article.text,
-                'source_link' : article.url,
-                'image' : article.top_image,
-                'images' : images,
+                'title': post['title'],
+                'body': article.text,
+                'source_link': article.url,
+                'image': article.top_image,
+                'images': images,
             }
             data_parsed.append(data)
-        
+
         dataframe = pd.DataFrame(data_parsed)
         dataframe.to_csv(FILE_NAME, sep="'", header=True, index=True)
         logger.success(f"Successfully saved articles in {FILE_NAME}")
         return data_parsed
-    
+
     except NameError as n:
-        logger.error(f"Unable to get more info from URLs ")
+        logger.error(f"Unable to get more info from URLs {n}")
         raise n("Unable to get more info from URLs ")
 
 
@@ -79,7 +79,7 @@ def update_db(data_parsed):
     for data in data_parsed:
         check_duplication = check_duplication_title(data['title'])
 
-        if check_duplication==False:
+        if check_duplication is False:
             try:
                 body_text = remove_unwanted(data['body'])
                 slug = slugify(data['title'])
@@ -91,24 +91,26 @@ def update_db(data_parsed):
                 connection.commit()
                 print(f"Post {data['title']} added to database")
                 logger.success(f"Post {data['title']} added to database")
-                    
+
             except NameError as n:
-                logger.error(f"Some error occured in {data['title']}")  
+                logger.error(f"Some error occured in {data['title']}")
                 raise n(f"Unable to update db. Problem in {data['title']}")
+
 
 def main():
     logger.add('../logs/tproger_parser.log', format='{time} __|__ {level} __|__ {message}', level='INFO', rotation='100 MB', compression='zip')
-    
+
     try:
         posts_parsed = parse_posts()
         data_parsed = get_everything(posts_parsed)
         update_db(data_parsed)
 
         logger.success("Successfully finished")
-    
+
     except Exception as e:
         logger.error("Unable to parse tproger.ru", 'Could not Connect To Dev')
         print(e)
+
 
 if __name__ == "__main__":
     main()

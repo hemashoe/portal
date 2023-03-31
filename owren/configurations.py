@@ -13,7 +13,7 @@ JAZZMIN_SETTINGS = {
     "copyright": "Öwren. 2023.ý.",
 
     # List of model admins to search from the search bar, search bar omitted if excluded
-    # If you want to use a single search field you dont need to use a list, you can use a simple string 
+    # If you want to use a single search field you dont need to use a list, you can use a simple string
     "search_model": ["authentication.User", "auth.Group"],
 
     #############
@@ -37,7 +37,7 @@ JAZZMIN_SETTINGS = {
         "auth": "fas fa-users-cog",
         "authentication.User": "fas fa-user-plus",
         "auth.Group": "fas fa-users",
-        "main.Profile" : "fas fa-user",
+        "main.Profile": "fas fa-user",
     },
     # Icons that are used when one is not manually specified
     "default_icon_parents": "fas fa-chevron-circle-right",
@@ -55,14 +55,13 @@ JAZZMIN_SETTINGS = {
     "show_ui_builder": True,
 }
 
-
 JAZZMIIN_UI_TWEAKS = {
-    'theme' : 'lux',
+    'theme': 'lux',
 }
 
 CKEDITOR_CONFIGS = {
     'default': {
-     
+
         'toolbar_Custom': [
             {'name': 'document', 'items': ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates']},
             {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
@@ -79,7 +78,7 @@ CKEDITOR_CONFIGS = {
                        'Language']},
             {'name': 'links', 'items': ['Link', 'Unlink', 'Anchor']},
             {'name': 'insert',
-             'items': ['Image', 'Youtube','Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe']},
+             'items': ['Image', 'Youtube', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe']},
             '/',
             {'name': 'styles', 'items': ['Styles', 'Format', 'Font', 'FontSize']},
             {'name': 'colors', 'items': ['TextColor', 'BGColor']},
@@ -95,7 +94,7 @@ CKEDITOR_CONFIGS = {
             ]},
         ],
         'toolbar': 'Custom',  # put selected toolbar config here
-        'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
+        'toolbarGroups': [{'name': 'document', 'groups': ['mode', 'document', 'doctools']}],
         'height': 400,
         # 'width': '100%',
         'filebrowserWindowHeight': 725,
@@ -104,7 +103,7 @@ CKEDITOR_CONFIGS = {
         'mathJaxLib': '//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
         'tabSpaces': 4,
         'extraPlugins': ','.join([
-            'uploadimage', # the upload image feature
+            'uploadimage',  # the upload image feature
             # your extra plugins here
             'div',
             'autolink',
@@ -122,9 +121,6 @@ CKEDITOR_CONFIGS = {
         ]),
     }
 }
-
-
-
 
 
 def get_filename(filename, request):

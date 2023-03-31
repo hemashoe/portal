@@ -3,7 +3,8 @@ from pathlib import Path
 
 from dotenv import find_dotenv, load_dotenv
 
-from .configurations import JAZZMIIN_UI_TWEAKS, JAZZMIN_SETTINGS, CKEDITOR_CONFIGS
+from .configurations import (CKEDITOR_CONFIGS, JAZZMIIN_UI_TWEAKS,
+                             JAZZMIN_SETTINGS)
 
 ################ ALL DIRECTORIES ################
 
@@ -14,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 load_dotenv(find_dotenv())
 SECRET_KEY = os.environ["SECRET_KEY"]
@@ -65,7 +66,7 @@ INTERNAL_IPS = [
 ]
 ####### CK EDITOR ########
 
-CKEDITOR_UPLOAD_PATH="posts/"
+CKEDITOR_UPLOAD_PATH = "posts/"
 CKEDITOR_FILENAME_GENERATOR = '.utils.get_filename'
 CKEDITOR_CONFIGS = CKEDITOR_CONFIGS
 CKEDITOR_IMAGE_BACKEND = "pillow"
@@ -134,10 +135,10 @@ LOGGING = {
             'backupCount': 100,
             'formatter': 'verbose',
         },
-        'console': { 
+        'console': {
             'level': 'DEBUG',
-            'class': 'logging.StreamHandler',                                                             
-        },  
+            'class': 'logging.StreamHandler',
+        },
     },
     'loggers': {
         'django': {
@@ -182,7 +183,7 @@ EMAIL_PORT = 465
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = True
 EMAIL_HOST_USER = os.environ["EMAIL_HOST_USER"]
-EMAIL_HOST_PASSWORD = os.environ ["EMAIL_HOST_PASSWORD"]
+EMAIL_HOST_PASSWORD = os.environ["EMAIL_HOST_PASSWORD"]
 
 ############ PASSWORD VALIDATION ###########
 
@@ -205,8 +206,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Ashgabat'
-DATETIME_FORMAT=  '%Y-%m-%d %H:%M'
-DATETIME_INPUT_FORMATS=  '%Y-%m-%d %H:%M'
+DATETIME_FORMAT = '%Y-%m-%d %H:%M'
+DATETIME_INPUT_FORMATS = '%Y-%m-%d %H:%M'
 
 USE_I18N = True
 USE_L10N = True
