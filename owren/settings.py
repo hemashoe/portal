@@ -130,7 +130,7 @@ LOGGING = {
         'logfile': {
             'level': 'INFO',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': "logs/voice.log",
+            'filename': "logs/owren.log",
             'maxBytes': 100000,
             'backupCount': 100,
             'formatter': 'verbose',

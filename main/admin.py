@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 
-from .models import *
+from .models import Profile, Post, News
 
 
 class ProfilesAdmin(admin.ModelAdmin):
@@ -15,16 +15,17 @@ class ProfilesAdmin(admin.ModelAdmin):
     def get_profile_photo(self, object):
         if object.profile_img:
             return mark_safe(f"<img src='{object.profile_img.url}' width=80px>")
-    
+
+
 admin.site.register(Profile, ProfilesAdmin)
 
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'source_link', 'date_published', 'get_post_photo', 'published')
-    list_display_links = ('title','source_link',)
+    list_display_links = ('title', 'source_link',)
     search_fields = ('title',)
-    prepopulated_fields = {"slug" : ("title",)}
-    list_editable = ('published','slug')
+    prepopulated_fields = {"slug": ("title",)}
+    list_editable = ('published', 'slug')
 
     def get_post_photo(self, object):
         if object.title_image:
@@ -35,14 +36,15 @@ admin.site.register(Post, PostAdmin)
 
 
 class NewsAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'source_link','date_published', 'get_post_photo', 'published')
+    list_display = ('title', 'slug', 'source_link', 'date_published', 'get_post_photo', 'published')
     list_display_links = ('title', 'source_link',)
     search_fields = ('title', 'description',)
-    prepopulated_fields = {"slug" : ("title",)}
-    list_editable = ('published','slug')
+    prepopulated_fields = {"slug": ("title",)}
+    list_editable = ('published', 'slug')
 
     def get_post_photo(self, object):
         if object.news_image:
             return mark_safe(f"<img src='{object.news_image.url}' width=80>")
+
 
 admin.site.register(News, NewsAdmin)

@@ -18,20 +18,20 @@ class Profile(models.Model):
     profile_img = models.ImageField(null=True, blank=True, upload_to='profiles/', default='defaults/1.png')
     created_date = models.DateField(auto_now_add=True)
     status = models.BooleanField(default=True)
-    skills = models.ManyToManyField(Skill,blank=True)
-    interests = models.ManyToManyField(Interest,blank=True)
+    skills = models.ManyToManyField(Skill, blank=True)
+    interests = models.ManyToManyField(Interest, blank=True)
 
     class Meta:
         verbose_name = 'Pofile'
         verbose_name_plural = 'Profiles'
         ordering = ['-created_date']
-            
+
     def __str__(self):
         return self.user
 
     def get_absolute_url(self):
         return reverse("profile_detail", args=[str(self.id)])
-    
+
     def save(self, *args, **kwargs):
         super(Profile, self).save(*args, **kwargs)
 
@@ -47,7 +47,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255, unique=True)
     slug = models.SlugField(max_length=255, unique=True)
     source_link = models.CharField(max_length=255, unique=True)
-    source_id = models.CharField(max_length=255,unique=True, blank=True, null=True)
+    source_id = models.CharField(max_length=255, unique=True, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     body = RichTextUploadingField()
     title_image = models.ImageField(upload_to="post/", null=True, blank=True)
@@ -60,7 +60,7 @@ class Post(models.Model):
         verbose_name = 'Post'
         verbose_name_plural = 'Posts'
         ordering = ['-date_published']
-    
+
     def __str__(self):
         return self.title
 
@@ -80,13 +80,13 @@ class Post(models.Model):
 
 
 class News(models.Model):
-    title = models.CharField(max_length=255,unique=True)
+    title = models.CharField(max_length=255, unique=True)
     description = models.TextField()
     body = RichTextUploadingField()
-    slug= models.SlugField(max_length=255, unique=True)
+    slug = models.SlugField(max_length=255, unique=True)
     source_link = models.CharField(max_length=255, unique=True)
-    source_id = models.CharField(max_length=255,unique=True, blank=True)
-    news_image = models.ImageField(upload_to=f"articles/", null=True, blank=True)
+    source_id = models.CharField(max_length=255, unique=True, blank=True)
+    news_image = models.ImageField(upload_to="articles/", null=True, blank=True)
     date_published = models.DateTimeField(auto_now_add=True)
     published = models.BooleanField(default=True)
     interests = models.ManyToManyField(Interest, blank=True)
@@ -96,13 +96,13 @@ class News(models.Model):
         verbose_name = 'News'
         verbose_name_plural = 'News'
         ordering = ['-date_published']
-    
+
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
         return reverse("News", args=[str(self.slug)])
-    
+
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super().save(*args, **kwargs)

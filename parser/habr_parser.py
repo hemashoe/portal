@@ -14,9 +14,9 @@ from utils import (HABR_DIR, author_profile, check_duplication, connect_to_db,
 FILE_NAME = str(HABR_DIR + "habr_data" + datetime.now().strftime("%m-%d_%H:%M") + ".csv")
 
 
-def parse_posts() -> list:
+def parse_posts():
     try:
-        rss_data = feedparser.parse('https://habr.com/ru/rss/all/all/?fl=ru')
+        rss_data = feedparser.parse('https://habr.com/ru/rss/all/all/')
         posts_count = len(rss_data.entries)
         posts_parsed = []
 
@@ -31,8 +31,7 @@ def parse_posts() -> list:
             }
             posts_parsed.append(post_parsed)
 
-        logger.info(f"Starting to parse habr succesfully  \
-                        {posts_parsed['post_id']}")
+        logger.info(f"Starting to parse habr succesfully")
 
         return posts_parsed
 

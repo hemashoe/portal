@@ -27,6 +27,7 @@ def connect_to_db():
     except NameError as n:
         n("No connection to database")
 
+
 def remove_unwanted(text) -> str:
     text = ''.join(text)
     text = text.replace('"', "'")
@@ -35,35 +36,36 @@ def remove_unwanted(text) -> str:
 
 
 def download_img(img_url, post_id) -> str:
-    path = os.path.join(MEDIA_STORE,(post_id))
+    path = os.path.join(MEDIA_STORE, (post_id))
     Path(path).mkdir(parents=True, exist_ok=True)
     try:
-        image = urllib.request.urlretrieve(str(img_url), os.path.join(str(path),str(img_url.split("/")[-1])))
-        
-        return image[0]
+        image = urllib.request.urlretrieve(str(img_url), os.path.join(str(path), str(img_url.split("/")[-1])))
 
-    except:
+        return image[0]
+    except Exception:
+
         image = ''
 
         return image
 
+
 def download_title_img(img_url, post_id) -> str:
     try:
-        path = os.path.join(MEDIA_STORE,(post_id))
+        path = os.path.join(MEDIA_STORE, (post_id))
         Path(path).mkdir(parents=True, exist_ok=True)
-        image = urllib.request.urlretrieve(str(img_url), os.path.join(str(path),str(img_url.split("/")[-1])))
+        image = urllib.request.urlretrieve(str(img_url), os.path.join(str(path), str(img_url.split("/")[-1])))
         img_db_name = image[0].split("/")[-3:]
         name = os.path.join(img_db_name[0], img_db_name[1], img_db_name[2])
         return name
 
-    except Exception:   
+    except Exception:
         name = ''
-        
+
         return name
 
 
-def download_multiple_images(images : list, post_id : str):
-    for image in images: 
+def download_multiple_images(images: list, post_id: str):
+    for image in images:
         downloaded = download_img(str(image), post_id)
 
         if downloaded:
@@ -71,7 +73,7 @@ def download_multiple_images(images : list, post_id : str):
 
         else:
             msg = ''
-        
+
         return msg
 
 
