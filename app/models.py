@@ -1,5 +1,4 @@
 import uuid
-
 from django.db import models
 from django.template.defaultfilters import slugify
 
@@ -11,7 +10,7 @@ class Skill(models.Model):
     photo = models.ImageField(upload_to='skills/', blank=True, null=True)
     wallpaper = models.ImageField(upload_to='skills/', blank=True, null=True)
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=True)
-    
+
     def __str__(self):
         return self.name
 
@@ -34,7 +33,7 @@ class Interest(models.Model):
 
     def __str__(self):
         return self.name
-        
+
     class Meta:
         verbose_name = 'Interests'
         verbose_name_plural = 'Interests'
@@ -42,4 +41,3 @@ class Interest(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
         super().save(*args, **kwargs)
-    

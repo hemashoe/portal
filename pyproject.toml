@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "owren"
+version = "0.1.0"
+description = "Just the start of the project see ya soon"
+authors = ["Maksat Hemdemow <thehighestintheroom00@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.2"
+djangorestframework-simplejwt = "django-cors-heades"
+django-cors-headers = "^3.14.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

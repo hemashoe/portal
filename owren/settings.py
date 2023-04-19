@@ -26,9 +26,8 @@ ALLOWED_HOSTS = ["192.168.192.24", "localhost", '127.0.0.1']
 ########## DJANGO APPLICATIONS ###########
 
 INSTALLED_APPS = [
-    # "debug_toolbar",
-    'corsheaders',
     'jazzmin',
+    'corsheaders',
     'ckeditor',
     'ckeditor_uploader',
 
@@ -49,7 +48,6 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
-    # "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -60,10 +58,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-INTERNAL_IPS = [
-    "192.168.192.24",
-    "127.0.0.1",
-]
 ####### CK EDITOR ########
 
 CKEDITOR_UPLOAD_PATH = "posts/"
@@ -107,9 +101,6 @@ WSGI_APPLICATION = 'owren.wsgi.application'
 # }
 
 # CACHE_TTL = 60 * 30
-
-############# LOGGING ###########################
-
 
 ############### LOGGING #################
 
@@ -163,12 +154,12 @@ LOGGING = {
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Owren',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'owren',
         'USER': 'root',
         'PASSWORD': 'P@ssw0rd',
         'HOST': 'localhost',
-        'PORT': '3306',
+        'PORT': '',
     }
 }
 
@@ -177,13 +168,13 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760
 
 ############## EMAIL SERVICE ###############
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 465
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = True
-EMAIL_HOST_USER = os.environ["EMAIL_HOST_USER"]
-EMAIL_HOST_PASSWORD = os.environ["EMAIL_HOST_PASSWORD"]
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 465
+# EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = True
+# EMAIL_HOST_USER = os.environ["EMAIL_HOST_USER"]
+# EMAIL_HOST_PASSWORD = os.environ["EMAIL_HOST_PASSWORD"]
 
 ############ PASSWORD VALIDATION ###########
 

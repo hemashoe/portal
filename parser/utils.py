@@ -2,7 +2,8 @@ import os
 import urllib.request
 from pathlib import Path
 
-import mysql.connector
+import psycopg2
+from psycopg2 import OperationalError
 from dotenv import find_dotenv, load_dotenv
 
 config = load_dotenv(find_dotenv())
@@ -14,18 +15,19 @@ MEDIA_STORE = os.path.join(str(BASE_DIR), 'media/post/')
 
 
 def connect_to_db():
+    connection = None
     try:
-        connection = mysql.connector.connect(
-                    database=os.environ["DATABASE"],
-                    host=os.environ["DB_HOST"],
-                    user=os.environ["DB_USER"],
-                    password=os.environ["DB_PASSWORD"])
-
+        connection = psycopg2.connect(
+                        database=os.environ["DATABASE"],
+                        host=os.environ["DB_HOST"],
+                        port=os.environ["DB_PORT"],
+                        user=os.environ["DB_USER"],
+                        password=os.environ["DB_PASSWORD"])
         cursor = connection.cursor()
-
         return connection, cursor
-    except NameError as n:
-        n("No connection to database")
+
+    except OperationalError as e:
+        print(f"The Error '{e}' occured")
 
 
 def remove_unwanted(text) -> str:
@@ -67,10 +69,8 @@ def download_title_img(img_url, post_id) -> str:
 def download_multiple_images(images: list, post_id: str):
     for image in images:
         downloaded = download_img(str(image), post_id)
-
         if downloaded:
             msg = f"Image {image} downloaded"
-
         else:
             msg = ''
 
@@ -88,7 +88,7 @@ def check_duplication(post_id):
         else:
             return True
 
-    except mysql.connector.Error as err:
+    except OperationalError as err:
         print(err)
 
 
@@ -103,7 +103,7 @@ def check_duplication_title(title):
         else:
             return True
 
-    except mysql.connector.Error as err:
+    except OperationalError as err:
         print(err)
 
 
@@ -114,8 +114,7 @@ def author_profile():
         query = f"SELECT id FROM main_profile WHERE user='{author}'"
         cursor.execute(query)
         result = cursor.fetchall()
-
-        return result[0][0]
+        print(result)
 
     except NameError as n:
         n("No Profile Nicko_B")

@@ -77,39 +77,3 @@ class Post(models.Model):
                 output_size = (720, 480)
                 img.thumbnail(output_size)
                 img.save(self.title_image.path)
-
-
-class News(models.Model):
-    title = models.CharField(max_length=255, unique=True)
-    description = models.TextField()
-    body = RichTextUploadingField()
-    slug = models.SlugField(max_length=255, unique=True)
-    source_link = models.CharField(max_length=255, unique=True)
-    source_id = models.CharField(max_length=255, unique=True, blank=True)
-    news_image = models.ImageField(upload_to="articles/", null=True, blank=True)
-    date_published = models.DateTimeField(auto_now_add=True)
-    published = models.BooleanField(default=True)
-    interests = models.ManyToManyField(Interest, blank=True)
-    author = models.ForeignKey(Profile, on_delete=models.SET_DEFAULT, default='Null', blank=True)
-
-    class Meta:
-        verbose_name = 'News'
-        verbose_name_plural = 'News'
-        ordering = ['-date_published']
-
-    def __str__(self):
-        return self.title
-
-    def get_absolute_url(self):
-        return reverse("News", args=[str(self.slug)])
-
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
-        super().save(*args, **kwargs)
-
-        if self.news_image:
-            img = Image.open(self.news_image.path)
-            if img.height > 720 or img.width > 480:
-                output_size = (720, 480)
-                img.thumbnail(output_size)
-                img.save(self.news_image.path)

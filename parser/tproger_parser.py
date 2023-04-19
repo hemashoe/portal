@@ -74,6 +74,7 @@ def get_everything(post_parsed: list) -> None:
 def update_db(data_parsed):
     logger.info("Connecting to database and updating")
     connection, cursor = connect_to_db()
+    logger.info(f"DB connection is {cursor}")
     author = author_profile()
 
     for data in data_parsed:

@@ -22,7 +22,7 @@ def parse_posts():
 
         for post in range(posts_count):
             post_content = rss_data.entries[post]
-            post_id = re.search(r'post/(\d+)/', post_content.guid).group(1)
+            post_id = re.search(r'articles/(\d+)/', post_content.guid).group(1)
 
             post_parsed: dict[str, Union[str, Any]] = {
                 'post_id': post_id,
@@ -31,7 +31,7 @@ def parse_posts():
             }
             posts_parsed.append(post_parsed)
 
-        logger.info(f"Starting to parse habr succesfully")
+        logger.info("Starting to parse habr succesfully")
 
         return posts_parsed
 
@@ -76,6 +76,7 @@ def update_db(data_parsed):
     logger.info("Connecting to database and updating")
     connection, cursor = connect_to_db()
     author = author_profile()
+    print(author)
 
     for data in data_parsed:
         check_for_dublicate = check_duplication(data['post_id'])
@@ -106,12 +107,13 @@ def main():
     logger.add('../logs/habr_parser.log', format='{time} __|__ {level} __|__ {message}', level='INFO', rotation='100 MB', compression='zip')
 
     try:
-        print("Starting To Parse")
         posts_parsed = parse_posts()
+        logger.success("Posts are parsed")
         data_parsed = get_article(posts_parsed)
-        update_db(data_parsed)
-        print("Finished")
-        logger.success("Successfully finished")
+        logger.success("Data was downloaded")
+        a = update_db(data_parsed)
+        print(a)
+        # logger.success("Successfully finished")
 
     except Exception as e:
         logger.error("Unable to parse habr.com", 'Could not Connect To Habr')
