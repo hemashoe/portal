@@ -74,9 +74,9 @@ def get_article(posts_parsed: list) -> None:
 
 def update_db(data_parsed):
     logger.info("Connecting to database and updating")
-    connection, cursor = connect_to_db()
+    connection = connect_to_db()
+    cursor = connection.cursor()
     author = author_profile()
-    print(author)
 
     for data in data_parsed:
         check_for_dublicate = check_duplication(data['post_id'])
@@ -90,7 +90,7 @@ def update_db(data_parsed):
                 download_multiple_images(data['images'], data['post_id'])
 
                 query = f"INSERT INTO main_post (title, slug, source_link, source_id, description, body, title_image, published, author_id)" \
-                        f'VALUES ("{data["title"]}", "{slug}", "{data["source_link"]}", "{data["post_id"]}", "{str(description_text)}", "{str(body_text)}", "{title_img}", "0", "{author}")'
+                        f'VALUES ("{data["title"]}", "{slug}", "{data["source_link"]}", "{data["post_id"]}", "{str(description_text)}", "{str(body_text)}", "{title_img}", True, "{author}")'
                 cursor.execute(query)
                 connection.commit()
                 print(f"Post {data['post_id']} added to database")
@@ -112,8 +112,7 @@ def main():
         data_parsed = get_article(posts_parsed)
         logger.success("Data was downloaded")
         a = update_db(data_parsed)
-        print(a)
-        # logger.success("Successfully finished")
+        logger.success("Successfully finished")
 
     except Exception as e:
         logger.error("Unable to parse habr.com", 'Could not Connect To Habr')

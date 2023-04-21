@@ -4,9 +4,9 @@ from pathlib import Path
 
 import psycopg2
 from psycopg2 import OperationalError
-from dotenv import find_dotenv, load_dotenv
+from dotenv import load_dotenv
 
-config = load_dotenv(find_dotenv())
+config = load_dotenv("/home/hema/main/Owren/.env")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 HABR_DIR = os.path.join(BASE_DIR, 'parser/habr_csv/')
@@ -18,16 +18,16 @@ def connect_to_db():
     connection = None
     try:
         connection = psycopg2.connect(
-                        database=os.environ["DATABASE"],
-                        host=os.environ["DB_HOST"],
-                        port=os.environ["DB_PORT"],
-                        user=os.environ["DB_USER"],
-                        password=os.environ["DB_PASSWORD"])
-        cursor = connection.cursor()
-        return connection, cursor
-
+            database=os.environ.get("DATABASE"),
+            user=os.environ.get("DB_USER"),
+            password=os.environ.get("DB_PASSWORD"),
+            host=os.environ.get("DB_HOST"),
+            port=os.environ.get("DB_PORT"),
+        )
     except OperationalError as e:
-        print(f"The Error '{e}' occured")
+        print(f"The error '{e}' occurred")
+
+    return connection
 
 
 def remove_unwanted(text) -> str:
@@ -80,7 +80,7 @@ def download_multiple_images(images: list, post_id: str):
 def check_duplication(post_id):
     try:
         connection, cursor = connect_to_db()
-        query = f"SELECT source_id FROM main_post WHERE source_id='{post_id}'"
+        query = f"SELECT source_id FROM public.main_post WHERE source_id='{post_id}'"
         cursor.execute(query)
         result = cursor.fetchall()
         if len(result) == 0:
@@ -95,7 +95,7 @@ def check_duplication(post_id):
 def check_duplication_title(title):
     try:
         connection, cursor = connect_to_db()
-        query = f"SELECT title FROM main_post WHERE title='{title}'"
+        query = f"SELECT title FROM public.main_post WHERE title='{title}'"
         cursor.execute(query)
         result = cursor.fetchall()
         if len(result) == 0:
@@ -111,10 +111,11 @@ def author_profile():
     author = "nicko_b"
     try:
         connection, cursor = connect_to_db()
-        query = f"SELECT id FROM main_profile WHERE user='{author}'"
+        query = f"SELECT id FROM public.main_profile WHERE user='{author}'"
         cursor.execute(query)
-        result = cursor.fetchall()
-        print(result)
+        result = cursor.fetchone()
+
+        return result
 
     except NameError as n:
         n("No Profile Nicko_B")

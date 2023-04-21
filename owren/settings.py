@@ -155,11 +155,11 @@ LOGGING = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'owren',
-        'USER': 'root',
-        'PASSWORD': 'P@ssw0rd',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': os.environ["DATABASE"],
+        'USER': os.environ["DB_USER"],
+        'PASSWORD': os.environ["DB_PASSWORD"],
+        'HOST': os.environ["DB_HOST"],
+        'PORT': os.environ["DB_PORT"],
     }
 }
 
