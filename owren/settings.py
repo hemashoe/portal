@@ -6,7 +6,6 @@ from dotenv import find_dotenv, load_dotenv
 from .configurations import (CKEDITOR_CONFIGS, JAZZMIIN_UI_TWEAKS,
                              JAZZMIN_SETTINGS)
 
-################ ALL DIRECTORIES ################
 
 ROOT_URLCONF = 'owren.urls'
 AUTH_USER_MODEL = 'authentication.User'
@@ -22,8 +21,6 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 
 DEBUG = True
 ALLOWED_HOSTS = ["192.168.192.24", "localhost", '127.0.0.1']
-
-########## DJANGO APPLICATIONS ###########
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -43,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
 ]
 
-############ MIDDLEWARES AND OTHERS ################
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
