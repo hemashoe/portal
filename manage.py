@@ -4,7 +4,7 @@ import os
 import sys
 from decouple import config
 
-settings = config("ENVOIRENM")
+settings = config("ENVIRONMENT")
 
 
 def main():

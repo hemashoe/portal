@@ -1,6 +1,7 @@
 import os
 from decouple import config
 from owren.utils import EnvironmentSettings
+from owren.configurations import CKEDITOR_CONFIGS, JAZZMIIN_UI_TWEAKS, JAZZMIN_SETTINGS
 from owren.settings.base import (
     AUTH_PASSWORD_VALIDATORS,
     TEMPLATES,
@@ -8,6 +9,7 @@ from owren.settings.base import (
 )
 
 settings_instance = EnvironmentSettings()
+print(settings_instance.database_settings)
 BASE_DIR = BASE_DIR
 STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles/")
@@ -38,6 +40,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "corsheaders",
+    "jazzmin",
+    "ckeditor",
+    "ckeditor_uploader",
 ]
 
 MIDDLEWARE = [
@@ -51,12 +56,24 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+# CK EDITOR CONFIGS
+
+CKEDITOR_UPLOAD_PATH = "posts/"
+CKEDITOR_FILENAME_GENERATOR = ".utils.get_filename"
+CKEDITOR_CONFIGS = CKEDITOR_CONFIGS
+CKEDITOR_IMAGE_BACKEND = "pillow"
+
+# JAZZMIN CONFIG
+JAZZMIN_SETTINGS = JAZZMIN_SETTINGS
+JAZZMIIN_UI_TWEAKS = JAZZMIIN_UI_TWEAKS
+
+
 TEMPLATES = TEMPLATES
 WSGI_APPLICATION = "owren.wsgi.application"
 AUTH_PASSWORD_VALIDATORS = AUTH_PASSWORD_VALIDATORS
 
 try:
-    DATABASES = {
+    DATABASE = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
             "HOST": settings_instance.database_settings["host"],

@@ -1,6 +1,10 @@
 import uuid
+
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
-from django.template.defaultfilters import slugify
+from slugify import slugify
+from django.urls import reverse
+from PIL import Image
 
 
 class Skill(models.Model):
@@ -45,17 +49,6 @@ class Interest(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
         super().save(*args, **kwargs)
-
-
-import uuid
-
-from ckeditor_uploader.fields import RichTextUploadingField
-from django.db import models
-from django.template.defaultfilters import slugify
-from django.urls import reverse
-from PIL import Image
-
-from app.models import Interest, Skill
 
 
 class Profile(models.Model):

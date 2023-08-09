@@ -1,16 +1,16 @@
 JAZZMIN_SETTINGS = {
-    "site_title": "Öwren Gurnamanyň Admin Sahypasy",
+    "site_title": "Admin Sahypa",
     "site_header": "Öwren",
     "site_brand": "Öwren",
     # CSS classes that are applied to the logo above
     "site_logo_classes": "img-circle",
     # Welcome text on the login screen
-    "welcome_sign": "Admin Sahypa Hoş Geldiniz",
+    "welcome_sign": "Admin Sahyp",
     # Copyright on the footer
     "copyright": "Öwren. 2023.ý.",
     # List of model admins to search from the search bar, search bar omitted if excluded
     # If you want to use a single search field you dont need to use a list, you can use a simple string
-    "search_model": ["authentication.User", "auth.Group"],
+    "search_model": ["auth.User", "auth.Group"],
     #############
     # Side Menu #
     #############
