@@ -7,16 +7,18 @@ class Skill(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True, unique=True)
     slug = models.SlugField(blank=True, null=True, unique=True)
     description = models.CharField(null=True, blank=True, max_length=255)
-    photo = models.ImageField(upload_to='skills/', blank=True, null=True)
-    wallpaper = models.ImageField(upload_to='skills/', blank=True, null=True)
-    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=True)
+    photo = models.ImageField(upload_to="skills/", blank=True, null=True)
+    wallpaper = models.ImageField(upload_to="skills/", blank=True, null=True)
+    id = models.UUIDField(
+        default=uuid.uuid4, unique=True, primary_key=True, editable=True
+    )
 
     def __str__(self):
         return self.name
 
     class Meta:
-        verbose_name = 'Skill'
-        verbose_name_plural = 'Skills'
+        verbose_name = "Skill"
+        verbose_name_plural = "Skills"
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -27,20 +29,23 @@ class Interest(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True, unique=True)
     slug = models.SlugField(blank=True, null=True, unique=True)
     description = models.CharField(max_length=255, blank=True, null=False)
-    photo = models.ImageField(upload_to='interests/', blank=True, null=True)
-    wallpaper = models.ImageField(upload_to='interests/', blank=True, null=True)
-    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=True)
+    photo = models.ImageField(upload_to="interests/", blank=True, null=True)
+    wallpaper = models.ImageField(upload_to="interests/", blank=True, null=True)
+    id = models.UUIDField(
+        default=uuid.uuid4, unique=True, primary_key=True, editable=True
+    )
 
     def __str__(self):
         return self.name
 
     class Meta:
-        verbose_name = 'Interests'
-        verbose_name_plural = 'Interests'
+        verbose_name = "Interests"
+        verbose_name_plural = "Interests"
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
         super().save(*args, **kwargs)
+
 
 import uuid
 
@@ -54,21 +59,25 @@ from app.models import Interest, Skill
 
 
 class Profile(models.Model):
-    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
+    id = models.UUIDField(
+        default=uuid.uuid4, unique=True, primary_key=True, editable=False
+    )
     user = models.CharField(max_length=255, unique=True)
     email = models.EmailField(max_length=255, blank=True, null=True)
     fullname = models.CharField(max_length=255, null=False)
     bio = models.TextField(blank=True, null=True)
-    profile_img = models.ImageField(null=True, blank=True, upload_to='profiles/', default=  'defaults/1.png')
+    profile_img = models.ImageField(
+        null=True, blank=True, upload_to="profiles/", default="defaults/1.png"
+    )
     created_date = models.DateField(auto_now_add=True)
     status = models.BooleanField(default=True)
     skills = models.ManyToManyField(Skill, blank=True)
     interests = models.ManyToManyField(Interest, blank=True)
 
     class Meta:
-        verbose_name = 'Pofile'
-        verbose_name_plural = 'Profiles'
-        ordering = ['-created_date']
+        verbose_name = "Pofile"
+        verbose_name_plural = "Profiles"
+        ordering = ["-created_date"]
 
     def __str__(self):
         return self.user
@@ -101,9 +110,9 @@ class Post(models.Model):
     author = models.ForeignKey(Profile, on_delete=models.CASCADE, blank=True)
 
     class Meta:
-        verbose_name = 'Post'
-        verbose_name_plural = 'Posts'
-        ordering = ['-date_published']
+        verbose_name = "Post"
+        verbose_name_plural = "Posts"
+        ordering = ["-date_published"]
 
     def __str__(self):
         return self.title

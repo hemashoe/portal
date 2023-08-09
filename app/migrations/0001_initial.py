@@ -5,41 +5,80 @@ import uuid
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Interest',
+            name="Interest",
             fields=[
-                ('name', models.CharField(blank=True, max_length=255, null=True, unique=True)),
-                ('slug', models.SlugField(blank=True, null=True, unique=True)),
-                ('description', models.CharField(blank=True, max_length=255)),
-                ('photo', models.ImageField(blank=True, null=True, upload_to='interests/')),
-                ('wallpaper', models.ImageField(blank=True, null=True, upload_to='interests/')),
-                ('id', models.UUIDField(default=uuid.uuid4, primary_key=True, serialize=False, unique=True)),
+                (
+                    "name",
+                    models.CharField(
+                        blank=True, max_length=255, null=True, unique=True
+                    ),
+                ),
+                ("slug", models.SlugField(blank=True, null=True, unique=True)),
+                ("description", models.CharField(blank=True, max_length=255)),
+                (
+                    "photo",
+                    models.ImageField(blank=True, null=True, upload_to="interests/"),
+                ),
+                (
+                    "wallpaper",
+                    models.ImageField(blank=True, null=True, upload_to="interests/"),
+                ),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        primary_key=True,
+                        serialize=False,
+                        unique=True,
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Interests',
-                'verbose_name_plural': 'Interests',
+                "verbose_name": "Interests",
+                "verbose_name_plural": "Interests",
             },
         ),
         migrations.CreateModel(
-            name='Skill',
+            name="Skill",
             fields=[
-                ('name', models.CharField(blank=True, max_length=255, null=True, unique=True)),
-                ('slug', models.SlugField(blank=True, null=True, unique=True)),
-                ('description', models.CharField(blank=True, max_length=255, null=True)),
-                ('photo', models.ImageField(blank=True, null=True, upload_to='skills/')),
-                ('wallpaper', models.ImageField(blank=True, null=True, upload_to='skills/')),
-                ('id', models.UUIDField(default=uuid.uuid4, primary_key=True, serialize=False, unique=True)),
+                (
+                    "name",
+                    models.CharField(
+                        blank=True, max_length=255, null=True, unique=True
+                    ),
+                ),
+                ("slug", models.SlugField(blank=True, null=True, unique=True)),
+                (
+                    "description",
+                    models.CharField(blank=True, max_length=255, null=True),
+                ),
+                (
+                    "photo",
+                    models.ImageField(blank=True, null=True, upload_to="skills/"),
+                ),
+                (
+                    "wallpaper",
+                    models.ImageField(blank=True, null=True, upload_to="skills/"),
+                ),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        primary_key=True,
+                        serialize=False,
+                        unique=True,
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Skill',
-                'verbose_name_plural': 'Skills',
+                "verbose_name": "Skill",
+                "verbose_name_plural": "Skills",
             },
         ),
     ]

@@ -1,19 +1,33 @@
+import os
 from decouple import config
+from owren.utils import EnvironmentSettings
 from owren.settings.base import (
     AUTH_PASSWORD_VALIDATORS,
-    ROOT_URLCONF,
     TEMPLATES,
     BASE_DIR,
 )
 
+settings_instance = EnvironmentSettings()
 BASE_DIR = BASE_DIR
-ROOT_URLCONF = ROOT_URLCONF
+STATIC_URL = "static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles/")
+MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles/")
 
-SECRET_KEY = config("SECRET_KEY_PROD")
-DEBUG = config("DEBUG_PROD")
+
+ROOT_URLCONF = "owren.urls"
+
+SECRET_KEY = settings_instance.secret_key
+DEBUG = settings_instance.debug
+
 ALLOWED_HOSTS = config(
     "ALLOWED_HOSTS_PROD", cast=lambda v: [s.strip() for s in v.split(",")]
 )
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    )
+}
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -22,45 +36,46 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'jazzmin',
-    'corsheaders',
-    'ckeditor',
-    'ckeditor_uploader',
+    "rest_framework",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
     "corsheaders.middleware.CorsMiddleware",
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.cache.UpdateCacheMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.cache.FetchFromCacheMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-
 TEMPLATES = TEMPLATES
-WSGI_APPLICATION = "speechai.wsgi.application"
+WSGI_APPLICATION = "owren.wsgi.application"
+AUTH_PASSWORD_VALIDATORS = AUTH_PASSWORD_VALIDATORS
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+try:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "HOST": settings_instance.database_settings["host"],
+            "NAME": settings_instance.database_settings["database"],
+            "USER": settings_instance.database_settings["username"],
+            "PASSWORD": settings_instance.database_settings["password"],
+            "PORT": settings_instance.database_settings["port"],
+        }
     }
-}
+
+except ConnectionError:
+    print("No connection")
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'Asia/Ashgabat'
-DATETIME_FORMAT = '%Y-%m-%d %H:%M'
-DATETIME_INPUT_FORMATS = '%Y-%m-%d %H:%M'
-
+LANGUAGE_CODE = "en-us"
+TIME_ZONE = "UTC"
 USE_I18N = True
-USE_L10N = True
-USE_THOUSAND_SEPARATOR = True
 USE_TZ = True
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DATETIME_FORMAT = "%Y-%m-%d %H:%M"
+DATETIME_INPUT_FORMATS = "%Y-%m-%d %H:%M"

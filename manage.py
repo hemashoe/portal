@@ -4,7 +4,7 @@ import os
 import sys
 from decouple import config
 
-settings = config("SETTINGS")
+settings = config("ENVOIRENM")
 
 
 def main():
@@ -21,5 +21,5 @@ def main():
     execute_from_command_line(sys.argv)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

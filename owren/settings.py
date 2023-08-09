@@ -3,61 +3,58 @@ from pathlib import Path
 
 from dotenv import find_dotenv, load_dotenv
 
-from .configurations import (CKEDITOR_CONFIGS, JAZZMIIN_UI_TWEAKS,
-                             JAZZMIN_SETTINGS)
+from .configurations import CKEDITOR_CONFIGS, JAZZMIIN_UI_TWEAKS, JAZZMIN_SETTINGS
 
 
-ROOT_URLCONF = 'owren.urls'
-AUTH_USER_MODEL = 'authentication.User'
+ROOT_URLCONF = "owren.urls"
+AUTH_USER_MODEL = "authentication.User"
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 
 load_dotenv(find_dotenv())
 SECRET_KEY = os.environ["SECRET_KEY"]
 
 DEBUG = True
-ALLOWED_HOSTS = ["192.168.192.24", "localhost", '127.0.0.1']
+ALLOWED_HOSTS = ["192.168.192.24", "localhost", "127.0.0.1"]
 
 INSTALLED_APPS = [
-    'jazzmin',
-    'corsheaders',
-    'ckeditor',
-    'ckeditor_uploader',
-
-    'app',
-    'authentication',
-    'main',
-
-    'django.contrib.staticfiles',
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
+    "jazzmin",
+    "corsheaders",
+    "ckeditor",
+    "ckeditor_uploader",
+    "app",
+    "authentication",
+    "main",
+    "django.contrib.staticfiles",
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
 ]
 
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.cache.UpdateCacheMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.cache.FetchFromCacheMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.cache.UpdateCacheMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.cache.FetchFromCacheMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
 ####### CK EDITOR ########
 
 CKEDITOR_UPLOAD_PATH = "posts/"
-CKEDITOR_FILENAME_GENERATOR = '.utils.get_filename'
+CKEDITOR_FILENAME_GENERATOR = ".utils.get_filename"
 CKEDITOR_CONFIGS = CKEDITOR_CONFIGS
 CKEDITOR_IMAGE_BACKEND = "pillow"
 
@@ -67,21 +64,21 @@ JAZZMIIN_UI_TWEAKS = JAZZMIIN_UI_TWEAKS
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'owren.wsgi.application'
+WSGI_APPLICATION = "owren.wsgi.application"
 
 ######### CACHE SYSTEM ###########################
 
@@ -101,47 +98,47 @@ WSGI_APPLICATION = 'owren.wsgi.application'
 ############### LOGGING #################
 
 LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '{levelname} {asctime} {module} {message}',
-            'style': '{',
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "{levelname} {asctime} {module} {message}",
+            "style": "{",
         },
-        'simple': {
-            'format': '{levelname} {message}',
-            'style': '{',
-        },
-    },
-    'handlers': {
-        'logfile': {
-            'level': 'INFO',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': "logs/owren.log",
-            'maxBytes': 100000,
-            'backupCount': 100,
-            'formatter': 'verbose',
-        },
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
+        "simple": {
+            "format": "{levelname} {message}",
+            "style": "{",
         },
     },
-    'loggers': {
-        'django': {
-            'handlers': ['logfile'],
-            'level': 'INFO',
-            'propagate': True,
+    "handlers": {
+        "logfile": {
+            "level": "INFO",
+            "class": "logging.handlers.RotatingFileHandler",
+            "filename": "logs/owren.log",
+            "maxBytes": 100000,
+            "backupCount": 100,
+            "formatter": "verbose",
         },
-        'django.request': {
-            'handlers': ['logfile'],
-            'level': 'INFO',
-            'propagate': True,
+        "console": {
+            "level": "DEBUG",
+            "class": "logging.StreamHandler",
         },
-        'django.server': {
-            'handlers': ['logfile'],
-            'level': 'INFO',
-            'propagate': True,
+    },
+    "loggers": {
+        "django": {
+            "handlers": ["logfile"],
+            "level": "INFO",
+            "propagate": True,
+        },
+        "django.request": {
+            "handlers": ["logfile"],
+            "level": "INFO",
+            "propagate": True,
+        },
+        "django.server": {
+            "handlers": ["logfile"],
+            "level": "INFO",
+            "propagate": True,
         },
     },
 }
@@ -149,13 +146,13 @@ LOGGING = {
 ######### DJANGO DATABASE  ############
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ["DATABASE"],
-        'USER': os.environ["DB_USER"],
-        'PASSWORD': os.environ["DB_PASSWORD"],
-        'HOST': os.environ["DB_HOST"],
-        'PORT': os.environ["DB_PORT"],
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": os.environ["DATABASE"],
+        "USER": os.environ["DB_USER"],
+        "PASSWORD": os.environ["DB_PASSWORD"],
+        "HOST": os.environ["DB_HOST"],
+        "PORT": os.environ["DB_PORT"],
     }
 }
 
@@ -176,31 +173,31 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 
 #################### INTERNALIZATION, TIMING ############################
 
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'Asia/Ashgabat'
-DATETIME_FORMAT = '%Y-%m-%d %H:%M'
-DATETIME_INPUT_FORMATS = '%Y-%m-%d %H:%M'
+LANGUAGE_CODE = "en-us"
+TIME_ZONE = "Asia/Ashgabat"
+DATETIME_FORMAT = "%Y-%m-%d %H:%M"
+DATETIME_INPUT_FORMATS = "%Y-%m-%d %H:%M"
 
 USE_I18N = True
 USE_L10N = True
 USE_THOUSAND_SEPARATOR = True
 USE_TZ = True
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 ################################################################################################################

@@ -9,9 +9,9 @@ from dotenv import load_dotenv
 config = load_dotenv("/home/hema/main/Owren/.env")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-HABR_DIR = os.path.join(BASE_DIR, 'parser/habr_csv/')
-TPROGER_DIR = os.path.join(BASE_DIR, 'parser/tproger_csv/')
-MEDIA_STORE = os.path.join(str(BASE_DIR), 'media/post/')
+HABR_DIR = os.path.join(BASE_DIR, "parser/habr_csv/")
+TPROGER_DIR = os.path.join(BASE_DIR, "parser/tproger_csv/")
+MEDIA_STORE = os.path.join(str(BASE_DIR), "media/post/")
 
 
 def connect_to_db():
@@ -31,7 +31,7 @@ def connect_to_db():
 
 
 def remove_unwanted(text) -> str:
-    text = ''.join(text)
+    text = "".join(text)
     text = text.replace('"', "'")
 
     return str(text)
@@ -41,12 +41,13 @@ def download_img(img_url, post_id) -> str:
     path = os.path.join(MEDIA_STORE, (post_id))
     Path(path).mkdir(parents=True, exist_ok=True)
     try:
-        image = urllib.request.urlretrieve(str(img_url), os.path.join(str(path), str(img_url.split("/")[-1])))
+        image = urllib.request.urlretrieve(
+            str(img_url), os.path.join(str(path), str(img_url.split("/")[-1]))
+        )
 
         return image[0]
     except Exception:
-
-        image = ''
+        image = ""
 
         return image
 
@@ -55,13 +56,15 @@ def download_title_img(img_url, post_id) -> str:
     try:
         path = os.path.join(MEDIA_STORE, (post_id))
         Path(path).mkdir(parents=True, exist_ok=True)
-        image = urllib.request.urlretrieve(str(img_url), os.path.join(str(path), str(img_url.split("/")[-1])))
+        image = urllib.request.urlretrieve(
+            str(img_url), os.path.join(str(path), str(img_url.split("/")[-1]))
+        )
         img_db_name = image[0].split("/")[-3:]
         name = os.path.join(img_db_name[0], img_db_name[1], img_db_name[2])
         return name
 
     except Exception:
-        name = ''
+        name = ""
 
         return name
 
@@ -72,7 +75,7 @@ def download_multiple_images(images: list, post_id: str):
         if downloaded:
             msg = f"Image {image} downloaded"
         else:
-            msg = ''
+            msg = ""
 
         return msg
 

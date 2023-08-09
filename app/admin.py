@@ -5,9 +5,9 @@ from .models import Skill, Interest
 
 @admin.register(Skill)
 class SkillAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'get_profile_photo', 'get_profile_photo')
-    list_display_links = ('name', 'description')
-    search_fields = ('name', 'id')
+    list_display = ("name", "description", "get_profile_photo", "get_profile_photo")
+    list_display_links = ("name", "description")
+    search_fields = ("name", "id")
     prepopulated_fields = {"slug": ("name",)}
 
     def get_profile_photo(self, object):
@@ -21,9 +21,9 @@ class SkillAdmin(admin.ModelAdmin):
 
 @admin.register(Interest)
 class InterestsAdmin(admin.ModelAdmin):
-    list_display = ("name", 'description', 'get_profile_photo', 'get_profile_photo')
-    list_display_links = ("name", 'description')
-    search_fields = ("name", 'id')
+    list_display = ("name", "description", "get_profile_photo", "get_profile_photo")
+    list_display_links = ("name", "description")
+    search_fields = ("name", "id")
     prepopulated_fields = {"slug": ("name",)}
 
     def get_profile_photo(self, object):
