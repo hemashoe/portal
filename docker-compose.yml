@@ -4,6 +4,8 @@ services:
     image: redis:7
     ports:
       - "6379:6379"
+    networks:
+      - test_network
   pg_db:
     container_name: postgres_container
     image: postgres
@@ -14,6 +16,8 @@ services:
       POSTGRES_DB: test_db
     ports:
       - "5432:5432"
+    networks:
+      - test_network
     volumes:
       - postgres_container:/var/lib/postgresql/data
   pgadmin:
@@ -25,9 +29,15 @@ services:
       PGADMIN_DEFAULT_PASSWORD: root
     ports:
       - "8888:80"
+    networks:
+      - test_network
     volumes:
       - pgadmin4:/var/lib/pgadmin
 
 volumes:
   postgres_container:
   pgadmin4:
+
+networks:
+  test_network:
+    driver: bridge
