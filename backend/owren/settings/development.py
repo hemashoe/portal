@@ -57,7 +57,7 @@ MIDDLEWARE = [
 # CK EDITOR CONFIGS
 
 CKEDITOR_UPLOAD_PATH = "posts/"
-CKEDITOR_FILENAME_GENERATOR = ".utils.get_filename"
+CKEDITOR_FILENAME_GENERATOR = "owren.configurations.get_filename"
 CKEDITOR_CONFIGS = CKEDITOR_CONFIGS
 CKEDITOR_IMAGE_BACKEND = "pillow"
 
@@ -72,7 +72,7 @@ AUTH_PASSWORD_VALIDATORS = AUTH_PASSWORD_VALIDATORS
 try:
     DATABASES = {
         "default": {
-            "ENGINE": "django.db.backends.postgresql",
+            "ENGINE": "django.db.backends.postgresql_psycopg2",
             "HOST": settings_instance.database_settings["host"],
             "NAME": settings_instance.database_settings["database"],
             "USER": settings_instance.database_settings["username"],

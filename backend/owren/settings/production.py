@@ -75,7 +75,7 @@ AUTH_PASSWORD_VALIDATORS = AUTH_PASSWORD_VALIDATORS
 try:
     DATABASE = {
         "default": {
-            "ENGINE": "django.db.backends.postgresql",
+            "ENGINE": "django.db.backends.postgresql_psycopg2",
             "HOST": settings_instance.database_settings["host"],
             "NAME": settings_instance.database_settings["database"],
             "USER": settings_instance.database_settings["username"],

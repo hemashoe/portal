@@ -8,7 +8,7 @@ import pandas as pd
 from loguru import logger
 from newspaper import Article
 from slugify import slugify
-from utils import (
+from parser.utils import (
     TPROGER_DIR,
     author_profile,
     check_duplication_title,

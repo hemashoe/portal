@@ -1,43 +1,46 @@
-version: '3.8'
+version: '3.10'
 services:
+
   redis:
     image: redis:7
     ports:
       - "6379:6379"
     networks:
-      - test_network
-  pg_db:
+      - postgres
+
+  postgres_database:
     container_name: postgres_container
-    image: postgres
+    image: "bitnami/postgresql:latest"
     restart: always
     environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: root
-      POSTGRES_DB: test_db
+      POSTGRES_USER: "admin"
+      POSTGRES_PASSWORD: "admin"
+      POSTGRES_DB: "owrendb"
     ports:
       - "5432:5432"
-    networks:
-      - test_network
     volumes:
-      - postgres_container:/var/lib/postgresql/data
+      - "test-data:/var/lib/postgresql/data"
+    networks:
+      - "postgres"
+
   pgadmin:
     container_name: pgadmin4
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:7.5
     restart: always
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: root
+      PGADMIN_DEFAULT_EMAIL: example@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: example
     ports:
-      - "8888:80"
-    networks:
-      - test_network
+      - "5050:80"
     volumes:
-      - pgadmin4:/var/lib/pgadmin
+      - "pgadmin-data:/var/lib/pgadmin"
+    networks:
+      - "postgres"
 
 volumes:
-  postgres_container:
-  pgadmin4:
+  test-data:
+  pgadmin-data:
 
 networks:
-  test_network:
+  postgres:
     driver: bridge

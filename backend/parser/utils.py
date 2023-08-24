@@ -17,11 +17,11 @@ def connect_to_db():
     connection = None
     try:
         connection = psycopg2.connect(
-            database=config("DATABASE"),
-            user=config("DB_USER"),
-            password=config("DB_PASSWORD"),
-            host=config("DB_HOST"),
-            port=config("DB_PORT"),
+            database=config("DEV_DB_NAME"),
+            user=config("DEV_DB_USERNAME"),
+            password=config("DEV_DB_PASSWORD"),
+            host=config("DEV_DB_HOST"),
+            port=config("DEV_DB_PORT"),
         )
     except ConnectionError as e:
         print(f"The error '{e}' occurred")
