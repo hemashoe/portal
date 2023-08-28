@@ -4,7 +4,7 @@ from pathlib import Path
 
 from decouple import config
 from psycopg2 import OperationalError
-
+import psycopg2
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
